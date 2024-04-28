@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="注意这些全都要根据自己所用系统是什么，ubuntu和debian这些可能都有些许出入，架构问题等 更新，安装依赖项 sudo apt update sudo apt install apt-transport-https ca-certificates curl software-properties-common 添加docker官方gpg密钥 curl -fsSL https:&#x2F;&#x2F;downlo">
+    <meta name="description" content="数学公式示例 引导栏 - 数学公式示例 - 行内公式 - 块级公式 - 上下标 - 根号和分数 - 求和和积分 - 其他例子 这是一个示例 Markdown 文档，演示了如何使用 LaTeX 编写数学公式。 行内公式 行内公式可以使用单个美元符号 $ 包裹起来，例如：\(E&#x3D;mc^2\)。 块级公式 块级公式可以使用 $$ 符号包裹起来，例如： \[ \frac{d}{dx} \left( \in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker_gitlab.md">
-<meta property="og:url" content="http://example.com/2024/04/28/docker-gitlab-md/index.html">
+<meta property="og:title" content="markdown_latex.md">
+<meta property="og:url" content="http://example.com/2024/04/28/markdown-latex-md/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="注意这些全都要根据自己所用系统是什么，ubuntu和debian这些可能都有些许出入，架构问题等 更新，安装依赖项 sudo apt update sudo apt install apt-transport-https ca-certificates curl software-properties-common 添加docker官方gpg密钥 curl -fsSL https:&#x2F;&#x2F;downlo">
+<meta property="og:description" content="数学公式示例 引导栏 - 数学公式示例 - 行内公式 - 块级公式 - 上下标 - 根号和分数 - 求和和积分 - 其他例子 这是一个示例 Markdown 文档，演示了如何使用 LaTeX 编写数学公式。 行内公式 行内公式可以使用单个美元符号 $ 包裹起来，例如：\(E&#x3D;mc^2\)。 块级公式 块级公式可以使用 $$ 符号包裹起来，例如： \[ \frac{d}{dx} \left( \in">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-28T11:58:22.000Z">
-<meta property="article:modified_time" content="2024-04-28T11:59:18.547Z">
+<meta property="article:published_time" content="2024-04-28T12:18:45.000Z">
+<meta property="article:modified_time" content="2024-04-28T12:19:28.038Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>docker_gitlab.md - Hexo</title>
+  <title>markdown_latex.md - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="docker_gitlab.md"></span>
+            <span id="subtitle" data-typed-text="markdown_latex.md"></span>
           
         </div>
 
@@ -209,7 +209,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-28 19:58" pubdate>
+        <time datetime="2024-04-28 20:18" pubdate>
           2024年4月28日 晚上
         </time>
       </span>
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          316 字
+          396 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -269,54 +269,57 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">docker_gitlab.md</h1>
+            <h1 id="seo-header">markdown_latex.md</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="注意这些全都要根据自己所用系统是什么ubuntu和debian这些可能都有些许出入架构问题等">注意这些全都要根据自己所用系统是什么，ubuntu和debian这些可能都有些许出入，架构问题等</h2>
-<h1 id="更新安装依赖项">更新，安装依赖项</h1>
-<p>sudo apt update sudo apt install apt-transport-https ca-certificates curl software-properties-common</p>
-<h1 id="添加docker官方gpg密钥">添加docker官方gpg密钥</h1>
-<p>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - ## 根据自己来设定，因为这个可能debian已经不用apt-key了，已经改用gpg这些了</p>
-<h1 id="添加docker仓库">添加docker仓库</h1>
-<p>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"</p>
-<h2 id="安装docker-ce">安装docker-ce</h2>
-<p>sudo apt update sudo apt install docker-ce</p>
-<h2 id="验证是否安装">验证是否安装</h2>
-<p>sudo systemctl status docker</p>
-<h2 id="创建gitlab目录来存放数据这些">创建gitlab目录来存放数据这些</h2>
-<p>sudo mkdir -p /srv/gitlab/config /srv/gitlab/data /srv/gitlab/logs</p>
-<h2 id="运行容器">运行容器</h2>
-<p>sudo docker run --detach<br />
---hostname ubuntu<br />
---publish 443:443 --publish 80:80 --publish 22:22<br />
---name gitlab<br />
---restart always<br />
---volume /srv/gitlab/config:/etc/gitlab<br />
---volume /srv/gitlab/logs:/var/log/gitlab<br />
---volume /srv/gitlab/data:/var/opt/gitlab<br />
---env GITLAB_ROOT_PASSWORD=LJB626901<br />
-yrzr/gitlab-ce-arm64v8:latest</p>
-<h3 id="最后一行就是要根据自己架构来获取镜像了arm架构和amd都不一样的your-hostname要改">最后一行就是要根据自己架构来获取镜像了，arm架构和amd都不一样的，Your hostname要改</h3>
-<h3 id="有时要注意这些端口是否被占用">有时要注意这些端口是否被占用</h3>
-<p>netstat -tuln | grep 80</p>
-<h1 id="查询所有的镜像">查询所有的镜像</h1>
-<p>docker ps -a # 此时会看到一个 gitlab-ce 的容器是没有启动的状态 # 删除 gitlab-ce 容器 docker rm gitlab-ce # 再次运行时，删除开放的 22 端口 docker run --detach<br />
---restart always<br />
---name gitlab<br />
---privileged<br />
---memory 4096M<br />
---publish 80:80<br />
---publish 443:443<br />
---hostname ubuntu<br />
---env GITLAB_OMNIBUS_CONFIG="<br />
-nginx['redirect_http_to_https'] = true; "<br />
---volume /srv/gitlab/config:/etc/gitlab<br />
---volume /srv/gitlab/logs:/var/log/gitlab<br />
---volume /srv/gitlab/data:/var/opt/gitlab<br />
---env GITLAB_ROOT_PASSWORD=LJB626901<br />
-yrzr/gitlab-ce-arm64v8:latest</p>
+                <h1 id="数学公式示例">数学公式示例</h1>
+<p><strong><em>引导栏</em></strong> - <a href="#数学公式示例">数学公式示例</a> - <a href="#行内公式">行内公式</a> - <a href="#块级公式">块级公式</a> - <a href="#上下标">上下标</a> - <a href="#根号和分数">根号和分数</a> - <a href="#求和和积分">求和和积分</a> - <a href="#其他例子">其他例子</a></p>
+<p>这是一个示例 Markdown 文档，演示了如何使用 LaTeX 编写数学公式。</p>
+<h2 id="行内公式">行内公式</h2>
+<p>行内公式可以使用单个美元符号 <code>$</code> 包裹起来，例如：<span class="math inline">\(E=mc^2\)</span>。</p>
+<h2 id="块级公式">块级公式</h2>
+<p>块级公式可以使用 <code>$$</code> 符号包裹起来，例如：</p>
+<p><span class="math display">\[
+\frac{d}{dx} \left( \int_{a}^{x} f(u) \, du \right) = f(x)
+\]</span></p>
+<p>这里是一个积分的例子，其中 <span class="math inline">\(f(u)\)</span> 是被积函数，<span class="math inline">\(a\)</span> 和 <span class="math inline">\(x\)</span> 是积分的下限和上限，<span class="math inline">\(\frac{d}{dx}\)</span> 是导数运算符。</p>
+<h2 id="上下标">上下标</h2>
+<p>你可以使用 <code>^</code> 和 <code>_</code> 符号来表示上标和下标，例如：</p>
+<p><span class="math display">\[
+x^2 + y_1 = z_{\text{max}}
+\]</span></p>
+<h2 id="根号和分数">根号和分数</h2>
+<p>你可以使用 <code>\sqrt</code> 来表示根号，<code>\frac</code> 来表示分数，例如：</p>
+<p><span class="math display">\[
+\sqrt{2} \cdot \frac{a}{b}
+\]</span></p>
+<p>这是一个根号和分数的例子。</p>
+<h2 id="求和和积分">求和和积分</h2>
+<p>你可以使用 <code>\sum</code> 来表示求和，<code>\int</code> 来表示积分，例如：</p>
+<p><span class="math display">\[
+\sum_{i=1}^{n} i^2 \quad \text{和} \quad \int_{0}^{\infty} e^{-x} \, dx
+\]</span></p>
+<p>这是一个求和和积分的例子。</p>
+<h2 id="其他例子">其他例子</h2>
+<!--  -->
+<p><span class="math display">\[
+\begin{align}
+f(x) &amp;= ax^2 + bx + c \\
+&amp;= a(x - x_1)(x - x_2) &amp;&amp; \text{（根据二次方程根的性质）} \\
+&amp;= a(x^2 - (x_1 + x_2)x + x_1x_2) &amp;&amp; \text{（展开乘法）} \\
+&amp;= ax^2 - a(x_1 + x_2)x + ax_1x_2 &amp;&amp; \text{（结合同类项）} \\
+&amp;= ax^2 - a(x_1 + x_2)x + ac &amp;&amp; \text{（由 $x_1x_2 = c$）}
+\end{align}
+\]</span></p>
+[ f(x) =
+<span class="math display">\[\begin{cases}
+ax^2 + bx + c, &amp; \text{if } x &gt; 0 \\
+0, &amp; \text{if } x = 0 \\
+-dx^2 + ex - f, &amp; \text{if } x &lt; 0
+\end{cases}\]</span>
+<p>] <!--  --></p>
 
                 
               </div>
@@ -334,8 +337,8 @@ yrzr/gitlab-ce-arm64v8:latest</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>docker_gitlab.md</div>
-      <div>http://example.com/2024/04/28/docker-gitlab-md/</div>
+      <div>markdown_latex.md</div>
+      <div>http://example.com/2024/04/28/markdown-latex-md/</div>
     </div>
     <div class="license-meta">
       
@@ -379,18 +382,12 @@ yrzr/gitlab-ce-arm64v8:latest</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/04/28/markdown-latex-md/" title="markdown_latex.md">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">markdown_latex.md</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/04/28/docker/" title="docker">
-                        <span class="hidden-mobile">docker</span>
+                      <a href="/2024/04/28/docker-gitlab-md/" title="docker_gitlab.md">
+                        <span class="hidden-mobile">docker_gitlab.md</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
