@@ -1,0 +1,14 @@
+.about-info {
+    font-size: 18px;
+    color: #333;
+}
+
+.about-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-info a:hover {
+    text-decoration: underline;
+}
+
