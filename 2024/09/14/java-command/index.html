@@ -34,11 +34,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="在Java中，编译和运行程序涉及几个主要命令，包括 javac（编译器）、java（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令： 1. 编写Java源代码 首先你需要一个Java源文件，例如，创建一个名为HelloWorld.java的文件，内容如下： 12345public class HelloWorld &#123;    public static void main(">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png">
+<meta property="og:image" content="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png">
 <meta property="article:published_time" content="2024-09-14T08:34:47.000Z">
-<meta property="article:modified_time" content="2024-09-14T08:35:26.457Z">
+<meta property="article:modified_time" content="2024-09-20T11:52:08.552Z">
 <meta property="article:author" content="JunBin Liang">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png">
   
   
   
@@ -240,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          749 字
+          1k 字
         
       </span>
     
@@ -251,7 +254,7 @@
         
         
         
-          7 分钟
+          9 分钟
         
       </span>
     
@@ -336,6 +339,17 @@
 <li>运行JAR文件：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -jar HelloWorld.jar<br></code></pre></td></tr></table></figure>
+<h3 id="打包成-jar-文件另法">打包成 JAR 文件另法</h3>
+<p>利用 <code>jar</code> 命令来对生成的字节码文件进行打包。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">jar -cvf hello.jar HelloWorld.class<br></code></pre></td></tr></table></figure>
+<p>其中 <code>c</code> 表示创建一个新 <code>jar</code> 包，<code>v</code> 表示创建过程中打印创建过程中的信息，<code>f</code> 则表示对新生成的 <code>jar</code> 命名。</p>
+<p>最后，利用以下命令来运行 <code>jar</code> 包。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">java -jar hello.jar<br></code></pre></td></tr></table></figure>
+<p>不过并不会顺利出现我们想要的结果，此时会报错 <code>hello.jar</code> 中没有主清单属性。这是因为我们还没有在 <code>MENIFEST.MF</code> 文件中添加 <code>Main-Class</code> 属性。 <a target="_blank" rel="noopener" href="https://github.com/cunyu1943/JavaPark/blob/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png"><img src="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png" srcset="/img/loading.gif" lazyload /></a></p>
+<p>用压缩软件打开刚创建的 <code>hello.jar</code>，里边除了 <code>HelloWorld.class</code> 文件之外，还会多一个 <code>META-INF</code> 文件夹，里边还有一个 <code>MENIFEST.MF</code> 文件，此时我们只需要用编辑器打开该文件，然后在文件中加入以下代码。（<strong>记得添加之后要保证整个文件最后保留一行空行</strong>）</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq">Main-<span class="hljs-keyword">Class</span>: HelloWorld<br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://github.com/cunyu1943/JavaPark/blob/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png"><img src="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png" srcset="/img/loading.gif" lazyload /></a></p>
+<p>添加完成之后，再次运行 <code>java -jar hello.jar</code> ，就可以成功在控制台打印 <code>Hello World!</code> 了。</p>
 <h3 id="常见的jdk命令总结">7. <strong>常见的JDK命令总结</strong></h3>
 <ul>
 <li><p><strong><code>javac</code></strong>：Java编译器，将Java源文件（<code>.java</code>）编译为字节码文件（<code>.class</code>）。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac HelloWorld.java<br></code></pre></td></tr></table></figure></p></li>
