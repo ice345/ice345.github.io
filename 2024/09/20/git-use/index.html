@@ -27,23 +27,22 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="安装最新版本 neovim 要在 Ubuntu 上将 Neovim 更新到 0.8.0 及以上版本，可以通过以下步骤操作： 1. 卸载当前版本的 Neovim 首先，卸载你当前版本的 Neovim： 1sudo apt remove neovim 2. 添加 Neovim 官方 PPA Neovim 提供了一个官方的 PPA，包含最新的 Neovim 版本。你可以通过添加该 PPA 来获取最新版本">
+    <meta name="description" content="git命令使用感想  git命令初始用   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了 如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nvim_command">
-<meta property="og:url" content="http://example.com/2024/09/15/nvim-command/index.html">
+<meta property="og:title" content="git_use">
+<meta property="og:url" content="http://example.com/2024/09/20/git-use/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="安装最新版本 neovim 要在 Ubuntu 上将 Neovim 更新到 0.8.0 及以上版本，可以通过以下步骤操作： 1. 卸载当前版本的 Neovim 首先，卸载你当前版本的 Neovim： 1sudo apt remove neovim 2. 添加 Neovim 官方 PPA Neovim 提供了一个官方的 PPA，包含最新的 Neovim 版本。你可以通过添加该 PPA 来获取最新版本">
+<meta property="og:description" content="git命令使用感想  git命令初始用   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了 如">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-14T16:06:38.000Z">
-<meta property="article:modified_time" content="2024-09-15T01:20:29.950Z">
+<meta property="article:published_time" content="2024-09-20T08:50:14.000Z">
+<meta property="article:modified_time" content="2024-09-20T08:51:15.957Z">
 <meta property="article:author" content="JunBin Liang">
-<meta property="article:tag" content="Vim">
-<meta property="article:tag" content="nvim_command">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>nvim_command - Hexo</title>
+  <title>git_use - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="nvim_command"></span>
+            <span id="subtitle" data-typed-text="git_use"></span>
           
         </div>
 
@@ -229,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-15 00:06" pubdate>
-          2024年9月15日 凌晨
+        <time datetime="2024-09-20 16:50" pubdate>
+          2024年9月20日 下午
         </time>
       </span>
     
@@ -241,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          470 字
         
       </span>
     
@@ -252,7 +251,7 @@
         
         
         
-          13 分钟
+          4 分钟
         
       </span>
     
@@ -289,176 +288,55 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">nvim_command</h1>
+            <h1 id="seo-header">git_use</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="安装最新版本-neovim">安装最新版本 neovim</h1>
-<p>要在 Ubuntu 上将 Neovim 更新到 0.8.0 及以上版本，可以通过以下步骤操作：</p>
-<h3 id="卸载当前版本的-neovim">1. 卸载当前版本的 Neovim</h3>
-<p>首先，卸载你当前版本的 Neovim：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt remove neovim<br></code></pre></td></tr></table></figure>
-<h3 id="添加-neovim-官方-ppa">2. 添加 Neovim 官方 PPA</h3>
-<p>Neovim 提供了一个官方的 PPA，包含最新的 Neovim 版本。你可以通过添加该 PPA 来获取最新版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo add-apt-repository ppa:neovim-ppa/stable<br></code></pre></td></tr></table></figure>
-<p>之后更新软件包列表：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt update<br></code></pre></td></tr></table></figure>
-<h3 id="安装最新版本的-neovim">3. 安装最新版本的 Neovim</h3>
-<p>现在安装 Neovim：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install neovim<br></code></pre></td></tr></table></figure>
-<p>这会安装最新的稳定版本，通常是 0.8.0 或更新版本。</p>
-<h3 id="检查版本">4. 检查版本</h3>
-<p>安装完成后，你可以检查是否成功更新到所需版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvim --version<br></code></pre></td></tr></table></figure>
-<h3 id="配置-lazyvim">5. 配置 LazyVim</h3>
-<p>更新 Neovim 后，确保你的 <code>~/.config/nvim</code> 目录下有正确的 LazyVim 配置文件。一般你可以通过 GitHub 获取 LazyVim 配置。</p>
-<h3 id="其他提示">其他提示</h3>
-<p>如果你仍然遇到版本问题，可以尝试通过 <a target="_blank" rel="noopener" href="https://github.com/neovim/neovim/releases">Neovim 官方发布页面</a> 下载预编译二进制文件，手动安装 Neovim。</p>
+                <!-- git初认识感想 -->
+<h1 id="git命令使用感想">git命令使用感想</h1>
 <hr />
-<p>LazyVim 是一个很受欢迎的 Neovim 配置框架，它提供了一个开箱即用的 Neovim 配置，使得 Neovim 的使用更加高效。下面是一些常用命令和导航键的介绍：</p>
-<h3 id="常用命令">常用命令</h3>
+<h2 id="git命令初始用">git命令初始用</h2>
+<!-- 这是已经建了仓库，可以使用git命令n推上去的情况，因为如果没有分支这些就要创建 -->
+<ul>
+<li>git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程</li>
+<li>git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了</li>
+<li>git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额</li>
+<li>git commit -m “描述” 这个就是提交上去了</li>
+<li>如果还没建分支就用git branch -M 分支名（一般是master或者是main）</li>
+<li>git remote add origin url（一般最好用ssh密钥即建一个，后面可以不问密码）</li>
+<li>git push origin 分支名</li>
+</ul>
+<h2 id="ssh密钥创建">ssh密钥创建</h2>
+<ul>
+<li>先cd ~/.ssh用ll看看有无id_rsa,id_rsa_pub，无就创建，用该命令： *** ssh-keygen -t rsa -b 4096 -C "nni461904@gmail.com" ***</li>
+<li>创建好后就cat命令直接获取id_rsa_pub里的密钥或者vim复制也可</li>
+<li>然后就进github网页设置那设置ssh密钥就可了</li>
+</ul>
+<h2 id="git-push报错">git push报错</h2>
+<ul>
+<li>这个学问就大了，要看报错，这是冲突性问题</li>
+</ul>
+<p>git push报错<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BA41117Qb/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【push冲突与解决方法，git提交冲突的解决方法，冲突产生的原因，git-pull操作，2023年git最新实用教程】">git push冲突</a></p>
+<!-- 我的想法 -->
+<ul>
+<li>因为折腾过很久，所以在最后提一下这个想法，这个是之前搞不定后，实现的一个操作：</li>
+</ul>
 <ol type="1">
-<li><p><strong>启动 Neovim</strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvim<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>打开文件</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:<span class="hljs-keyword">e</span> 文件名<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>保存文件</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:<span class="hljs-keyword">w</span><br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>保存并退出</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:<span class="hljs-keyword">wq</span><br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>退出不保存</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:q!<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>查找文件</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:<span class="hljs-keyword">find</span> 文件名<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>替换文本</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:%s/旧文本/新文本/g<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>跳转到行号</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:行号<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>显示帮助文档</strong> <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">:<span class="hljs-keyword">help</span><br></code></pre></td></tr></table></figure></p></li>
+<li>先在github网页复制clone下来</li>
+<li>这样操作之后就可以实现本地和远程的同步了，这样我本地版本就大于远程的了 <!-- 只是这样无法再复杂的情况下很好实现需求，因为这样是一种妥协操作 --></li>
+<li>之后就可以按add那样提交就是了</li>
 </ol>
-<h3 id="常用导航键">常用导航键</h3>
+<h2 id="因为文件夹里包含.git文件导致github网页创建了个子系统模块">因为文件夹里包含.git文件导致github网页创建了个子系统模块</h2>
 <ol type="1">
-<li><strong>基本导航</strong>
-<ul>
-<li><code>h</code>：左移</li>
-<li><code>j</code>：下移</li>
-<li><code>k</code>：上移</li>
-<li><code>l</code>：右移</li>
-</ul></li>
-<li><strong>单词导航</strong>
-<ul>
-<li><code>w</code>：跳到下一个单词的开始</li>
-<li><code>e</code>：跳到当前或下一个单词的结尾</li>
-<li><code>b</code>：跳到当前或上一个单词的开始</li>
-</ul></li>
-<li><strong>行导航</strong>
-<ul>
-<li><code>0</code>：跳到行首</li>
-<li><code>$</code>：跳到行尾</li>
-<li><code>G</code>：跳到文件末尾</li>
-<li><code>gg</code>：跳到文件开头</li>
-</ul></li>
-<li><strong>页面导航</strong>
-<ul>
-<li><code>Ctrl + f</code>：向下翻一页</li>
-<li><code>Ctrl + b</code>：向上翻一页</li>
-</ul></li>
-<li><strong>跳转到标签</strong>
-<ul>
-<li><code>Ctrl + o</code>：跳回到上一个跳转位置</li>
-<li><code>Ctrl + i</code>：跳到下一个跳转位置</li>
-</ul></li>
+<li>先删除这个.git文件 rm -rf .git</li>
+<li>然后用git rm --cached 文件名实现在暂存区删除这个文件夹，实现停止跟踪这个文件或文件夹，从而可以实现修复</li>
+<li>使用git add命令重新添加到暂存区</li>
+<li>最后用git commit命令来提交</li>
+<li>最后git push <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43145427/article/details/125248146" title="实现github网页修复问题">修复</a></li>
 </ol>
-<h3 id="lazyvim-特性">LazyVim 特性</h3>
-<p>LazyVim 在启动时会自动加载一系列插件，并且配置了很多便捷的功能。以下是一些特定于 LazyVim 的操作：</p>
-<ol type="1">
-<li><strong>插件管理</strong>
-<ul>
-<li>使用 <code>:Lazy</code> 命令可以管理插件，如安装、更新和删除插件。</li>
-<li><code>:Lazy install</code>：安装插件</li>
-<li><code>:Lazy update</code>：更新插件</li>
-<li><code>:Lazy clean</code>：删除不再使用的插件</li>
-</ul></li>
-<li><strong>配置文件</strong>
-<ul>
-<li>LazyVim 的配置文件通常位于 <code>~/.config/nvim/lua/user/</code> 目录下，你可以在这里找到和修改 LazyVim 的配置文件。</li>
-</ul></li>
-<li><strong>快捷键</strong>
-<ul>
-<li>LazyVim 可能会定义一些自定义的快捷键，你可以在 LazyVim 的文档或者配置文件中找到这些快捷键的定义。</li>
-</ul></li>
-</ol>
-<hr />
-<h1 id="快速导航方法">快速导航方法</h1>
-<p>在 Neovim 中，有几种高效的方式可以快速导航到当前行中的某个单词附近，而不需要使用方向键。这些方法可以帮助你更快速地定位到你需要编辑的位置：</p>
-<h3 id="使用-查找">1. <strong>使用 <code>/</code> 查找</strong></h3>
-<p>你可以使用 <code>/</code> 命令进行文本查找：</p>
-<ol type="1">
-<li>按 <code>/&lt;字符&gt;</code> 进入查找模式。</li>
-<li>输入你要查找的单词或文本，然后按 <code>Enter</code>。</li>
-<li>使用 <code>n</code> 跳转到下一个匹配项，<code>N</code> 跳转到上一个匹配项。</li>
-</ol>
-<p>例如，要查找当前行中的 <code>foo</code>，你可以按 <code>/foo</code>，然后按 <code>Enter</code>。</p>
-<h3 id="使用-f-和-t">2. <strong>使用 <code>f</code> 和 <code>t</code></strong></h3>
-<p><code>f</code> 和 <code>t</code> 命令可以帮助你快速跳转到当前行中的特定字符位置：</p>
-<ul>
-<li><code>f&lt;char&gt;</code>：跳转到当前行中第一个 <code>&lt;char&gt;</code> 位置。</li>
-<li><code>t&lt;char&gt;</code>：跳转到当前行中第一个 <code>&lt;char&gt;</code> 之前的位置。</li>
-</ul>
-<p>例如：</p>
-<ul>
-<li>按 <code>f</code> 然后是 <code>a</code> 将跳转到当前行第一个 <code>a</code> 位置。</li>
-<li>按 <code>t</code> 然后是 <code>a</code> 将跳转到当前行第一个 <code>a</code> 之前的位置。</li>
-</ul>
-<h3 id="使用-和">3. <strong>使用 <code>;</code> 和 <code>,</code></strong></h3>
-<ul>
-<li><code>;</code>：重复上一个 <code>f</code>、<code>t</code>、<code>F</code> 或 <code>T</code> 命令。</li>
-<li><code>,</code>：重复上一个 <code>f</code>、<code>t</code>、<code>F</code> 或 <code>T</code> 命令的反向操作。</li>
-</ul>
-<h3 id="使用-g-命令">4. <strong>使用 <code>g</code> 命令</strong></h3>
-<ul>
-<li><code>g/&lt;字符&gt;</code>：在当前行中查找 <code>&lt;字符&gt;</code>。</li>
-</ul>
-<h3 id="使用-和-1">5. <strong>使用 <code>*</code> 和 <code>#</code></strong></h3>
-<ul>
-<li><code>*</code>：查找光标下单词的下一个匹配项。</li>
-<li><code>#</code>：查找光标下单词的上一个匹配项。</li>
-</ul>
-<hr />
-<p>在插入模式下，你可以使用一些技巧来快速移动到行中的特定位置，无需退出插入模式或使用方向键。以下是一些常用的方法：</p>
-<h3 id="使用-c-o">1. <strong>使用 <code>&lt;C-o&gt;</code></strong></h3>
-<ul>
-<li><strong><code>&lt;C-o&gt;</code></strong>（Control + o）：在插入模式下按下 <code>&lt;C-o&gt;</code> 进入一次普通模式命令，然后可以使用普通模式命令进行导航。例如：
-<ul>
-<li><code>&lt;C-o&gt;f&lt;char&gt;</code>：跳转到当前行中的第一个 <code>&lt;char&gt;</code> 位置。</li>
-<li><code>&lt;C-o&gt;t&lt;char&gt;</code>：跳转到当前行中的第一个 <code>&lt;char&gt;</code> 之前的位置。</li>
-<li><code>&lt;C-o&gt;/pattern</code>：在当前行中查找 <code>&lt;pattern&gt;</code>。</li>
-</ul></li>
-</ul>
-<h3 id="使用-c-w">2. <strong>使用 <code>&lt;C-w&gt;</code></strong></h3>
-<ul>
-<li><strong><code>&lt;C-w&gt;</code></strong>（Control + w）：在插入模式下按下 <code>&lt;C-w&gt;</code> 可以帮助你快速移动到单词边界：
-<ul>
-<li><strong><code>&lt;C-w&gt;</code> + <code>h/j/k/l</code></strong>：在插入模式下，按 <code>&lt;C-w&gt;</code> 后接方向键可以移动到当前单词的边界。</li>
-</ul></li>
-</ul>
-<h3 id="使用插入模式快捷键">3. <strong>使用插入模式快捷键</strong></h3>
-<ul>
-<li><strong><code>&lt;C-a&gt;</code></strong> 和 <strong><code>&lt;C-e&gt;</code></strong>：这些快捷键帮助你在插入模式下进行更精确的光标移动：
-<ul>
-<li><strong><code>&lt;C-a&gt;</code></strong>：将光标移动到当前单词的开头。</li>
-<li><strong><code>&lt;C-e&gt;</code></strong>：将光标移动到当前单词的结尾。</li>
-</ul></li>
-</ul>
-<h3 id="使用-c-f-和-c-b">4. <strong>使用 <code>&lt;C-f&gt;</code> 和 <code>&lt;C-b&gt;</code></strong></h3>
-<ul>
-<li><strong><code>&lt;C-f&gt;</code></strong> 和 <strong><code>&lt;C-b&gt;</code></strong>：在插入模式下，你可以使用这些快捷键在当前行中进行前向和后向滚动：
-<ul>
-<li><strong><code>&lt;C-f&gt;</code></strong>：向前滚动。</li>
-<li><strong><code>&lt;C-b&gt;</code></strong>：向后滚动。</li>
-</ul></li>
-</ul>
-<h3 id="使用-c-u-和-c-d">5. <strong>使用 <code>&lt;C-u&gt;</code> 和 <code>&lt;C-d&gt;</code></strong></h3>
-<ul>
-<li><strong><code>&lt;C-u&gt;</code></strong> 和 <strong><code>&lt;C-d&gt;</code></strong>：这些快捷键可以用于向上和向下滚动文本，在插入模式下也有效：
-<ul>
-<li><strong><code>&lt;C-u&gt;</code></strong>：向上滚动半屏。</li>
-<li><strong><code>&lt;C-d&gt;</code></strong>：向下滚动半屏。</li>
-</ul></li>
-</ul>
+<h2 id="git命令学习"><strong><em>git命令学习</em></strong></h2>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gv421i7wW/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【git 详解，10分钟学会】">git命令学习</a></p>
 
                 
               </div>
@@ -477,15 +355,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Vim/" class="category-chain-item">Vim</a>
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/Vim/nvim-command/" class="category-chain-item">nvim_command</a>
-  
-  
-
   
 
       </span>
@@ -499,9 +370,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Vim/" class="print-no-link">#Vim</a>
-      
-        <a href="/tags/nvim-command/" class="print-no-link">#nvim_command</a>
+        <a href="/tags/Git/" class="print-no-link">#Git</a>
       
     </div>
   
@@ -513,8 +382,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>nvim_command</div>
-      <div>http://example.com/2024/09/15/nvim-command/</div>
+      <div>git_use</div>
+      <div>http://example.com/2024/09/20/git-use/</div>
     </div>
     <div class="license-meta">
       
@@ -526,7 +395,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月15日</div>
+          <div>2024年9月20日</div>
         </div>
       
       
@@ -558,9 +427,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/20/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/" title="javadoc生成注释文件">
+                      <a href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" title="常用Git命令">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">javadoc生成注释文件</span>
+                        <span class="hidden-mobile">常用Git命令</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -568,8 +437,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/14/vim-command/" title="vim_command">
-                        <span class="hidden-mobile">vim_command</span>
+                      <a href="/2024/09/20/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" title="git版本管理">
+                        <span class="hidden-mobile">git版本管理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
