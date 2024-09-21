@@ -35,7 +35,7 @@
 <meta property="og:description" content="下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。 1. 创建 Java 包 1.1 目录结构 假设我们要创建一个名为 com.example.myapp 的包，目录结构如下：  [!NOTE] 一般包名就是目录结构名。因此，我们运行或者编译包时一般都是在目录根结构下运行命令，比如 com.example.myapp 这个包是根据 myapp&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-21T08:15:08.000Z">
-<meta property="article:modified_time" content="2024-09-21T08:16:14.109Z">
+<meta property="article:modified_time" content="2024-09-21T08:28:00.142Z">
 <meta property="article:author" content="JunBin Liang">
 <meta property="article:tag" content="-编程 - Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          770 字
+          1.6k 字
         
       </span>
     
@@ -251,7 +251,7 @@
         
         
         
-          7 分钟
+          14 分钟
         
       </span>
     
@@ -304,18 +304,42 @@
 <h4 id="编写-java-文件">1.2 编写 Java 文件</h4>
 <p><strong>HelloWorld. java</strong>: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.example.myapp;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HelloWorld</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        Utils.printMessage(<span class="hljs-string">&quot;This is a message from Utils.&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p>
 <p><strong>Utils. java</strong>: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.example.myapp;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Utils</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">printMessage</span><span class="hljs-params">(String message)</span> &#123;<br>        System.out.println(message);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p>
+<h3 id="编译-java-文件">2. 编译 Java 文件</h3>
+<ol type="1">
+<li><p>打开终端，导航到 <code>src</code> 目录： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> path/to/myapp/src<br></code></pre></td></tr></table></figure></p></li>
+<li><p>使用 <code>javac</code> 编译 Java 文件： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac com/example/myapp/*.java -d ../../bin<br></code></pre></td></tr></table></figure></p>
+<p>这里 <code>-d ../../bin</code> 表示将编译生成的 <code>.class</code> 文件放到 <code>bin</code> 目录下。</p></li>
+</ol>
 <h3 id="运行-java-程序">3. 运行 Java 程序</h3>
 <ol type="1">
 <li><p>确保你在 <code>bin</code> 目录中： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ../../bin<br></code></pre></td></tr></table></figure></p></li>
 <li><p>运行程序： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java com.example.myapp.HelloWorld<br></code></pre></td></tr></table></figure></p></li>
+</ol>
+<h3 id="创建-jar-文件">4. 创建 JAR 文件</h3>
+<ol type="1">
+<li><p>仍然在 <code>bin</code> 目录中，使用 <code>jar</code> 命令创建 JAR 文件： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jar cvf myapp.jar com/example/myapp/*.class<br></code></pre></td></tr></table></figure></p>
+<p>这里 <code>c</code> 表示创建，<code>v</code> 表示详细输出，<code>f</code> 表示指定 JAR 文件名。</p></li>
+<li><p>确认 JAR 文件已创建： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure></p>
+<p>你应该能看到 <code>myapp.jar</code> 文件。</p></li>
 </ol>
 <h3 id="运行-jar-文件">5. 运行 JAR 文件</h3>
 <ol type="1">
 <li>运行 JAR 文件时需要指定主类。在 <code>HelloWorld</code> 类中，我们可以在 <code>MANIFEST.MF</code> 中指定主类，或者直接在命令行中运行： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -<span class="hljs-built_in">cp</span> myapp.jar com.example.myapp.HelloWorld<br></code></pre></td></tr></table></figure></li>
 </ol>
 <p>这种方式可以运行 <strong>JAR 文件</strong>中任意个类，只要你使用 cp 命令指定就行</p>
+<h3 id="添加主类到-jar-文件">6. 添加主类到 JAR 文件</h3>
+<p>为了使 JAR 文件可直接运行，可以添加主类到 <code>MANIFEST.MF</code> 文件中：</p>
+<ol type="1">
+<li><p>创建一个名为 <code>MANIFEST.MF</code> 的文件，内容如下： <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Manifest</span>-Version: <span class="hljs-number">1</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">Main</span>-Class: com.example.myapp.HelloWorld<br></code></pre></td></tr></table></figure></p></li>
+<li><p>创建 JAR 文件时指定 <code>MANIFEST.MF</code>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jar cvfm myapp.jar MANIFEST.MF com/example/myapp/*.class<br></code></pre></td></tr></table></figure></p></li>
+</ol>
 <h3 id="直接运行-jar-文件">7. 直接运行 JAR 文件</h3>
 <p>现在你可以直接运行 JAR 文件，而不需要再指定主类： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -jar myapp.jar<br></code></pre></td></tr></table></figure></p>
+<h3 id="用第三方包">8. 用第三方包</h3>
+<p>java 文件中要用到的包是别人打包好的，我们编译时要通过添加参数来实现使用别人的包，如下：</p>
+<p><strong>编译</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls HappyFaceFX.java<br></code></pre></td></tr></table></figure>
+<p><strong>运行</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls HappyFaceFX<br></code></pre></td></tr></table></figure></p>
 <h3 id="用自己本地打好的包">9. 用自己本地打好的包</h3>
 <p>首先，这是原始目录结构：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs bash">```bash<br>myapp<br>├── bin<br>│   ├── com<br>│   │   └── example<br>│   │       ├── myapp<br>│   │           ├── HelloWorld.class<br>│   │           └── Utils.class<br>│   │       <br>│   │        <br>│   └── myapp.jar<br>└── src<br>    └── com<br>        └── example<br>            ├── app<br>            │   ├── HelloWorld.java<br>            │   └── Utils.java<br>            └── <span class="hljs-built_in">test</span><br>                └── MainApp.java<br></code></pre></td></tr></table></figure>
@@ -333,6 +357,42 @@
 <p>运行指令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java com.example.test.MainApp  <br></code></pre></td></tr></table></figure></p>
 <p>看情况需不需要链接类文件，好像在同一个包的根目录 <code>com/example</code> 下就不需要使用 <code>-cp</code>。不在同一个根目录下就要使用 <code>-cp</code>。</p>
 <p>总之，如果不能运行就自己手动加上 <code>-cp</code> 就行了</p>
+<h3 id="module-path-和--cp-区别">10. <code>--module-path</code> 和 <code>-cp</code> 区别</h3>
+<p><code>--module-path</code> 和 <code>-cp</code> （或 <code>--class-path</code>） 是 Java 中的两个不同选项，它们用于不同的场景，因为 Java 支持两种不同的代码组织方式：<strong>模块系统</strong> 和 <strong>类路径</strong>。</p>
+<h4 id="区别">区别：</h4>
+<h5 id="cp--class-path">1. <strong><code>-cp</code>（<code>--class-path</code>）</strong>：</h5>
+<p><code>-cp</code> 是用于指定 <strong>类路径</strong> 的选项，适用于传统的 Java 项目结构，即所有的 <code>.class</code> 文件和 JAR 文件都是通过类路径来管理和加载的。</p>
+<ul>
+<li><strong>使用场景</strong>：用于在传统的 Java 项目中查找 <code>.class</code> 文件和 JAR 包。</li>
+<li><strong>适合的项目</strong>：适合未使用 Java 9 引入的模块系统的项目，或者依旧通过类路径进行管理的库和依赖。</li>
+</ul>
+<p><strong>示例</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac -<span class="hljs-built_in">cp</span> /path/to/library.jar YourProgram.java<br>java -<span class="hljs-built_in">cp</span> /path/to/library.jar YourProgram<br></code></pre></td></tr></table></figure></p>
+<h5 id="module-path-p">2. <strong><code>--module-path</code>（<code>-p</code>）</strong>：</h5>
+<p><code>--module-path</code> 是用于 <strong>模块系统</strong> 的选项，这是 Java 9 引入的特性。在模块系统中，代码和依赖项（例如 JAR 文件）被打包为模块，每个模块都有一个明确的依赖关系和暴露的 API。</p>
+<ul>
+<li><strong>使用场景</strong>：用于指定模块路径（即模块化的 JAR 文件），适合 Java 9 及以上的项目，特别是那些使用了 Java 的模块系统的项目。</li>
+<li><strong>适合的项目</strong>：适合将代码和依赖项组织为模块的项目。例如，JavaFX 是基于模块系统的库。</li>
+</ul>
+<p><strong>示例</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac --module-path /path/to/modules --add-modules javafx.controls YourProgram.java<br>java --module-path /path/to/modules --add-modules javafx.controls YourProgram<br></code></pre></td></tr></table></figure></p>
+<h4 id="为什么-javafx-需要---module-path">为什么 JavaFX 需要 <code>--module-path</code>？</h4>
+<p>JavaFX 自从 Java 9 起就成为了一个独立的模块（不再包含在 JDK 中）。因此，当你在编译和运行 JavaFX 应用时，你需要告诉 Java 编译器和运行时如何找到 JavaFX 模块，这就是为什么使用 <code>--module-path</code> 来指定 JavaFX 模块的路径。</p>
+<p><strong>示例解释</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls HappyFaceFX.java<br></code></pre></td></tr></table></figure>
+<ul>
+<li><strong><code>--module-path</code></strong>：指定 JavaFX SDK 的路径，其中包含 JavaFX 的模块化 JAR 文件。</li>
+<li><strong><code>--add-modules javafx.controls</code></strong>：明确告诉编译器或运行时要加载 <code>javafx.controls</code> 模块，这是 JavaFX 提供的核心 UI 控件模块。</li>
+</ul>
+<h4 id="什么时候用--cp-和---module-path">什么时候用 <code>-cp</code> 和 <code>--module-path</code>？</h4>
+<ul>
+<li><strong>使用 <code>-cp</code></strong>：当你使用的是非模块化的 Java 项目或依赖时，继续使用类路径（<code>-cp</code>）。</li>
+<li><strong>使用 <code>--module-path</code></strong>：当你的项目或依赖是模块化的，特别是使用 Java 9 引入的模块系统时，比如 JavaFX。</li>
+</ul>
+<h4 id="小结">小结</h4>
+<ul>
+<li><code>-cp</code> 适用于传统的类路径管理。</li>
+<li><code>--module-path</code> 适用于模块化的项目和库（如 Java 9 引入的模块系统）。</li>
+</ul>
+<hr />
 <h3 id="总结">总结</h3>
 <p>你已经完成了以下步骤： 1. 创建 Java 包。 2. 编写 Java 文件并编译。 3. 运行 Java 程序。 4. 创建 JAR 文件。 5. 添加主类到 JAR 文件并直接运行。</p>
 <p>这种方法可以帮助你组织代码、简化项目管理，并且便于分发。</p>
