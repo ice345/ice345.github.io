@@ -29,20 +29,20 @@
   
     <meta name="description" content="大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件系统和硬盘关系">
-<meta property="og:url" content="http://example.com/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E7%A1%AC%E7%9B%98%E5%85%B3%E7%B3%BB/index.html">
+<meta property="og:title" content="文件系统和卷的关系">
+<meta property="og:url" content="http://example.com/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/index.html">
 <meta property="og:site_name" content="ICEのBlog">
 <meta property="og:description" content="大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-27T09:49:14.000Z">
-<meta property="article:modified_time" content="2024-09-27T09:51:37.670Z">
+<meta property="article:modified_time" content="2024-09-29T09:56:59.026Z">
 <meta property="article:author" content="JunBin Liang">
 <meta property="article:tag" content="计算机">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>文件系统和硬盘关系 - ICEのBlog</title>
+  <title>文件系统和卷的关系 - ICEのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -221,7 +221,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="文件系统和硬盘关系"></span>
+            <span id="subtitle" data-typed-text="文件系统和卷的关系"></span>
           
         </div>
 
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          996 字
+          997 字
         
       </span>
     
@@ -297,7 +297,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">文件系统和硬盘关系</h1>
+            <h1 id="seo-header">文件系统和卷的关系</h1>
             
             
               <div class="markdown-body">
@@ -322,7 +322,7 @@
 </blockquote>
 <h1 id="硬盘操作和文件系统关系">硬盘操作和文件系统关系</h1>
 <h2 id="回顾">回顾</h2>
-<p>上一节的<a href="硬盘相关.md">硬盘相关</a>这个操作流程： - 将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。 - 将物理卷加入到一个 <strong>卷组（VG）</strong> 中。 - 在卷组中创建 <strong>逻辑卷（LV）</strong>。 其实还不能达到我们平时打开文件资源管理器中点击文件夹就可以实现跳转并显示下一层的文件内容。（<strong>说白了这个逻辑卷还只是一个没有关联的存储空间，无法读取和写入数据</strong>）我们还要在逻辑卷上操作然后才可以实现如上效果。</p>
+<p>上一节的<a target="_blank" rel="noopener" href="https://ice345.github.io/2024/09/27/硬盘相关-卷.md">硬盘相关-卷</a>这个操作流程： - 将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。 - 将物理卷加入到一个 <strong>卷组（VG）</strong> 中。 - 在卷组中创建 <strong>逻辑卷（LV）</strong>。 其实还不能达到我们平时打开文件资源管理器中点击文件夹就可以实现跳转并显示下一层的文件内容。（<strong>说白了这个逻辑卷还只是一个没有关联的存储空间，无法读取和写入数据</strong>）我们还要在逻辑卷上操作然后才可以实现如上效果。</p>
 <p>要进行的操作就是： - 在逻辑卷上创建文件系统（如 Ext 4、XFS 等）。 - 将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</p>
 <blockquote>
 <p>[!TIPS] 这个文件系统的格式是可以自己选择的，就是我们安装系统的时候，选择自定义安装或者高级安装方式，可以手动选择文件系统格式，手动划分硬盘，位每个分区或者逻辑卷选择文件系统格式。例如： - 你可以选择在 <code>/</code> 根目录分区上使用 <strong>Ext4</strong>。 - 在 <code>/home</code> 分区上使用 <strong>XFS</strong>。 - 在 <code>/boot</code> 分区上使用 <strong>Ext 3</strong>，等等。</p>
@@ -389,8 +389,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>文件系统和硬盘关系</div>
-      <div>http://example.com/2024/09/27/文件系统和硬盘关系/</div>
+      <div>文件系统和卷的关系</div>
+      <div>http://example.com/2024/09/27/文件系统和卷的关系/</div>
     </div>
     <div class="license-meta">
       
@@ -438,8 +438,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3/" title="硬盘相关">
-                        <span class="hidden-mobile">硬盘相关</span>
+                      <a href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/" title="硬盘相关-卷">
+                        <span class="hidden-mobile">硬盘相关-卷</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
