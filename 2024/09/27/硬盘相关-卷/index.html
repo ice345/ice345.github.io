@@ -99,7 +99,7 @@
   
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -308,25 +308,25 @@
 <p>物理卷是 LVM 的基本存储单元，通常对应于物理硬盘分区或整个硬盘。一个物理卷可以包含在一个或多个卷组中。</p>
 <ul>
 <li><p><strong>物理卷的创建</strong>： 你可以使用 <code>pvcreate</code> 命令将一个物理分区或硬盘初始化为物理卷。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pvcreate /dev/sda3<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pvcreate /dev/sda3<br></code></pre></td></tr></table></figure></li>
 <li><p><strong>物理卷的信息</strong>： 通过 <code>pvs</code> 命令可以查看所有物理卷的信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pvs<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pvs<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="卷组volume-groupvg">2. 卷组（Volume Group，VG）</h4>
 <p>卷组是 LVM 的第二个层次，包含了一个或多个物理卷。一个卷组可以看作是一个存储池，可以在其上创建逻辑卷。</p>
 <ul>
 <li><p><strong>卷组的创建</strong>： 可以使用 <code>vgcreate</code> 命令将一个或多个物理卷组合成一个卷组。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vgcreate ubuntu-vg /dev/sda3<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vgcreate ubuntu-vg /dev/sda3<br></code></pre></td></tr></table></figure></li>
 <li><p><strong>卷组的信息</strong>： 通过 <code>vgdisplay</code> 命令可以查看卷组的详细信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vgdisplay<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vgdisplay<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="逻辑卷logical-volumelv">3. 逻辑卷（Logical Volume，LV）</h4>
 <p>逻辑卷是在卷组之上创建的，可以看作是传统的分区。它提供了实际的存储空间，可以像普通分区一样使用（格式化、挂载等）。</p>
 <ul>
 <li><p><strong>逻辑卷的创建</strong>： 可以使用 <code>lvcreate</code> 命令在卷组上创建逻辑卷。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo lvcreate -L 100G -n ubuntu-lv ubuntu-vg<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> lvcreate -L 100G -n ubuntu-lv ubuntu-vg<br></code></pre></td></tr></table></figure></li>
 <li><p><strong>逻辑卷的信息</strong>： 通过 <code>lvdisplay</code> 命令可以查看逻辑卷的详细信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo lvdisplay<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> lvdisplay<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="它们之间的关系">它们之间的关系</h3>
 <ul>
@@ -368,15 +368,15 @@
 <h3 id="命令及其解释">命令及其解释</h3>
 <ol type="1">
 <li><p><strong><code>sudo vgdisplay</code></strong>： 显示卷组（Volume Group，VG）的详细信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vgdisplay<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vgdisplay<br></code></pre></td></tr></table></figure>
 <p><strong>输出解释</strong>：</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs gauss">--- <span class="hljs-built_in">Volume</span> group ---<br>VG Name               ubuntu-vg                    <span class="hljs-meta"># 卷组的名称</span><br><span class="hljs-keyword">System</span> ID<br><span class="hljs-keyword">Format</span>                lvm2                         <span class="hljs-meta"># 卷组使用的LVM版本</span><br>Metadata Areas        <span class="hljs-number">1</span>                            <span class="hljs-meta"># 元数据区域数量</span><br>Metadata Sequence No  <span class="hljs-number">2</span>                            <span class="hljs-meta"># 元数据序列号</span><br>VG Access             read/write                   <span class="hljs-meta"># 卷组的访问权限</span><br>VG Status             resizable                    <span class="hljs-meta"># 卷组的状态</span><br>MAX LV                <span class="hljs-number">0</span>                            <span class="hljs-meta"># 最大逻辑卷数量（0表示没有限制）</span><br>Cur LV                <span class="hljs-number">1</span>                            <span class="hljs-meta"># 当前逻辑卷数量</span><br><span class="hljs-keyword">Open</span> LV               <span class="hljs-number">1</span>                            <span class="hljs-meta"># 当前打开的逻辑卷数量</span><br>Max PV                <span class="hljs-number">0</span>                            <span class="hljs-meta"># 最大物理卷数量（0表示没有限制）</span><br>Cur PV                <span class="hljs-number">1</span>                            <span class="hljs-meta"># 当前物理卷数量</span><br>Act PV                <span class="hljs-number">1</span>                            <span class="hljs-meta"># 当前活动的物理卷数量</span><br>VG Size               &lt;<span class="hljs-number">462.71</span> GiB                  <span class="hljs-meta"># 卷组的总大小</span><br>PE Size               <span class="hljs-number">4.00</span> MiB                     <span class="hljs-meta"># 每个物理扩展区（PE）的大小</span><br>Total PE              <span class="hljs-number">118453</span>                       <span class="hljs-meta"># 总的物理扩展区数量</span><br>Alloc PE / Size       <span class="hljs-number">25600</span> / <span class="hljs-number">100.00</span> GiB           <span class="hljs-meta"># 已分配的物理扩展区数量及大小</span><br>Free  PE / Size       <span class="hljs-number">92853</span> / &lt;<span class="hljs-number">362.71</span> GiB          <span class="hljs-meta"># 未分配的物理扩展区数量及大小</span><br>VG UUID               xDrQn5<span class="hljs-number">-82</span>mb-GSRY-IqDV-VR4V-fNOk-JodsIE <span class="hljs-meta"># 卷组的唯一标识符</span><br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>sudo lvdisplay</code></strong>： 显示逻辑卷（Logical Volume，LV）的详细信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo lvdisplay<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> lvdisplay<br></code></pre></td></tr></table></figure>
 <p><strong>输出解释</strong>：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment">--- Logical volume ---</span><br>LV Path                /dev/ubuntu-vg/ubuntu-lv      <span class="hljs-comment"># 逻辑卷的路径</span><br>LV Name                ubuntu-lv                     <span class="hljs-comment"># 逻辑卷的名称</span><br>VG Name                ubuntu-vg                     <span class="hljs-comment"># 逻辑卷所属的卷组名称</span><br>LV UUID                OeCqDd-O039-JMhk-TWaJ-og8T-BPgi-rL6hcd <span class="hljs-comment"># 逻辑卷的唯一标识符</span><br>LV Write Access        <span class="hljs-built_in">read</span>/<span class="hljs-built_in">write</span>                    <span class="hljs-comment"># 逻辑卷的访问权限</span><br>LV Creation host, <span class="hljs-built_in">time</span> ubuntu-server, <span class="hljs-number">2024</span><span class="hljs-number">-07</span><span class="hljs-number">-13</span> <span class="hljs-number">10</span>:<span class="hljs-number">44</span>:<span class="hljs-number">07</span> +<span class="hljs-number">0000</span> <span class="hljs-comment"># 逻辑卷创建的主机和时间</span><br>LV Status              available                     <span class="hljs-comment"># 逻辑卷的状态</span><br><span class="hljs-comment"># open                 1                             # 当前打开的逻辑卷数量</span><br>LV Size                <span class="hljs-number">100.00</span> GiB                    <span class="hljs-comment"># 逻辑卷的大小</span><br>Current LE             <span class="hljs-number">25600</span>                         <span class="hljs-comment"># 当前逻辑扩展区数量</span><br>Segments               <span class="hljs-number">1</span>                             <span class="hljs-comment"># 逻辑卷的段数</span><br>Allocation             inherit                       <span class="hljs-comment"># 分配策略</span><br>Read ahead sectors     auto                          <span class="hljs-comment"># 预读扇区数</span><br>- currently <span class="hljs-keyword">set</span> <span class="hljs-keyword">to</span>     <span class="hljs-number">256</span>                           <span class="hljs-comment"># 当前设置的预读扇区数</span><br>Block device           <span class="hljs-number">252</span>:<span class="hljs-number">0</span>                         <span class="hljs-comment"># 逻辑卷的块设备号</span><br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>sudo pvs</code></strong>： 显示物理卷（Physical Volume，PV）的信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pvs<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pvs<br></code></pre></td></tr></table></figure>
 <p><strong>输出解释</strong>：</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">PV         VG        Fmt  Attr PSize    PFree<br>/dev/sda3  ubuntu-vg lvm2 <span class="hljs-keyword">a</span><span class="hljs-comment">--  &lt;462.71g &lt;362.71g</span><br></code></pre></td></tr></table></figure>
 <ul>
@@ -388,7 +388,7 @@
 <li><code>PFree</code>: 物理卷的空闲大小。</li>
 </ul></li>
 <li><p><strong><code>sudo vgs</code></strong>： 显示卷组的摘要信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vgs<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vgs<br></code></pre></td></tr></table></figure>
 <p><strong>输出解释</strong>：</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">VG</span>        #PV #LV #SN Attr   VSize    VFree<br><span class="hljs-attribute">ubuntu</span>-vg   <span class="hljs-number">1</span>   <span class="hljs-number">1</span>   <span class="hljs-number">0</span> wz--n- &lt;<span class="hljs-number">462</span>.<span class="hljs-number">71</span>g &lt;<span class="hljs-number">362</span>.<span class="hljs-number">71</span>g<br></code></pre></td></tr></table></figure>
 <ul>
@@ -401,7 +401,7 @@
 <li><code>VFree</code>: 卷组的空闲大小。</li>
 </ul></li>
 <li><p><strong><code>sudo lvs</code></strong>： 显示逻辑卷的摘要信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo lvs<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> lvs<br></code></pre></td></tr></table></figure>
 <p><strong>输出解释</strong>：</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">LV</span>        VG        Attr       LSize   Pool Origin Data%  <span class="hljs-keyword">Meta</span>%  <span class="hljs-keyword">Move</span> <span class="hljs-keyword">Log</span> Cpy%Sync Convert<br>ubuntu-<span class="hljs-keyword">lv</span> ubuntu-vg -wi-ao---- 100.00g<br></code></pre></td></tr></table></figure>
 <ul>
@@ -472,15 +472,15 @@
 <li><p><strong><code>lsblk</code></strong>：列出所有块设备，包括它们的挂载点和大小。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">lsblk<br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>fdisk -l</code></strong>：列出所有分区和详细信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo fdisk -l<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> fdisk -l<br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>lsblk</code></strong>：列出所有块设备及其大小。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">lsblk<br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>fdisk -l</code></strong>：显示所有磁盘及其分区信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo fdisk -l<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> fdisk -l<br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>df -h</code></strong>：显示各个挂载点的使用情况，包括总空间、已用空间和可用空间。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">df</span> -h<br></code></pre></td></tr></table></figure></li>
 <li><p><strong><code>parted -l</code></strong>：显示所有磁盘及其分区信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo parted -l<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> parted -l<br></code></pre></td></tr></table></figure></li>
 </ol>
 <p>这些命令将帮助你查看硬盘的总大小和分区信息。</p>
 

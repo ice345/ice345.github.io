@@ -99,7 +99,7 @@
   
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -355,7 +355,7 @@
 <p>从你的输出中可以看到，OpenJDK 8（<code>openjdk-8-jdk</code>）已经安装在你的系统中，版本为 <code>8u422-b05-1~22.04</code>。因此，你现在应该已经拥有OpenJDK 8。</p>
 <p>如果你运行<code>java -version</code>后仍然看到OpenJDK 11，可能是因为系统仍在使用OpenJDK 11作为默认Java版本。</p>
 <p>你可以通过以下命令切换默认的Java版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-alternatives --config java<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> update-alternatives --config java<br></code></pre></td></tr></table></figure>
 <p>然后在提示的列表中选择OpenJDK 8的路径（通常带有<code>java-8-openjdk</code>）。</p>
 <p>执行这个命令后，再次运行 <code>java -version</code>，应该会显示你刚设置的Java版本。</p>
 <h2 id="修改-javac-版本">修改 javac 版本</h2>
@@ -363,7 +363,7 @@
 <ol type="1">
 <li>查看可用的 <code>javac</code> 版本：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-alternatives --config javac<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> update-alternatives --config javac<br></code></pre></td></tr></table></figure>
 <ol start="2" type="1">
 <li><p>在出现的列表中选择与 OpenJDK 8 相关的路径，通常路径中会包含 <code>java-8-openjdk</code>。</p></li>
 <li><p>选择完成后，再次检查 <code>javac</code> 的版本：</p></li>

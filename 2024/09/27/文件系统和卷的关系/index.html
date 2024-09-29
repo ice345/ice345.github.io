@@ -99,7 +99,7 @@
   
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -332,7 +332,7 @@
 <p>==我们创建好文件系统格式后，是可以让硬盘知道怎么管理数据了，但是这个数据是怎么来的，就是从操作系统上来的。既然是从操作系统上来的，我们就要挂载到操作系统上才可以来让数据写入到硬盘中，从而文件系统可以按照格式来管理数据==</p>
 <ol type="1">
 <li><p><strong>让操作系统识别并访问数据</strong>： 挂载的作用是将存储设备（如硬盘分区或逻辑卷）关联到操作系统中的某个目录。</p>
-<p>例如，执行一下挂载命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo mount /dev/myvg/mylv /mnt/mydata（/mnt一般是挂载目录）<br></code></pre></td></tr></table></figure></p></li>
+<p>例如，执行一下挂载命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount /dev/myvg/mylv /mnt/mydata（/mnt一般是挂载目录）<br></code></pre></td></tr></table></figure></p></li>
 <li><p><strong>文件系统的入口点</strong>： 文件系统是用于组织数据的，而挂载点（如 <code>/mnt/mydata</code>）是文件系统与操作系统交互的入口。</p></li>
 <li><p><strong>多卷管理</strong>：挂载可以实现在不同目录下挂载多个存储设备或逻辑卷。类比于：就是在电脑上可以同时挂载个 u 盘或者挂载个移动硬盘。</p></li>
 <li><p><strong>动态扩展和迁移</strong>：就是继续上面的例子，u 盘和移动硬盘可以随时卸载（umount），插在别的电脑上。</p></li>
