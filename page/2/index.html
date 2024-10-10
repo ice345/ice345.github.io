@@ -91,119 +91,7 @@
   
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -361,23 +249,23 @@ mjx-container[display="true"] + br {
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/14/java-command/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="java_command">
+        <a href="/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="文件系统和卷的关系">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/09/14/java-command/" target="_self">
-          java_command
+        <a href="/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/" target="_self">
+          文件系统和卷的关系
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2024/09/14/java-command/" target="_self">
+      <a class="index-excerpt " href="/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/" target="_self">
         <div>
-          在Java中，编译和运行程序涉及几个主要命令，包括 javac（编译器）、java（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令： 1. 编写Java源代码 首先你需要一个Java源文件，例如，创建一个名为HelloWorld.java的文件，内容如下： 12345public class HelloWorld &#123;    public static void main(
+          大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S
         </div>
       </a>
 
@@ -385,299 +273,8 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-14 16:34" pubdate>
-              2024-09-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Java/">#Java</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/14/java-lib%E5%B8%B8%E8%A7%81error/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="java_lib常见error">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/14/java-lib%E5%B8%B8%E8%A7%81error/" target="_self">
-          java_lib常见error
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2024/09/14/java-lib%E5%B8%B8%E8%A7%81error/" target="_self">
-        <div>
-          [!NOTE] 在 javac 编译和使用 java 运行时自动添加库，使用--module-path 添加库路径，使用--module-add 添加库  在较新的 Ubuntu 版本（如 22.04）中，openjdk-8-jdk 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-14 16:33" pubdate>
-              2024-09-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Java/">#Java</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/14/java-set/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="java_set">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/14/java-set/" target="_self">
-          java_set
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2024/09/14/java-set/" target="_self">
-        <div>
-          在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括JAVA_HOME、PATH和CLASSPATH），以及设置CLASSPATH以便程序能够找到所需的库文件。以下是详细步骤： 1. 安装JDK  访问 Oracle官网 或 OpenJDK 下载适合你操作系统的Java Development Kit (JDK) 版本。 安装下载的JD
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-14 16:31" pubdate>
-              2024-09-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Java/">#Java</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="hexo个人博客创建">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/" target="_self">
-          hexo个人博客创建
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2024/09/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/" target="_self">
-        <div>
-          [!NOTE] 三条常用命令： 1. hexo clean 2. hexo generate 3. hexo deploy   [!TIPS] 上面的这些命令以及配置文件（. yml）这些全部都是基于 source 目录下去搜索执行的。因此，如果是配置路径是就要注意这个是要基于 source 目录的，配置路径直接/img/test. jpg 这种是以 source 目录作为根目录的。因此要你就写
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-07 14:45" pubdate>
-              2024-09-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="category-chain-item">个人博客</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/hexo/">#hexo</a>
-            
-              <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">#个人博客</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/07/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%BB%8B%E7%BB%8D/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="内存区域介绍">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/07/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%BB%8B%E7%BB%8D/" target="_self">
-          内存区域介绍
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2024/09/07/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%BB%8B%E7%BB%8D/" target="_self">
-        <div>
-          [!NOTE] The program code, global variables, and constant global variables are all stored in static segments, as these all have static lifetimes and known sizes at compile time. If we look at the addr
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-07 11:32" pubdate>
-              2024-09-07
+            <time datetime="2024-09-27 17:49" pubdate>
+              2024-09-27
             </time>
           </div>
         
@@ -697,7 +294,7 @@ mjx-container[display="true"] + br {
   
     <span>></span>
     
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/" class="category-chain-item">内存区域</a>
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
   
   
 
@@ -726,23 +323,23 @@ mjx-container[display="true"] + br {
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/07/%E4%BA%8C%E6%9D%91%E6%98%A0%E5%B0%84/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="二村映射">
+        <a href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="硬盘相关-卷">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/09/07/%E4%BA%8C%E6%9D%91%E6%98%A0%E5%B0%84/" target="_self">
-          二村映射
+        <a href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/" target="_self">
+          硬盘相关-卷
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2024/09/07/%E4%BA%8C%E6%9D%91%E6%98%A0%E5%B0%84/" target="_self">
+      <a class="index-excerpt " href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/" target="_self">
         <div>
-          Futamura 投影（Futamura Projection）是编程语言和编译技术中的一个重要概念，由日本计算机科学家 Futamura Yoshihiko 在 1971 年提出。Futamura 投影解释了如何通过对解释器进行部分求值（Partial Evaluation），将解释器转换为编译器，以及进一步的可能转变。 背景与基本概念 在理解 Futamura 投影之前，需要了解以下两个概念：
+          LVM（逻辑卷管理器）的概念 LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。 1. 物理卷（Physical Volume，PV） 物理卷是 LVM 的基本存储单元，通常对应于物理硬盘分区或整个硬盘。一个物理卷可以包含在一个或多个卷组中。  物理
         </div>
       </a>
 
@@ -750,8 +347,82 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-07 11:25" pubdate>
-              2024-09-07
+            <time datetime="2024-09-27 15:53" pubdate>
+              2024-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">#计算机</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/09/21/Java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="Java中有关包的相关配置以及介绍">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/09/21/Java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/" target="_self">
+          Java中有关包的相关配置以及介绍
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/09/21/Java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/" target="_self">
+        <div>
+          下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。 1. 创建 Java 包 1.1 目录结构 假设我们要创建一个名为 com.example.myapp 的包，目录结构如下：  [!NOTE] 一般包名就是目录结构名。因此，我们运行或者编译包时一般都是在目录根结构下运行命令，比如 com.example.myapp 这个包是根据 myapp/
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-21 16:15" pubdate>
+              2024-09-21
             </time>
           </div>
         
@@ -771,7 +442,7 @@ mjx-container[display="true"] + br {
   
     <span>></span>
     
-  <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E5%92%8C%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程思想和语言</a>
+  <a href="/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -788,9 +459,7 @@ mjx-container[display="true"] + br {
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
-            
-              <a href="/tags/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E5%92%8C%E8%AF%AD%E8%A8%80/">#编程思想和语言</a>
+              <a href="/tags/%E7%BC%96%E7%A8%8B-Java/">#-编程 - Java</a>
             
           </div>
         
@@ -802,23 +471,23 @@ mjx-container[display="true"] + br {
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/07/gcc%E4%BB%8B%E7%BB%8D/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="gcc介绍">
+        <a href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="常用Git命令">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/09/07/gcc%E4%BB%8B%E7%BB%8D/" target="_self">
-          gcc介绍
+        <a href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" target="_self">
+          常用Git命令
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2024/09/07/gcc%E4%BB%8B%E7%BB%8D/" target="_self">
+      <a class="index-excerpt " href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" target="_self">
         <div>
-          编译系统（过程）  p7   p8  编译过程是将源代码转换成可执行文件的几个步骤的集合。每一步生成不同类型的文件，这些文件在最终的可执行程序中扮演不同的角色。以下是详细的步骤以及每个阶段产生的文件的作用： 1. 预处理（Preprocessing） 命令: gcc -E test.c -o test.i 文件: test.i 作用:  预处理器处理 #include、#define 和其他预处理
+          常用 Git 命令 Git简介  Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。  Git与SVN的区别 Git不仅仅是个版本控制系统，它
         </div>
       </a>
 
@@ -826,8 +495,209 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-07 11:21" pubdate>
-              2024-09-07
+            <time datetime="2024-09-20 16:51" pubdate>
+              2024-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Git/">#Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/09/20/git-use/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="git_use">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/09/20/git-use/" target="_self">
+          git_use
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/09/20/git-use/" target="_self">
+        <div>
+          git命令使用感想  git命令初始用   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了 如
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-20 16:50" pubdate>
+              2024-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Git/">#Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/09/20/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="git版本管理">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/09/20/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_self">
+          git版本管理
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/09/20/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_self">
+        <div>
+          在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。 一、Git 版本冲突的出现情形  同一文件的同一部分被多个开发者修改： 当多个开发者修改同一个文件的同一部分时，如果尝试合
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-20 16:49" pubdate>
+              2024-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Git/">#Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/09/20/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="javadoc生成注释文件">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/09/20/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/" target="_self">
+          javadoc生成注释文件
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/09/20/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/" target="_self">
+        <div>
+          什么是 Javadoc？ Javadoc 是 Java 编程语言中用于生成 API 文档的工具。它通过解析源代码中的特殊注释，生成带有结构化文档的 HTML 文件，从而为类、方法、字段等生成说明文档。Javadoc 是 Java 编程中极为重要的文档生成工具，有助于开发者理解和使用代码。 Javadoc 的作用  生成 API 文档：Javadoc 可以通过 Java 源代码中的注释生成详细的 A
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-20 16:47" pubdate>
+              2024-09-20
             </time>
           </div>
         
@@ -847,7 +717,7 @@ mjx-container[display="true"] + br {
   
     <span>></span>
     
-  <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%BC%96%E8%AF%91%E5%99%A8/" class="category-chain-item">编译器</a>
+  <a href="/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -866,7 +736,7 @@ mjx-container[display="true"] + br {
             
               <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
             
-              <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/">#编译器</a>
+              <a href="/tags/Java/">#Java</a>
             
           </div>
         
@@ -878,23 +748,23 @@ mjx-container[display="true"] + br {
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/06/06/hamming-number-solutions/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="hamming_number_solutions">
+        <a href="/2024/09/15/nvim-command/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="nvim_command">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/06/06/hamming-number-solutions/" target="_self">
-          hamming_number_solutions
+        <a href="/2024/09/15/nvim-command/" target="_self">
+          nvim_command
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2024/06/06/hamming-number-solutions/" target="_self">
+      <a class="index-excerpt " href="/2024/09/15/nvim-command/" target="_self">
         <div>
-          hamming number 题解思路 题目：codewars网站   problem description   solutions  solution   个人第一题目思路：就一个数的质因数分解，我只要检查这个数质因数是不是只有2 3 5就行了。 123456789101112131415161718192021222324def is_hamming_number(num):    &quo
+          安装最新版本 neovim 要在 Ubuntu 上将 Neovim 更新到 0.8.0 及以上版本，可以通过以下步骤操作： 1. 卸载当前版本的 Neovim 首先，卸载你当前版本的 Neovim： 1sudo apt remove neovim 2. 添加 Neovim 官方 PPA Neovim 提供了一个官方的 PPA，包含最新的 Neovim 版本。你可以通过添加该 PPA 来获取最新版本
         </div>
       </a>
 
@@ -902,8 +772,8 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-06-06 10:59" pubdate>
-              2024-06-06
+            <time datetime="2024-09-15 00:06" pubdate>
+              2024-09-15
             </time>
           </div>
         
@@ -918,12 +788,12 @@ mjx-container[display="true"] + br {
     
       <span class="category-chain">
         
-  <a href="/categories/math/" class="category-chain-item">math</a>
+  <a href="/categories/Vim/" class="category-chain-item">Vim</a>
   
   
     <span>></span>
     
-  <a href="/categories/math/algorithm/" class="category-chain-item">algorithm</a>
+  <a href="/categories/Vim/nvim-command/" class="category-chain-item">nvim_command</a>
   
   
 
@@ -940,9 +810,9 @@ mjx-container[display="true"] + br {
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/math/">#math</a>
+              <a href="/tags/Vim/">#Vim</a>
             
-              <a href="/tags/algorithm/">#algorithm</a>
+              <a href="/tags/nvim-command/">#nvim_command</a>
             
           </div>
         
@@ -954,23 +824,23 @@ mjx-container[display="true"] + br {
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/05/15/%E6%95%B0%E8%AE%BA%E7%9F%A5%E8%AF%86/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="数论知识">
+        <a href="/2024/09/14/vim-command/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="vim_command">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/05/15/%E6%95%B0%E8%AE%BA%E7%9F%A5%E8%AF%86/" target="_self">
-          数论知识
+        <a href="/2024/09/14/vim-command/" target="_self">
+          vim_command
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2024/05/15/%E6%95%B0%E8%AE%BA%E7%9F%A5%E8%AF%86/" target="_self">
+      <a class="index-excerpt " href="/2024/09/14/vim-command/" target="_self">
         <div>
-          #数论知识 :raised_hands:一些个人理解和思考（素数的一些建议看书，书本讲得不错，虽然有些点不加以细证），尤其Extened Chinese Remider Theroy那里，是个人思考总结的，仅供参考。:raised_hands:  数论pdf    #数论知识  #贝祖定理（Bézout's identity） #扩展欧几里得思路解析：  #扩展欧几里得c++代码  #中国剩余定理
+          在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。 常用命令模式命令  进入命令模式：按 Esc 键进入命令模式。 退出 Vim：  :q 退出 :q! 强制退出（不保存） :wq 保存并退出 :x 保存并退出（等同于 :wq）  保存文件：  :w 保存文件 :w new_filename 另存为新文件   移
         </div>
       </a>
 
@@ -978,8 +848,8 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-05-15 14:59" pubdate>
-              2024-05-15
+            <time datetime="2024-09-14 20:47" pubdate>
+              2024-09-14
             </time>
           </div>
         
@@ -994,7 +864,7 @@ mjx-container[display="true"] + br {
     
       <span class="category-chain">
         
-  <a href="/categories/math/" class="category-chain-item">math</a>
+  <a href="/categories/Vim/" class="category-chain-item">Vim</a>
   
   
 
@@ -1009,7 +879,7 @@ mjx-container[display="true"] + br {
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/math/">#math</a>
+              <a href="/tags/Vim/">#Vim</a>
             
           </div>
         
@@ -1021,23 +891,23 @@ mjx-container[display="true"] + br {
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/04/30/latex/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="latex">
+        <a href="/2024/09/14/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="软连接和/.desktop图标">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/04/30/latex/" target="_self">
-          latex
+        <a href="/2024/09/14/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/" target="_self">
+          软连接和/.desktop图标
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2024/04/30/latex/" target="_self">
+      <a class="index-excerpt " href="/2024/09/14/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/" target="_self">
         <div>
-          Divide-and-Conquer Method Share  1. 阐释 代换法的关键在于利用数学归纳法。首先，要猜测一个大致的上界，并结合数学归纳法进行证明。然后，验证基本条件，确保递归满足这个上界。若无法准确猜测界限，可能需要一个一个试着证明，直到达到比较准确的界限为止。 2. 例子  3. 解释 这个递归表达式明显属于归并排序，时间复杂度为 。可以尝试用  进行证明。首先，假设小于 n
+          两者区别 创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别： 1. 软连接（符号链接）  作用：软连接（ln -s 命令）本质上是文件系统中的快捷方式，它为文件或目录创建一个指向目标文件的链接。通过软连接，用户可以使用不同的路径来访问同一个文件或目录。 应用场景：  用于命令行中简化对某个文件或可执行程序的路径访问。例如，你可以通过软连接将 /opt/myapp/myap
         </div>
       </a>
 
@@ -1045,8 +915,8 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-30 00:03" pubdate>
-              2024-04-30
+            <time datetime="2024-09-14 16:36" pubdate>
+              2024-09-14
             </time>
           </div>
         
@@ -1061,20 +931,13 @@ mjx-container[display="true"] + br {
     
       <span class="category-chain">
         
-  <a href="/categories/math/" class="category-chain-item">math</a>
+  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/math/technology/" class="category-chain-item">technology</a>
+  <a href="/categories/Linux/%E6%A1%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="category-chain-item">桌面设计</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/math/technology/algorithm/" class="category-chain-item">algorithm</a>
-  
-  
-
   
 
   
@@ -1090,11 +953,7 @@ mjx-container[display="true"] + br {
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/technology/">#technology</a>
-            
-              <a href="/tags/math/">#math</a>
-            
-              <a href="/tags/algorithm/">#algorithm</a>
+              <a href="/tags/Linux/">#Linux</a>
             
           </div>
         
@@ -1106,7 +965,7 @@ mjx-container[display="true"] + br {
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

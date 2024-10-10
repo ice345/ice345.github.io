@@ -27,22 +27,22 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S">
+    <meta name="description" content="[!NOTE] A bootloader is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件系统和卷的关系">
-<meta property="og:url" content="http://example.com/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/index.html">
+<meta property="og:title" content="BOOTLOADER和BOOT MANAGER的区别（English）">
+<meta property="og:url" content="http://example.com/2024/10/10/BOOTLOADER%E5%92%8CBOOT%20MANAGER%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88English%EF%BC%89/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S">
+<meta property="og:description" content="[!NOTE] A bootloader is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-27T09:49:14.000Z">
-<meta property="article:modified_time" content="2024-09-29T09:56:59.026Z">
+<meta property="article:published_time" content="2024-10-10T12:30:57.000Z">
+<meta property="article:modified_time" content="2024-10-10T12:32:03.616Z">
 <meta property="article:author" content="JunBin Liang">
-<meta property="article:tag" content="计算机">
+<meta property="article:tag" content="BOOT">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>文件系统和卷的关系 - ICEのBlog</title>
+  <title>BOOTLOADER和BOOT MANAGER的区别（English） - ICEのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -221,7 +221,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="文件系统和卷的关系"></span>
+            <span id="subtitle" data-typed-text="BOOTLOADER和BOOT MANAGER的区别（English）"></span>
           
         </div>
 
@@ -237,8 +237,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-27 17:49" pubdate>
-          2024年9月27日 下午
+        <time datetime="2024-10-10 20:30" pubdate>
+          2024年10月10日 晚上
         </time>
       </span>
     
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          997 字
+          163 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          9 分钟
+          2 分钟
         
       </span>
     
@@ -297,46 +297,112 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">文件系统和卷的关系</h1>
+            <h1 id="seo-header">BOOTLOADER和BOOT MANAGER的区别（English）</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="大致流程">大致流程</h1>
-<p><strong>流程如下：</strong> 1. 将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。 2. 将物理卷加入到一个 <strong>卷组（VG）</strong> 中。 3. 在卷组中创建 <strong>逻辑卷（LV）</strong>。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</p>
-<h1 id="文件系统介绍">文件系统介绍</h1>
-<h2 id="文件系统">1. 文件系统</h2>
-<p><strong>文件系统说白了就是操作系统管理硬盘中数据的一个方式。</strong> 详细点就是：问阿金系统可以管理 <code>硬盘</code>，<code>SSD</code>，<code>u盘</code> 等存储设备的数据布局，提供读写文件的接口。文件系统负责存储文件、文件的元数据（如文件名称、权限、时间戳等），以及组织文件所在的路径结构（如文件夹层级）。</p>
-<h2 id="文件系统格式">2. 文件系统格式</h2>
-<p>主流格式如下：</p>
+                <blockquote>
+<p>[!NOTE] A <strong>bootloader</strong> is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system's firmware (e.g., BIOS/UEFI).</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE] A <strong>boot manager</strong> is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. ==It operates after the system firmware has selected a boot device but before the operating system is loaded.==</p>
+</blockquote>
+<p>The <strong>bootloader</strong> and the <strong>boot manager（不仅可以引导多系统，还可以引导多个 bootloader）</strong> are closely related components in the system boot process, but they serve different purposes. Here's a breakdown of the relationship and differences between the two:</p>
+<h3 id="bootloader">1. <strong>Bootloader</strong></h3>
+<p>A <strong>bootloader</strong> is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system's firmware (e.g., BIOS/UEFI).</p>
+<h4 id="key-features-of-a-bootloader">Key Features of a Bootloader:</h4>
 <ul>
-<li><strong>NTFS</strong>（Windows默认文件系统）</li>
-<li><strong>FAT32</strong>（一种兼容性较好的文件系统，用于U盘等设备）</li>
-<li><strong>exFAT</strong>（常用于大容量的外部存储设备）</li>
-<li><strong>XFS</strong>（高性能的文件系统，适合大数据存储）</li>
-<li><strong>Btrfs</strong>（现代Linux文件系统，提供高级功能，如快照、子卷等）</li>
-<li><strong>ZFS</strong>（跨平台、具有高数据完整性和快照功能）</li>
+<li><strong>Low-level function</strong>: The bootloader's primary function is to load the operating system into memory and hand over control to it. It is the first software that runs after the system firmware (BIOS/UEFI) has done its hardware initialization.</li>
+<li><strong>Location</strong>: In MBR systems, the bootloader is stored in the Master Boot Record (the first 446 bytes of the disk). In GPT systems, bootloaders are stored in the <strong>EFI System Partition (ESP)</strong>.</li>
+<li><strong>Doesn’t typically have a user interface</strong>: The bootloader’s role is primarily functional. Its main task is to load the OS without necessarily providing user choices (unless it also serves as a boot manager).</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>GRUB</strong> (GRand Unified Bootloader) is one of the most common bootloaders used in Linux systems.</li>
+<li><strong>Windows Bootloader</strong> loads Windows from the disk.</li>
+<li><strong>LILO</strong> (Linux Loader) is another example of a Linux bootloader.</li>
+</ul></li>
 </ul>
-<blockquote>
-<p>[!NOTE] 不同的文件系统格式的区别就是：<code>性能</code>，<code>容量</code>，<code>恢复</code> 等的区别。</p>
-</blockquote>
-<h1 id="硬盘操作和文件系统关系">硬盘操作和文件系统关系</h1>
-<h2 id="回顾">回顾</h2>
-<p>上一节的<a target="_blank" rel="noopener" href="https://ice345.github.io/2024/09/27/硬盘相关-卷.md">硬盘相关-卷</a>这个操作流程： - 将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。 - 将物理卷加入到一个 <strong>卷组（VG）</strong> 中。 - 在卷组中创建 <strong>逻辑卷（LV）</strong>。 其实还不能达到我们平时打开文件资源管理器中点击文件夹就可以实现跳转并显示下一层的文件内容。（<strong>说白了这个逻辑卷还只是一个没有关联的存储空间，无法读取和写入数据</strong>）我们还要在逻辑卷上操作然后才可以实现如上效果。</p>
-<p>要进行的操作就是： - 在逻辑卷上创建文件系统（如 Ext 4、XFS 等）。 - 将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</p>
-<blockquote>
-<p>[!TIPS] 这个文件系统的格式是可以自己选择的，就是我们安装系统的时候，选择自定义安装或者高级安装方式，可以手动选择文件系统格式，手动划分硬盘，位每个分区或者逻辑卷选择文件系统格式。例如： - 你可以选择在 <code>/</code> 根目录分区上使用 <strong>Ext4</strong>。 - 在 <code>/home</code> 分区上使用 <strong>XFS</strong>。 - 在 <code>/boot</code> 分区上使用 <strong>Ext 3</strong>，等等。</p>
-</blockquote>
-<p>创建好文件系统格式后，我们就要将其挂载到系统目录下了。原因如下：</p>
-<h2 id="原因">原因</h2>
-<p>==我们创建好文件系统格式后，是可以让硬盘知道怎么管理数据了，但是这个数据是怎么来的，就是从操作系统上来的。既然是从操作系统上来的，我们就要挂载到操作系统上才可以来让数据写入到硬盘中，从而文件系统可以按照格式来管理数据==</p>
+<h3 id="boot-manager">2. <strong>Boot Manager</strong></h3>
+<p>A <strong>boot manager</strong> is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. It operates after the system firmware has selected a boot device but before the operating system is loaded.</p>
+<h4 id="key-features-of-a-boot-manager">Key Features of a Boot Manager:</h4>
+<ul>
+<li><strong>Presents a menu for OS selection</strong>: A boot manager allows users to choose which operating system or kernel to boot from when multiple OSes are installed. It displays a menu or interface for this purpose.</li>
+<li><strong>Works with multiple bootloaders</strong>: The boot manager can direct the system to load specific bootloaders for different operating systems. For example, GRUB can load the bootloaders for both Linux and Windows, allowing the user to choose which one to boot.</li>
+<li><strong>Located in the EFI System Partition or MBR</strong>: In UEFI systems, the boot manager files are stored in the EFI System Partition (ESP). In MBR systems, a boot manager like GRUB can reside in the MBR.</li>
+<li><strong>Can be part of a bootloader</strong>: Some bootloaders, like GRUB, also serve as boot managers. GRUB not only loads the OS but also presents a menu to choose between multiple operating systems or kernel configurations.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>GRUB</strong>: GRUB is both a bootloader and a boot manager, allowing users to choose from different operating systems or kernel versions.</li>
+<li><strong>Windows Boot Manager</strong>: The default boot manager for Windows systems that presents a menu if multiple versions of Windows are installed.</li>
+<li><strong>rEFInd</strong>: A standalone boot manager for UEFI systems that can load operating systems directly from their bootloaders.</li>
+</ul></li>
+</ul>
+<h3 id="relationship-between-bootloader-and-boot-manager">3. <strong>Relationship Between Bootloader and Boot Manager</strong></h3>
+<ul>
+<li><p><strong>Interdependency</strong>: The boot manager works with bootloaders. The boot manager is responsible for presenting the user with options (like which OS to boot), while the bootloader executes the task of actually loading the chosen OS. For example, GRUB (which can act as both a bootloader and a boot manager) will present a menu to choose between Linux and Windows. Once the user makes a selection, GRUB will load the corresponding bootloader to boot into the chosen operating system.</p></li>
+<li><p><strong>Boot Sequence</strong>:</p>
 <ol type="1">
-<li><p><strong>让操作系统识别并访问数据</strong>： 挂载的作用是将存储设备（如硬盘分区或逻辑卷）关联到操作系统中的某个目录。</p>
-<p>例如，执行一下挂载命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount /dev/myvg/mylv /mnt/mydata（/mnt一般是挂载目录）<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>文件系统的入口点</strong>： 文件系统是用于组织数据的，而挂载点（如 <code>/mnt/mydata</code>）是文件系统与操作系统交互的入口。</p></li>
-<li><p><strong>多卷管理</strong>：挂载可以实现在不同目录下挂载多个存储设备或逻辑卷。类比于：就是在电脑上可以同时挂载个 u 盘或者挂载个移动硬盘。</p></li>
-<li><p><strong>动态扩展和迁移</strong>：就是继续上面的例子，u 盘和移动硬盘可以随时卸载（umount），插在别的电脑上。</p></li>
-</ol>
+<li><strong>System firmware (BIOS/UEFI)</strong> starts the boot process and looks for a bootloader or boot manager based on the configured boot device order.</li>
+<li>The <strong>boot manager</strong> (if present) presents the user with a choice of operating systems.</li>
+<li>The <strong>bootloader</strong> for the selected OS is executed, and it loads the kernel of that OS into memory.</li>
+<li>Control is handed over to the OS, which completes the boot process.</li>
+</ol></li>
+</ul>
+<h3 id="key-differences-between-bootloader-and-boot-manager">4. <strong>Key Differences Between Bootloader and Boot Manager</strong>:</h3>
+<table>
+
+<thead>
+<tr class="header">
+<th><strong>Feature</strong></th>
+<th><strong>Bootloader</strong></th>
+<th><strong>Boot Manager</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Primary Role</strong></td>
+<td>Loads the operating system kernel into memory</td>
+<td>Manages user selection of which OS or bootloader to run</td>
+</tr>
+<tr class="even">
+<td><strong>When It Runs</strong></td>
+<td>Runs immediately after system firmware (BIOS/UEFI)</td>
+<td>Runs before the bootloader to offer OS selection</td>
+</tr>
+<tr class="odd">
+<td><strong>Functionality</strong></td>
+<td>Directly loads and starts the OS</td>
+<td>Presents a menu for choosing which OS or bootloader to run</td>
+</tr>
+<tr class="even">
+<td><strong>User Interface</strong></td>
+<td>Typically no user interface (unless integrated)</td>
+<td>Provides a menu for OS selection</td>
+</tr>
+<tr class="odd">
+<td><strong>Examples</strong></td>
+<td>GRUB (bootloader function), Windows Bootloader</td>
+<td>GRUB (boot manager function), Windows Boot Manager, rEFInd</td>
+</tr>
+<tr class="even">
+<td><strong>Storage Location</strong></td>
+<td>MBR or EFI System Partition (ESP)</td>
+<td>EFI System Partition (ESP) or sometimes in the MBR</td>
+</tr>
+<tr class="odd">
+<td><strong>Multiple OS Support</strong></td>
+<td>Directly loads one OS</td>
+<td>Manages multiple bootloaders or OS choices</td>
+</tr>
+</tbody>
+</table>
+<h3 id="summary">5. <strong>Summary</strong>:</h3>
+<ul>
+<li><strong>Bootloader</strong>: Loads the operating system and is responsible for starting the boot process. It’s a critical low-level program that the system needs to begin loading the OS.</li>
+<li><strong>Boot Manager</strong>: Allows the user to select between different operating systems or configurations. It provides the user interface that can offer choices when there are multiple OSes installed.</li>
+</ul>
+<p>In modern systems, <strong>GRUB</strong> is a common tool that combines the roles of <strong>boot manager</strong> and <strong>bootloader</strong>, offering both OS selection and actual loading of the OS. However, some systems may use separate programs for these two roles, especially in more complex multi-boot environments.</p>
 
                 
               </div>
@@ -355,12 +421,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  <a href="/categories/BOOT/" class="category-chain-item">BOOT</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
+  <a href="/categories/BOOT/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
   
   
 
@@ -377,7 +443,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="print-no-link">#计算机</a>
+        <a href="/tags/BOOT/" class="print-no-link">#BOOT</a>
       
     </div>
   
@@ -389,8 +455,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>文件系统和卷的关系</div>
-      <div>http://example.com/2024/09/27/文件系统和卷的关系/</div>
+      <div>BOOTLOADER和BOOT MANAGER的区别（English）</div>
+      <div>http://example.com/2024/10/10/BOOTLOADER和BOOT MANAGER的区别（English）/</div>
     </div>
     <div class="license-meta">
       
@@ -402,7 +468,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月27日</div>
+          <div>2024年10月10日</div>
         </div>
       
       
@@ -434,18 +500,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/10/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93MBR%E5%92%8CGPT%E5%88%86%E5%8C%BA/" title="简单总结MBR和GPT分区">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">简单总结MBR和GPT分区</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/" title="硬盘相关-卷">
-                        <span class="hidden-mobile">硬盘相关-卷</span>
+                      <a href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" title="GPT分区方案">
+                        <span class="hidden-mobile">GPT分区方案</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
