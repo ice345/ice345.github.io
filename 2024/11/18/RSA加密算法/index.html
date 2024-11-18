@@ -27,22 +27,23 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="1234567891011sudo mount &#x2F;dev&#x2F;sdXX &#x2F;mnt sudo mount &#x2F;dev&#x2F;sdaXX &#x2F;mnt&#x2F;home(有这个分区的话)sudo mount --bind &#x2F;dev &#x2F;mnt&#x2F;devsudo mount --bind &#x2F;dev&#x2F;pts &#x2F;mnt&#x2F;dev&#x2F;ptssudo mount --bind &#x2F;proc &#x2F;mnt&#x2F;procsudo mount --bind">
+    <meta name="description" content="RSA 加密算法解释 一、RSA 加密算法的数学原理 1. 生成密钥对 步骤如下：  选择两个大素数：( p ) 和 ( q )。 计算 ( n )： \[ n &#x3D; p \times q \] 计算欧拉函数 (\(\varphi(n)\))：  \[ \varphi (n) &#x3D; (p-1) \times (q-1) \]  选择一个公钥指数 ( e )，要求 \(1&lt;e&lt;\varphi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="chroot">
-<meta property="og:url" content="http://example.com/2024/10/14/chroot/index.html">
+<meta property="og:title" content="RSA加密算法">
+<meta property="og:url" content="http://example.com/2024/11/18/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="1234567891011sudo mount &#x2F;dev&#x2F;sdXX &#x2F;mnt sudo mount &#x2F;dev&#x2F;sdaXX &#x2F;mnt&#x2F;home(有这个分区的话)sudo mount --bind &#x2F;dev &#x2F;mnt&#x2F;devsudo mount --bind &#x2F;dev&#x2F;pts &#x2F;mnt&#x2F;dev&#x2F;ptssudo mount --bind &#x2F;proc &#x2F;mnt&#x2F;procsudo mount --bind">
+<meta property="og:description" content="RSA 加密算法解释 一、RSA 加密算法的数学原理 1. 生成密钥对 步骤如下：  选择两个大素数：( p ) 和 ( q )。 计算 ( n )： \[ n &#x3D; p \times q \] 计算欧拉函数 (\(\varphi(n)\))：  \[ \varphi (n) &#x3D; (p-1) \times (q-1) \]  选择一个公钥指数 ( e )，要求 \(1&lt;e&lt;\varphi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-14T09:00:36.000Z">
-<meta property="article:modified_time" content="2024-10-14T09:02:41.756Z">
+<meta property="article:published_time" content="2024-11-18T07:38:01.000Z">
+<meta property="article:modified_time" content="2024-11-18T07:47:23.085Z">
 <meta property="article:author" content="JunBin Liang">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="密码学">
+<meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>chroot - ICEのBlog</title>
+  <title>RSA加密算法 - ICEのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -221,7 +222,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="chroot"></span>
+            <span id="subtitle" data-typed-text="RSA加密算法"></span>
           
         </div>
 
@@ -237,8 +238,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-14 17:00" pubdate>
-          2024年10月14日 下午
+        <time datetime="2024-11-18 15:38" pubdate>
+          2024年11月18日 下午
         </time>
       </span>
     
@@ -249,7 +250,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          2k 字
         
       </span>
     
@@ -260,7 +261,7 @@
         
         
         
-          10 分钟
+          17 分钟
         
       </span>
     
@@ -297,88 +298,243 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">chroot</h1>
+            <h1 id="seo-header">RSA加密算法</h1>
             
             
               <div class="markdown-body">
                 
-                <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount /dev/sdXX /mnt <br><span class="hljs-built_in">sudo</span> mount /dev/sdaXX /mnt/home(有这个分区的话)<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev /mnt/dev<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev/pts /mnt/dev/pts<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /proc /mnt/proc<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /sys /mnt/sys<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /run /mnt/run<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /etc/resolv. conf /mnt/etc/resolv. conf<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /tmp /mnt/tmp<br><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chroot</span> /mnt <br></code></pre></td></tr></table></figure>
-<h2 id="什么是-chroot">什么是 <code>chroot</code>？</h2>
-<p><code>chroot</code>（Change Root）是 Linux/Unix 系统中的一种工具，它允许你将当前的根文件系统切换到指定的目录，使该目录成为虚拟机或类似于容器的环境。简单来说，<code>chroot</code> 可以将系统的根目录 <code>/</code> 改变为某个其他的目录，这样你可以在这个隔离的环境下操作，不影响主系统。这种方式通常用于恢复系统、测试环境、构建软件或者运行独立的系统。</p>
-<p>但是，<code>chroot</code> 环境并不自动包含宿主机所有功能。为了确保虚拟机能够正常使用类似宿主机的功能，比如设备访问、进程管理和网络功能，你需要手动挂载一些关键文件系统。</p>
-<h2 id="挂载的原理">挂载的原理：</h2>
-<p>这些挂载操作是通过 <code>--bind</code> 选项来实现的，它允许将宿主机的某个目录或文件系统“绑定”到 chroot 环境的某个位置。这样一来，虚拟机就可以直接访问宿主机上的这些资源，达到正常运行系统和网络功能的目的。</p>
-<p>这些文件系统本身大多是虚拟的（例如 <code>/proc</code> 和 <code>/sys</code>），因此它们不是实际的存储内容，而是动态生成的系统信息。通过将它们挂载到虚拟机，虚拟机就可以和宿主机共享这些动态系统信息。</p>
-<h2 id="挂载的文件系统有哪些为什么挂载">挂载的文件系统有哪些？为什么挂载？</h2>
-<p>为了让 <code>chroot</code> 环境有完整的系统功能，你需要挂载以下文件系统或文件：</p>
-<h3 id="proc-进程文件系统"><strong><code>/proc</code></strong> （进程文件系统）</h3>
+                <h1 id="rsa-加密算法解释">RSA 加密算法解释</h1>
+<h3 id="一rsa-加密算法的数学原理">一、RSA 加密算法的数学原理</h3>
+<h4 id="生成密钥对">1. 生成密钥对</h4>
+<p><strong>步骤如下</strong>：</p>
+<ul>
+<li><strong>选择两个大素数</strong>：( p ) 和 ( q )。</li>
+<li><strong>计算 ( n )</strong>： <span class="math display">\[
+n = p \times q
+\]</span></li>
+<li><strong>计算欧拉函数 (<span class="math inline">\(\varphi(n)\)</span>)</strong>：</li>
+</ul>
+<p><span class="math display">\[
+\varphi (n) = (p-1) \times (q-1)
+\]</span></p>
+<ul>
+<li><strong>选择一个公钥指数 ( e )</strong>，要求 <span class="math inline">\(1&lt;e&lt;\varphi(n)\)</span>，并且 <span class="math inline">\(e\)</span> 与 <span class="math inline">\(\varphi(n)\)</span> 互质(即 ( <span class="math inline">\(gcd(e,\varphi(n))=1\)</span>) )。</li>
+<li><strong>计算私钥指数 ( d )</strong>，使得：</li>
+</ul>
+<p><span class="math display">\[
+d \times e \equiv 1 \pmod{\varphi (n)}
+\]</span> 这意味着 ( d ) 是 ( e ) 在模 (<span class="math inline">\(\varphi(n)\)</span>) 下的乘法逆元。</p>
+<ul>
+<li><strong>生成密钥对</strong>：
+<ul>
+<li><strong>公钥（Public Key）</strong>：( (e, n) )</li>
+<li><strong>私钥（Private Key）</strong>：( (d, n) )</li>
+</ul></li>
+</ul>
+<h4 id="加密过程">2. 加密过程</h4>
+<p>假设要加密的明文为 ( M )（其中 ( M &lt; n )）：</p>
+<ul>
+<li><strong>加密公式</strong>：</li>
+</ul>
+<p><span class="math display">\[
+ C = M^e\;mod\;n \; \text{即} \; M^e \equiv C(mod\;n)
+\]</span></p>
+<ul>
+<li>这里，( C ) 是密文，( M ) 是明文。</li>
+</ul>
+<h4 id="解密过程">3. 解密过程</h4>
+<p>使用私钥 ( (d, n) ) 对密文 ( C ) 进行解密：</p>
+<ul>
+<li><strong>解密公式</strong>：</li>
+</ul>
+<p><span class="math display">\[
+ M = C^d\;mod\;n\;即\;C^d \equiv M(mod\;n)
+\]</span></p>
+<ul>
+<li>解密后得到原始明文 ( M )。</li>
+</ul>
+<h3 id="二rsa-算法中的数学原理">二、RSA 算法中的数学原理</h3>
+<p>RSA 的安全性基于以下数学难题：</p>
+<ul>
+<li><strong>大整数分解问题</strong>：给定 ( n = p q )，分解 ( n ) 得到 ( p ) 和 ( q ) 非常困难，尤其当 ( p ) 和 ( q ) 是非常大的素数时。</li>
+<li><strong>模幂运算</strong>和<strong>欧拉定理</strong>：
+<ul>
+<li>根据欧拉定理： $$</li>
+</ul></li>
+</ul>
+<p>M^{(n)}   $$</p>
+<ul>
+<li>通过选择 ( d ) 和 ( e ) 满足(<span class="math inline">\(d \times e \equiv 1 \pmod{\varphi (n)}\)</span>)，可以确保加密和解密过程互为逆操作。</li>
+</ul>
+<blockquote>
+<p>[!TIPS] 省流证明如下:</p>
+</blockquote>
+<p><em>条件:</em></p>
+<p><em>e:</em> 要求 <span class="math inline">\(1&lt;e&lt;\varphi(n)\)</span>，并且 <span class="math inline">\(e\)</span> 与 <span class="math inline">\(\varphi(n)\)</span> 互质 (即 ( <span class="math inline">\(gcd(e,\varphi(n))=1\)</span>) )</p>
+<p><em>d:</em> 有如下得到:</p>
+<p><span class="math inline">\(d \times e \equiv 1(mod\;\varphi(n))\)</span></p>
+<p><span class="math display">\[
+\begin{align}
+ C = M^e\;mod\;n \; \text{即} \; M^e \equiv C(mod\;n) \tag{1}
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+ M = C^d\;mod\;n\;即\;C^d \equiv M(mod\;n)
+\end{align} \tag{2}
+\]</span></p>
+<p><strong>由 1 公式左右两边进行 d 的幂次方可得 2 公式</strong>, 即: <span class="math display">\[
+\begin{align}
+&amp;M^{de} \equiv C^d\equiv M(\text{mod n}) \text{即} \\
+&amp;M^{de}\equiv M(\text{mod n})
+\end{align}
+\]</span></p>
+<p>==我们想要证明为什么可以通过对密文 C 进行 d 次方就可以解密得到原文==</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;M^{\varphi(n)}\equiv 1 \text{(mod n)} \\
+&amp;d\times e\equiv 1(\text{mod $\varphi(n)$}) \\
+&amp;\text{所以$\varphi(n)\mid de - 1$} \\
+&amp;\text{de - 1是$\varphi(n)的整数倍$}\\
+&amp;\text{所以}M^{de-1}\equiv 1(\text{mod n}) \\
+\text{得证}
+\end{align}
+\]</span></p>
+<h3 id="三rsa-的实际应用场景">三、RSA 的实际应用场景</h3>
+<ul>
+<li><strong>加密通信</strong>：用于加密对称密钥（如 TLS/SSL 证书交换中的密钥协商）。</li>
+<li><strong>数字签名</strong>：用于验证消息或文件的完整性和来源（如电子邮件签名、软件发布验证）。</li>
+<li><strong>身份认证</strong>：用于确保数据来自合法的发送方（如数字证书、身份验证）。</li>
+</ul>
+<hr />
+<h1 id="rsa-结合-hash">RSA 结合 Hash</h1>
+<h3 id="rsa-与-hash-算法的结合">RSA 与 Hash 算法的结合</h3>
+<h4 id="数字签名">1. 数字签名</h4>
+<p>RSA 常与 Hash 算法结合用于<strong>数字签名</strong>，以确保数据的完整性和来源的真实性。以下是流程：</p>
+<ul>
+<li><strong>步骤 1</strong>：对消息 ( M ) 进行 Hash 计算，得到 Hash 值 ( H (M) )。</li>
+<li><strong>步骤 2</strong>：用发送方的私钥 ( d ) 对 Hash 值进行加密，生成签名 ( S )：</li>
+</ul>
+<p><span class="math display">\[
+  S = H (M)^d \mod n
+\]</span></p>
+<ul>
+<li><strong>步骤 3</strong>：将签名 ( S ) 和消息 ( M ) 一同发送给接收方。</li>
+<li><strong>步骤 4（验证方）</strong>：
+<ul>
+<li>接收方使用发送方的公钥 ( e ) 解密签名：</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+H&#39; (M) = S^e \mod n
+\]</span></p>
+<ul>
+<li>接收方再对消息 ( M ) 计算 Hash 值 ( H (M) )，并与解密得到的 ( H' (M) ) 进行比较：
+<ul>
+<li>如果 ( H (M) = H' (M) )，则说明签名有效，消息未被篡改。</li>
+</ul></li>
+</ul>
+<h4 id="为什么结合-hash-算法">2. 为什么结合 Hash 算法？</h4>
+<ul>
+<li><strong>性能优化</strong>：RSA 对大数据加密速度较慢，因此通常只对 Hash 值（而不是整个消息）进行签名。</li>
+<li><strong>数据完整性</strong>：Hash 算法能将任意长度的消息转换为固定长度的 Hash 值，且能快速检测数据篡改。</li>
+<li><strong>防止碰撞攻击</strong>：通过结合强 Hash 算法，可以确保不同的消息生成不同的 Hash 值，进一步增强安全性。</li>
+</ul>
+<h5 id="性能优化">2.1 <strong>性能优化</strong></h5>
+<blockquote>
+<p>[!TIPS] 这个优化只是对消息的签名的优化，并不是说对大文件的加密的优化</p>
+</blockquote>
+<ul>
+<li><p><strong>问题</strong>：RSA 对大数据的加密和解密非常耗时，因为 RSA 的加密解密是基于大整数的模幂运算。如果直接用 RSA 对一整段消息（比如一个文件）进行加密或签名，会导致性能低下，尤其是数据量很大时。</p></li>
+<li><p><strong>解决方案</strong>：</p>
+<ul>
+<li>通过 Hash 算法将任意长度的消息 ( M ) 生成固定长度的 Hash 值 ( H (M) )（例如 256 位）。</li>
+<li>只对这个固定长度的 Hash 值进行 RSA 加密，而不是对整个消息加密。</li>
+<li>这样就大幅减少了计算量，提高了加密签名的速度。</li>
+</ul></li>
+</ul>
+<p><strong>示例</strong>：</p>
+<ul>
+<li>假设我们要签名一份 1 GB 的文件，如果直接用 RSA 签名，需要处理 1 GB 的数据，这会非常耗时。</li>
+<li>相反，如果先对文件使用 Hash 算法（如 SHA-256），将其压缩成一个 256 位（32 字节）的 Hash 值，再用 RSA 签名，那么只需处理 32 字节的数据，这会大大提升签名效率。</li>
+</ul>
+<h5 id="数据完整性">2.2 <strong>数据完整性</strong></h5>
+<ul>
+<li><p><strong>问题</strong>：我们需要确保消息在传输过程中未被篡改。直接使用 RSA 加密原始消息虽然能提供安全性，但效率低且成本高。</p></li>
+<li><p><strong>解决方案</strong>：</p>
+<ul>
+<li>通过 Hash 算法将消息 ( M ) 转换为固定长度的 Hash 值 ( H (M) )。</li>
+<li>任何对消息 ( M ) 的修改都会导致 Hash 值 ( H (M) ) 的改变。</li>
+<li>这意味着接收方可以轻松检测出消息是否被篡改。</li>
+</ul></li>
+</ul>
+<p><strong>示例</strong>：</p>
+<ul>
+<li>发送方要传输消息 ( M )（例如 "Hello, World!"）。</li>
+<li>发送前计算其 Hash 值 ( H (M) )，得到 ( H (M) = <span class="math inline">\(\text{0x1a2b3c...}\)</span>)。</li>
+<li>发送方用自己的私钥对 ( H (M) ) 进行 RSA 签名，并将签名和消息 ( M ) 一起发送。</li>
+<li>接收方收到后，重新计算消息的 Hash 值 ( H' (M) ) 并验证签名：
+<ul>
+<li>如果 ( H (M) = H' (M) )，则消息未被篡改。</li>
+<li>否则，说明消息可能被修改。</li>
+</ul></li>
+</ul>
+<h5 id="防止碰撞攻击">2.3 <strong>防止碰撞攻击</strong></h5>
+<ul>
+<li><p><strong>问题</strong>：攻击者可能尝试构造两条不同的消息 ( <span class="math inline">\(M_{1}\)</span> ) 和 ( <span class="math inline">\(M_{2}\)</span> )，使它们产生相同的 Hash 值 ( H (<span class="math inline">\(M_{1}\)</span>) = H (<span class="math inline">\(M_{2}\)</span>) )。如果攻击成功，攻击者可以用合法消息 ( <span class="math inline">\(M_{1}\)</span> ) 签名，而接收方验证的却是伪造消息 ( <span class="math inline">\(M_{2}\)</span> )。</p></li>
+<li><p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用安全的 Hash 算法（如 SHA-256、SHA-3 等）来生成 Hash 值，确保其抗碰撞性（即不同的输入产生不同的 Hash 值）。</li>
+<li>强 Hash 算法使得找到碰撞的难度极高，从而提升整体安全性。</li>
+</ul></li>
+</ul>
+<p><strong>示例</strong>：</p>
+<ul>
+<li>假设 Alice 对一条合法消息 (<span class="math inline">\(M_{1}\)</span>) 进行签名，生成(<span class="math inline">\(S = H (M_{1})^d\text{(mod n)}\)</span>)。</li>
+<li>Bob 试图找到另一条消息(<span class="math inline">\(M_{2}\)</span>)，使得 (<span class="math inline">\(H(M_{2}=H(M_{1}))\)</span>)，从而冒充 Alice 的签名。</li>
+<li>如果 Alice 使用的是强 Hash 算法（如 SHA-256），则 Bob 几乎不可能找到这样的 (<span class="math inline">\(M_{2}\)</span>)。</li>
+<li>因此，结合 Hash 算法后，RSA 数字签名可以有效防止碰撞攻击。</li>
+</ul>
+<h3 id="完整示例rsa-与-hash-算法结合的数字签名流程"><strong>完整示例：RSA 与 Hash 算法结合的数字签名流程</strong></h3>
+<p>假设 Alice 需要给 Bob 发送一条消息，并确保消息的真实性和完整性：</p>
 <ol type="1">
-<li><strong><code>/proc</code></strong> （进程文件系统）
+<li><strong>Alice 计算消息的 Hash 值</strong>：
 <ul>
-<li><strong>作用</strong>：提供系统和进程的信息，如 CPU、内存使用情况、挂载点等。</li>
-<li><strong>为什么挂载</strong>：许多命令依赖 <code>/proc</code> 来获取系统状态（如 <code>ps</code>, <code>top</code> 等）。挂载后，chroot 可以访问宿主机的系统和进程信息。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /proc /mnt/proc<br></code></pre></td></tr></table></figure></li>
+<li>消息 ( M )："Hello, Bob!"</li>
+<li>使用 Hash 算法(如 SHA-256)得到 Hash 值 ( H (M) )。</li>
+</ul></li>
+<li><strong>Alice 生成数字签名</strong>：
+<ul>
+<li>Alice 使用她的私钥 ( d ) 对 Hash 值 ( H (M) ) 进行 RSA 加密，生成签名 ( S )：</li>
 </ul></li>
 </ol>
-<h3 id="sys-系统文件系统"><strong><code>/sys</code></strong> （系统文件系统）</h3>
-<ol start="2" type="1">
-<li><strong><code>/sys</code></strong> （系统文件系统）
+<p><span class="math display">\[
+S = H (M)^d \mod n
+\]</span></p>
 <ul>
-<li><strong>作用</strong>：提供关于系统硬件设备的信息，包括驱动程序、设备状态等。</li>
-<li><strong>为什么挂载</strong>：系统管理工具（如 <code>udevadm</code>）和硬件相关的功能需要访问 <code>/sys</code>。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /sys /mnt/sys<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="dev-设备文件系统"><strong><code>/dev</code></strong> （设备文件系统）</h3>
+<li>Alice 将签名 ( S ) 和原始消息 ( M ) 一同发送给 Bob。</li>
+</ul>
 <ol start="3" type="1">
-<li><strong><code>/dev</code></strong> （设备文件系统）
+<li><strong>Bob 验证签名</strong>：
 <ul>
-<li><strong>作用</strong>：提供设备节点，比如硬盘、终端设备、USB 等。</li>
-<li><strong>为什么挂载</strong>：<code>/dev</code> 让 <code>chroot</code> 环境可以访问实际的硬件设备，包括硬盘、鼠标、键盘等，以及管理这些设备。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev /mnt/dev<br></code></pre></td></tr></table></figure></li>
+<li>Bob 收到消息 ( M ) 和签名 ( S ) 后，用 Alice 的公钥 ( e ) 解密签名</li>
 </ul></li>
 </ol>
-<h3 id="run-运行时信息"><strong><code>/run</code></strong> （运行时信息）</h3>
-<ol start="4" type="1">
-<li><strong><code>/run</code></strong> （运行时信息）
+<p><span class="math display">\[
+H&#39; (M) = S^e \mod n
+\]</span></p>
 <ul>
-<li><strong>作用</strong>：包含系统运行时生成的临时文件，比如 PID 文件、socket 文件等。</li>
-<li><strong>为什么挂载</strong>：一些系统进程和服务需要 <code>/run</code> 来存储它们的运行状态或通信文件。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /run /mnt/run<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="devpts-伪终端"><strong><code>/dev/pts</code></strong> （伪终端</h3>
-<ol start="5" type="1">
-<li><strong><code>/dev/pts</code></strong> （伪终端）
+<li>Bob 再对收到的消息 ( M ) 重新计算Hash值 ( H (M) )。</li>
+<li>如果 ( H' (M) = H (M) )，则签名有效，消息未被篡改且确实来自 Alice。</li>
+</ul>
+<h3 id="总结">总结</h3>
+<p>结合 Hash 算法后，RSA 加密系统在性能和安全性上得到了显著提升：</p>
 <ul>
-<li><strong>作用</strong>：提供伪终端（pseudo-terminal），用于创建多个终端会话，比如 <code>ssh</code> 或 <code>sudo</code> 需要使用它。</li>
-<li><strong>为什么挂载</strong>：在 <code>chroot</code> 中执行需要伪终端的命令时（如 <code>sudo</code>），必须挂载 <code>/dev/pts</code>。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev/pts /mnt/dev/pts<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="etcresolv.conf-dns-配置"><strong><code>/etc/resolv.conf</code></strong> （DNS 配置）</h3>
-<ol start="6" type="1">
-<li><strong><code>/etc/resolv.conf</code></strong> （DNS 配置）
-<ul>
-<li><strong>作用</strong>：配置系统如何解析域名，通过 DNS 服务器转换域名为 IP 地址。</li>
-<li><strong>为什么挂载</strong>：如果 <code>chroot</code> 环境中需要访问网络（如更新软件），必须能解析域名，因此要挂载 <code>/etc/resolv.conf</code>。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /etc/resolv.conf /mnt/etc/resolv.conf<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="tmp-临时文件"><strong><code>/tmp</code></strong> （临时文件）</h3>
-<ol start="7" type="1">
-<li><strong><code>/tmp</code></strong> （临时文件）
-<ul>
-<li><strong>作用</strong>：用于存储临时文件和目录。</li>
-<li><strong>为什么挂载</strong>：某些程序可能需要 <code>/tmp</code> 目录来存储临时数据。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /tmp /mnt/tmp<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="挂载顺序">挂载顺序</h3>
-<p>一般来说，挂载这些目录的顺序不是特别严格，只要你确保所有必要的目录都已经挂载。可以按照如下步骤进行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev /mnt/dev<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev/pts /mnt/dev/pts<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /proc /mnt/proc<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /sys /mnt/sys<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /run /mnt/run<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /etc/resolv. conf /mnt/etc/resolv. conf<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /tmp /mnt/tmp<br></code></pre></td></tr></table></figure>
-<p>然后进入 <code>chroot</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chroot</span> /mnt<br></code></pre></td></tr></table></figure>
+<li><strong>性能优化</strong>：只对固定长度的 Hash 值进行 RSA 运算，而不是整个消息。</li>
+<li><strong>数据完整性</strong>：任何对消息的篡改都会导致 Hash 值变化，从而被检测到。</li>
+<li><strong>防碰撞攻击</strong>：强 Hash 算法确保不同消息产生不同的 Hash 值，保护签名的安全性。</li>
+</ul>
+<p>因此，RSA 和 Hash 算法的结合在现代安全通信中非常重要，如 SSL/TLS、数字证书、电子邮件签名等场景。</p>
 
                 
               </div>
@@ -397,12 +553,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="category-chain-item">密码学</a>
   
   
     <span>></span>
     
-  <a href="/categories/Linux/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0/" class="category-chain-item">深入学习</a>
+  <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/algorithm/" class="category-chain-item">algorithm</a>
   
   
 
@@ -419,7 +575,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="print-no-link">#密码学</a>
+      
+        <a href="/tags/algorithm/" class="print-no-link">#algorithm</a>
       
     </div>
   
@@ -431,8 +589,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>chroot</div>
-      <div>http://example.com/2024/10/14/chroot/</div>
+      <div>RSA加密算法</div>
+      <div>http://example.com/2024/11/18/RSA加密算法/</div>
     </div>
     <div class="license-meta">
       
@@ -444,7 +602,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月14日</div>
+          <div>2024年11月18日</div>
         </div>
       
       
@@ -476,9 +634,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/18/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" title="RSA加密算法">
+                      <a href="/2024/11/18/RSA%E5%8A%A0%E5%AF%86-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%92%8CHAS%E7%AE%97%E6%B3%95%E7%BB%93%E5%90%88%E4%BE%8B%E5%AD%90/" title="RSA加密,数字签名和HAS算法结合例子">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">RSA加密算法</span>
+                        <span class="hidden-mobile">RSA加密,数字签名和HAS算法结合例子</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -486,8 +644,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/10/BOOTLOADER%E5%92%8CBOOT%20MANAGER%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88English%EF%BC%89/" title="BOOTLOADER和BOOT MANAGER的区别（English）">
-                        <span class="hidden-mobile">BOOTLOADER和BOOT MANAGER的区别（English）</span>
+                      <a href="/2024/10/14/chroot/" title="chroot">
+                        <span class="hidden-mobile">chroot</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

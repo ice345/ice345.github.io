@@ -27,22 +27,23 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="1234567891011sudo mount &#x2F;dev&#x2F;sdXX &#x2F;mnt sudo mount &#x2F;dev&#x2F;sdaXX &#x2F;mnt&#x2F;home(有这个分区的话)sudo mount --bind &#x2F;dev &#x2F;mnt&#x2F;devsudo mount --bind &#x2F;dev&#x2F;pts &#x2F;mnt&#x2F;dev&#x2F;ptssudo mount --bind &#x2F;proc &#x2F;mnt&#x2F;procsudo mount --bind">
+    <meta name="description" content="在处理大文件或大量数据时，流行的加密方法通常是采用 混合加密方案，即结合了 对称加密（如 AES）和 非对称加密（如 RSA）的方法。这样可以在保证安全性的同时，提高效率，避免直接对大文件进行加密所带来的性能瓶颈。 1. 混合加密方案 混合加密方案利用了对称加密和非对称加密各自的优势： - 对称加密（如 AES）：处理速度快，适合加密大数据。 - 非对称加密（如 RSA）：安全性高，适合用来加密对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="chroot">
-<meta property="og:url" content="http://example.com/2024/10/14/chroot/index.html">
+<meta property="og:title" content="流行的大量数据或者大文件加密">
+<meta property="og:url" content="http://example.com/2024/11/18/%E6%B5%81%E8%A1%8C%E7%9A%84%E5%A4%A7%E9%87%8F%E6%95%B0%E6%8D%AE%E6%88%96%E8%80%85%E5%A4%A7%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="1234567891011sudo mount &#x2F;dev&#x2F;sdXX &#x2F;mnt sudo mount &#x2F;dev&#x2F;sdaXX &#x2F;mnt&#x2F;home(有这个分区的话)sudo mount --bind &#x2F;dev &#x2F;mnt&#x2F;devsudo mount --bind &#x2F;dev&#x2F;pts &#x2F;mnt&#x2F;dev&#x2F;ptssudo mount --bind &#x2F;proc &#x2F;mnt&#x2F;procsudo mount --bind">
+<meta property="og:description" content="在处理大文件或大量数据时，流行的加密方法通常是采用 混合加密方案，即结合了 对称加密（如 AES）和 非对称加密（如 RSA）的方法。这样可以在保证安全性的同时，提高效率，避免直接对大文件进行加密所带来的性能瓶颈。 1. 混合加密方案 混合加密方案利用了对称加密和非对称加密各自的优势： - 对称加密（如 AES）：处理速度快，适合加密大数据。 - 非对称加密（如 RSA）：安全性高，适合用来加密对">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-14T09:00:36.000Z">
-<meta property="article:modified_time" content="2024-10-14T09:02:41.756Z">
+<meta property="article:published_time" content="2024-11-18T07:51:27.000Z">
+<meta property="article:modified_time" content="2024-11-18T07:52:44.823Z">
 <meta property="article:author" content="JunBin Liang">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="密码学">
+<meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>chroot - ICEのBlog</title>
+  <title>流行的大量数据或者大文件加密 - ICEのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -221,7 +222,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="chroot"></span>
+            <span id="subtitle" data-typed-text="流行的大量数据或者大文件加密"></span>
           
         </div>
 
@@ -237,8 +238,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-14 17:00" pubdate>
-          2024年10月14日 下午
+        <time datetime="2024-11-18 15:51" pubdate>
+          2024年11月18日 下午
         </time>
       </span>
     
@@ -249,7 +250,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.3k 字
         
       </span>
     
@@ -260,7 +261,7 @@
         
         
         
-          10 分钟
+          11 分钟
         
       </span>
     
@@ -297,88 +298,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">chroot</h1>
+            <h1 id="seo-header">流行的大量数据或者大文件加密</h1>
             
             
               <div class="markdown-body">
                 
-                <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount /dev/sdXX /mnt <br><span class="hljs-built_in">sudo</span> mount /dev/sdaXX /mnt/home(有这个分区的话)<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev /mnt/dev<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev/pts /mnt/dev/pts<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /proc /mnt/proc<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /sys /mnt/sys<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /run /mnt/run<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /etc/resolv. conf /mnt/etc/resolv. conf<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /tmp /mnt/tmp<br><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chroot</span> /mnt <br></code></pre></td></tr></table></figure>
-<h2 id="什么是-chroot">什么是 <code>chroot</code>？</h2>
-<p><code>chroot</code>（Change Root）是 Linux/Unix 系统中的一种工具，它允许你将当前的根文件系统切换到指定的目录，使该目录成为虚拟机或类似于容器的环境。简单来说，<code>chroot</code> 可以将系统的根目录 <code>/</code> 改变为某个其他的目录，这样你可以在这个隔离的环境下操作，不影响主系统。这种方式通常用于恢复系统、测试环境、构建软件或者运行独立的系统。</p>
-<p>但是，<code>chroot</code> 环境并不自动包含宿主机所有功能。为了确保虚拟机能够正常使用类似宿主机的功能，比如设备访问、进程管理和网络功能，你需要手动挂载一些关键文件系统。</p>
-<h2 id="挂载的原理">挂载的原理：</h2>
-<p>这些挂载操作是通过 <code>--bind</code> 选项来实现的，它允许将宿主机的某个目录或文件系统“绑定”到 chroot 环境的某个位置。这样一来，虚拟机就可以直接访问宿主机上的这些资源，达到正常运行系统和网络功能的目的。</p>
-<p>这些文件系统本身大多是虚拟的（例如 <code>/proc</code> 和 <code>/sys</code>），因此它们不是实际的存储内容，而是动态生成的系统信息。通过将它们挂载到虚拟机，虚拟机就可以和宿主机共享这些动态系统信息。</p>
-<h2 id="挂载的文件系统有哪些为什么挂载">挂载的文件系统有哪些？为什么挂载？</h2>
-<p>为了让 <code>chroot</code> 环境有完整的系统功能，你需要挂载以下文件系统或文件：</p>
-<h3 id="proc-进程文件系统"><strong><code>/proc</code></strong> （进程文件系统）</h3>
+                <p>在处理大文件或大量数据时，流行的加密方法通常是采用 <strong>混合加密方案</strong>，即结合了 <strong>对称加密</strong>（如 AES）和 <strong>非对称加密</strong>（如 RSA）的方法。这样可以在保证安全性的同时，提高效率，避免直接对大文件进行加密所带来的性能瓶颈。</p>
+<h3 id="混合加密方案">1. <strong>混合加密方案</strong></h3>
+<p>混合加密方案利用了对称加密和非对称加密各自的优势： - <strong>对称加密</strong>（如 AES）：处理速度快，适合加密大数据。 - <strong>非对称加密</strong>（如 RSA）：安全性高，适合用来加密对称加密的密钥。</p>
+<h4 id="典型流程">典型流程：</h4>
 <ol type="1">
-<li><strong><code>/proc</code></strong> （进程文件系统）
-<ul>
-<li><strong>作用</strong>：提供系统和进程的信息，如 CPU、内存使用情况、挂载点等。</li>
-<li><strong>为什么挂载</strong>：许多命令依赖 <code>/proc</code> 来获取系统状态（如 <code>ps</code>, <code>top</code> 等）。挂载后，chroot 可以访问宿主机的系统和进程信息。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /proc /mnt/proc<br></code></pre></td></tr></table></figure></li>
-</ul></li>
+<li><p><strong>生成对称密钥</strong>：首先，生成一个随机的对称密钥（如 AES 密钥），这个密钥用来加密文件。对称加密通常很快，适用于处理大量数据。</p></li>
+<li><p><strong>用对称密钥加密文件</strong>：使用 AES 或其他对称加密算法将大文件或大量数据加密。因为对称加密效率高，可以迅速加密大文件。</p></li>
+<li><p><strong>加密对称密钥</strong>：用接收方的公钥（RSA）加密对称密钥。这样，只有持有私钥的接收方才能解密对称密钥，从而解密文件。</p></li>
+<li><p><strong>传输加密数据</strong>：将加密后的文件和加密后的对称密钥一起发送给接收方。</p></li>
+<li><p><strong>接收方解密</strong>：接收方首先用自己的私钥解密对称密钥，然后使用解密得到的对称密钥解密文件。</p></li>
 </ol>
-<h3 id="sys-系统文件系统"><strong><code>/sys</code></strong> （系统文件系统）</h3>
-<ol start="2" type="1">
-<li><strong><code>/sys</code></strong> （系统文件系统）
-<ul>
-<li><strong>作用</strong>：提供关于系统硬件设备的信息，包括驱动程序、设备状态等。</li>
-<li><strong>为什么挂载</strong>：系统管理工具（如 <code>udevadm</code>）和硬件相关的功能需要访问 <code>/sys</code>。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /sys /mnt/sys<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="dev-设备文件系统"><strong><code>/dev</code></strong> （设备文件系统）</h3>
-<ol start="3" type="1">
-<li><strong><code>/dev</code></strong> （设备文件系统）
-<ul>
-<li><strong>作用</strong>：提供设备节点，比如硬盘、终端设备、USB 等。</li>
-<li><strong>为什么挂载</strong>：<code>/dev</code> 让 <code>chroot</code> 环境可以访问实际的硬件设备，包括硬盘、鼠标、键盘等，以及管理这些设备。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev /mnt/dev<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="run-运行时信息"><strong><code>/run</code></strong> （运行时信息）</h3>
-<ol start="4" type="1">
-<li><strong><code>/run</code></strong> （运行时信息）
-<ul>
-<li><strong>作用</strong>：包含系统运行时生成的临时文件，比如 PID 文件、socket 文件等。</li>
-<li><strong>为什么挂载</strong>：一些系统进程和服务需要 <code>/run</code> 来存储它们的运行状态或通信文件。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /run /mnt/run<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="devpts-伪终端"><strong><code>/dev/pts</code></strong> （伪终端</h3>
-<ol start="5" type="1">
-<li><strong><code>/dev/pts</code></strong> （伪终端）
-<ul>
-<li><strong>作用</strong>：提供伪终端（pseudo-terminal），用于创建多个终端会话，比如 <code>ssh</code> 或 <code>sudo</code> 需要使用它。</li>
-<li><strong>为什么挂载</strong>：在 <code>chroot</code> 中执行需要伪终端的命令时（如 <code>sudo</code>），必须挂载 <code>/dev/pts</code>。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev/pts /mnt/dev/pts<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="etcresolv.conf-dns-配置"><strong><code>/etc/resolv.conf</code></strong> （DNS 配置）</h3>
-<ol start="6" type="1">
-<li><strong><code>/etc/resolv.conf</code></strong> （DNS 配置）
-<ul>
-<li><strong>作用</strong>：配置系统如何解析域名，通过 DNS 服务器转换域名为 IP 地址。</li>
-<li><strong>为什么挂载</strong>：如果 <code>chroot</code> 环境中需要访问网络（如更新软件），必须能解析域名，因此要挂载 <code>/etc/resolv.conf</code>。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /etc/resolv.conf /mnt/etc/resolv.conf<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="tmp-临时文件"><strong><code>/tmp</code></strong> （临时文件）</h3>
-<ol start="7" type="1">
-<li><strong><code>/tmp</code></strong> （临时文件）
-<ul>
-<li><strong>作用</strong>：用于存储临时文件和目录。</li>
-<li><strong>为什么挂载</strong>：某些程序可能需要 <code>/tmp</code> 目录来存储临时数据。</li>
-<li><strong>挂载命令</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /tmp /mnt/tmp<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-</ol>
-<h3 id="挂载顺序">挂载顺序</h3>
-<p>一般来说，挂载这些目录的顺序不是特别严格，只要你确保所有必要的目录都已经挂载。可以按照如下步骤进行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev /mnt/dev<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /dev/pts /mnt/dev/pts<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /proc /mnt/proc<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /sys /mnt/sys<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /run /mnt/run<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /etc/resolv. conf /mnt/etc/resolv. conf<br><span class="hljs-built_in">sudo</span> mount --<span class="hljs-built_in">bind</span> /tmp /mnt/tmp<br></code></pre></td></tr></table></figure>
-<p>然后进入 <code>chroot</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chroot</span> /mnt<br></code></pre></td></tr></table></figure>
+<p>这种方案的优点： - <strong>效率高</strong>：对称加密（AES）非常快速，适合处理大文件。 - <strong>安全性高</strong>：非对称加密（RSA）保证了对称密钥的安全传输。 - <strong>灵活性</strong>：适用于大文件、流媒体、云存储等场景。</p>
+<h3 id="分块加密">2. <strong>分块加密</strong></h3>
+<p>对于一些特殊应用，分块加密也是一种流行的方法，尤其是在直接使用非对称加密时： - 将大文件分成多个较小的块（通常每个块的大小限制在 RSA 加密能够处理的范围内，比如 256 字节）。 - 对每个块使用 RSA 或其他加密算法进行加密。 - 这种方法适用于一些小型系统或者需要直接加密而没有对称加密需求的场景，但效率比混合加密方案低。</p>
+<h3 id="端到端加密-end-to-end-encryption">3. <strong>端到端加密 (End-to-End Encryption)</strong></h3>
+<p>端到端加密也在加密大量数据时广泛使用，特别是用于云存储或消息传递服务中。以下是典型的端到端加密方案： - <strong>数据加密</strong>：客户端对数据进行加密，然后发送到服务器。 - <strong>密钥管理</strong>：密钥管理是关键，通常使用公私钥对来加密通信密钥。 - <strong>解密</strong>：只有授权的接收方能够解密数据。</p>
+<p>在很多应用场景中，端到端加密结合了对称加密和非对称加密（类似混合加密方案），确保通信的安全性和效率。</p>
+<h3 id="使用专用加密工具">4. <strong>使用专用加密工具</strong></h3>
+<p>许多加密工具和协议已经优化了大文件的加密过程，例如： - <strong>GPG (GNU Privacy Guard)</strong>：基于 OpenPGP 标准，常用于文件加密，支持对称和非对称加密。 - <strong>SSL/TLS</strong>：用于保护网络传输中的数据，特别适合流媒体、实时通信等大数据量传输。</p>
+<h3 id="硬件加速">5. <strong>硬件加速</strong></h3>
+<p>为了进一步提高加密效率，很多系统使用硬件加速： - <strong>硬件加速的对称加密算法</strong>：如 AES-NI（Intel 提供的 AES 加速指令），可以显著加速 AES 加密过程，尤其是在加密大文件时。 - <strong>硬件安全模块 (HSM)</strong>：用于生成和存储密钥，确保加密操作的安全性和高效性。</p>
+<h3 id="云服务加密">6. <strong>云服务加密</strong></h3>
+<p>对于云存储和云计算中的大文件加密，很多云服务提供商会自动处理加密： - 例如，<strong>Amazon S 3</strong>、<strong>Google Cloud Storage</strong> 等会自动对存储在云中的数据进行加密，通常使用 AES-256（对称加密算法）。 - 同时，密钥管理服务（如 AWS KMS 或 Google Cloud KMS）提供了加密密钥的管理和访问控制。</p>
+<h3 id="流式加密">7. <strong>流式加密</strong></h3>
+<p>对于实时数据流的加密（如视频流、音频流、实时通信数据），流式加密算法（如 RC 4、ChaCha 20）常常被使用。这些算法专门针对数据流进行加密，能够在流数据传输过程中保证安全性。</p>
+<h3 id="总结"><strong>总结</strong></h3>
+<p>处理大文件或大量数据时，最流行的加密方法是采用 <strong>混合加密方案</strong>，即结合 <strong>对称加密</strong>（如 AES）和 <strong>非对称加密</strong>（如 RSA）的优点。对称加密用于高效地加密数据，而非对称加密用于加密对称密钥，确保密钥的安全性。这种方法广泛应用于云存储、文件加密、数据传输等场景，同时，使用硬件加速、分块加密、端到端加密等技术可以进一步提高效率和安全性。</p>
 
                 
               </div>
@@ -397,12 +348,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="category-chain-item">密码学</a>
   
   
     <span>></span>
     
-  <a href="/categories/Linux/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0/" class="category-chain-item">深入学习</a>
+  <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/algorithm/" class="category-chain-item">algorithm</a>
   
   
 
@@ -419,7 +370,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="print-no-link">#密码学</a>
+      
+        <a href="/tags/algorithm/" class="print-no-link">#algorithm</a>
       
     </div>
   
@@ -431,8 +384,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>chroot</div>
-      <div>http://example.com/2024/10/14/chroot/</div>
+      <div>流行的大量数据或者大文件加密</div>
+      <div>http://example.com/2024/11/18/流行的大量数据或者大文件加密/</div>
     </div>
     <div class="license-meta">
       
@@ -444,7 +397,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月14日</div>
+          <div>2024年11月18日</div>
         </div>
       
       
@@ -476,18 +429,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/18/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" title="RSA加密算法">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">RSA加密算法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/10/BOOTLOADER%E5%92%8CBOOT%20MANAGER%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88English%EF%BC%89/" title="BOOTLOADER和BOOT MANAGER的区别（English）">
-                        <span class="hidden-mobile">BOOTLOADER和BOOT MANAGER的区别（English）</span>
+                      <a href="/2024/11/18/RSA%E5%8A%A0%E5%AF%86-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%92%8CHAS%E7%AE%97%E6%B3%95%E7%BB%93%E5%90%88%E4%BE%8B%E5%AD%90/" title="RSA加密,数字签名和HAS算法结合例子">
+                        <span class="hidden-mobile">RSA加密,数字签名和HAS算法结合例子</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
