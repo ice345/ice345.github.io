@@ -243,25 +243,3 @@ Debouncer.prototype = {
     this.requestTick();
   }
 };
-
-Fluid.utils.changeModel = function(modelUrl) {
-  // 确保在切换模型时销毁当前模型
-  if (window.oml2d) {
-    window.oml2d.destroy(); // 销毁当前模型
-  }
-
-  // 创建并加载新模型
-  window.oml2d = new OML2D({
-    model: modelUrl,  // 新模型的 URL
-    parentElement: document.body,
-    position: [-10, 35],
-    scale: 0.15,
-    stageStyle: {
-      width: 250,
-      height: 250
-    }
-  });
-
-  // 初始化模型
-  window.oml2d.init();
-};
