@@ -252,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          163 字
+          166 字
         
       </span>
     
@@ -306,17 +306,19 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>[!NOTE] A <strong>bootloader</strong> is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system's firmware (e.g., BIOS/UEFI).</p>
+<p>[!NOTE]
+A <strong>bootloader</strong> is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system’s firmware (e.g., BIOS/UEFI).</p>
 </blockquote>
 <blockquote>
-<p>[!NOTE] A <strong>boot manager</strong> is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. ==It operates after the system firmware has selected a boot device but before the operating system is loaded.==</p>
+<p>[!NOTE]
+A <strong>boot manager</strong> is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. <mark>It operates after the system firmware has selected a boot device but before the operating system is loaded.</mark></p>
 </blockquote>
-<p>The <strong>bootloader</strong> and the <strong>boot manager（不仅可以引导多系统，还可以引导多个 bootloader）</strong> are closely related components in the system boot process, but they serve different purposes. Here's a breakdown of the relationship and differences between the two:</p>
-<h3 id="bootloader">1. <strong>Bootloader</strong></h3>
-<p>A <strong>bootloader</strong> is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system's firmware (e.g., BIOS/UEFI).</p>
-<h4 id="key-features-of-a-bootloader">Key Features of a Bootloader:</h4>
+<p>The <strong>bootloader</strong> and the <strong>boot manager（不仅可以引导多系统，还可以引导多个 bootloader）</strong> are closely related components in the system boot process, but they serve different purposes. Here’s a breakdown of the relationship and differences between the two:</p>
+<h3 id="1-Bootloader">1. <strong>Bootloader</strong><a class="anchor" href="#1-Bootloader">·</a></h3>
+<p>A <strong>bootloader</strong> is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system’s firmware (e.g., BIOS/UEFI).</p>
+<h4 id="Key-Features-of-a-Bootloader">Key Features of a Bootloader:<a class="anchor" href="#Key-Features-of-a-Bootloader">·</a></h4>
 <ul>
-<li><strong>Low-level function</strong>: The bootloader's primary function is to load the operating system into memory and hand over control to it. It is the first software that runs after the system firmware (BIOS/UEFI) has done its hardware initialization.</li>
+<li><strong>Low-level function</strong>: The bootloader’s primary function is to load the operating system into memory and hand over control to it. It is the first software that runs after the system firmware (BIOS/UEFI) has done its hardware initialization.</li>
 <li><strong>Location</strong>: In MBR systems, the bootloader is stored in the Master Boot Record (the first 446 bytes of the disk). In GPT systems, bootloaders are stored in the <strong>EFI System Partition (ESP)</strong>.</li>
 <li><strong>Doesn’t typically have a user interface</strong>: The bootloader’s role is primarily functional. Its main task is to load the OS without necessarily providing user choices (unless it also serves as a boot manager).</li>
 <li><strong>Examples</strong>:
@@ -324,11 +326,12 @@
 <li><strong>GRUB</strong> (GRand Unified Bootloader) is one of the most common bootloaders used in Linux systems.</li>
 <li><strong>Windows Bootloader</strong> loads Windows from the disk.</li>
 <li><strong>LILO</strong> (Linux Loader) is another example of a Linux bootloader.</li>
-</ul></li>
 </ul>
-<h3 id="boot-manager">2. <strong>Boot Manager</strong></h3>
+</li>
+</ul>
+<h3 id="2-Boot-Manager">2. <strong>Boot Manager</strong><a class="anchor" href="#2-Boot-Manager">·</a></h3>
 <p>A <strong>boot manager</strong> is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. It operates after the system firmware has selected a boot device but before the operating system is loaded.</p>
-<h4 id="key-features-of-a-boot-manager">Key Features of a Boot Manager:</h4>
+<h4 id="Key-Features-of-a-Boot-Manager">Key Features of a Boot Manager:<a class="anchor" href="#Key-Features-of-a-Boot-Manager">·</a></h4>
 <ul>
 <li><strong>Presents a menu for OS selection</strong>: A boot manager allows users to choose which operating system or kernel to boot from when multiple OSes are installed. It displays a menu or interface for this purpose.</li>
 <li><strong>Works with multiple bootloaders</strong>: The boot manager can direct the system to load specific bootloaders for different operating systems. For example, GRUB can load the bootloaders for both Linux and Windows, allowing the user to choose which one to boot.</li>
@@ -339,68 +342,72 @@
 <li><strong>GRUB</strong>: GRUB is both a bootloader and a boot manager, allowing users to choose from different operating systems or kernel versions.</li>
 <li><strong>Windows Boot Manager</strong>: The default boot manager for Windows systems that presents a menu if multiple versions of Windows are installed.</li>
 <li><strong>rEFInd</strong>: A standalone boot manager for UEFI systems that can load operating systems directly from their bootloaders.</li>
-</ul></li>
 </ul>
-<h3 id="relationship-between-bootloader-and-boot-manager">3. <strong>Relationship Between Bootloader and Boot Manager</strong></h3>
+</li>
+</ul>
+<h3 id="3-Relationship-Between-Bootloader-and-Boot-Manager">3. <strong>Relationship Between Bootloader and Boot Manager</strong><a class="anchor" href="#3-Relationship-Between-Bootloader-and-Boot-Manager">·</a></h3>
 <ul>
-<li><p><strong>Interdependency</strong>: The boot manager works with bootloaders. The boot manager is responsible for presenting the user with options (like which OS to boot), while the bootloader executes the task of actually loading the chosen OS. For example, GRUB (which can act as both a bootloader and a boot manager) will present a menu to choose between Linux and Windows. Once the user makes a selection, GRUB will load the corresponding bootloader to boot into the chosen operating system.</p></li>
-<li><p><strong>Boot Sequence</strong>:</p>
-<ol type="1">
+<li>
+<p><strong>Interdependency</strong>: The boot manager works with bootloaders. The boot manager is responsible for presenting the user with options (like which OS to boot), while the bootloader executes the task of actually loading the chosen OS. For example, GRUB (which can act as both a bootloader and a boot manager) will present a menu to choose between Linux and Windows. Once the user makes a selection, GRUB will load the corresponding bootloader to boot into the chosen operating system.</p>
+</li>
+<li>
+<p><strong>Boot Sequence</strong>:</p>
+<ol>
 <li><strong>System firmware (BIOS/UEFI)</strong> starts the boot process and looks for a bootloader or boot manager based on the configured boot device order.</li>
 <li>The <strong>boot manager</strong> (if present) presents the user with a choice of operating systems.</li>
 <li>The <strong>bootloader</strong> for the selected OS is executed, and it loads the kernel of that OS into memory.</li>
 <li>Control is handed over to the OS, which completes the boot process.</li>
-</ol></li>
+</ol>
+</li>
 </ul>
-<h3 id="key-differences-between-bootloader-and-boot-manager">4. <strong>Key Differences Between Bootloader and Boot Manager</strong>:</h3>
+<h3 id="4-Key-Differences-Between-Bootloader-and-Boot-Manager">4. <strong>Key Differences Between Bootloader and Boot Manager</strong>:<a class="anchor" href="#4-Key-Differences-Between-Bootloader-and-Boot-Manager">·</a></h3>
 <table>
-
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Feature</strong></th>
 <th><strong>Bootloader</strong></th>
 <th><strong>Boot Manager</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Primary Role</strong></td>
 <td>Loads the operating system kernel into memory</td>
 <td>Manages user selection of which OS or bootloader to run</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>When It Runs</strong></td>
 <td>Runs immediately after system firmware (BIOS/UEFI)</td>
 <td>Runs before the bootloader to offer OS selection</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Functionality</strong></td>
 <td>Directly loads and starts the OS</td>
 <td>Presents a menu for choosing which OS or bootloader to run</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>User Interface</strong></td>
 <td>Typically no user interface (unless integrated)</td>
 <td>Provides a menu for OS selection</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Examples</strong></td>
 <td>GRUB (bootloader function), Windows Bootloader</td>
 <td>GRUB (boot manager function), Windows Boot Manager, rEFInd</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Storage Location</strong></td>
 <td>MBR or EFI System Partition (ESP)</td>
 <td>EFI System Partition (ESP) or sometimes in the MBR</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Multiple OS Support</strong></td>
 <td>Directly loads one OS</td>
 <td>Manages multiple bootloaders or OS choices</td>
 </tr>
 </tbody>
 </table>
-<h3 id="summary">5. <strong>Summary</strong>:</h3>
+<h3 id="5-Summary">5. <strong>Summary</strong>:<a class="anchor" href="#5-Summary">·</a></h3>
 <ul>
 <li><strong>Bootloader</strong>: Loads the operating system and is responsible for starting the boot process. It’s a critical low-level program that the system needs to begin loading the OS.</li>
 <li><strong>Boot Manager</strong>: Allows the user to select between different operating systems or configurations. It provides the user interface that can offer choices when there are multiple OSes installed.</li>

@@ -308,101 +308,128 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>[!NOTE] The program code, global variables, and constant global variables are all stored in <em>static</em> segments, as these all have static lifetimes and known sizes at compile time.</p>
+<p>[!NOTE]
+The program code, global variables, and constant global variables are all stored in <em>static</em> segments, as these all have static lifetimes and known sizes at compile time.</p>
 <p>If we look at the addresses printed by <code>mexplore</code>, we see that the global variables stored in are at relatively low memory addresses (around <code>0x60'0000</code> hexadecimal and <code>0x40'0000</code> hexadecimal), while the local variable is stored at a high address, close to <code>0x7fff'ffff'ffff</code> (about 247), and the dynamically allocated character is stored in between (albeit closer to the static segments).</p>
-<p>There is a reason for this placement: it allows both types of segments to grow without risk of getting in each other's way. In particular, the automatic-lifetime segment grows <em>downwards</em> as more local variables come into scope, while the dynamic-lifetime segment grows <em>upwards</em>. If they ever meet, your computer runs out of memory.</p>
 </blockquote>
-<h1 id="内存区域划分">内存区域划分</h1>
+<p>There is a reason for this placement: it allows both types of segments to grow without risk of getting in each other’s way. In particular, the automatic-lifetime segment grows <em>downwards</em> as more local variables come into scope, while the dynamic-lifetime segment grows <em>upwards</em>. If they ever meet, your computer runs out of memory.</p>
+<h1 id="内存区域划分">内存区域划分<a class="anchor" href="#内存区域划分">·</a></h1>
 <p>在计算机中，程序运行时的内存布局通常分为多个区域，每个区域负责存储特定类型的数据。这种内存布局通常包括以下主要部分：</p>
-<ol type="1">
-<li><strong>代码段（Text Segment）</strong>:
+<ol>
+<li>
+<p><strong>代码段（Text Segment）</strong>:</p>
 <ul>
 <li><strong>存储内容</strong>: 存放程序的可执行代码，也就是编译后的机器指令。该区域通常是只读的，以防止程序的代码被意外或恶意修改。</li>
 <li><strong>特性</strong>: 常见操作系统将其标记为只读并可执行。</li>
-</ul></li>
-<li><strong>数据段（Data Segment）</strong>:
+</ul>
+</li>
+<li>
+<p><strong>数据段（Data Segment）</strong>:</p>
 <ul>
 <li><strong>存储内容</strong>: 存放已初始化的全局变量和静态变量。这个段可以进一步分为两部分：
 <ul>
 <li><strong>已初始化数据段（Initialized Data Segment）</strong>: 存储在编译时已初始化的全局和静态变量。</li>
 <li><strong>未初始化数据段（BSS Segment，Block Started by Symbol）</strong>: 存放未初始化的全局变量和静态变量。在程序开始执行时，BSS 段的内容会被初始化为零。</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>特性</strong>: 数据段是可读写的。</li>
-</ul></li>
-<li><strong>堆（Heap dynamic-lifetime segment is called the </strong>heap<strong>）</strong>:
+</ul>
+</li>
+<li>
+<p><strong>堆（Heap  dynamic-lifetime segment is called the <strong>heap</strong>）</strong>:</p>
 <ul>
 <li><strong>存储内容</strong>: 用于动态分配的内存块。<code>malloc</code>、<code>calloc</code>、<code>realloc</code> 等函数在运行时从堆中分配内存。堆的大小可以在运行时增长和缩小。</li>
 <li><strong>特性</strong>: 堆区域通常从低地址向高地址扩展。</li>
-</ul></li>
-<li><strong>栈（Stack automatic-lifetime segment is called the </strong>stack<strong>.）</strong>:
+</ul>
+</li>
+<li>
+<p><strong>栈（Stack  automatic-lifetime segment is called the <strong>stack</strong>.）</strong>:</p>
 <ul>
 <li><strong>存储内容</strong>: 用于存放函数的局部变量、函数参数和返回地址。当函数被调用时，会在栈上分配一个新的栈帧，用于存储该函数的局部数据。函数调用结束后，栈帧会被释放。</li>
 <li><strong>特性</strong>: 栈区域通常从高地址向低地址扩展。栈的大小是有限的，过度使用栈空间（如过深的递归调用或大量局部变量）可能导致栈溢出。</li>
-</ul></li>
-<li><strong>常量段（Rodata Segment）</strong>:
+</ul>
+</li>
+<li>
+<p><strong>常量段（Rodata Segment）</strong>:</p>
 <ul>
 <li><strong>存储内容</strong>: 存放只读数据，比如字符串常量和其他不变数据。这些数据通常在编译时确定并在运行时不会改变。</li>
 <li><strong>特性</strong>: 常量段通常是只读的。</li>
-</ul></li>
-<li><strong>执行堆栈（Call Stack）</strong>:
+</ul>
+</li>
+<li>
+<p><strong>执行堆栈（Call Stack）</strong>:</p>
 <ul>
 <li><strong>存储内容</strong>: 特指用于存储每个线程的调用信息，包括函数调用的返回地址、局部变量和函数参数。执行堆栈与栈区域有些重叠的概念。</li>
 <li><strong>特性</strong>: 递归调用或大量局部变量可能导致栈溢出。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h2 id="内存布局示意图">内存布局示意图</h2>
-<p>典型的内存布局==从高地址到低地址==可以如下表示：</p>
+<h2 id="内存布局示意图">内存布局示意图<a class="anchor" href="#内存布局示意图">·</a></h2>
+<p>典型的内存布局<mark>从高地址到低地址</mark>可以如下表示：</p>
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-code">+--------------------+</span><br><span class="hljs-section">|      栈 (Stack)      |</span><br><span class="hljs-section">+--------------------+</span><br>|   堆 (Heap)       |<br><span class="hljs-section">| (动态分配区)      |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 未初始化数据段 (BSS) |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 已初始化数据段 (Data) |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">|  只读数据段 (Rodata)  |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 代码段 (Text)      |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 其他系统区域 (Other)  |</span><br><span class="hljs-section">+--------------------+</span><br></code></pre></td></tr></table></figure>
-<figure>
-<img src="https://github.com/ice345/picture_share/blob/master/technology/memory.png?raw=true" srcset="/img/loading.gif" lazyload alt="" /><figcaption>memory</figcaption>
-</figure>
+<p><img src="https://github.com/ice345/picture_share/blob/master/technology/memory.png?raw=true" srcset="/img/loading.gif" lazyload alt="memory"></p>
 <p>在 C 语言中，变量根据其类型和作用域分布在程序的不同内存区域。以下是不同类型的变量及其存储位置的详细说明：</p>
-<ol type="1">
-<li><strong>全局变量（Global Variables）</strong>:
+<ol>
+<li>
+<p><strong>全局变量（Global Variables）</strong>:</p>
 <ul>
 <li><strong>定义</strong>: 在函数外部定义的变量，具有全局作用域，整个程序运行期间都可以访问。</li>
 <li><strong>存储位置</strong>:
 <ul>
-<li>已初始化的全局变量存储在<strong>数据段（Data Segment）</strong>的已初始化数据区域。</li>
+<li>已初始化的全局变量存储在**数据段（Data Segment）**的已初始化数据区域。</li>
 <li>未初始化的全局变量存储在<strong>BSS 段（Block Started by Symbol Segment）</strong>，程序开始时 BSS 段的内容被初始化为零。</li>
-</ul></li>
-</ul></li>
-<li><strong>静态变量（Static Variables）</strong>:
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>静态变量（Static Variables）</strong>:</p>
 <ul>
 <li><strong>定义</strong>: 使用 <code>static</code> 关键字修饰的变量。可以是全局或局部的，但在程序的生命周期内都只分配一次，并保留其值。</li>
 <li><strong>存储位置</strong>:
 <ul>
 <li>静态全局变量：与全局变量类似，已初始化的存储在数据段，未初始化的存储在 BSS 段。</li>
 <li>静态局部变量：尽管其作用域仅限于函数内，但其生命周期与程序相同，也存储在数据段或 BSS 段中。</li>
-</ul></li>
-</ul></li>
-<li><strong>常量变量（Constant Variables）</strong>:
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>常量变量（Constant Variables）</strong>:</p>
 <ul>
 <li><strong>定义</strong>: 使用 <code>const</code> 关键字修饰的变量，声明后不能更改其值。</li>
 <li><strong>存储位置</strong>:
 <ul>
 <li>常量全局变量：通常存储在<strong>只读数据段（Rodata Segment）</strong>。但如果常量是局部的，它可能存储在栈或寄存器中，具体取决于编译器优化。</li>
 <li>常量局部变量：通常在栈上分配，或者在某些情况下编译器可能将它们优化到寄存器中。</li>
-</ul></li>
-</ul></li>
-<li><strong>局部变量（Local Variables）</strong>:
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>局部变量（Local Variables）</strong>:</p>
 <ul>
 <li><strong>定义</strong>: 在函数或块中定义的变量，只在其定义的作用域内有效。</li>
 <li><strong>存储位置</strong>:
 <ul>
-<li>通常存储在<strong>栈（Stack）</strong>中。函数调用时，局部变量在栈上分配空间，函数返回时这些空间被释放。</li>
-</ul></li>
-</ul></li>
-<li><strong>动态分配的内存</strong>:
+<li>通常存储在**栈（Stack）**中。函数调用时，局部变量在栈上分配空间，函数返回时这些空间被释放。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>动态分配的内存</strong>:</p>
 <ul>
 <li><strong>定义</strong>: 使用 <code>malloc</code>、<code>calloc</code>、<code>realloc</code> 等函数动态分配的内存。大小和数量在运行时决定。</li>
 <li><strong>存储位置</strong>:
 <ul>
-<li>存储在<strong>堆（Heap）</strong>中。堆内存的生命周期由程序员控制，需要手动释放（使用 <code>free</code> 函数），否则会导致内存泄漏。</li>
-</ul></li>
-</ul></li>
+<li>存储在**堆（Heap）**中。堆内存的生命周期由程序员控制，需要手动释放（使用 <code>free</code> 函数），否则会导致内存泄漏。</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h2 id="总结">总结</h2>
+<h2 id="总结">总结<a class="anchor" href="#总结">·</a></h2>
 <ul>
 <li><strong>代码段（Text Segment）</strong>: 存放程序的可执行代码。</li>
 <li><strong>数据段（Data Segment）</strong>: 存放已初始化的全局变量和静态变量。</li>
