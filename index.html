@@ -268,7 +268,7 @@
       
       <a class="index-excerpt " href="/2024/11/18/%E6%B5%81%E8%A1%8C%E7%9A%84%E5%A4%A7%E9%87%8F%E6%95%B0%E6%8D%AE%E6%88%96%E8%80%85%E5%A4%A7%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86/" target="_self">
         <div>
-          在处理大文件或大量数据时，流行的加密方法通常是采用 混合加密方案，即结合了 对称加密（如 AES）和 非对称加密（如 RSA）的方法。这样可以在保证安全性的同时，提高效率，避免直接对大文件进行加密所带来的性能瓶颈。 1. 混合加密方案· 混合加密方案利用了对称加密和非对称加密各自的优势：  对称加密（如 AES）：处理速度快，适合加密大数据。 非对称加密（如 RSA）：安全性高，适合用来加密对称加
+          在处理大文件或大量数据时，流行的加密方法通常是采用 混合加密方案，即结合了 对称加密（如 AES）和 非对称加密（如 RSA）的方法。这样可以在保证安全性的同时，提高效率，避免直接对大文件进行加密所带来的性能瓶颈。 1. 混合加密方案 混合加密方案利用了对称加密和非对称加密各自的优势：  对称加密（如 AES）：处理速度快，适合加密大数据。 非对称加密（如 RSA）：安全性高，适合用来加密对称加密
         </div>
       </a>
 
@@ -344,7 +344,7 @@
       
       <a class="index-excerpt " href="/2024/11/18/RSA%E5%8A%A0%E5%AF%86-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%92%8CHAS%E7%AE%97%E6%B3%95%E7%BB%93%E5%90%88%E4%BE%8B%E5%AD%90/" target="_self">
         <div>
-          情境概述·  Alice 和 Bob 是通信双方。 目标：确保消息 ( M ) 的机密性、完整性和来源可验证。 使用的技术：RSA 加密、数字签名和 Hash 算法。  双方应持有的密钥·   Alice:  私钥$( d_{A})$ ：用来签名消息。 公钥 $(e_{A})$：用来加密消息（如果 Alice 要接收加密消息）。    Bob:  私钥 $( d_{B})$ ：用来解密消息。 公钥
+          情境概述  Alice 和 Bob 是通信双方。 目标：确保消息 ( M ) 的机密性、完整性和来源可验证。 使用的技术：RSA 加密、数字签名和 Hash 算法。  双方应持有的密钥  Alice:  私钥\(( d_{A})\) ：用来签名消息。 公钥 \((e_{A})\)：用来加密消息（如果 Alice 要接收加密消息）。  Bob:  私钥 \(( d_{B})\) ：用来解密消息。 公
         </div>
       </a>
 
@@ -420,7 +420,7 @@
       
       <a class="index-excerpt " href="/2024/11/18/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" target="_self">
         <div>
-          RSA 加密算法解释· 一、RSA 加密算法的数学原理· 1. 生成密钥对· 步骤如下：  选择两个大素数：( p ) 和 ( q )。 计算 ( n )： $$ n = p \times q $$ 计算欧拉函数 ($\varphi(n)$)：  $$ \varphi (n) = (p-1) \times (q-1) $$  选择一个公钥指数 ( e )，要求 $1&lt;e&lt;\varphi
+          RSA 加密算法解释 一、RSA 加密算法的数学原理 1. 生成密钥对 步骤如下：  选择两个大素数：( p ) 和 ( q )。 计算 ( n )： \[ n = p \times q \] 计算欧拉函数 (\(\varphi(n)\))：  \[ \varphi (n) = (p-1) \times (q-1) \]  选择一个公钥指数 ( e )，要求 \(1&lt;e&lt;\varphi
         </div>
       </a>
 
@@ -554,6 +554,80 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="GPT分区方案">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
+          GPT分区方案
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
+        <div>
+          p18  GPT（GUID 分区表） 分区方案在结构、功能以及与引导加载程序和系统引导的交互方式方面与 MBR（主引导记录） 方案有很大不同。让我们比较一下这两者，并了解 GPT 在系统引导环境中的工作原理，尤其是对于双引导场景。 1. GPT 和 MBR 分区方案之间的差异：     方面 MBR GPT     分区表大小 64 字节（限制为 4 个主分区） 将多个分区存储在更大的表中
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-10 20:30" pubdate>
+              2024-10-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/BOOT/" class="category-chain-item">BOOT</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/BOOT/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/BOOT/">#BOOT</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2024/10/10/BOOTLOADER%E5%92%8CBOOT%20MANAGER%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88English%EF%BC%89/" target="_self">
           <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="BOOTLOADER和BOOT MANAGER的区别（English）">
         </a>
@@ -628,80 +702,6 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="GPT分区方案">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
-          GPT分区方案
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2024/10/10/GPT%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
-        <div>
-          GPT（GUID 分区表） 分区方案在结构、功能以及与引导加载程序和系统引导的交互方式方面与 MBR（主引导记录） 方案有很大不同。让我们比较一下这两者，并了解 GPT 在系统引导环境中的工作原理，尤其是对于双引导场景。 1. GPT 和 MBR 分区方案之间的差异：·    方面 MBR GPT     分区表大小 64 字节（限制为 4 个主分区） 将多个分区存储在更大的表中   分区数 最
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-10 20:30" pubdate>
-              2024-10-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/BOOT/" class="category-chain-item">BOOT</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/BOOT/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/BOOT/">#BOOT</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2024/10/10/GRUB/" target="_self">
           <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="GRUB">
         </a>
@@ -718,7 +718,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/GRUB/" target="_self">
         <div>
-          是的，GRUB 不会将其所有引导加载程序代码都存储在 /boot/grub 中。它使用 多阶段架构，其中引导加载程序的不同部分存储在不同的位置，这对于使用 MBR 和 GPT 分区方案的系统至关重要，尤其是在 BIOS 模式 下启动时。 GRUB 的多阶段架构说明· GRUB 的启动过程分为几个阶段，每个阶段都存储在不同的位置，具体取决于分区方案（MBR 或 GPT）和启动模式（BIOS 或 UE
+          是的，GRUB 不会将其所有引导加载程序代码都存储在 /boot/grub 中。它使用 多阶段架构，其中引导加载程序的不同部分存储在不同的位置，这对于使用 MBR 和 GPT 分区方案的系统至关重要，尤其是在 BIOS 模式 下启动时。 GRUB 的多阶段架构说明 GRUB 的启动过程分为几个阶段，每个阶段都存储在不同的位置，具体取决于分区方案（MBR 或 GPT）和启动模式（BIOS 或 UEF
         </div>
       </a>
 
@@ -792,7 +792,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/MBR%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
         <div>
-          [!NOTE] MBR（主引导记录） 结构就是主引导代码+分区表（+post-mbr gap），主引导代码 就是专门负责用来加载系统到内存中的，分区表 就是一个磁盘的整体布局。post-mbr gap 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，则就会出现 grub 的代码覆盖了原本的主引导的原先代码。   1. MBR 结构：·  主引导记录 (MBR)
+          [!NOTE] MBR（主引导记录） 结构就是主引导代码+分区表（+post-mbr gap），主引导代码 就是专门负责用来加载系统到内存中的，分区表 就是一个磁盘的整体布局。post-mbr gap 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，==则就会出现 grub 的代码覆盖了原本的主引导的原先代码。==   p17  1. MBR 结构：  主引导
         </div>
       </a>
 
@@ -940,7 +940,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/" target="_self">
         <div>
-          当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。 1. 开机自检 (POST)·  开机：   当您打开计算机电源时，电源会向主板和所有连接的组件供电。   POST：   固件（BIOS 或 UEFI）运行一系列称为开机自检 (POST) 的诊断测试。这会检查必要的
+          当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。 1. 开机自检 (POST)  开机：   当您打开计算机电源时，电源会向主板和所有连接的组件供电。   POST：   固件（BIOS 或 UEFI）运行一系列称为开机自检 (POST) 的诊断测试。这会检查必要的硬
         </div>
       </a>
 

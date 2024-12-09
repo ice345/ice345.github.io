@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="大致流程· 流程如下：  将硬盘分区，并将其初始化为 物理卷（PV）。 将物理卷加入到一个 卷组（VG） 中。 在卷组中创建 逻辑卷（LV）。 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。  文件系统介绍· 1. 文件系统· 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，SSD，u盘 等存储设">
+    <meta name="description" content="大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件系统和卷的关系">
 <meta property="og:url" content="http://example.com/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="大致流程· 流程如下：  将硬盘分区，并将其初始化为 物理卷（PV）。 将物理卷加入到一个 卷组（VG） 中。 在卷组中创建 逻辑卷（LV）。 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。  文件系统介绍· 1. 文件系统· 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，SSD，u盘 等存储设">
+<meta property="og:description" content="大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-27T09:49:14.000Z">
 <meta property="article:modified_time" content="2024-09-29T09:56:59.026Z">
@@ -252,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          992 字
+          997 字
         
       </span>
     
@@ -305,19 +305,12 @@
             
               <div class="markdown-body">
                 
-                <h1 id="大致流程">大致流程<a class="anchor" href="#大致流程">·</a></h1>
-<p><strong>流程如下：</strong></p>
-<ol>
-<li>将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。</li>
-<li>将物理卷加入到一个 <strong>卷组（VG）</strong> 中。</li>
-<li>在卷组中创建 <strong>逻辑卷（LV）</strong>。</li>
-<li>在逻辑卷上创建文件系统（如 Ext4、XFS 等）。</li>
-<li>将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</li>
-</ol>
-<h1 id="文件系统介绍">文件系统介绍<a class="anchor" href="#文件系统介绍">·</a></h1>
-<h2 id="1-文件系统">1. 文件系统<a class="anchor" href="#1-文件系统">·</a></h2>
+                <h1 id="大致流程">大致流程</h1>
+<p><strong>流程如下：</strong> 1. 将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。 2. 将物理卷加入到一个 <strong>卷组（VG）</strong> 中。 3. 在卷组中创建 <strong>逻辑卷（LV）</strong>。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</p>
+<h1 id="文件系统介绍">文件系统介绍</h1>
+<h2 id="文件系统">1. 文件系统</h2>
 <p><strong>文件系统说白了就是操作系统管理硬盘中数据的一个方式。</strong> 详细点就是：问阿金系统可以管理 <code>硬盘</code>，<code>SSD</code>，<code>u盘</code> 等存储设备的数据布局，提供读写文件的接口。文件系统负责存储文件、文件的元数据（如文件名称、权限、时间戳等），以及组织文件所在的路径结构（如文件夹层级）。</p>
-<h2 id="2-文件系统格式">2. 文件系统格式<a class="anchor" href="#2-文件系统格式">·</a></h2>
+<h2 id="文件系统格式">2. 文件系统格式</h2>
 <p>主流格式如下：</p>
 <ul>
 <li><strong>NTFS</strong>（Windows默认文件系统）</li>
@@ -328,45 +321,24 @@
 <li><strong>ZFS</strong>（跨平台、具有高数据完整性和快照功能）</li>
 </ul>
 <blockquote>
-<p>[!NOTE]
-不同的文件系统格式的区别就是：<code>性能</code>，<code>容量</code>，<code>恢复</code> 等的区别。</p>
+<p>[!NOTE] 不同的文件系统格式的区别就是：<code>性能</code>，<code>容量</code>，<code>恢复</code> 等的区别。</p>
 </blockquote>
-<h1 id="硬盘操作和文件系统关系">硬盘操作和文件系统关系<a class="anchor" href="#硬盘操作和文件系统关系">·</a></h1>
-<h2 id="回顾">回顾<a class="anchor" href="#回顾">·</a></h2>
-<p>上一节的<a target="_blank" rel="noopener" href="https://ice345.github.io/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7.md">硬盘相关-卷</a>这个操作流程：</p>
-<ul>
-<li>将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。</li>
-<li>将物理卷加入到一个 <strong>卷组（VG）</strong> 中。</li>
-<li>在卷组中创建 <strong>逻辑卷（LV）</strong>。其实还不能达到我们平时打开文件资源管理器中点击文件夹就可以实现跳转并显示下一层的文件内容。（<strong>说白了这个逻辑卷还只是一个没有关联的存储空间，无法读取和写入数据</strong>）我们还要在逻辑卷上操作然后才可以实现如上效果。</li>
-</ul>
-<p>要进行的操作就是：</p>
-<ul>
-<li>在逻辑卷上创建文件系统（如 Ext 4、XFS 等）。</li>
-<li>将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</li>
-</ul>
+<h1 id="硬盘操作和文件系统关系">硬盘操作和文件系统关系</h1>
+<h2 id="回顾">回顾</h2>
+<p>上一节的<a target="_blank" rel="noopener" href="https://ice345.github.io/2024/09/27/硬盘相关-卷.md">硬盘相关-卷</a>这个操作流程： - 将硬盘分区，并将其初始化为 <strong>物理卷（PV）</strong>。 - 将物理卷加入到一个 <strong>卷组（VG）</strong> 中。 - 在卷组中创建 <strong>逻辑卷（LV）</strong>。 其实还不能达到我们平时打开文件资源管理器中点击文件夹就可以实现跳转并显示下一层的文件内容。（<strong>说白了这个逻辑卷还只是一个没有关联的存储空间，无法读取和写入数据</strong>）我们还要在逻辑卷上操作然后才可以实现如上效果。</p>
+<p>要进行的操作就是： - 在逻辑卷上创建文件系统（如 Ext 4、XFS 等）。 - 将逻辑卷 <strong>挂载</strong> 到系统目录中，以便访问和存储数据。</p>
 <blockquote>
-<p>[!TIPS]
-这个文件系统的格式是可以自己选择的，就是我们安装系统的时候，选择自定义安装或者高级安装方式，可以手动选择文件系统格式，手动划分硬盘，位每个分区或者逻辑卷选择文件系统格式。例如：</p>
-<ul>
-<li>你可以选择在 <code>/</code> 根目录分区上使用 <strong>Ext4</strong>。</li>
-<li>在 <code>/home</code> 分区上使用 <strong>XFS</strong>。</li>
-<li>在 <code>/boot</code> 分区上使用 <strong>Ext 3</strong>，等等。</li>
-</ul>
+<p>[!TIPS] 这个文件系统的格式是可以自己选择的，就是我们安装系统的时候，选择自定义安装或者高级安装方式，可以手动选择文件系统格式，手动划分硬盘，位每个分区或者逻辑卷选择文件系统格式。例如： - 你可以选择在 <code>/</code> 根目录分区上使用 <strong>Ext4</strong>。 - 在 <code>/home</code> 分区上使用 <strong>XFS</strong>。 - 在 <code>/boot</code> 分区上使用 <strong>Ext 3</strong>，等等。</p>
 </blockquote>
 <p>创建好文件系统格式后，我们就要将其挂载到系统目录下了。原因如下：</p>
-<h2 id="原因">原因<a class="anchor" href="#原因">·</a></h2>
-<p><mark>我们创建好文件系统格式后，是可以让硬盘知道怎么管理数据了，但是这个数据是怎么来的，就是从操作系统上来的。既然是从操作系统上来的，我们就要挂载到操作系统上才可以来让数据写入到硬盘中，从而文件系统可以按照格式来管理数据</mark></p>
-<ol>
-<li>
-<p><strong>让操作系统识别并访问数据</strong>： 挂载的作用是将存储设备（如硬盘分区或逻辑卷）关联到操作系统中的某个目录。</p>
-<p>例如，执行一下挂载命令：</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount /dev/myvg/mylv /mnt/mydata（/mnt一般是挂载目录）<br></code></pre></td></tr></table></figure>
-<ol start="2">
-<li><strong>文件系统的入口点</strong>： 文件系统是用于组织数据的，而挂载点（如 <code>/mnt/mydata</code>）是文件系统与操作系统交互的入口。</li>
-<li><strong>多卷管理</strong>：挂载可以实现在不同目录下挂载多个存储设备或逻辑卷。类比于：就是在电脑上可以同时挂载个 u 盘或者挂载个移动硬盘。</li>
-<li><strong>动态扩展和迁移</strong>：就是继续上面的例子，u 盘和移动硬盘可以随时卸载（umount），插在别的电脑上。</li>
+<h2 id="原因">原因</h2>
+<p>==我们创建好文件系统格式后，是可以让硬盘知道怎么管理数据了，但是这个数据是怎么来的，就是从操作系统上来的。既然是从操作系统上来的，我们就要挂载到操作系统上才可以来让数据写入到硬盘中，从而文件系统可以按照格式来管理数据==</p>
+<ol type="1">
+<li><p><strong>让操作系统识别并访问数据</strong>： 挂载的作用是将存储设备（如硬盘分区或逻辑卷）关联到操作系统中的某个目录。</p>
+<p>例如，执行一下挂载命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount /dev/myvg/mylv /mnt/mydata（/mnt一般是挂载目录）<br></code></pre></td></tr></table></figure></p></li>
+<li><p><strong>文件系统的入口点</strong>： 文件系统是用于组织数据的，而挂载点（如 <code>/mnt/mydata</code>）是文件系统与操作系统交互的入口。</p></li>
+<li><p><strong>多卷管理</strong>：挂载可以实现在不同目录下挂载多个存储设备或逻辑卷。类比于：就是在电脑上可以同时挂载个 u 盘或者挂载个移动硬盘。</p></li>
+<li><p><strong>动态扩展和迁移</strong>：就是继续上面的例子，u 盘和移动硬盘可以随时卸载（umount），插在别的电脑上。</p></li>
 </ol>
 
                 
