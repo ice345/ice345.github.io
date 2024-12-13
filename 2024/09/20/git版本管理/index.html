@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。 一、Git 版本冲突的出现情形  同一文件的同一部分被多个开发者修改： 当多个开发者修改同一个文件的同一部分时，如果尝试合">
+    <meta name="description" content="在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。 一、Git 版本冲突的出现情形·   同一文件的同一部分被多个开发者修改：当多个开发者修改同一个文件的同一部分时，如果尝试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git版本管理">
 <meta property="og:url" content="http://example.com/2024/09/20/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。 一、Git 版本冲突的出现情形  同一文件的同一部分被多个开发者修改： 当多个开发者修改同一个文件的同一部分时，如果尝试合">
+<meta property="og:description" content="在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。 一、Git 版本冲突的出现情形·   同一文件的同一部分被多个开发者修改：当多个开发者修改同一个文件的同一部分时，如果尝试">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-20T08:49:27.000Z">
 <meta property="article:modified_time" content="2024-09-20T08:49:57.500Z">
@@ -308,54 +308,75 @@
               <div class="markdown-body">
                 
                 <p>在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。</p>
-<h3 id="一git-版本冲突的出现情形">一、Git 版本冲突的出现情形</h3>
-<ol type="1">
-<li><p><strong>同一文件的同一部分被多个开发者修改</strong>： 当多个开发者修改同一个文件的同一部分时，如果尝试合并这些修改，Git 无法自动决定哪一部分修改应该保留。例如：</p>
+<h3 id="一、Git-版本冲突的出现情形">一、Git 版本冲突的出现情形<a class="anchor" href="#一、Git-版本冲突的出现情形">·</a></h3>
+<ol>
+<li>
+<p><strong>同一文件的同一部分被多个开发者修改</strong>：当多个开发者修改同一个文件的同一部分时，如果尝试合并这些修改，Git 无法自动决定哪一部分修改应该保留。例如：</p>
 <ul>
 <li>开发者 A 修改了文件 <code>file.txt</code> 的第 10 行，提交并推送了。</li>
 <li>开发者 B 在开发者 A 推送之前也修改了 <code>file.txt</code> 的第 10 行，并在之后尝试推送。</li>
-</ul></li>
-<li><p><strong>不同分支的合并</strong>： 不同分支上的代码通常会有不同的开发进展，当一个开发者在两个不同的分支上修改了同一文件的同一部分内容时，合并分支时会产生冲突。</p></li>
-<li><p><strong>手动解决冲突不当</strong>： 当冲突发生时，开发者在手动解决冲突时没有正确地保留需要的代码，导致推送到远程仓库时再次产生冲突。</p></li>
+</ul>
+</li>
+<li>
+<p><strong>不同分支的合并</strong>：不同分支上的代码通常会有不同的开发进展，当一个开发者在两个不同的分支上修改了同一文件的同一部分内容时，合并分支时会产生冲突。</p>
+</li>
+<li>
+<p><strong>手动解决冲突不当</strong>：当冲突发生时，开发者在手动解决冲突时没有正确地保留需要的代码，导致推送到远程仓库时再次产生冲突。</p>
+</li>
 </ol>
-<h3 id="二如何解决-git-版本冲突">二、如何解决 Git 版本冲突</h3>
-<p>当发生冲突时，Git 会标记出冲突的地方，文件内容会出现如下格式： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br># 当前分支的代码<br>=======<br># 其他分支的代码<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<br></code></pre></td></tr></table></figure> 在这种情况下，需要手动决定保留哪一部分代码，或者将两个版本的代码合并。具体步骤如下：</p>
-<h4 id="检查冲突文件">1. 检查冲突文件</h4>
-<p>当你尝试合并代码时，冲突会阻止提交并显示冲突文件。你可以通过以下命令查看冲突文件： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git status<br></code></pre></td></tr></table></figure> 冲突文件会显示在 "Unmerged paths" 下方。</p>
-<h4 id="手动解决冲突">2. 手动解决冲突</h4>
+<h3 id="二、如何解决-Git-版本冲突">二、如何解决 Git 版本冲突<a class="anchor" href="#二、如何解决-Git-版本冲突">·</a></h3>
+<p>当发生冲突时，Git 会标记出冲突的地方，文件内容会出现如下格式：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br># 当前分支的代码<br>=======<br># 其他分支的代码<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<br></code></pre></td></tr></table></figure>
+<p>在这种情况下，需要手动决定保留哪一部分代码，或者将两个版本的代码合并。具体步骤如下：</p>
+<h4 id="1-检查冲突文件">1. 检查冲突文件<a class="anchor" href="#1-检查冲突文件">·</a></h4>
+<p>当你尝试合并代码时，冲突会阻止提交并显示冲突文件。你可以通过以下命令查看冲突文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git status<br></code></pre></td></tr></table></figure>
+<p>冲突文件会显示在 “Unmerged paths” 下方。</p>
+<h4 id="2-手动解决冲突">2. 手动解决冲突<a class="anchor" href="#2-手动解决冲突">·</a></h4>
 <p>打开冲突文件，根据冲突标记 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 来手动解决冲突。例如，你可以决定保留其中一部分代码，或将不同的部分合并在一起。解决后删除冲突标记并保存文件。</p>
-<h4 id="标记解决冲突">3. 标记解决冲突</h4>
-<p>解决冲突后，告诉 Git 冲突已经被解决，可以通过 <code>git add</code> 命令将文件标记为已解决： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add &lt;conflict-file&gt;<br></code></pre></td></tr></table></figure></p>
-<h4 id="提交合并结果">4. 提交合并结果</h4>
-<p>最后，提交冲突解决后的更改： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;Resolve merge conflict&quot;</span><br></code></pre></td></tr></table></figure></p>
-<h4 id="推送到远程仓库">5. 推送到远程仓库</h4>
-<p>解决冲突后，可以将合并后的代码推送到远程仓库： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure></p>
-<h3 id="三多人合作中的-git-版本管理实践">三、多人合作中的 Git 版本管理实践</h3>
+<h4 id="3-标记解决冲突">3. 标记解决冲突<a class="anchor" href="#3-标记解决冲突">·</a></h4>
+<p>解决冲突后，告诉 Git 冲突已经被解决，可以通过 <code>git add</code> 命令将文件标记为已解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add &lt;conflict-file&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="4-提交合并结果">4. 提交合并结果<a class="anchor" href="#4-提交合并结果">·</a></h4>
+<p>最后，提交冲突解决后的更改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;Resolve merge conflict&quot;</span><br></code></pre></td></tr></table></figure>
+<h4 id="5-推送到远程仓库">5. 推送到远程仓库<a class="anchor" href="#5-推送到远程仓库">·</a></h4>
+<p>解决冲突后，可以将合并后的代码推送到远程仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure>
+<h3 id="三、多人合作中的-Git-版本管理实践">三、多人合作中的 Git 版本管理实践<a class="anchor" href="#三、多人合作中的-Git-版本管理实践">·</a></h3>
 <p>为了避免和减少冲突，团队在协作时应该遵循一些最佳实践。以下是详细的版本管理流程和策略：</p>
-<h4 id="使用分支策略">1. <strong>使用分支策略</strong></h4>
+<h4 id="1-使用分支策略">1. <strong>使用分支策略</strong><a class="anchor" href="#1-使用分支策略">·</a></h4>
 <ul>
 <li><strong>主分支（<code>main</code> 或 <code>master</code>）</strong>：主分支用于存放稳定的、已发布的代码。</li>
 <li><strong>开发分支（<code>develop</code>）</strong>：用于开发的主分支，集成了所有开发人员的代码。</li>
 <li><strong>功能分支（<code>feature/xxx</code>）</strong>：每个功能或修复创建独立的功能分支，避免在开发过程中对其他功能产生影响。</li>
 </ul>
 <p>开发者可以在功能分支上工作，完成功能开发后再合并到 <code>develop</code> 分支，最后再由 <code>develop</code> 合并到 <code>main</code>。</p>
-<h4 id="定期拉取代码git-pull">2. <strong>定期拉取代码（<code>git pull</code>）</strong></h4>
-<p>开发者在工作之前和提交代码之前，应定期从远程仓库拉取最新的代码，以确保自己的代码基于最新的状态。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure></p>
-<h4 id="提交频繁且小规模的更改">3. <strong>提交频繁且小规模的更改</strong></h4>
-<p>大规模的提交更容易产生冲突，提交频繁且小的更改可以减少冲突的发生。可以使用以下命令来提交更改： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;Describe the changes made&quot;</span><br>git push origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure></p>
-<h4 id="代码审查code-review和合并请求pull-request">4. <strong>代码审查（Code Review）和合并请求（Pull Request）</strong></h4>
+<h4 id="2-定期拉取代码（git-pull）">2. <strong>定期拉取代码（<code>git pull</code>）</strong><a class="anchor" href="#2-定期拉取代码（git-pull）">·</a></h4>
+<p>开发者在工作之前和提交代码之前，应定期从远程仓库拉取最新的代码，以确保自己的代码基于最新的状态。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="3-提交频繁且小规模的更改">3. <strong>提交频繁且小规模的更改</strong><a class="anchor" href="#3-提交频繁且小规模的更改">·</a></h4>
+<p>大规模的提交更容易产生冲突，提交频繁且小的更改可以减少冲突的发生。可以使用以下命令来提交更改：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;Describe the changes made&quot;</span><br>git push origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="4-代码审查（Code-Review）和合并请求（Pull-Request）">4. <strong>代码审查（Code Review）和合并请求（Pull Request）</strong><a class="anchor" href="#4-代码审查（Code-Review）和合并请求（Pull-Request）">·</a></h4>
 <ul>
 <li>在多人协作中，开发者应该通过创建 Pull Request 来合并代码。通过 Pull Request，其他团队成员可以审查代码，确保代码质量并减少冲突。</li>
 <li>Pull Request 通常会在 <code>feature/xxx</code> 分支与 <code>develop</code> 分支之间进行，审查通过后再合并。</li>
 </ul>
-<h4 id="解决冲突的技巧">5. <strong>解决冲突的技巧</strong></h4>
+<h4 id="5-解决冲突的技巧">5. <strong>解决冲突的技巧</strong><a class="anchor" href="#5-解决冲突的技巧">·</a></h4>
 <ul>
 <li><strong>频繁拉取代码</strong>：当你在开发功能时，定期将 <code>develop</code> 分支合并到你的功能分支，以确保你的分支总是与其他人的工作同步，尽早发现潜在的冲突。</li>
 <li><strong>保持清晰的提交记录</strong>：在提交代码时，保持清晰的提交信息，可以让其他开发者清楚地了解每次提交的目的。</li>
 </ul>
-<h4 id="回滚操作">6. <strong>回滚操作</strong></h4>
-<p>当合并发生错误时，可以通过以下命令回滚： - <strong>撤销最后一次提交</strong>（还未推送）： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git reset --soft HEAD^<br></code></pre></td></tr></table></figure> - <strong>回滚到某个特定的提交</strong>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git reset --hard &lt;commit-hash&gt;<br></code></pre></td></tr></table></figure></p>
-<h3 id="四总结">四、总结</h3>
+<h4 id="6-回滚操作">6. <strong>回滚操作</strong><a class="anchor" href="#6-回滚操作">·</a></h4>
+<p>当合并发生错误时，可以通过以下命令回滚：</p>
+<ul>
+<li><strong>撤销最后一次提交</strong>（还未推送）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git reset --soft HEAD^<br></code></pre></td></tr></table></figure>
+</li>
+<li><strong>回滚到某个特定的提交</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git reset --hard &lt;commit-hash&gt;<br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="四、总结">四、总结<a class="anchor" href="#四、总结">·</a></h3>
 <p>在多人合作中，版本冲突不可避免，但通过合理的 Git 分支策略、定期拉取代码、频繁小规模提交、代码审查等方式，可以有效减少冲突并高效解决冲突。每个团队成员应尽可能早地处理冲突，并在冲突发生时耐心、细致地解决，以确保代码的稳定性和协作的顺畅。</p>
 
                 

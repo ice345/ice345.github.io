@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="[!NOTE] 在 javac 编译和使用 java 运行时自动添加库，使用--module-path 添加库路径，使用--module-add 添加库  在较新的 Ubuntu 版本（如 22.04）中，openjdk-8-jdk 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动">
+    <meta name="description" content="[!NOTE] 在 javac 编译和使用 java 运行时自动添加库，使用–module-path 添加库路径，使用–module-add 添加库  在较新的 Ubuntu 版本（如 22.04）中，openjdk-8-jdk 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动包含">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java_lib常见error">
 <meta property="og:url" content="http://example.com/2024/09/14/java-lib%E5%B8%B8%E8%A7%81error/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="[!NOTE] 在 javac 编译和使用 java 运行时自动添加库，使用--module-path 添加库路径，使用--module-add 添加库  在较新的 Ubuntu 版本（如 22.04）中，openjdk-8-jdk 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动">
+<meta property="og:description" content="[!NOTE] 在 javac 编译和使用 java 运行时自动添加库，使用–module-path 添加库路径，使用–module-add 添加库  在较新的 Ubuntu 版本（如 22.04）中，openjdk-8-jdk 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动包含">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-14T08:33:54.000Z">
 <meta property="article:modified_time" content="2024-09-14T08:34:33.249Z">
@@ -308,38 +308,49 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>[!NOTE] 在 javac 编译和使用 java 运行时自动添加库，使用--module-path 添加库路径，使用--module-add 添加库</p>
+<p>[!NOTE]
+在 javac 编译和使用 java 运行时自动添加库，使用–module-path 添加库路径，使用–module-add 添加库</p>
 </blockquote>
 <p>在较新的 Ubuntu 版本（如 22.04）中，<code>openjdk-8-jdk</code> 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动包含 JavaFX。</p>
-<h3 id="原因">原因：</h3>
-<ol type="1">
-<li><strong>JavaFX 的分离</strong>：
+<h3 id="原因：">原因：<a class="anchor" href="#原因：">·</a></h3>
+<ol>
+<li>
+<p><strong>JavaFX 的分离</strong>：</p>
 <ul>
 <li>自 <strong>Java 11</strong> 起，JavaFX 被从标准 JDK 中移除，成为一个独立的模块。OpenJDK 8 并不包含 JavaFX，因为它的设计理念和未来版本的 JavaFX 模块化策略有所不同。</li>
-</ul></li>
-<li><strong>JavaFX 与 OpenJDK 8</strong>：
+</ul>
+</li>
+<li>
+<p><strong>JavaFX 与 OpenJDK 8</strong>：</p>
 <ul>
 <li>在 OpenJDK 8 时，JavaFX 是作为 JDK 的一部分提供的，但在更高版本中（如 Java 11 和之后），它被移除到一个独立的库中。因此，OpenJDK 8 的包中不再包含 JavaFX。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="解决方法">解决方法：</h3>
+<h3 id="解决方法：">解决方法：<a class="anchor" href="#解决方法：">·</a></h3>
 <p>要在使用 OpenJDK 8 的系统上添加 JavaFX，你需要手动安装 JavaFX SDK。请按照以下步骤操作：</p>
-<ol type="1">
-<li><strong>下载 JavaFX SDK</strong>：
+<ol>
+<li>
+<p><strong>下载 JavaFX SDK</strong>：</p>
 <ul>
 <li>访问 <a target="_blank" rel="noopener" href="https://openjfx.io/">OpenJFX官网</a> 下载与你的操作系统匹配的 JavaFX SDK。</li>
-</ul></li>
-<li><strong>解压并配置 JavaFX</strong>：
+</ul>
+</li>
+<li>
+<p><strong>解压并配置 JavaFX</strong>：</p>
 <ul>
 <li>解压下载的 SDK 文件。你会得到一个包含 JavaFX JAR 文件的 <code>lib</code> 文件夹。</li>
-</ul></li>
-<li><strong>编译和运行 JavaFX 应用程序</strong>：
+</ul>
+</li>
+<li>
+<p><strong>编译和运行 JavaFX 应用程序</strong>：</p>
 <ul>
 <li>编译 JavaFX 程序时，使用 <code>--module-path</code> 参数来指定 JavaFX JAR 文件的位置。</li>
 <li>运行 JavaFX 程序时，使用 <code>--module-path</code> 和 <code>--add-modules</code> 参数来确保 JavaFX 模块可用。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="示例">示例：</h3>
+<h3 id="示例：">示例：<a class="anchor" href="#示例：">·</a></h3>
 <p>假设你下载并解压的 JavaFX SDK 位于 <code>/path/to/javafx-sdk</code>，然后你可以使用以下命令编译和运行 JavaFX 程序：</p>
 <p><strong>编译</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls HappyFaceFX.java<br></code></pre></td></tr></table></figure>

@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。 常用命令模式命令  进入命令模式：按 Esc 键进入命令模式。 退出 Vim：  :q 退出 :q! 强制退出（不保存） :wq 保存并退出 :x 保存并退出（等同于 :wq）  保存文件：  :w 保存文件 :w new_filename 另存为新文件   移">
+    <meta name="description" content="在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。 常用命令模式命令·  进入命令模式：按 Esc 键进入命令模式。 退出 Vim：  :q 退出 :q! 强制退出（不保存） :wq 保存并退出 :x 保存并退出（等同于 :wq）   保存文件：  :w 保存文件 :w new_filename 另存为新文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim_command">
 <meta property="og:url" content="http://example.com/2024/09/14/vim-command/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。 常用命令模式命令  进入命令模式：按 Esc 键进入命令模式。 退出 Vim：  :q 退出 :q! 强制退出（不保存） :wq 保存并退出 :x 保存并退出（等同于 :wq）  保存文件：  :w 保存文件 :w new_filename 另存为新文件   移">
+<meta property="og:description" content="在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。 常用命令模式命令·  进入命令模式：按 Esc 键进入命令模式。 退出 Vim：  :q 退出 :q! 强制退出（不保存） :wq 保存并退出 :x 保存并退出（等同于 :wq）   保存文件：  :w 保存文件 :w new_filename 另存为新文件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-14T12:47:20.000Z">
 <meta property="article:modified_time" content="2024-09-14T12:47:51.447Z">
@@ -308,8 +308,8 @@
               <div class="markdown-body">
                 
                 <p>在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。</p>
-<h3 id="常用命令模式命令">常用命令模式命令</h3>
-<ol type="1">
+<h3 id="常用命令模式命令">常用命令模式命令<a class="anchor" href="#常用命令模式命令">·</a></h3>
+<ol>
 <li><strong>进入命令模式</strong>：按 <code>Esc</code> 键进入命令模式。</li>
 <li><strong>退出 Vim</strong>：
 <ul>
@@ -317,49 +317,60 @@
 <li><code>:q!</code> 强制退出（不保存）</li>
 <li><code>:wq</code> 保存并退出</li>
 <li><code>:x</code> 保存并退出（等同于 <code>:wq</code>）</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>保存文件</strong>：
 <ul>
 <li><code>:w</code> 保存文件</li>
 <li><code>:w new_filename</code> 另存为新文件</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="移动方向的键位">移动方向的键位</h3>
-<ol type="1">
-<li><strong>基本方向移动</strong>：
+<h3 id="移动方向的键位">移动方向的键位<a class="anchor" href="#移动方向的键位">·</a></h3>
+<ol>
+<li>
+<p><strong>基本方向移动</strong>：</p>
 <ul>
 <li><code>h</code>：向左移动一个字符</li>
 <li><code>j</code>：向下移动一行</li>
 <li><code>k</code>：向上移动一行</li>
 <li><code>l</code>：向右移动一个字符</li>
-</ul></li>
-<li><strong>快速移动</strong>：
+</ul>
+</li>
+<li>
+<p><strong>快速移动</strong>：</p>
 <ul>
 <li><code>0</code>：移动到行首</li>
 <li><code>$</code>：移动到行尾</li>
 <li><code>gg</code>：移动到文件开头</li>
 <li><code>G</code>：移动到文件末尾</li>
 <li><code>:n</code>：移动到第 <code>n</code> 行（例如 <code>:5</code> 会移动到第 5 行）</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="精确跳转到行内的某个位置">精确跳转到行内的某个位置</h3>
-<ol type="1">
-<li><strong>精确跳转到某个字符</strong>：
+<h3 id="精确跳转到行内的某个位置">精确跳转到行内的某个位置<a class="anchor" href="#精确跳转到行内的某个位置">·</a></h3>
+<ol>
+<li>
+<p><strong>精确跳转到某个字符</strong>：</p>
 <ul>
 <li><code>f&lt;char&gt;</code>：向右跳转到下一个指定的字符，例如 <code>fa</code> 会跳到当前行的下一个字母 <code>a</code>。</li>
 <li><code>F&lt;char&gt;</code>：向左跳转到上一个指定的字符。</li>
 <li><code>t&lt;char&gt;</code>：向右跳转到指定字符的前一个位置。</li>
 <li><code>T&lt;char&gt;</code>：向左跳转到指定字符的后一个位置。</li>
-</ul></li>
-<li><strong>快速跳转到行内的某个位置</strong>：
+</ul>
+</li>
+<li>
+<p><strong>快速跳转到行内的某个位置</strong>：</p>
 <ul>
 <li><code>nG</code>：跳到第 <code>n</code> 行。</li>
 <li><code>n|</code>：跳到当前行的第 <code>n</code> 列。例如 <code>5|</code> 会跳到当前行的第 5 列。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="插入模式">插入模式</h3>
-<ol type="1">
-<li><strong>进入插入模式</strong>：
+<h3 id="插入模式">插入模式<a class="anchor" href="#插入模式">·</a></h3>
+<ol>
+<li>
+<p><strong>进入插入模式</strong>：</p>
 <ul>
 <li><code>i</code>：在当前光标位置前插入</li>
 <li><code>I</code>：在当前行的行首插入</li>
@@ -367,13 +378,16 @@
 <li><code>A</code>：在当前行的行尾插入</li>
 <li><code>o</code>：在当前行下方插入新行</li>
 <li><code>O</code>：在当前行上方插入新行</li>
-</ul></li>
-<li><strong>退出插入模式</strong>：
+</ul>
+</li>
+<li>
+<p><strong>退出插入模式</strong>：</p>
 <ul>
 <li>按 <code>Esc</code> 退出插入模式，返回命令模式。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="其他常用命令">其他常用命令</h3>
+<h3 id="其他常用命令">其他常用命令<a class="anchor" href="#其他常用命令">·</a></h3>
 <ul>
 <li><code>dd</code>：删除整行</li>
 <li><code>x</code>：删除光标所在的字符</li>

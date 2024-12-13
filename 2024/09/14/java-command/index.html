@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="在Java中，编译和运行程序涉及几个主要命令，包括 javac（编译器）、java（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令： 1. 编写Java源代码 首先你需要一个Java源文件，例如，创建一个名为HelloWorld.java的文件，内容如下： 12345public class HelloWorld &#123;    public static void main(">
+    <meta name="description" content="在Java中，编译和运行程序涉及几个主要命令，包括 javac（编译器）、java（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令： 1. 编写Java源代码· 首先你需要一个Java源文件，例如，创建一个名为HelloWorld.java的文件，内容如下： 12345public class HelloWorld &#123;    public static void main">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java_command">
 <meta property="og:url" content="http://example.com/2024/09/14/java-command/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="在Java中，编译和运行程序涉及几个主要命令，包括 javac（编译器）、java（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令： 1. 编写Java源代码 首先你需要一个Java源文件，例如，创建一个名为HelloWorld.java的文件，内容如下： 12345public class HelloWorld &#123;    public static void main(">
+<meta property="og:description" content="在Java中，编译和运行程序涉及几个主要命令，包括 javac（编译器）、java（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令： 1. 编写Java源代码· 首先你需要一个Java源文件，例如，创建一个名为HelloWorld.java的文件，内容如下： 12345public class HelloWorld &#123;    public static void main">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png">
 <meta property="og:image" content="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png">
@@ -311,71 +311,86 @@
               <div class="markdown-body">
                 
                 <p>在Java中，编译和运行程序涉及几个主要命令，包括 <code>javac</code>（编译器）、<code>java</code>（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令：</p>
-<h3 id="编写java源代码">1. <strong>编写Java源代码</strong></h3>
+<h3 id="1-编写Java源代码">1. <strong>编写Java源代码</strong><a class="anchor" href="#1-编写Java源代码">·</a></h3>
 <p>首先你需要一个Java源文件，例如，创建一个名为<code>HelloWorld.java</code>的文件，内容如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HelloWorld</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="编译java程序">2. <strong>编译Java程序</strong></h3>
+<h3 id="2-编译Java程序">2. <strong>编译Java程序</strong><a class="anchor" href="#2-编译Java程序">·</a></h3>
 <p>使用<code>javac</code>命令编译Java源文件。该命令会将<code>.java</code>文件编译为Java字节码，并生成相应的<code>.class</code>文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac HelloWorld.java<br></code></pre></td></tr></table></figure>
 <p>执行后会生成<code>HelloWorld.class</code>文件，这就是可以由Java虚拟机（JVM）执行的字节码文件。</p>
-<h4 id="编译多个文件">编译多个文件：</h4>
+<h4 id="编译多个文件：">编译多个文件：<a class="anchor" href="#编译多个文件：">·</a></h4>
 <p>如果你有多个Java文件，也可以一起编译，例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac File1.java File2.java<br></code></pre></td></tr></table></figure>
 <p>或者编译当前目录下的所有Java文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac *.java<br></code></pre></td></tr></table></figure>
-<h3 id="运行java程序">3. <strong>运行Java程序</strong></h3>
+<h3 id="3-运行Java程序">3. <strong>运行Java程序</strong><a class="anchor" href="#3-运行Java程序">·</a></h3>
 <p>使用<code>java</code>命令运行编译好的Java类文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java HelloWorld<br></code></pre></td></tr></table></figure>
 <p>注意：运行Java程序时不需要加<code>.class</code>扩展名，只需提供类名。</p>
-<h3 id="编译并指定输出目录">4. <strong>编译并指定输出目录</strong></h3>
+<h3 id="4-编译并指定输出目录">4. <strong>编译并指定输出目录</strong><a class="anchor" href="#4-编译并指定输出目录">·</a></h3>
 <p>你可以通过<code>-d</code>选项指定编译后的<code>.class</code>文件的输出目录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac -d bin HelloWorld.java<br></code></pre></td></tr></table></figure>
 <p>这会将编译后的<code>.class</code>文件输出到<code>bin</code>目录下。</p>
-<h3 id="设置类路径classpath">5. <strong>设置类路径（CLASSPATH）</strong></h3>
+<h3 id="5-设置类路径（CLASSPATH）">5. <strong>设置类路径（CLASSPATH）</strong><a class="anchor" href="#5-设置类路径（CLASSPATH）">·</a></h3>
 <p>如果你的Java程序依赖其他库或者<code>class</code>文件，你需要通过<code>-cp</code>（或<code>-classpath</code>）选项指定类路径。例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -<span class="hljs-built_in">cp</span> .:lib/somelibrary.jar HelloWorld<br></code></pre></td></tr></table></figure>
 <p>在这个例子中，当前目录（<code>.</code>）和<code>lib/somelibrary.jar</code>都被加入到类路径中（注意Linux使用冒号<code>:</code>分隔，Windows使用分号<code>;</code>分隔）。</p>
-<h3 id="打包成jar文件">6. <strong>打包成JAR文件</strong></h3>
+<h3 id="6-打包成JAR文件">6. <strong>打包成JAR文件</strong><a class="anchor" href="#6-打包成JAR文件">·</a></h3>
 <p>你可以将Java程序打包成一个JAR文件（Java Archive），然后可以通过JVM直接运行这个JAR包。步骤如下：</p>
-<h4 id="创建jar文件">创建JAR文件：</h4>
+<h4 id="创建JAR文件：">创建JAR文件：<a class="anchor" href="#创建JAR文件：">·</a></h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jar cvf HelloWorld.jar HelloWorld.class<br></code></pre></td></tr></table></figure>
-<h4 id="创建可执行的jar文件">创建可执行的JAR文件：</h4>
+<h4 id="创建可执行的JAR文件：">创建可执行的JAR文件：<a class="anchor" href="#创建可执行的JAR文件：">·</a></h4>
 <p>如果你的Java程序有<code>main</code>方法，可以创建一个可执行的JAR文件：</p>
-<ol type="1">
+<ol>
 <li>首先，创建一个<code>manifest.txt</code>文件，指定入口点：</li>
 </ol>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq">Main-<span class="hljs-keyword">Class</span>: HelloWorld<br></code></pre></td></tr></table></figure>
-<ol start="2" type="1">
+<ol start="2">
 <li>然后执行以下命令打包JAR文件：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jar cfm HelloWorld.jar manifest.txt HelloWorld.class<br></code></pre></td></tr></table></figure>
-<ol start="3" type="1">
+<ol start="3">
 <li>运行JAR文件：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -jar HelloWorld.jar<br></code></pre></td></tr></table></figure>
-<h3 id="打包成-jar-文件另法">打包成 JAR 文件另法</h3>
+<h3 id="打包成-JAR-文件另法">打包成 JAR 文件另法<a class="anchor" href="#打包成-JAR-文件另法">·</a></h3>
 <p>利用 <code>jar</code> 命令来对生成的字节码文件进行打包。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">jar -cvf hello.jar HelloWorld.class<br></code></pre></td></tr></table></figure>
 <p>其中 <code>c</code> 表示创建一个新 <code>jar</code> 包，<code>v</code> 表示创建过程中打印创建过程中的信息，<code>f</code> 则表示对新生成的 <code>jar</code> 命名。</p>
 <p>最后，利用以下命令来运行 <code>jar</code> 包。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">java -jar hello.jar<br></code></pre></td></tr></table></figure>
-<p>不过并不会顺利出现我们想要的结果，此时会报错 <code>hello.jar</code> 中没有主清单属性。这是因为我们还没有在 <code>MENIFEST.MF</code> 文件中添加 <code>Main-Class</code> 属性。 <a target="_blank" rel="noopener" href="https://github.com/cunyu1943/JavaPark/blob/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png"><img src="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png" srcset="/img/loading.gif" lazyload /></a></p>
+<p>不过并不会顺利出现我们想要的结果，此时会报错 <code>hello.jar</code> 中没有主清单属性。这是因为我们还没有在 <code>MENIFEST.MF</code> 文件中添加 <code>Main-Class</code> 属性。 <a target="_blank" rel="noopener" href="https://github.com/cunyu1943/JavaPark/blob/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png"><img src="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/compile.png" srcset="/img/loading.gif" lazyload alt=""></a></p>
 <p>用压缩软件打开刚创建的 <code>hello.jar</code>，里边除了 <code>HelloWorld.class</code> 文件之外，还会多一个 <code>META-INF</code> 文件夹，里边还有一个 <code>MENIFEST.MF</code> 文件，此时我们只需要用编辑器打开该文件，然后在文件中加入以下代码。（<strong>记得添加之后要保证整个文件最后保留一行空行</strong>）</p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq">Main-<span class="hljs-keyword">Class</span>: HelloWorld<br></code></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://github.com/cunyu1943/JavaPark/blob/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png"><img src="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png" srcset="/img/loading.gif" lazyload /></a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/cunyu1943/JavaPark/blob/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png"><img src="https://github.com/cunyu1943/JavaPark/raw/main/src/java-tutorial/javase/assets/20220711-oop-3/main-class.png" srcset="/img/loading.gif" lazyload alt=""></a></p>
 <p>添加完成之后，再次运行 <code>java -jar hello.jar</code> ，就可以成功在控制台打印 <code>Hello World!</code> 了。</p>
-<h3 id="常见的jdk命令总结">7. <strong>常见的JDK命令总结</strong></h3>
+<h3 id="7-常见的JDK命令总结">7. <strong>常见的JDK命令总结</strong><a class="anchor" href="#7-常见的JDK命令总结">·</a></h3>
 <ul>
-<li><p><strong><code>javac</code></strong>：Java编译器，将Java源文件（<code>.java</code>）编译为字节码文件（<code>.class</code>）。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac HelloWorld.java<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong><code>java</code></strong>：Java解释器，运行编译后的字节码（<code>.class</code>）文件。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java HelloWorld<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong><code>jar</code></strong>：用于创建和管理JAR文件（Java归档文件），可以打包多个<code>.class</code>文件和其他资源。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jar cvf HelloWorld.jar HelloWorld.class<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong><code>javadoc</code></strong>：用于生成Java源代码的API文档。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javadoc HelloWorld.java<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong><code>javap</code></strong>：反编译<code>.class</code>文件，查看字节码或方法签名。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javap HelloWorld<br></code></pre></td></tr></table></figure></p></li>
+<li>
+<p><strong><code>javac</code></strong>：Java编译器，将Java源文件（<code>.java</code>）编译为字节码文件（<code>.class</code>）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac HelloWorld.java<br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong><code>java</code></strong>：Java解释器，运行编译后的字节码（<code>.class</code>）文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java HelloWorld<br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong><code>jar</code></strong>：用于创建和管理JAR文件（Java归档文件），可以打包多个<code>.class</code>文件和其他资源。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jar cvf HelloWorld.jar HelloWorld.class<br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong><code>javadoc</code></strong>：用于生成Java源代码的API文档。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javadoc HelloWorld.java<br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong><code>javap</code></strong>：反编译<code>.class</code>文件，查看字节码或方法签名。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javap HelloWorld<br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="调试jdb">8. <strong>调试（<code>jdb</code>）</strong></h3>
+<h3 id="8-调试（jdb）">8. <strong>调试（<code>jdb</code>）</strong><a class="anchor" href="#8-调试（jdb）">·</a></h3>
 <p>如果需要调试Java程序，Java开发工具包还提供了<code>jdb</code>命令（Java Debugger），用于设置断点、检查变量等：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jdb HelloWorld<br></code></pre></td></tr></table></figure>
-<h3 id="总结">总结</h3>
+<h3 id="总结">总结<a class="anchor" href="#总结">·</a></h3>
 <p>Java程序的编译和运行过程主要使用到两个核心命令：<code>javac</code>（编译）和<code>java</code>（运行）。通过这些命令，可以编写、编译、运行Java代码。此外，<code>jar</code>命令允许将Java程序打包成JAR文件，<code>javap</code>可以反编译字节码，<code>jdb</code>可以调试Java程序。这些命令组合起来使得Java开发非常灵活且强大。</p>
 
                 

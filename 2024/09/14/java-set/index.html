@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括JAVA_HOME、PATH和CLASSPATH），以及设置CLASSPATH以便程序能够找到所需的库文件。以下是详细步骤： 1. 安装JDK  访问 Oracle官网 或 OpenJDK 下载适合你操作系统的Java Development Kit (JDK) 版本。 安装下载的JD">
+    <meta name="description" content="在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括JAVA_HOME、PATH和CLASSPATH），以及设置CLASSPATH以便程序能够找到所需的库文件。以下是详细步骤： 1. 安装JDK·  访问 Oracle官网 或 OpenJDK 下载适合你操作系统的Java Development Kit (JDK) 版本。 安装下载的J">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java_set">
 <meta property="og:url" content="http://example.com/2024/09/14/java-set/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括JAVA_HOME、PATH和CLASSPATH），以及设置CLASSPATH以便程序能够找到所需的库文件。以下是详细步骤： 1. 安装JDK  访问 Oracle官网 或 OpenJDK 下载适合你操作系统的Java Development Kit (JDK) 版本。 安装下载的JD">
+<meta property="og:description" content="在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括JAVA_HOME、PATH和CLASSPATH），以及设置CLASSPATH以便程序能够找到所需的库文件。以下是详细步骤： 1. 安装JDK·  访问 Oracle官网 或 OpenJDK 下载适合你操作系统的Java Development Kit (JDK) 版本。 安装下载的J">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-14T08:31:40.000Z">
 <meta property="article:modified_time" content="2024-09-14T08:33:38.556Z">
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          875 字
+          878 字
         
       </span>
     
@@ -308,70 +308,89 @@
               <div class="markdown-body">
                 
                 <p>在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括<code>JAVA_HOME</code>、<code>PATH</code>和<code>CLASSPATH</code>），以及设置<code>CLASSPATH</code>以便程序能够找到所需的库文件。以下是详细步骤：</p>
-<h1 id="安装jdk">1. <strong>安装JDK</strong></h1>
-<ol type="1">
+<h1 id="1-安装JDK">1. <strong>安装JDK</strong><a class="anchor" href="#1-安装JDK">·</a></h1>
+<ol>
 <li>访问 <a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-jdk-downloads.html">Oracle官网</a> 或 <a target="_blank" rel="noopener" href="https://openjdk.java.net/">OpenJDK</a> 下载适合你操作系统的Java Development Kit (JDK) 版本。</li>
 <li>安装下载的JDK，按照安装向导进行操作，默认安装路径通常是<code>C:\Program Files\Java\jdk-version</code>。</li>
 </ol>
-<h1 id="配置环境变量">2. <strong>配置环境变量</strong></h1>
+<h1 id="2-配置环境变量">2. <strong>配置环境变量</strong><a class="anchor" href="#2-配置环境变量">·</a></h1>
 <p>为了使系统能够识别和使用Java编译器和运行时环境，需要将<code>JAVA_HOME</code>和<code>PATH</code>环境变量配置到系统中。</p>
-<h2 id="设置java_home环境变量">设置<code>JAVA_HOME</code>环境变量</h2>
-<ol type="1">
-<li><strong>右键点击“此电脑”或“我的电脑”</strong>，选择<strong>“属性”</strong>。</li>
-<li>点击<strong>“高级系统设置”</strong>，然后点击<strong>“环境变量”</strong>。</li>
-<li>在<strong>“系统变量”</strong>部分，点击<strong>“新建”</strong>，创建一个新的环境变量：
+<h2 id="设置JAVA-HOME环境变量">设置<code>JAVA_HOME</code>环境变量<a class="anchor" href="#设置JAVA-HOME环境变量">·</a></h2>
+<ol>
+<li><strong>右键点击“此电脑”或“我的电脑”</strong>，选择**“属性”**。</li>
+<li>点击**“高级系统设置”<strong>，然后点击</strong>“环境变量”**。</li>
+<li>在**“系统变量”<strong>部分，点击</strong>“新建”**，创建一个新的环境变量：
 <ul>
 <li>变量名：<code>JAVA_HOME</code></li>
 <li>变量值：JDK的安装路径，例如<code>C:\Program Files\Java\jdk-17</code>（根据你安装的版本路径来设置）。</li>
-</ul></li>
+</ul>
+</li>
 <li>点击<strong>确定</strong>保存。</li>
 </ol>
-<h2 id="配置-path-环境变量">配置 <code>PATH</code> 环境变量</h2>
-<ol type="1">
-<li><p>在同一个“环境变量”窗口的<strong>系统变量</strong>部分，找到名为<code>Path</code>的变量，选中它后点击<strong>编辑</strong>。</p></li>
-<li><p>点击<strong>“新建”</strong>，然后将以下路径添加到<code>Path</code>变量中：</p>
-<p><code>%JAVA_HOME%\bin</code></p></li>
-<li><p>点击<strong>确定</strong>保存。</p></li>
+<h2 id="配置-PATH-环境变量">配置 <code>PATH</code> 环境变量<a class="anchor" href="#配置-PATH-环境变量">·</a></h2>
+<ol>
+<li>
+<p>在同一个“环境变量”窗口的<strong>系统变量</strong>部分，找到名为<code>Path</code>的变量，选中它后点击<strong>编辑</strong>。</p>
+</li>
+<li>
+<p>点击**“新建”**，然后将以下路径添加到<code>Path</code>变量中：</p>
+<p><code>%JAVA_HOME%\bin</code></p>
+</li>
+<li>
+<p>点击<strong>确定</strong>保存。</p>
+</li>
 </ol>
-<h1 id="设置classpath环境变量可选">3. <strong>设置<code>CLASSPATH</code>环境变量（可选）</strong></h1>
+<h1 id="3-设置CLASSPATH环境变量（可选）">3. <strong>设置<code>CLASSPATH</code>环境变量（可选）</strong><a class="anchor" href="#3-设置CLASSPATH环境变量（可选）">·</a></h1>
 <p><code>CLASSPATH</code>用于告诉Java编译器和运行时环境在哪里查找用户定义的类和包。如果你使用的是第三方库或你自己的Java类存放在自定义目录下，可以通过<code>CLASSPATH</code>来配置路径。对于普通Java开发，通常可以忽略这个步骤，因为JDK会自动查找标准库。</p>
-<h2 id="如果需要配置classpath">如果需要配置<code>CLASSPATH</code>：</h2>
-<ol type="1">
-<li><p>在<strong>“系统变量”</strong>部分，点击<strong>“新建”</strong>，创建一个新的环境变量：</p>
+<h2 id="如果需要配置CLASSPATH：">如果需要配置<code>CLASSPATH</code>：<a class="anchor" href="#如果需要配置CLASSPATH：">·</a></h2>
+<ol>
+<li>
+<p>在**“系统变量”<strong>部分，点击</strong>“新建”**，创建一个新的环境变量：</p>
 <ul>
 <li>变量名：<code>CLASSPATH</code></li>
 <li>变量值：包含库文件路径，添加<code>.</code>表示当前目录：</li>
 </ul>
-<p><code>.;%JAVA_HOME%\lib;%JAVA_HOME%\jre\lib</code></p></li>
-<li><p>点击<strong>确定</strong>保存。</p></li>
+<p><code>.;%JAVA_HOME%\lib;%JAVA_HOME%\jre\lib</code></p>
+</li>
+<li>
+<p>点击<strong>确定</strong>保存。</p>
+</li>
 </ol>
 <p><code>CLASSPATH</code>的每个路径之间用分号（<code>;</code>）隔开，<code>.</code>表示当前目录，JVM会从这里开始查找类文件。</p>
-<h2 id="验证配置">4. <strong>验证配置</strong></h2>
-<ol type="1">
-<li><p>打开命令提示符，输入以下命令以验证<code>JAVA_HOME</code>是否配置正确：</p>
+<h2 id="4-验证配置">4. <strong>验证配置</strong><a class="anchor" href="#4-验证配置">·</a></h2>
+<ol>
+<li>
+<p>打开命令提示符，输入以下命令以验证<code>JAVA_HOME</code>是否配置正确：</p>
 <p><code>echo %JAVA_HOME%</code></p>
-<p>它应该输出你安装的JDK的路径。</p></li>
-<li><p>验证<code>java</code>和<code>javac</code>命令是否能正常使用：</p>
+<p>它应该输出你安装的JDK的路径。</p>
+</li>
+<li>
+<p>验证<code>java</code>和<code>javac</code>命令是否能正常使用：</p>
 <p><code>java -version javac -version</code></p>
-<p>你应该能看到Java版本信息。如果没有看到正确的版本，检查环境变量的配置。</p></li>
+<p>你应该能看到Java版本信息。如果没有看到正确的版本，检查环境变量的配置。</p>
+</li>
 </ol>
-<h1 id="linux-下修改-java-版本">4. Linux 下修改 java 版本</h1>
-<h2 id="修改-java-版本">修改 java 版本</h2>
+<h1 id="4-Linux-下修改-java-版本">4. Linux 下修改 java 版本<a class="anchor" href="#4-Linux-下修改-java-版本">·</a></h1>
+<h2 id="修改-java-版本">修改 java 版本<a class="anchor" href="#修改-java-版本">·</a></h2>
 <p>从你的输出中可以看到，OpenJDK 8（<code>openjdk-8-jdk</code>）已经安装在你的系统中，版本为 <code>8u422-b05-1~22.04</code>。因此，你现在应该已经拥有OpenJDK 8。</p>
 <p>如果你运行<code>java -version</code>后仍然看到OpenJDK 11，可能是因为系统仍在使用OpenJDK 11作为默认Java版本。</p>
 <p>你可以通过以下命令切换默认的Java版本：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> update-alternatives --config java<br></code></pre></td></tr></table></figure>
 <p>然后在提示的列表中选择OpenJDK 8的路径（通常带有<code>java-8-openjdk</code>）。</p>
 <p>执行这个命令后，再次运行 <code>java -version</code>，应该会显示你刚设置的Java版本。</p>
-<h2 id="修改-javac-版本">修改 javac 版本</h2>
+<h2 id="修改-javac-版本">修改 javac 版本<a class="anchor" href="#修改-javac-版本">·</a></h2>
 <p>要将 <code>javac</code> 的版本切换为 OpenJDK 8，可以使用 <code>update-alternatives</code> 工具来设置默认的 <code>javac</code> 版本，和你之前设置 <code>java</code> 版本的方法相同：</p>
-<ol type="1">
+<ol>
 <li>查看可用的 <code>javac</code> 版本：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> update-alternatives --config javac<br></code></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li><p>在出现的列表中选择与 OpenJDK 8 相关的路径，通常路径中会包含 <code>java-8-openjdk</code>。</p></li>
-<li><p>选择完成后，再次检查 <code>javac</code> 的版本：</p></li>
+<ol start="2">
+<li>
+<p>在出现的列表中选择与 OpenJDK 8 相关的路径，通常路径中会包含 <code>java-8-openjdk</code>。</p>
+</li>
+<li>
+<p>选择完成后，再次检查 <code>javac</code> 的版本：</p>
+</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">javac -version<br></code></pre></td></tr></table></figure>
 <p>这样你就可以将 <code>javac</code> 的版本与 <code>java</code> 设置为一致的 OpenJDK 8。</p>
