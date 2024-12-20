@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="git命令使用感想·  git命令初始用·   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了">
+    <meta name="description" content="git命令使用感想  git命令初始用   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了 如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git_use">
 <meta property="og:url" content="http://example.com/2024/09/20/git-use/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="git命令使用感想·  git命令初始用·   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了">
+<meta property="og:description" content="git命令使用感想  git命令初始用   git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程 git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了 git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额 git commit -m “描述” 这个就是提交上去了 如">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-20T08:50:14.000Z">
 <meta property="article:modified_time" content="2024-09-20T08:51:15.957Z">
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          474 字
+          470 字
         
       </span>
     
@@ -308,9 +308,9 @@
               <div class="markdown-body">
                 
                 <!-- git初认识感想 -->
-<h1 id="git命令使用感想">git命令使用感想<a class="anchor" href="#git命令使用感想">·</a></h1>
-<hr>
-<h2 id="git命令初始用">git命令初始用<a class="anchor" href="#git命令初始用">·</a></h2>
+<h1 id="git命令使用感想">git命令使用感想</h1>
+<hr />
+<h2 id="git命令初始用">git命令初始用</h2>
 <!-- 这是已经建了仓库，可以使用git命令n推上去的情况，因为如果没有分支这些就要创建 -->
 <ul>
 <li>git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程</li>
@@ -321,14 +321,13 @@
 <li>git remote add origin url（一般最好用ssh密钥即建一个，后面可以不问密码）</li>
 <li>git push origin 分支名</li>
 </ul>
-<h2 id="ssh密钥创建">ssh密钥创建<a class="anchor" href="#ssh密钥创建">·</a></h2>
+<h2 id="ssh密钥创建">ssh密钥创建</h2>
 <ul>
-<li>先cd ~/.ssh用ll看看有无id_rsa,id_rsa_pub，无就创建，用该命令：
-*** ssh-keygen -t rsa -b 4096 -C “<a href="mailto:nni461904@gmail.com">nni461904@gmail.com</a>” ***</li>
+<li>先cd ~/.ssh用ll看看有无id_rsa,id_rsa_pub，无就创建，用该命令： *** ssh-keygen -t rsa -b 4096 -C "nni461904@gmail.com" ***</li>
 <li>创建好后就cat命令直接获取id_rsa_pub里的密钥或者vim复制也可</li>
 <li>然后就进github网页设置那设置ssh密钥就可了</li>
 </ul>
-<h2 id="git-push报错">git push报错<a class="anchor" href="#git-push报错">·</a></h2>
+<h2 id="git-push报错">git push报错</h2>
 <ul>
 <li>这个学问就大了，要看报错，这是冲突性问题</li>
 </ul>
@@ -337,22 +336,20 @@
 <ul>
 <li>因为折腾过很久，所以在最后提一下这个想法，这个是之前搞不定后，实现的一个操作：</li>
 </ul>
-<ol>
+<ol type="1">
 <li>先在github网页复制clone下来</li>
-<li>这样操作之后就可以实现本地和远程的同步了，这样我本地版本就大于远程的了<!-- 只是这样无法再复杂的情况下很好实现需求，因为这样是一种妥协操作 -->
-</li>
+<li>这样操作之后就可以实现本地和远程的同步了，这样我本地版本就大于远程的了 <!-- 只是这样无法再复杂的情况下很好实现需求，因为这样是一种妥协操作 --></li>
 <li>之后就可以按add那样提交就是了</li>
 </ol>
-<h2 id="因为文件夹里包含-git文件导致github网页创建了个子系统模块">因为文件夹里包含.git文件导致github网页创建了个子系统模块<a class="anchor" href="#因为文件夹里包含-git文件导致github网页创建了个子系统模块">·</a></h2>
-<ol>
+<h2 id="因为文件夹里包含.git文件导致github网页创建了个子系统模块">因为文件夹里包含.git文件导致github网页创建了个子系统模块</h2>
+<ol type="1">
 <li>先删除这个.git文件 rm -rf .git</li>
 <li>然后用git rm --cached 文件名实现在暂存区删除这个文件夹，实现停止跟踪这个文件或文件夹，从而可以实现修复</li>
 <li>使用git add命令重新添加到暂存区</li>
 <li>最后用git commit命令来提交</li>
-<li>最后git push
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43145427/article/details/125248146" title="实现github网页修复问题">修复</a></li>
+<li>最后git push <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43145427/article/details/125248146" title="实现github网页修复问题">修复</a></li>
 </ol>
-<h2 id="git命令学习"><em><strong>git命令学习</strong></em><a class="anchor" href="#git命令学习">·</a></h2>
+<h2 id="git命令学习"><strong><em>git命令学习</em></strong></h2>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gv421i7wW/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【git 详解，10分钟学会】">git命令学习</a></p>
 
                 

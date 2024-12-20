@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="两者区别· 创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别： 1. 软连接（符号链接）·  作用：软连接（ln -s 命令）本质上是文件系统中的快捷方式，它为文件或目录创建一个指向目标文件的链接。通过软连接，用户可以使用不同的路径来访问同一个文件或目录。 应用场景：  用于命令行中简化对某个文件或可执行程序的路径访问。例如，你可以通过软连接将 &#x2F;opt&#x2F;myapp&#x2F;my">
+    <meta name="description" content="两者区别 创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别： 1. 软连接（符号链接）  作用：软连接（ln -s 命令）本质上是文件系统中的快捷方式，它为文件或目录创建一个指向目标文件的链接。通过软连接，用户可以使用不同的路径来访问同一个文件或目录。 应用场景：  用于命令行中简化对某个文件或可执行程序的路径访问。例如，你可以通过软连接将 &#x2F;opt&#x2F;myapp&#x2F;myap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="软连接和&#x2F;.desktop图标">
 <meta property="og:url" content="http://example.com/2024/09/14/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="两者区别· 创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别： 1. 软连接（符号链接）·  作用：软连接（ln -s 命令）本质上是文件系统中的快捷方式，它为文件或目录创建一个指向目标文件的链接。通过软连接，用户可以使用不同的路径来访问同一个文件或目录。 应用场景：  用于命令行中简化对某个文件或可执行程序的路径访问。例如，你可以通过软连接将 &#x2F;opt&#x2F;myapp&#x2F;my">
+<meta property="og:description" content="两者区别 创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别： 1. 软连接（符号链接）  作用：软连接（ln -s 命令）本质上是文件系统中的快捷方式，它为文件或目录创建一个指向目标文件的链接。通过软连接，用户可以使用不同的路径来访问同一个文件或目录。 应用场景：  用于命令行中简化对某个文件或可执行程序的路径访问。例如，你可以通过软连接将 &#x2F;opt&#x2F;myapp&#x2F;myap">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-14T08:36:35.000Z">
 <meta property="article:modified_time" content="2024-09-14T08:37:47.629Z">
@@ -307,26 +307,24 @@
             
               <div class="markdown-body">
                 
-                <h1 id="两者区别">两者区别<a class="anchor" href="#两者区别">·</a></h1>
+                <h1 id="两者区别">两者区别</h1>
 <p>创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别：</p>
-<h3 id="1-软连接（符号链接）">1. <strong>软连接（符号链接）</strong><a class="anchor" href="#1-软连接（符号链接）">·</a></h3>
+<h3 id="软连接符号链接">1. <strong>软连接（符号链接）</strong></h3>
 <ul>
 <li><strong>作用</strong>：软连接（<code>ln -s</code> 命令）本质上是文件系统中的快捷方式，它为文件或目录创建一个指向目标文件的链接。通过软连接，用户可以使用不同的路径来访问同一个文件或目录。</li>
 <li><strong>应用场景</strong>：
 <ul>
 <li>用于命令行中简化对某个文件或可执行程序的路径访问。例如，你可以通过软连接将 <code>/opt/myapp/myapp_executable</code> 映射到 <code>/usr/local/bin/myapp</code>，使得你可以通过命令 <code>myapp</code> 来运行程序，而不需要输入完整路径。</li>
 <li>主要用于命令行和文件系统级别的操作，无法直接创建带图形界面或图标的可视化快捷方式。</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>特点</strong>：
 <ul>
 <li>无图形界面，纯粹是文件系统中的一个链接。</li>
 <li>用于命令行或脚本的便捷操作。</li>
 <li>只适用于终端或脚本中调用程序，而不涉及桌面图标、应用菜单等图形界面元素。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="2-桌面图标（-desktop-文件）">2. <strong>桌面图标（<code>.desktop</code> 文件）</strong><a class="anchor" href="#2-桌面图标（-desktop-文件）">·</a></h3>
+<h3 id="桌面图标.desktop-文件">2. <strong>桌面图标（<code>.desktop</code> 文件）</strong></h3>
 <ul>
 <li><strong>作用</strong>：<code>.desktop</code> 文件是一种定义应用程序启动方式的文件，通常用于 Linux 桌面环境。它不仅可以指向一个可执行文件，还可以包含应用的图标、名称、描述等信息。通过它，用户可以在桌面或应用菜单中图形化地启动应用程序。</li>
 <li><strong>应用场景</strong>：
@@ -334,178 +332,164 @@
 <li>用于在桌面环境下为应用程序创建图标或快捷方式，例如将应用程序显示在 Ubuntu 的应用菜单、启动器、桌面等地方。</li>
 <li>允许通过图形界面启动程序，而不是通过命令行。</li>
 <li><code>.desktop</code> 文件可以定义更多的行为，如是否在终端运行、传递特定参数、设置图标等。</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>特点</strong>：
 <ul>
 <li>主要用于图形化的桌面环境，允许用户通过鼠标点击图标来启动应用程序。</li>
 <li>可以设置图标、名称、描述、类别等信息，用户体验更友好。</li>
 <li>可以配置应用程序是否运行在终端、是否使用特定的图标等。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="主要区别总结："><strong>主要区别总结</strong>：<a class="anchor" href="#主要区别总结：">·</a></h3>
+<h3 id="主要区别总结"><strong>主要区别总结</strong>：</h3>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th><strong>特性</strong></th>
 <th><strong>软连接</strong></th>
 <th><strong>桌面图标（<code>.desktop</code> 文件）</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>作用</strong></td>
 <td>创建文件或目录的快捷方式，用于简化命令行操作</td>
 <td>为应用程序创建桌面快捷方式，允许在图形界面中启动应用</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>应用场景</strong></td>
 <td>文件系统、命令行中的快捷方式</td>
 <td>桌面环境、应用菜单中的图标，图形化启动应用程序</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>使用方式</strong></td>
 <td>通过终端命令执行</td>
 <td>通过点击桌面图标或应用菜单启动</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>图标支持</strong></td>
 <td>无图标支持，只是文件路径的指向</td>
 <td>支持图标显示，可以自定义图标、描述、应用类别等</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>是否需要图形界面</strong></td>
 <td>不需要，完全依赖于命令行或文件系统的路径操作</td>
 <td>需要图形界面环境，用于桌面或应用菜单中的应用程序快捷方式</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>可执行文件的配置选项</strong></td>
 <td>只能指向文件或目录，没有其他配置选项</td>
 <td>可以配置是否使用终端、参数传递、应用程序分类、图标等</td>
 </tr>
 </tbody>
 </table>
-<h3 id="何时使用软连接？"><strong>何时使用软连接？</strong><a class="anchor" href="#何时使用软连接？">·</a></h3>
+<h3 id="何时使用软连接"><strong>何时使用软连接？</strong></h3>
 <ul>
 <li>当你主要通过命令行使用应用程序时，软连接是一个方便的方式。它可以让你在终端中使用简短命令，而无需输入完整路径。</li>
 </ul>
-<h3 id="何时使用桌面图标（-desktop-文件）？"><strong>何时使用桌面图标（<code>.desktop</code> 文件）？</strong><a class="anchor" href="#何时使用桌面图标（-desktop-文件）？">·</a></h3>
+<h3 id="何时使用桌面图标.desktop-文件"><strong>何时使用桌面图标（<code>.desktop</code> 文件）？</strong></h3>
 <ul>
 <li>当你希望在桌面、应用菜单或启动器中图形化启动应用程序时，应该使用 <code>.desktop</code> 文件。它适用于日常用户需要通过点击图标的方式启动应用程序的场景。</li>
 </ul>
 <p>两者可以结合使用，比如为命令行用户创建软链接，同时为图形化用户提供 <code>.desktop</code> 文件，这样既方便终端操作，也方便图形界面使用。</p>
-<hr>
-<h1 id="示例">示例<a class="anchor" href="#示例">·</a></h1>
+<hr />
+<h1 id="示例">示例</h1>
 <p>当然，以下是分别使用软连接和 <code>.desktop</code> 文件的示例，以帮助你更清楚地理解两者的区别和用途。</p>
-<h3 id="1-软连接的示例"><strong>1. 软连接的示例</strong><a class="anchor" href="#1-软连接的示例">·</a></h3>
+<h3 id="软连接的示例"><strong>1. 软连接的示例</strong></h3>
 <p><strong>场景</strong>：假设你安装了一个应用程序 <code>myapp</code>，它的可执行文件位于 <code>/opt/myapp/myapp_executable</code>。你希望在终端中直接使用 <code>myapp</code> 命令来启动这个程序，而不需要输入完整路径。</p>
-<h4 id="步骤：">步骤：<a class="anchor" href="#步骤：">·</a></h4>
-<ol>
+<h4 id="步骤">步骤：</h4>
+<ol type="1">
 <li>查找可执行文件的路径（假设它在 <code>/opt/myapp/myapp_executable</code>）。</li>
 <li>创建软连接，将其链接到 <code>/usr/local/bin/</code>，方便在终端中使用：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">ln</span> -s /opt/myapp/myapp_executable /usr/local/bin/myapp<br></code></pre></td></tr></table></figure>
-<h4 id="结果：">结果：<a class="anchor" href="#结果：">·</a></h4>
+<h4 id="结果">结果：</h4>
 <ul>
 <li>你现在可以直接在终端中通过输入 <code>myapp</code> 来启动这个应用程序，而不需要输入完整路径 <code>/opt/myapp/myapp_executable</code>。</li>
 <li>软连接就是文件系统中的一个快捷方式，可以通过命令行快速访问应用程序。</li>
 </ul>
-<h4 id="验证：">验证：<a class="anchor" href="#验证：">·</a></h4>
+<h4 id="验证">验证：</h4>
 <p>可以运行以下命令查看软链接是否创建成功：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -l /usr/local/bin/myapp<br></code></pre></td></tr></table></figure>
-<p>你会看到输出类似于：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">lrwxrwxrwx</span> <span class="hljs-number">1</span> root root <span class="hljs-number">24</span> Sep <span class="hljs-number">14</span> <span class="hljs-number">10</span>:<span class="hljs-number">00</span> /usr/local/bin/myapp -&gt; /opt/myapp/myapp_executable<br></code></pre></td></tr></table></figure>
+<p>你会看到输出类似于： <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">lrwxrwxrwx</span> <span class="hljs-number">1</span> root root <span class="hljs-number">24</span> Sep <span class="hljs-number">14</span> <span class="hljs-number">10</span>:<span class="hljs-number">00</span> /usr/local/bin/myapp -&gt; /opt/myapp/myapp_executable<br></code></pre></td></tr></table></figure></p>
 <p>这意味着 <code>/usr/local/bin/myapp</code> 现在指向 <code>/opt/myapp/myapp_executable</code>。</p>
-<h3 id="2-创建桌面图标的示例"><strong>2. 创建桌面图标的示例</strong><a class="anchor" href="#2-创建桌面图标的示例">·</a></h3>
+<h3 id="创建桌面图标的示例"><strong>2. 创建桌面图标的示例</strong></h3>
 <p><strong>场景</strong>：你希望为 <code>myapp</code> 创建一个图标，显示在桌面或应用菜单中，方便通过点击启动程序。同时，你希望这个图标有一个合适的名称和图标文件。</p>
-<h4 id="步骤：-2">步骤：<a class="anchor" href="#步骤：-2">·</a></h4>
-<ol>
+<h4 id="步骤-1">步骤：</h4>
+<ol type="1">
 <li>首先，找到应用程序的可执行文件（例如 <code>/opt/myapp/myapp_executable</code>）和图标文件（例如 <code>/opt/myapp/myapp_icon.png</code>）。</li>
 <li>创建 <code>.desktop</code> 文件。你可以使用文本编辑器创建一个新的 <code>.desktop</code> 文件：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gedit ~/.local/share/applications/myapp.desktop<br></code></pre></td></tr></table></figure>
-<ol start="3">
+<ol start="3" type="1">
 <li>在 <code>.desktop</code> 文件中添加以下内容：</li>
 </ol>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Desktop Entry]</span><br><span class="hljs-attr">Version</span>=<span class="hljs-number">1.0</span><br><span class="hljs-attr">Name</span>=MyApp<br><span class="hljs-attr">Comment</span>=This is my custom application<br><span class="hljs-attr">Exec</span>=/opt/myapp/myapp_executable   <span class="hljs-comment"># 应用程序的实际路径</span><br><span class="hljs-attr">Icon</span>=/opt/myapp/myapp_icon.png      <span class="hljs-comment"># 图标文件路径</span><br><span class="hljs-attr">Terminal</span>=<span class="hljs-literal">false</span>                     <span class="hljs-comment"># 不需要在终端中运行</span><br><span class="hljs-attr">Type</span>=Application<br><span class="hljs-attr">Categories</span>=Utility<span class="hljs-comment">;                # 类别，可根据需要选择</span><br></code></pre></td></tr></table></figure>
-<ol start="4">
-<li>
-<p>保存并关闭文件。</p>
-</li>
-<li>
-<p>赋予 <code>.desktop</code> 文件执行权限：</p>
-</li>
+<ol start="4" type="1">
+<li><p>保存并关闭文件。</p></li>
+<li><p>赋予 <code>.desktop</code> 文件执行权限：</p></li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x ~/.local/share/applications/myapp.desktop<br></code></pre></td></tr></table></figure>
-<h4 id="结果：-2">结果：<a class="anchor" href="#结果：-2">·</a></h4>
+<h4 id="结果-1">结果：</h4>
 <ul>
 <li>你现在可以在 Ubuntu 的应用菜单中搜索 <code>MyApp</code>，并通过图标启动它。</li>
 <li>如果你希望将图标显示在桌面上，还可以将 <code>.desktop</code> 文件复制到桌面：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> ~/.local/share/applications/myapp.desktop ~/Desktop/<br></code></pre></td></tr></table></figure>
-<h4 id="验证：-2">验证：<a class="anchor" href="#验证：-2">·</a></h4>
+<h4 id="验证-1">验证：</h4>
 <ul>
 <li>在应用菜单中搜索 <code>MyApp</code>。</li>
 <li>双击桌面上的图标，应用程序将启动。</li>
 </ul>
-<h3 id="对比总结："><strong>对比总结：</strong><a class="anchor" href="#对比总结：">·</a></h3>
+<h3 id="对比总结"><strong>对比总结：</strong></h3>
 <table>
+
 <thead>
-<tr>
+<tr class="header">
 <th><strong>特性</strong></th>
 <th><strong>软连接示例</strong></th>
 <th><strong>桌面图标示例</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>目的</strong></td>
 <td>在命令行中方便运行应用程序</td>
 <td>在桌面或应用菜单中方便启动应用程序</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>操作系统级别</strong></td>
 <td>文件系统（终端和路径操作）</td>
 <td>桌面环境（图形用户界面）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>创建命令</strong></td>
 <td><code>sudo ln -s /opt/myapp/myapp_executable /usr/local/bin/myapp</code></td>
 <td>编辑并创建 <code>.desktop</code> 文件，赋予执行权限</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>启动方式</strong></td>
 <td>在终端中输入 <code>myapp</code></td>
 <td>点击桌面或应用菜单中的图标</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>是否支持图标</strong></td>
 <td>不支持图标，仅支持命令行使用</td>
 <td>支持图标，可以在桌面、应用菜单中显示自定义图标</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>适合的用户</strong></td>
 <td>终端用户、开发者、需要频繁通过命令行启动程序的用户</td>
 <td>图形界面用户、希望通过点击图标方便启动应用的普通用户</td>
 </tr>
 </tbody>
 </table>
-<p>这两个方法可以结合使用，例如：</p>
-<ul>
-<li>为终端用户创建一个软链接，方便通过命令行快速启动程序。</li>
-<li>为桌面用户创建一个 <code>.desktop</code> 文件，提供友好的图形化启动方式。</li>
-</ul>
-<hr>
-<h1 id="说明">说明<a class="anchor" href="#说明">·</a></h1>
+<p>这两个方法可以结合使用，例如： - 为终端用户创建一个软链接，方便通过命令行快速启动程序。 - 为桌面用户创建一个 <code>.desktop</code> 文件，提供友好的图形化启动方式。</p>
+<hr />
+<h1 id="说明">说明</h1>
 <p>在 Ubuntu 及其他类 Unix 系统中，通常将软链接（符号链接）放到 <code>/usr/local/bin</code> 目录有几个重要原因。这个做法涉及到文件系统的组织、环境变量和可执行文件的查找机制。</p>
-<h3 id="1-usr-local-bin-是用户本地安装软件的标准目录">1. <strong><code>/usr/local/bin</code> 是用户本地安装软件的标准目录</strong><a class="anchor" href="#1-usr-local-bin-是用户本地安装软件的标准目录">·</a></h3>
-<p><code>/usr/local/bin</code> 是 Linux 系统中一个专门用来存放用户自己安装的软件或脚本的目录，而不是操作系统包管理器（如 <code>apt</code>）管理的软件。其主要目的包括：</p>
-<ul>
-<li><strong>分离系统软件和用户自定义软件</strong>：系统自带的核心程序通常位于 <code>/bin</code>、<code>/usr/bin</code> 等目录，而 <code>/usr/local/bin</code> 是为本地用户安装的软件或脚本准备的，不会被系统包管理器覆盖或删除。</li>
-<li><strong>避免系统升级影响</strong>：如果用户将自己的程序放在 <code>/usr/bin</code> 或 <code>/bin</code>，在系统升级时可能会被系统文件覆盖。而 <code>/usr/local/bin</code> 被保留用于本地用户操作，系统升级不会动这个目录里的文件。</li>
-</ul>
-<h3 id="2-usr-local-bin-在系统的-PATH-环境变量中">2. <strong><code>/usr/local/bin</code> 在系统的 <code>PATH</code> 环境变量中</strong><a class="anchor" href="#2-usr-local-bin-在系统的-PATH-环境变量中">·</a></h3>
+<h3 id="usrlocalbin-是用户本地安装软件的标准目录">1. <strong><code>/usr/local/bin</code> 是用户本地安装软件的标准目录</strong></h3>
+<p><code>/usr/local/bin</code> 是 Linux 系统中一个专门用来存放用户自己安装的软件或脚本的目录，而不是操作系统包管理器（如 <code>apt</code>）管理的软件。其主要目的包括： - <strong>分离系统软件和用户自定义软件</strong>：系统自带的核心程序通常位于 <code>/bin</code>、<code>/usr/bin</code> 等目录，而 <code>/usr/local/bin</code> 是为本地用户安装的软件或脚本准备的，不会被系统包管理器覆盖或删除。 - <strong>避免系统升级影响</strong>：如果用户将自己的程序放在 <code>/usr/bin</code> 或 <code>/bin</code>，在系统升级时可能会被系统文件覆盖。而 <code>/usr/local/bin</code> 被保留用于本地用户操作，系统升级不会动这个目录里的文件。</p>
+<h3 id="usrlocalbin-在系统的-path-环境变量中">2. <strong><code>/usr/local/bin</code> 在系统的 <code>PATH</code> 环境变量中</strong></h3>
 <p><code>PATH</code> 是 Linux 系统中的一个环境变量，存放着系统在终端中查找可执行文件的目录。当你在终端中输入命令时，系统会从 <code>PATH</code> 列出的目录中按顺序查找该命令对应的可执行文件。如果你将软链接放到 <code>PATH</code> 中的某个目录（如 <code>/usr/local/bin</code>），用户可以直接在终端中运行该程序，而无需输入完整路径。</p>
 <p>可以通过以下命令查看 <code>PATH</code> 变量的内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
@@ -513,18 +497,14 @@
 <p>例如，<code>$PATH</code> 通常可能包含类似以下路径：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin<br></code></pre></td></tr></table></figure>
 <p>如果将软链接放在 <code>/usr/local/bin</code>，就无需输入绝对路径，可以直接通过命令名运行程序。</p>
-<h3 id="3-方便命令行调用">3. <strong>方便命令行调用</strong><a class="anchor" href="#3-方便命令行调用">·</a></h3>
+<h3 id="方便命令行调用">3. <strong>方便命令行调用</strong></h3>
 <p>将软链接放在 <code>/usr/local/bin</code> 中后，用户可以直接在终端中输入程序名称，而不必输入程序的完整路径。例如，如果你的程序可执行文件位于 <code>/opt/myapp/myapp_executable</code>，而你创建了一个软链接到 <code>/usr/local/bin/myapp</code>，则只需输入 <code>myapp</code> 即可运行该程序，而不需要每次都输入 <code>/opt/myapp/myapp_executable</code>。</p>
-<h3 id="4-遵循文件系统层次标准（FHS）">4. <strong>遵循文件系统层次标准（FHS）</strong><a class="anchor" href="#4-遵循文件系统层次标准（FHS）">·</a></h3>
-<p>Linux 系统通常遵循 <strong>文件系统层次标准</strong>（FHS, Filesystem Hierarchy Standard）。根据 FHS 规范：</p>
-<ul>
-<li><strong><code>/bin</code></strong> 和 <strong><code>/usr/bin</code></strong>：用于存放操作系统自带的程序和包管理器安装的软件。系统的核心工具和程序都放在这些目录中。</li>
-<li><strong><code>/usr/local/bin</code></strong>：这是专门为用户安装的程序、脚本或工具准备的目录，通常用于非操作系统提供的、用户自定义安装的软件。它可以看作是 “本地”（local）空间，供管理员或用户自行管理。</li>
-</ul>
+<h3 id="遵循文件系统层次标准fhs">4. <strong>遵循文件系统层次标准（FHS）</strong></h3>
+<p>Linux 系统通常遵循 <strong>文件系统层次标准</strong>（FHS, Filesystem Hierarchy Standard）。根据 FHS 规范： - <strong><code>/bin</code></strong> 和 <strong><code>/usr/bin</code></strong>：用于存放操作系统自带的程序和包管理器安装的软件。系统的核心工具和程序都放在这些目录中。 - <strong><code>/usr/local/bin</code></strong>：这是专门为用户安装的程序、脚本或工具准备的目录，通常用于非操作系统提供的、用户自定义安装的软件。它可以看作是 "本地"（local）空间，供管理员或用户自行管理。</p>
 <p>因此，遵循这种标准，可以帮助管理员和开发者更好地组织系统中的应用程序，确保系统升级和维护的安全性与一致性。</p>
-<h3 id="5-权限管理">5. <strong>权限管理</strong><a class="anchor" href="#5-权限管理">·</a></h3>
+<h3 id="权限管理">5. <strong>权限管理</strong></h3>
 <p>通常，系统目录（如 <code>/bin</code>、<code>/usr/bin</code>）是只读的，只有超级用户（<code>root</code>）可以对其进行写操作。相反，<code>/usr/local/bin</code> 通常为系统管理员和某些用户提供写权限，便于用户安装自定义程序和脚本，而不会影响系统的核心文件。</p>
-<h3 id="总结：">总结：<a class="anchor" href="#总结：">·</a></h3>
+<h3 id="总结">总结：</h3>
 <ul>
 <li><strong>将软链接放在 <code>/usr/local/bin</code></strong> 是一种惯例和最佳实践，因为该目录是专门为用户安装的本地程序保留的，它在 <code>PATH</code> 变量中，确保了你可以在终端中方便地访问和运行程序。</li>
 <li><strong>这样做可以保持系统的整洁和安全</strong>，避免本地安装的软件与操作系统自带的核心软件发生冲突。</li>

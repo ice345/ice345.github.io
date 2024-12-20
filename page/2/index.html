@@ -254,6 +254,80 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/10/10/GRUB/" target="_self">
+          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="GRUB">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/10/GRUB/" target="_self">
+          GRUB
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/10/10/GRUB/" target="_self">
+        <div>
+          是的，GRUB 不会将其所有引导加载程序代码都存储在 /boot/grub 中。它使用 多阶段架构，其中引导加载程序的不同部分存储在不同的位置，这对于使用 MBR 和 GPT 分区方案的系统至关重要，尤其是在 BIOS 模式 下启动时。 GRUB 的多阶段架构说明 GRUB 的启动过程分为几个阶段，每个阶段都存储在不同的位置，具体取决于分区方案（MBR 或 GPT）和启动模式（BIOS 或 UEF
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-10 20:30" pubdate>
+              2024-10-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/BOOT/" class="category-chain-item">BOOT</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/BOOT/%E7%A1%AC%E7%9B%98/" class="category-chain-item">硬盘</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/BOOT/">#BOOT</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2024/10/10/MBR%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
           <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="MBR分区方案">
         </a>
@@ -270,7 +344,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/MBR%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/" target="_self">
         <div>
-          [!NOTE] MBR（主引导记录） 结构就是主引导代码+分区表（+post-mbr gap），主引导代码 就是专门负责用来加载系统到内存中的，分区表 就是一个磁盘的整体布局。post-mbr gap 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，则就会出现 grub 的代码覆盖了原本的主引导的原先代码。   1. MBR 结构：·  主引导记录 (MBR)
+          [!NOTE] MBR（主引导记录） 结构就是主引导代码+分区表（+post-mbr gap），主引导代码 就是专门负责用来加载系统到内存中的，分区表 就是一个磁盘的整体布局。post-mbr gap 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，==则就会出现 grub 的代码覆盖了原本的主引导的原先代码。==   p17  1. MBR 结构：  主引导
         </div>
       </a>
 
@@ -418,7 +492,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/" target="_self">
         <div>
-          当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。 1. 开机自检 (POST)·  开机：   当您打开计算机电源时，电源会向主板和所有连接的组件供电。   POST：   固件（BIOS 或 UEFI）运行一系列称为开机自检 (POST) 的诊断测试。这会检查必要的
+          当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。 1. 开机自检 (POST)  开机：   当您打开计算机电源时，电源会向主板和所有连接的组件供电。   POST：   固件（BIOS 或 UEFI）运行一系列称为开机自检 (POST) 的诊断测试。这会检查必要的硬
         </div>
       </a>
 
@@ -492,7 +566,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/%E5%9B%BA%E4%BB%B6%20%E7%A1%AC%E4%BB%B6%20%E7%B3%BB%E7%BB%9F/" target="_self">
         <div>
-          在 Linux 中，固件 是指与特定硬件组件紧密相关的低级软件，通过提供指令和控制机制使它们能够正常运行。此固件在内核之下运行，但对于硬件与操作系统交互至关重要。 让我们分解一下问题的每个部分： 1. Linux 中的固件· 在 Linux 系统中，固件通常是指在以下硬件设备上运行的微代码或二进制代码：  CPU（例如，Intel 或 AMD 微代码） GPU（显卡固件） 网卡（Wi-Fi 或以太
+          在 Linux 中，固件 是指与特定硬件组件紧密相关的低级软件，通过提供指令和控制机制使它们能够正常运行。此固件在内核之下运行，但对于硬件与操作系统交互至关重要。 让我们分解一下问题的每个部分： 1. Linux 中的固件 在 Linux 系统中，固件通常是指在以下硬件设备上运行的微代码或二进制代码： - CPU（例如，Intel 或 AMD 微代码） - GPU（显卡固件） - 网卡（Wi-Fi
         </div>
       </a>
 
@@ -566,7 +640,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/%E5%9B%BA%E4%BB%B6%20%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/" target="_self">
         <div>
-          固件·   定义：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。   角色：固件提供允许硬件正常运行的基本控制指令。它非常接近硬件并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。   直接控制：在某些情况下，固件直接与硬件通信，而不依赖于操作系
+          固件  定义：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。 角色：固件提供允许硬件正常运行的基本控制指令。它非常接近硬件并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。 直接控制：在某些情况下，固件直接与硬件通信，而不依赖于操作系统 (OS)
         </div>
       </a>
 
@@ -640,7 +714,7 @@
       
       <a class="index-excerpt " href="/2024/10/10/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93MBR%E5%92%8CGPT%E5%88%86%E5%8C%BA/" target="_self">
         <div>
-          boot 方式和分区方案的最佳配合·  uefi+gpt bios+mbr  BIOS+MBR·  [!NOTE] MBR (主引导记录)的整体详细结构简单介绍就是：主引导代码+分区表+post-mbr gap  单纯靠 主引导代码 无法完整引导系统，所以要有 post-mbr gap （MBR 与第一个磁盘分区之间的间隙）来辅助引导系统，可以说是一个过渡用的。  第一阶段就是主引导代码，主要作用
+          boot 方式和分区方案的最佳配合  uefi+gpt bios+mbr  BIOS+MBR  [!NOTE] MBR (主引导记录)的整体详细结构简单介绍就是：主引导代码+分区表+post-mbr gap  单纯靠 主引导代码 无法完整引导系统，所以要有 post-mbr gap （MBR 与第一个磁盘分区之间的间隙）来辅助引导系统，可以说是一个过渡用的。  第一阶段就是主引导代码，主要作用就是
         </div>
       </a>
 
@@ -714,7 +788,7 @@
       
       <a class="index-excerpt " href="/2024/09/27/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/" target="_self">
         <div>
-          大致流程· 流程如下：  将硬盘分区，并将其初始化为 物理卷（PV）。 将物理卷加入到一个 卷组（VG） 中。 在卷组中创建 逻辑卷（LV）。 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。  文件系统介绍· 1. 文件系统· 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，SSD，u盘 等存储设
+          大致流程 流程如下： 1. 将硬盘分区，并将其初始化为 物理卷（PV）。 2. 将物理卷加入到一个 卷组（VG） 中。 3. 在卷组中创建 逻辑卷（LV）。 4. 在逻辑卷上创建文件系统（如 Ext4、XFS 等）。 5. 将逻辑卷 挂载 到系统目录中，以便访问和存储数据。 文件系统介绍 1. 文件系统 文件系统说白了就是操作系统管理硬盘中数据的一个方式。 详细点就是：问阿金系统可以管理 硬盘，S
         </div>
       </a>
 
@@ -788,7 +862,7 @@
       
       <a class="index-excerpt " href="/2024/09/27/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/" target="_self">
         <div>
-          LVM（逻辑卷管理器）的概念· LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。 1. 物理卷（Physical Volume，PV）· 物理卷是 LVM 的基本存储单元，通常对应于物理硬盘分区或整个硬盘。一个物理卷可以包含在一个或多个卷组中。
+          LVM（逻辑卷管理器）的概念 LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。 1. 物理卷（Physical Volume，PV） 物理卷是 LVM 的基本存储单元，通常对应于物理硬盘分区或整个硬盘。一个物理卷可以包含在一个或多个卷组中。  物理
         </div>
       </a>
 
@@ -862,7 +936,7 @@
       
       <a class="index-excerpt " href="/2024/09/21/Java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/" target="_self">
         <div>
-          下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。 1. 创建 Java 包· 1.1 目录结构· 假设我们要创建一个名为 com.example.myapp 的包，目录结构如下：  [!NOTE] 一般包名就是目录结构名。因此，我们运行或者编译包时一般都是在目录根结构下运行命令，比如 com.example.myapp 这个包是根据 myap
+          下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。 1. 创建 Java 包 1.1 目录结构 假设我们要创建一个名为 com.example.myapp 的包，目录结构如下：  [!NOTE] 一般包名就是目录结构名。因此，我们运行或者编译包时一般都是在目录根结构下运行命令，比如 com.example.myapp 这个包是根据 myapp/
         </div>
       </a>
 
@@ -911,73 +985,6 @@
               <a href="/tags/Java/">#Java</a>
             
               <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" target="_self">
-          <img src="/img/Hibike!Euphonium.jpg" srcset="/img/loading.gif" lazyload alt="常用Git命令">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" target="_self">
-          常用Git命令
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2024/09/20/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4/" target="_self">
-        <div>
-          常用 Git 命令· Git简介·  Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。  Git与SVN的区别· Git不仅仅是个版本控制系
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-20 16:51" pubdate>
-              2024-09-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Git/">#Git</a>
             
           </div>
         
