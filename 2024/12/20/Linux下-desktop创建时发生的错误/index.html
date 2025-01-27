@@ -27,15 +27,15 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="[!NOTE] 好用的工具: desktop-file-validate 这个来检查编写的错误  例子 123456789[Desktop Entry]Version&#x3D;1.0Name&#x3D;TodoistComment&#x3D;This is balabala(填任何东西都可以)Exec&#x3D;&#x2F;home&#x2F;ice&#x2F;....Icon&#x3D;&#x2F;home&#x2F;ice&#x2F;.....Terminal&#x3D;falseType&#x3D;Applicat">
+    <meta name="description" content="[!NOTE] 好用的工具: desktop-file-validate 这个来检查编写的错误  例子· 123456789[Desktop Entry]Version&#x3D;1.0Name&#x3D;TodoistComment&#x3D;This is balabala(填任何东西都可以)Exec&#x3D;&#x2F;home&#x2F;ice&#x2F;....Icon&#x3D;&#x2F;home&#x2F;ice&#x2F;.....Terminal&#x3D;falseType&#x3D;Applica">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下.desktop创建时发生的错误">
 <meta property="og:url" content="http://example.com/2024/12/20/Linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="[!NOTE] 好用的工具: desktop-file-validate 这个来检查编写的错误  例子 123456789[Desktop Entry]Version&#x3D;1.0Name&#x3D;TodoistComment&#x3D;This is balabala(填任何东西都可以)Exec&#x3D;&#x2F;home&#x2F;ice&#x2F;....Icon&#x3D;&#x2F;home&#x2F;ice&#x2F;.....Terminal&#x3D;falseType&#x3D;Applicat">
+<meta property="og:description" content="[!NOTE] 好用的工具: desktop-file-validate 这个来检查编写的错误  例子· 123456789[Desktop Entry]Version&#x3D;1.0Name&#x3D;TodoistComment&#x3D;This is balabala(填任何东西都可以)Exec&#x3D;&#x2F;home&#x2F;ice&#x2F;....Icon&#x3D;&#x2F;home&#x2F;ice&#x2F;.....Terminal&#x3D;falseType&#x3D;Applica">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-20T02:04:36.000Z">
-<meta property="article:modified_time" content="2024-12-20T02:05:58.128Z">
+<meta property="article:modified_time" content="2025-01-27T09:51:05.785Z">
 <meta property="article:author" content="JunBin Liang">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          313 字
+          315 字
         
       </span>
     
@@ -308,21 +308,24 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>[!NOTE] 好用的工具: <code>desktop-file-validate</code> 这个来检查编写的错误</p>
+<p>[!NOTE]
+好用的工具: <code>desktop-file-validate</code> 这个来检查编写的错误</p>
 </blockquote>
-<h1 id="例子">例子</h1>
+<h1 id="例子">例子<a class="anchor" href="#例子">·</a></h1>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">[Desktop Entry]<br>Version=1.0<br>Name=Todoist<br>Comment=This is balabala(填任何东西都可以)<br>Exec=/home/ice/....<br>Icon=/home/ice/.....<br>Terminal=<span class="hljs-literal">false</span><br>Type=Application<br>Categories=Utility<br></code></pre></td></tr></table></figure>
 <p><strong>这个就是典型的 <code>.desktop</code> 的编写例子</strong>, 其余什么的 <code>.desktop</code> 文件都可以参考这个来编写</p>
-<h1 id="错误">错误</h1>
+<h1 id="错误">错误<a class="anchor" href="#错误">·</a></h1>
 <p>最近在 <code>arch</code> 中编写这个发现出错，但是想破了脑袋都没有想明白哪里出了问题，问 chatgpt, 我就简单进行比对，发现一模一样就没有想清楚。</p>
 <p>我就只好总结询问 <code>Google</code>, 功夫不负有心人，在 <code>reddit</code> 中，看到这个 question 发现可以通过 <code>desktop-file-validate &lt;.desktop file name&gt;</code> 来检查编写出现的错误.</p>
-<p>最后，给我这样的信息: <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">todoist.desktop: error: value &quot;Application &quot; for key &quot;Type&quot; in group &quot;Desktop Entry&quot; is not a registered type value (&quot;Application&quot;, &quot;Link&quot; and &quot;Directory&quot;)<br></code></pre></td></tr></table></figure></p>
+<p>最后，给我这样的信息:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">todoist.desktop: error: value &quot;Application &quot; for key &quot;Type&quot; in group &quot;Desktop Entry&quot; is not a registered type value (&quot;Application&quot;, &quot;Link&quot; and &quot;Directory&quot;)<br></code></pre></td></tr></table></figure>
 <p>但是我看我的 Type 行没有发现有什么空格，我就不能理解.</p>
 <p><em>但是最后我在 <code>Application</code> 后发现这个后面有个空格导致了出现这样的错误</em></p>
 <blockquote>
-<p>[!TIPS] 我会在这个后面出现空格，是因为 nvim 编写时，如果你不加空格，你按 enter 就会接受提示词，因此才会导致这样的问题的😠</p>
+<p>[!TIPS]
+我会在这个后面出现空格，是因为 nvim 编写时，如果你不加空格，你按 enter 就会接受提示词，因此才会导致这样的问题的😠</p>
 </blockquote>
-<h1 id="参考">参考</h1>
+<h1 id="参考">参考<a class="anchor" href="#参考">·</a></h1>
 <p><a target="_blank" rel="noopener" href="https://www.reddit.com/r/gnome/comments/166g9l6/desktop_file_entry_not_showing_up_in_application/">reddit</a></p>
 
                 

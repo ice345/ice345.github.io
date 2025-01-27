@@ -27,26 +27,24 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="[!NOTE] The program code, global variables, and constant global variables are all stored in static segments, as these all have static lifetimes and known sizes at compile time. If we look at the addr">
+    <meta name="description" content="你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤： 1. 不蒜子访问量统计的代码添加· 不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。 步骤：·  在你的 &lt;div class&#x3D;&quot;footer-inner&quot;&gt; 中，找到合适的位置（例如网站存活时间下方），然后添加以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内存区域介绍">
-<meta property="og:url" content="http://example.com/2024/09/07/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="hexo添加存活时间和访问人数">
+<meta property="og:url" content="http://example.com/2025/01/27/hexo%E6%B7%BB%E5%8A%A0%E5%AD%98%E6%B4%BB%E6%97%B6%E9%97%B4%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="[!NOTE] The program code, global variables, and constant global variables are all stored in static segments, as these all have static lifetimes and known sizes at compile time. If we look at the addr">
+<meta property="og:description" content="你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤： 1. 不蒜子访问量统计的代码添加· 不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。 步骤：·  在你的 &lt;div class&#x3D;&quot;footer-inner&quot;&gt; 中，找到合适的位置（例如网站存活时间下方），然后添加以">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.com/ice345/picture_share/blob/master/technology/memory.png?raw=true">
-<meta property="article:published_time" content="2024-09-07T03:32:17.000Z">
-<meta property="article:modified_time" content="2025-01-27T09:51:05.869Z">
+<meta property="article:published_time" content="2025-01-27T10:46:31.000Z">
+<meta property="article:modified_time" content="2025-01-27T10:50:18.086Z">
 <meta property="article:author" content="JunBin Liang">
-<meta property="article:tag" content="计算机">
+<meta property="article:tag" content="个人博客">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://github.com/ice345/picture_share/blob/master/technology/memory.png?raw=true">
   
   
   
     <meta name="google-site-verification" content="9JRO3fIih2QZAncVygVo__DkMIqg2DRoHWwuclS6YEw" />
   
-  <title>内存区域介绍 - ICEのBlog</title>
+  <title>hexo添加存活时间和访问人数 - ICEのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="内存区域介绍"></span>
+            <span id="subtitle" data-typed-text="hexo添加存活时间和访问人数"></span>
           
         </div>
 
@@ -244,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-07 11:32" pubdate>
-          2024年9月7日 中午
+        <time datetime="2025-01-27 18:46" pubdate>
+          2025年1月27日 晚上
         </time>
       </span>
     
@@ -256,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.2k 字
         
       </span>
     
@@ -267,7 +265,7 @@
         
         
         
-          12 分钟
+          11 分钟
         
       </span>
     
@@ -304,143 +302,58 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">内存区域介绍</h1>
+            <h1 id="seo-header">hexo添加存活时间和访问人数</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>[!NOTE]
-The program code, global variables, and constant global variables are all stored in <em>static</em> segments, as these all have static lifetimes and known sizes at compile time.</p>
-<p>If we look at the addresses printed by <code>mexplore</code>, we see that the global variables stored in are at relatively low memory addresses (around <code>0x60'0000</code> hexadecimal and <code>0x40'0000</code> hexadecimal), while the local variable is stored at a high address, close to <code>0x7fff'ffff'ffff</code> (about 247), and the dynamically allocated character is stored in between (albeit closer to the static segments).</p>
-</blockquote>
-<p>There is a reason for this placement: it allows both types of segments to grow without risk of getting in each other’s way. In particular, the automatic-lifetime segment grows <em>downwards</em> as more local variables come into scope, while the dynamic-lifetime segment grows <em>upwards</em>. If they ever meet, your computer runs out of memory.</p>
-<h1 id="内存区域划分">内存区域划分<a class="anchor" href="#内存区域划分">·</a></h1>
-<p>在计算机中，程序运行时的内存布局通常分为多个区域，每个区域负责存储特定类型的数据。这种内存布局通常包括以下主要部分：</p>
+                <p>你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤：</p>
+<h3 id="1-不蒜子访问量统计的代码添加">1. <strong>不蒜子访问量统计的代码添加</strong><a class="anchor" href="#1-不蒜子访问量统计的代码添加">·</a></h3>
+<p>不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。</p>
+<h4 id="步骤："><strong>步骤：</strong><a class="anchor" href="#步骤：">·</a></h4>
+<ol>
+<li>在你的 <code>&lt;div class=&quot;footer-inner&quot;&gt;</code> 中，找到合适的位置（例如网站存活时间下方），然后添加以下不蒜子的统计代码：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 访问人数统计 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span><br>    本站总访问量：<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 次<br><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h4 id="代码解释："><strong>代码解释：</strong><a class="anchor" href="#代码解释：">·</a></h4>
+<ul>
+<li><code>id=&quot;busuanzi_container_site_pv&quot;</code> 和 <code>id=&quot;busuanzi_value_site_pv&quot;</code> 是不蒜子提供的 ID，它们会在页面加载后自动统计并显示站点的总访问量。</li>
+<li>通过 <code>busuanzi.pure.mini.js</code> 引入不蒜子统计脚本，它会自动计算并更新访问量。</li>
+</ul>
+<h4 id="修改后的文件："><strong>修改后的文件：</strong><a class="anchor" href="#修改后的文件：">·</a></h4>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer-inner&quot;</span>&gt;</span><br>    &lt;% if (theme.footer.content) &#123; %&gt;<br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer-content&quot;</span>&gt;</span><br>            &lt;%- theme.footer.content %&gt;<br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    &lt;% &#125; %&gt;<br>    &lt;% if (theme.footer.statistics.enable) &#123; %&gt;<br>        &lt;%- partial(&#x27;_partials/footer/statistics.ejs&#x27;) %&gt;<br>    &lt;% &#125; %&gt;<br>    &lt;% if(theme.footer.beian.enable) &#123; %&gt;<br>        <span class="hljs-comment">&lt;!-- 备案信息 ICP for China --&gt;</span><br>        &lt;%- partial(&#x27;_partials/footer/beian.ejs&#x27;) %&gt;<br>    &lt;% &#125; %&gt;<br>    &lt;% if(theme.web_analytics.cnzz) &#123; %&gt;<br>        <span class="hljs-comment">&lt;!-- cnzz Analytics Icon --&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cnzz_stat_icon_&lt;%= theme.web_analytics.cnzz %&gt;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>    &lt;% &#125; %&gt;<br><br>    <span class="hljs-comment">&lt;!-- 网站存活时间计时功能 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;site-lifetime&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// 设置网站的创建日期</span></span><br><span class="language-javascript">        <span class="hljs-keyword">const</span> creationDate = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;2024-04-21&#x27;</span>); <span class="hljs-comment">// 请根据实际情况修改日期</span></span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// 计算当前日期和网站创建日期之间的天数差</span></span><br><span class="language-javascript">        <span class="hljs-keyword">function</span> <span class="hljs-title function_">calculateDaysSinceCreation</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();</span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> timeDifference = now - creationDate;</span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> daysSinceCreation = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(timeDifference / (<span class="hljs-number">1000</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">24</span>));</span><br><span class="language-javascript">            <span class="hljs-keyword">return</span> daysSinceCreation;</span><br><span class="language-javascript">        &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// 页面加载完成后执行</span></span><br><span class="language-javascript">        <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;DOMContentLoaded&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            <span class="hljs-comment">// 计算存活天数</span></span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> daysSinceCreation = <span class="hljs-title function_">calculateDaysSinceCreation</span>();</span><br><span class="language-javascript">            </span><br><span class="language-javascript">            <span class="hljs-comment">// 更新存活时间</span></span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> lifetimeElement = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;site-lifetime&#x27;</span>);</span><br><span class="language-javascript">            lifetimeElement.<span class="hljs-property">textContent</span> = <span class="hljs-string">`网站存活了 <span class="hljs-subst">$&#123;daysSinceCreation&#125;</span> 天`</span>;</span><br><span class="language-javascript">        &#125;);</span><br><span class="language-javascript">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!-- 访问人数统计 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span><br>        本站总访问量：<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 次<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-使用插件方式显示访问量">2. <strong>使用插件方式显示访问量</strong><a class="anchor" href="#2-使用插件方式显示访问量">·</a></h3>
+<p>如果你想使用插件（例如 <code>hexo-wordcount</code>）来统计和显示页面访问量，你可以按照以下步骤进行配置。</p>
+<h4 id="步骤：-2"><strong>步骤：</strong><a class="anchor" href="#步骤：-2">·</a></h4>
 <ol>
 <li>
-<p><strong>代码段（Text Segment）</strong>:</p>
-<ul>
-<li><strong>存储内容</strong>: 存放程序的可执行代码，也就是编译后的机器指令。该区域通常是只读的，以防止程序的代码被意外或恶意修改。</li>
-<li><strong>特性</strong>: 常见操作系统将其标记为只读并可执行。</li>
-</ul>
+<p><strong>安装插件：</strong></p>
+<p>首先，安装 <code>hexo-wordcount</code> 插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-wordcount --save<br></code></pre></td></tr></table></figure>
 </li>
 <li>
-<p><strong>数据段（Data Segment）</strong>:</p>
-<ul>
-<li><strong>存储内容</strong>: 存放已初始化的全局变量和静态变量。这个段可以进一步分为两部分：
-<ul>
-<li><strong>已初始化数据段（Initialized Data Segment）</strong>: 存储在编译时已初始化的全局和静态变量。</li>
-<li><strong>未初始化数据段（BSS Segment，Block Started by Symbol）</strong>: 存放未初始化的全局变量和静态变量。在程序开始执行时，BSS 段的内容会被初始化为零。</li>
-</ul>
-</li>
-<li><strong>特性</strong>: 数据段是可读写的。</li>
-</ul>
+<p><strong>修改模板文件：</strong></p>
+<p>找到你的主题文件夹中的页面模板（例如 <code>themes/your-theme/layout/_partial/footer.ejs</code> 或 <code>footer.ejs</code>），然后在适当位置（例如网站存活时间和备案信息之后）添加以下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 访问人数统计 --&gt;</span><br>本站总访问量：&lt;%= page.total_count %&gt;<br></code></pre></td></tr></table></figure>
+<p><strong>注意：</strong> 这个插件可以统计字数、阅读时间等信息，也可以结合其他统计功能使用。</p>
 </li>
 <li>
-<p><strong>堆（Heap  dynamic-lifetime segment is called the <strong>heap</strong>）</strong>:</p>
-<ul>
-<li><strong>存储内容</strong>: 用于动态分配的内存块。<code>malloc</code>、<code>calloc</code>、<code>realloc</code> 等函数在运行时从堆中分配内存。堆的大小可以在运行时增长和缩小。</li>
-<li><strong>特性</strong>: 堆区域通常从低地址向高地址扩展。</li>
-</ul>
-</li>
-<li>
-<p><strong>栈（Stack  automatic-lifetime segment is called the <strong>stack</strong>.）</strong>:</p>
-<ul>
-<li><strong>存储内容</strong>: 用于存放函数的局部变量、函数参数和返回地址。当函数被调用时，会在栈上分配一个新的栈帧，用于存储该函数的局部数据。函数调用结束后，栈帧会被释放。</li>
-<li><strong>特性</strong>: 栈区域通常从高地址向低地址扩展。栈的大小是有限的，过度使用栈空间（如过深的递归调用或大量局部变量）可能导致栈溢出。</li>
-</ul>
-</li>
-<li>
-<p><strong>常量段（Rodata Segment）</strong>:</p>
-<ul>
-<li><strong>存储内容</strong>: 存放只读数据，比如字符串常量和其他不变数据。这些数据通常在编译时确定并在运行时不会改变。</li>
-<li><strong>特性</strong>: 常量段通常是只读的。</li>
-</ul>
-</li>
-<li>
-<p><strong>执行堆栈（Call Stack）</strong>:</p>
-<ul>
-<li><strong>存储内容</strong>: 特指用于存储每个线程的调用信息，包括函数调用的返回地址、局部变量和函数参数。执行堆栈与栈区域有些重叠的概念。</li>
-<li><strong>特性</strong>: 递归调用或大量局部变量可能导致栈溢出。</li>
-</ul>
+<p><strong>更新 Hexo 并生成静态文件：</strong></p>
+<p>完成后，执行以下命令生成更新后的静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo generate<br></code></pre></td></tr></table></figure>
+<p>然后部署网站：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="内存布局示意图">内存布局示意图<a class="anchor" href="#内存布局示意图">·</a></h2>
-<p>典型的内存布局<mark>从高地址到低地址</mark>可以如下表示：</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-code">+--------------------+</span><br><span class="hljs-section">|      栈 (Stack)      |</span><br><span class="hljs-section">+--------------------+</span><br>|   堆 (Heap)       |<br><span class="hljs-section">| (动态分配区)      |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 未初始化数据段 (BSS) |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 已初始化数据段 (Data) |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">|  只读数据段 (Rodata)  |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 代码段 (Text)      |</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| 其他系统区域 (Other)  |</span><br><span class="hljs-section">+--------------------+</span><br></code></pre></td></tr></table></figure>
-<p><img src="https://github.com/ice345/picture_share/blob/master/technology/memory.png?raw=true" srcset="/img/loading.gif" lazyload alt="memory"></p>
-<p>在 C 语言中，变量根据其类型和作用域分布在程序的不同内存区域。以下是不同类型的变量及其存储位置的详细说明：</p>
-<ol>
-<li>
-<p><strong>全局变量（Global Variables）</strong>:</p>
-<ul>
-<li><strong>定义</strong>: 在函数外部定义的变量，具有全局作用域，整个程序运行期间都可以访问。</li>
-<li><strong>存储位置</strong>:
-<ul>
-<li>已初始化的全局变量存储在**数据段（Data Segment）**的已初始化数据区域。</li>
-<li>未初始化的全局变量存储在<strong>BSS 段（Block Started by Symbol Segment）</strong>，程序开始时 BSS 段的内容被初始化为零。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>静态变量（Static Variables）</strong>:</p>
-<ul>
-<li><strong>定义</strong>: 使用 <code>static</code> 关键字修饰的变量。可以是全局或局部的，但在程序的生命周期内都只分配一次，并保留其值。</li>
-<li><strong>存储位置</strong>:
-<ul>
-<li>静态全局变量：与全局变量类似，已初始化的存储在数据段，未初始化的存储在 BSS 段。</li>
-<li>静态局部变量：尽管其作用域仅限于函数内，但其生命周期与程序相同，也存储在数据段或 BSS 段中。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>常量变量（Constant Variables）</strong>:</p>
-<ul>
-<li><strong>定义</strong>: 使用 <code>const</code> 关键字修饰的变量，声明后不能更改其值。</li>
-<li><strong>存储位置</strong>:
-<ul>
-<li>常量全局变量：通常存储在<strong>只读数据段（Rodata Segment）</strong>。但如果常量是局部的，它可能存储在栈或寄存器中，具体取决于编译器优化。</li>
-<li>常量局部变量：通常在栈上分配，或者在某些情况下编译器可能将它们优化到寄存器中。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>局部变量（Local Variables）</strong>:</p>
-<ul>
-<li><strong>定义</strong>: 在函数或块中定义的变量，只在其定义的作用域内有效。</li>
-<li><strong>存储位置</strong>:
-<ul>
-<li>通常存储在**栈（Stack）**中。函数调用时，局部变量在栈上分配空间，函数返回时这些空间被释放。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>动态分配的内存</strong>:</p>
-<ul>
-<li><strong>定义</strong>: 使用 <code>malloc</code>、<code>calloc</code>、<code>realloc</code> 等函数动态分配的内存。大小和数量在运行时决定。</li>
-<li><strong>存储位置</strong>:
-<ul>
-<li>存储在**堆（Heap）**中。堆内存的生命周期由程序员控制，需要手动释放（使用 <code>free</code> 函数），否则会导致内存泄漏。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="总结">总结<a class="anchor" href="#总结">·</a></h2>
-<ul>
-<li><strong>代码段（Text Segment）</strong>: 存放程序的可执行代码。</li>
-<li><strong>数据段（Data Segment）</strong>: 存放已初始化的全局变量和静态变量。</li>
-<li><strong>BSS 段（Block Started by Symbol Segment）</strong>: 存放未初始化的全局变量和静态变量，程序开始时初始化为零。</li>
-<li><strong>只读数据段（Rodata Segment）</strong>: 存放常量数据和字符串常量。</li>
-<li><strong>栈（Stack）</strong>: 存放局部变量、函数参数和返回地址。</li>
-<li><strong>堆（Heap）</strong>: 存放动态分配的内存。</li>
-</ul>
-<p>理解这些内存区域及其作用对于高效和安全的编程至关重要，特别是在涉及到动态内存管理、全局状态和并发问题时。</p>
+<h3 id="3-Moe-Counter-动漫式计数">3. <code>Moe-Counter</code> 动漫式计数<a class="anchor" href="#3-Moe-Counter-动漫式计数">·</a></h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/journey-ad/Moe-Counter">github🔗</a></p>
+<p>主要思路就是跟着文档操作就行了的，先生成代码 (就是一个 img 格式的代码)</p>
+<p>然后，如果你想在底部 (footer) 插入，你就要在 <code>/home/ice/my-blog/themes/fluid(your-theme)/layout/_partials/footer.ejs</code> 插入代码，具体示例如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- Moe-Counter 访问人数统计 --&gt;<br>&lt;div style=<span class="hljs-string">&quot;text-align: center; margin-top: 10px;&quot;</span>&gt;<br>    &lt;span style=<span class="hljs-string">&quot;font-size: 16px; font-weight: bold;&quot;</span>&gt;访问人数统计: &lt;/span&gt;<br>    &lt;img src=<span class="hljs-string">&quot;https://count.getloli.com/@:ice345?name=%3Aice345&amp;theme=gelbooru&amp;padding=7&amp;offset=0&amp;align=bottom&amp;scale=1&amp;pixelated=1&amp;darkmode=auto&quot;</span> alt=<span class="hljs-string">&quot;visitor count&quot;</span>&gt;<br>&lt;/div&gt;<br></code></pre></td></tr></table></figure>
+<p>这个你想在底部生成<strong>邮箱，github 链接，QQ</strong>这些就仿照如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- 添加社交链接 --&gt;<br>&lt;div style=<span class="hljs-string">&quot;font-size: 13px; font-weight: bold; text-align: center;&quot;</span>&gt;<br>    &lt;div style=<span class="hljs-string">&quot;display: flex; justify-content: center; gap: 20px;&quot;</span>&gt;<br>        &lt;span class=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;<br>            &lt;a class=<span class="hljs-string">&quot;nav-link&quot;</span> href=<span class="hljs-string">&quot;https://github.com/ice345&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;<br>                &lt;i class=<span class="hljs-string">&quot;fab fa-github&quot;</span> style=<span class="hljs-string">&quot;color:#409EFF;&quot;</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span>&gt;&lt;/i&gt;<br>                GitHub<br>            &lt;/a&gt;<br>        &lt;/span&gt;<br><br>        &lt;span class=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;<br>            &lt;a class=<span class="hljs-string">&quot;nav-link&quot;</span> href=<span class="hljs-string">&quot;mailto:nni461904@gmail.com&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;<br>                &lt;i class=<span class="hljs-string">&quot;fa fa-envelope&quot;</span> style=<span class="hljs-string">&quot;color:#409EFF&quot;</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span>&gt;&lt;/i&gt;<br>                邮箱<br>            &lt;/a&gt;<br>        &lt;/span&gt;<br><br>        &lt;span class=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;<br>            &lt;a class=<span class="hljs-string">&quot;nav-link&quot;</span> href=<span class="hljs-string">&quot;https://alist.050626.xyz&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;<br>                &lt;i class=<span class="hljs-string">&quot;fa-solid fa-cloud-download&quot;</span> style=<span class="hljs-string">&quot;color:#409EFF;&quot;</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span>&gt;&lt;/i&gt;<br>                Alist<br>            &lt;/a&gt;<br>        &lt;/span&gt;<br>    &lt;/div&gt;<br>    &lt;br /&gt;<br>&lt;/div&gt;  <br></code></pre></td></tr></table></figure>
+<h3 id="4-存活时间">4. 存活时间<a class="anchor" href="#4-存活时间">·</a></h3>
+<p>这个的添加就仿照访问人数即可</p>
 
                 
               </div>
@@ -459,15 +372,8 @@ The program code, global variables, and constant global variables are all stored
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="category-chain-item">个人博客</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/" class="category-chain-item">内存区域</a>
-  
-  
-
   
 
       </span>
@@ -481,7 +387,7 @@ The program code, global variables, and constant global variables are all stored
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="print-no-link">#计算机</a>
+        <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="print-no-link">#个人博客</a>
       
     </div>
   
@@ -493,8 +399,8 @@ The program code, global variables, and constant global variables are all stored
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>内存区域介绍</div>
-      <div>http://example.com/2024/09/07/内存区域介绍/</div>
+      <div>hexo添加存活时间和访问人数</div>
+      <div>http://example.com/2025/01/27/hexo添加存活时间和访问人数/</div>
     </div>
     <div class="license-meta">
       
@@ -506,7 +412,7 @@ The program code, global variables, and constant global variables are all stored
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月7日</div>
+          <div>2025年1月27日</div>
         </div>
       
       
@@ -538,18 +444,12 @@ The program code, global variables, and constant global variables are all stored
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/" title="hexo个人博客创建">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">hexo个人博客创建</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/07/%E4%BA%8C%E6%9D%91%E6%98%A0%E5%B0%84/" title="二村映射">
-                        <span class="hidden-mobile">二村映射</span>
+                      <a href="/2025/01/27/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

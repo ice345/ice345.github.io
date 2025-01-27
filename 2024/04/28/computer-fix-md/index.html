@@ -27,15 +27,15 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="电脑崩溃之学会系统重装  前言 前几天，早上装完mac化的桌面后，发现确实ubuntu的内存不够用了，就打算对ubuntu扩容，参考的就是这个网页：ubuntu扩容。就这样，我的ubunt搞崩了，我想删了重装，结果我不小心格掉了windows的efi分区，导致Ubuntu的引导可以用，windows的就不行了。最终，搞不了Ubuntu，又进不了windows。 我不敢问群里的人，一些人又不会，最终">
+    <meta name="description" content="电脑崩溃之学会系统重装·  前言· 前几天，早上装完mac化的桌面后，发现确实ubuntu的内存不够用了，就打算对ubuntu扩容，参考的就是这个网页：ubuntu扩容。就这样，我的ubunt搞崩了，我想删了重装，结果我不小心格掉了windows的efi分区，导致Ubuntu的引导可以用，windows的就不行了。最终，搞不了Ubuntu，又进不了windows。 我不敢问群里的人，一些人又不会，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="computer_fix.md">
 <meta property="og:url" content="http://example.com/2024/04/28/computer-fix-md/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="电脑崩溃之学会系统重装  前言 前几天，早上装完mac化的桌面后，发现确实ubuntu的内存不够用了，就打算对ubuntu扩容，参考的就是这个网页：ubuntu扩容。就这样，我的ubunt搞崩了，我想删了重装，结果我不小心格掉了windows的efi分区，导致Ubuntu的引导可以用，windows的就不行了。最终，搞不了Ubuntu，又进不了windows。 我不敢问群里的人，一些人又不会，最终">
+<meta property="og:description" content="电脑崩溃之学会系统重装·  前言· 前几天，早上装完mac化的桌面后，发现确实ubuntu的内存不够用了，就打算对ubuntu扩容，参考的就是这个网页：ubuntu扩容。就这样，我的ubunt搞崩了，我想删了重装，结果我不小心格掉了windows的efi分区，导致Ubuntu的引导可以用，windows的就不行了。最终，搞不了Ubuntu，又进不了windows。 我不敢问群里的人，一些人又不会，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-28T12:25:44.000Z">
-<meta property="article:modified_time" content="2024-09-27T04:05:54.801Z">
+<meta property="article:modified_time" content="2025-01-27T09:51:05.765Z">
 <meta property="article:author" content="JunBin Liang">
 <meta property="article:tag" content="technology">
 <meta name="twitter:card" content="summary_large_image">
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          528 字
+          524 字
         
       </span>
     
@@ -307,19 +307,26 @@
             
               <div class="markdown-body">
                 
-                <h1 id="电脑崩溃之学会系统重装">电脑崩溃之学会系统重装</h1>
-<hr />
-<h2 id="前言">前言</h2>
+                <h1 id="电脑崩溃之学会系统重装">电脑崩溃之学会系统重装<a class="anchor" href="#电脑崩溃之学会系统重装">·</a></h1>
+<hr>
+<h2 id="前言">前言<a class="anchor" href="#前言">·</a></h2>
 <p>前几天，早上装完mac化的桌面后，发现确实ubuntu的内存不够用了，就打算对ubuntu扩容，参考的就是这个网页：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43356770/article/details/135393063" title="不知道是我的问题还是他教程不行">ubuntu扩容</a>。就这样，我的ubunt搞崩了，我想删了重装，结果我不小心格掉了windows的efi分区，导致Ubuntu的引导可以用，windows的就不行了。最终，搞不了Ubuntu，又进不了windows。</p>
 <p>我不敢问群里的人，一些人又不会，最终我迷迷糊糊地重置了电脑，最终结果就是我的数据全没了。第一次重置分区又不是很会，卡在说c盘无法分，结果就是下了一个软件，导致有了垃圾，（好像金山毒霸这些），最终我选择重装。哦噢，后面问了群u，了解到了ventoy以及微pe这些好用的工具。最后就是用到这些重装了我的dell。分区其实如果没什么，也可以直接在磁盘管理这里分的，这里更直接，又没什么障碍。</p>
-<p>处理sony那台电脑才是最奇葩的，不知道我爸是怎么重装的系统，导致我一怒之下将Ubuntu的efi分区给格了，导致现在用不了u盘启动也进不了系统。我搞了很久，不行就拆掉后盖，拆掉硬盘，发现好像dell识别不了。最终无奈放弃。不过也了解到了一些有用的东西，比如硬盘格式：机械硬盘（hdd），固态硬盘（ssd），混合的（hybrid hdd）。 固态硬盘分：m.2,sata。 m.2也分m，b，m&amp;b的。看缺口：左m有b</p>
-<h2 id="学到的东西">学到的东西</h2>
-<p>学会制作多系统盘，不像以前用rufus烧录一个盘。学会看一下bios的一些设置，学会利用u盘重装系统。以及学会用微pe处理一些各种各样的问题，比如： 1. <strong><em>重装系统时，磁盘格式问题</em></strong> 2. <strong><em>恢复系统引导</em></strong> 3. <strong><em>在微pe中分区</em></strong> 4. <strong><em>磁盘类型</em></strong></p>
+<p>处理sony那台电脑才是最奇葩的，不知道我爸是怎么重装的系统，导致我一怒之下将Ubuntu的efi分区给格了，导致现在用不了u盘启动也进不了系统。我搞了很久，不行就拆掉后盖，拆掉硬盘，发现好像dell识别不了。最终无奈放弃。不过也了解到了一些有用的东西，比如硬盘格式：机械硬盘（hdd），固态硬盘（ssd），混合的（hybrid hdd）。固态硬盘分：m.2,sata。
+m.2也分m，b，m&amp;b的。看缺口：左m有b</p>
+<h2 id="学到的东西">学到的东西<a class="anchor" href="#学到的东西">·</a></h2>
+<p>学会制作多系统盘，不像以前用rufus烧录一个盘。学会看一下bios的一些设置，学会利用u盘重装系统。以及学会用微pe处理一些各种各样的问题，比如：</p>
+<ol>
+<li><em><strong>重装系统时，磁盘格式问题</strong></em></li>
+<li><em><strong>恢复系统引导</strong></em></li>
+<li><em><strong>在微pe中分区</strong></em></li>
+<li><em><strong>磁盘类型</strong></em></li>
+</ol>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/165345006">区分m.2磁盘</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vT4y1n7JX/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="PE装系统保姆教程！U盘启动器制作！微pe重装系统！u盘重装系统！超简单！重装系统!超详细系统安装教程！系统如何安装？系统怎么装？">微pe</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1oa4y1j7A2/?share_source=copy_web" title="【装机教程】全网最详细的MBR转GPT教程（把MBR转换成GPT的同时，保留硬盘上的数据）">微pe</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1EZ4y18769/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【利用Ventoy打造最强大的启动U盘，把PE、Win To Go统统塞进去】">ventoy</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1EZ4y18769/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【利用Ventoy打造最强大的启动U盘，把PE、Win To Go统统塞进去】 ">ventoy</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.ventoy.net/cn/">ventoy官网</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV16k4y137aT/?share_source=copy_web&amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【ventoy报错，在ventoy官网安全说明里有解决方法】">ventoy常见问题</a></li>
 </ul>
