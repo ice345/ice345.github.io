@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="固件·   定义：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。   角色：固件提供允许硬件正常运行的基本控制指令。它非常接近硬件并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。   直接控制：在某些情况下，固件直接与硬件通信，而不依赖于操作系">
+    <meta name="description" content="固件  定义：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。 角色：固件提供允许硬件正常运行的基本控制指令。它非常接近硬件并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。 直接控制：在某些情况下，固件直接与硬件通信，而不依赖于操作系统 (OS)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="固件 驱动程序">
 <meta property="og:url" content="http://example.com/2024/10/10/%E5%9B%BA%E4%BB%B6%20%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="固件·   定义：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。   角色：固件提供允许硬件正常运行的基本控制指令。它非常接近硬件并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。   直接控制：在某些情况下，固件直接与硬件通信，而不依赖于操作系">
+<meta property="og:description" content="固件  定义：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。 角色：固件提供允许硬件正常运行的基本控制指令。它非常接近硬件并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。 直接控制：在某些情况下，固件直接与硬件通信，而不依赖于操作系统 (OS)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-10T12:30:57.000Z">
 <meta property="article:modified_time" content="2025-01-27T09:51:05.792Z">
@@ -307,108 +307,92 @@
             
               <div class="markdown-body">
                 
-                <h3 id="固件"><strong>固件</strong><a class="anchor" href="#固件">·</a></h3>
+                <h3 id="固件"><strong>固件</strong></h3>
 <ul>
-<li>
-<p><strong>定义</strong>：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。</p>
-</li>
-<li>
-<p><strong>角色</strong>：固件提供允许硬件正常运行的基本控制指令。它<strong>非常接近硬件</strong>并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。</p>
-</li>
-<li>
-<p><strong>直接控制</strong>：在某些情况下，固件直接与硬件通信，而不依赖于操作系统 (OS)。例如，BIOS/UEFI 固件甚至在操作系统启动之前就控制硬件。某些设备可以仅使用其固件（例如嵌入式系统）运行，但如果没有来自操作系统的高级控制，它们可能会受到限制。</p>
-</li>
-<li>
-<p><strong>示例</strong>：</p>
-</li>
-<li>
-<p><strong>BIOS/UEFI</strong>，用于在计算机启动时初始化和配置系统硬件。</p>
-</li>
-<li>
-<p><strong>显卡固件</strong>（如 VBIOS），用于设置 GPU 以进行基本渲染和与操作系统通信。</p>
-</li>
-<li>
-<p><strong>SSD 固件</strong>，用于管理存储设备的内部磨损均衡、垃圾收集和错误更正过程。</p>
-</li>
+<li><p><strong>定义</strong>：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如
+ROM、EEPROM 或闪存）中。</p></li>
+<li><p><strong>角色</strong>：固件提供允许硬件正常运行的基本控制指令。它<strong>非常接近硬件</strong>并且通常在最基本的层面上运行。这意味着它控制硬件的基本行为和特性，例如网卡如何处理数据传输或显卡如何处理渲染。</p></li>
+<li><p><strong>直接控制</strong>：在某些情况下，固件直接与硬件通信，而不依赖于操作系统
+(OS)。例如，BIOS/UEFI
+固件甚至在操作系统启动之前就控制硬件。某些设备可以仅使用其固件（例如嵌入式系统）运行，但如果没有来自操作系统的高级控制，它们可能会受到限制。</p></li>
+<li><p><strong>示例</strong>：</p></li>
+<li><p><strong>BIOS/UEFI</strong>，用于在计算机启动时初始化和配置系统硬件。</p></li>
+<li><p><strong>显卡固件</strong>（如 VBIOS），用于设置 GPU
+以进行基本渲染和与操作系统通信。</p></li>
+<li><p><strong>SSD
+固件</strong>，用于管理存储设备的内部磨损均衡、垃圾收集和错误更正过程。</p></li>
 </ul>
-<h3 id="驱动程序"><strong>驱动程序</strong><a class="anchor" href="#驱动程序">·</a></h3>
+<h3 id="驱动程序"><strong>驱动程序</strong></h3>
 <ul>
-<li>
-<p><strong>定义</strong>：驱动程序是一种软件，允许操作系统（如 Linux、Windows 或 macOS）与硬件设备通信。驱动程序充当操作系统和硬件之间的中介。</p>
-</li>
-<li>
-<p><strong>角色</strong>：驱动程序使操作系统和更高级别的软件能够控制和使用硬件。固件控制硬件的内部操作，而<strong>驱动程序解释来自操作系统的命令</strong>并将其转换为硬件可以理解和执行的指令。驱动程序还<strong>抽象硬件复杂性</strong>，允许操作系统和应用程序与硬件交互，而无需了解其低级细节。</p>
-</li>
-<li>
-<p><strong>操作系统控制</strong>：与固件不同，驱动程序由操作系统在运行时加载。如果没有驱动程序，操作系统就无法直接控制硬件，但一旦安装了驱动程序，操作系统就可以通过驱动程序向硬件发送请求（例如，读取/写入数据、显示图形、发送网络数据包）。驱动程序还使操作系统能够以标准化的方式访问硬件资源。</p>
-</li>
-<li>
-<p><strong>示例</strong>：</p>
+<li><p><strong>定义</strong>：驱动程序是一种软件，允许操作系统（如
+Linux、Windows 或
+macOS）与硬件设备通信。驱动程序充当操作系统和硬件之间的中介。</p></li>
+<li><p><strong>角色</strong>：驱动程序使操作系统和更高级别的软件能够控制和使用硬件。固件控制硬件的内部操作，而<strong>驱动程序解释来自操作系统的命令</strong>并将其转换为硬件可以理解和执行的指令。驱动程序还<strong>抽象硬件复杂性</strong>，允许操作系统和应用程序与硬件交互，而无需了解其低级细节。</p></li>
+<li><p><strong>操作系统控制</strong>：与固件不同，驱动程序由操作系统在运行时加载。如果没有驱动程序，操作系统就无法直接控制硬件，但一旦安装了驱动程序，操作系统就可以通过驱动程序向硬件发送请求（例如，读取/写入数据、显示图形、发送网络数据包）。驱动程序还使操作系统能够以标准化的方式访问硬件资源。</p></li>
+<li><p><strong>示例</strong>：</p>
 <ul>
-<li><strong>图形驱动程序</strong>（如 NVIDIA、AMD 或 Intel 驱动程序）允许操作系统和应用程序渲染复杂的图形并访问 GPU 功能。</li>
+<li><strong>图形驱动程序</strong>（如 NVIDIA、AMD 或 Intel
+驱动程序）允许操作系统和应用程序渲染复杂的图形并访问 GPU 功能。</li>
 <li><strong>网络驱动程序</strong>使操作系统能够与系统的网卡通信并处理网络上的数据传输。</li>
-<li><strong>存储驱动程序</strong>使操作系统能够与硬盘驱动器、SSD 和 USB 设备交互。</li>
+<li><strong>存储驱动程序</strong>使操作系统能够与硬盘驱动器、SSD 和 USB
+设备交互。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="固件和驱动程序之间的主要区别"><strong>固件和驱动程序之间的主要区别</strong><a class="anchor" href="#固件和驱动程序之间的主要区别">·</a></h3>
+<h3
+id="固件和驱动程序之间的主要区别"><strong>固件和驱动程序之间的主要区别</strong></h3>
 <table>
+
 <thead>
-<tr>
+<tr class="header">
 <th><strong>方面</strong></th>
 <th><strong>固件</strong></th>
 <th><strong>驱动程序</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>位置</strong></td>
 <td>嵌入硬件或存储在 <code>/lib/firmware</code></td>
-<td>安装在操作系统中（例如，在 Linux 上存储在 <code>/lib/modules/</code> 中）</td>
+<td>安装在操作系统中（例如，在 Linux 上存储在 <code>/lib/modules/</code>
+中）</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>控制级别</strong></td>
 <td>直接控制硬件的内部工作</td>
 <td>为操作系统提供与硬件通信的接口</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>加载时间</strong></td>
 <td>在操作系统启动前加载（例如，BIOS/UEFI）或由操作系统加载以初始化硬件</td>
 <td>由操作系统在运行时加载以管理硬件功能</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>用途</strong></td>
 <td>管理基本的低级硬件功能</td>
 <td>使操作系统能够访问和控制硬件</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>与操作系统的交互</strong></td>
 <td>通常独立于操作系统；在硬件级别工作</td>
 <td>需要操作系统才能运行；作为操作系统和硬件之间的中介</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>示例</strong></td>
 <td>GPU 固件、SSD 固件、UEFI 固件</td>
 <td>图形驱动程序、网络驱动程序、声音驱动程序</td>
 </tr>
 </tbody>
 </table>
-<h3 id="固件和驱动程序如何协同工作"><strong>固件和驱动程序如何协同工作</strong><a class="anchor" href="#固件和驱动程序如何协同工作">·</a></h3>
+<h3
+id="固件和驱动程序如何协同工作"><strong>固件和驱动程序如何协同工作</strong></h3>
 <ul>
-<li>
-<p><strong>固件控制硬件的内部操作</strong>：例如，网卡上的固件管理卡在网络上物理发送和接收数据包的方式。它在非常低的级别处理数据包缓冲和错误检查等事情。</p>
-</li>
-<li>
-<p><strong>驱动程序在硬件（由固件控制）和操作系统之间进行接口</strong>：操作系统中的网卡驱动程序从操作系统接收更高级别的请求（如“发送此数据包”或“连接到此网络”）并将其传递给网卡，网卡使用其固件执行这些指令。</p>
-</li>
-<li>
-<p><strong>固件 + 驱动程序示例</strong>：</p>
-</li>
-<li>
-<p>显卡上的固件设置其低级操作并确保它可以渲染基本图像，但操作系统中的图形驱动程序通过在应用程序和硬件之间提供接口，允许用户充分利用 GPU 的游戏、3 D 建模或视频渲染功能。</p>
-</li>
+<li><p><strong>固件控制硬件的内部操作</strong>：例如，网卡上的固件管理卡在网络上物理发送和接收数据包的方式。它在非常低的级别处理数据包缓冲和错误检查等事情。</p></li>
+<li><p><strong>驱动程序在硬件（由固件控制）和操作系统之间进行接口</strong>：操作系统中的网卡驱动程序从操作系统接收更高级别的请求（如“发送此数据包”或“连接到此网络”）并将其传递给网卡，网卡使用其固件执行这些指令。</p></li>
+<li><p><strong>固件 + 驱动程序示例</strong>：</p></li>
+<li><p>显卡上的固件设置其低级操作并确保它可以渲染基本图像，但操作系统中的图形驱动程序通过在应用程序和硬件之间提供接口，允许用户充分利用
+GPU 的游戏、3 D 建模或视频渲染功能。</p></li>
 </ul>
-<h3 id="摘要"><strong>摘要</strong><a class="anchor" href="#摘要">·</a></h3>
+<h3 id="摘要"><strong>摘要</strong></h3>
 <ul>
 <li><strong>固件</strong>直接控制硬件的<strong>内部、低级操作</strong>，使其正常运行。</li>
 <li><strong>驱动程序</strong>通过抽象硬件复杂性并提供标准化接口，允许<strong>操作系统与硬件进行通信和控制</strong>。</li>

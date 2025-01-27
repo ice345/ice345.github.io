@@ -27,12 +27,12 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤： 1. 不蒜子访问量统计的代码添加· 不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。 步骤：·  在你的 &lt;div class&#x3D;&quot;footer-inner&quot;&gt; 中，找到合适的位置（例如网站存活时间下方），然后添加以">
+    <meta name="description" content="你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤： 1. 不蒜子访问量统计的代码添加 不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。 步骤：  在你的 &lt;div class&#x3D;&quot;footer-inner&quot;&gt; 中，找到合适的位置（例如网站存活时间下方），然后添加以下不蒜子的统计代码：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo添加存活时间和访问人数">
 <meta property="og:url" content="http://example.com/2025/01/27/hexo%E6%B7%BB%E5%8A%A0%E5%AD%98%E6%B4%BB%E6%97%B6%E9%97%B4%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0/index.html">
 <meta property="og:site_name" content="ICEのBlog">
-<meta property="og:description" content="你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤： 1. 不蒜子访问量统计的代码添加· 不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。 步骤：·  在你的 &lt;div class&#x3D;&quot;footer-inner&quot;&gt; 中，找到合适的位置（例如网站存活时间下方），然后添加以">
+<meta property="og:description" content="你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤： 1. 不蒜子访问量统计的代码添加 不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。 步骤：  在你的 &lt;div class&#x3D;&quot;footer-inner&quot;&gt; 中，找到合适的位置（例如网站存活时间下方），然后添加以下不蒜子的统计代码：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-27T10:46:31.000Z">
 <meta property="article:modified_time" content="2025-01-27T10:50:18.086Z">
@@ -308,51 +308,61 @@
               <div class="markdown-body">
                 
                 <p>你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤：</p>
-<h3 id="1-不蒜子访问量统计的代码添加">1. <strong>不蒜子访问量统计的代码添加</strong><a class="anchor" href="#1-不蒜子访问量统计的代码添加">·</a></h3>
-<p>不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。</p>
-<h4 id="步骤："><strong>步骤：</strong><a class="anchor" href="#步骤：">·</a></h4>
-<ol>
-<li>在你的 <code>&lt;div class=&quot;footer-inner&quot;&gt;</code> 中，找到合适的位置（例如网站存活时间下方），然后添加以下不蒜子的统计代码：</li>
+<h3 id="不蒜子访问量统计的代码添加">1.
+<strong>不蒜子访问量统计的代码添加</strong></h3>
+<p>不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的
+Hexo 网站。</p>
+<h4 id="步骤"><strong>步骤：</strong></h4>
+<ol type="1">
+<li>在你的 <code>&lt;div class="footer-inner"&gt;</code>
+中，找到合适的位置（例如网站存活时间下方），然后添加以下不蒜子的统计代码：</li>
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 访问人数统计 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span><br>    本站总访问量：<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 次<br><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<h4 id="代码解释："><strong>代码解释：</strong><a class="anchor" href="#代码解释：">·</a></h4>
+<h4 id="代码解释"><strong>代码解释：</strong></h4>
 <ul>
-<li><code>id=&quot;busuanzi_container_site_pv&quot;</code> 和 <code>id=&quot;busuanzi_value_site_pv&quot;</code> 是不蒜子提供的 ID，它们会在页面加载后自动统计并显示站点的总访问量。</li>
-<li>通过 <code>busuanzi.pure.mini.js</code> 引入不蒜子统计脚本，它会自动计算并更新访问量。</li>
+<li><code>id="busuanzi_container_site_pv"</code> 和
+<code>id="busuanzi_value_site_pv"</code> 是不蒜子提供的
+ID，它们会在页面加载后自动统计并显示站点的总访问量。</li>
+<li>通过 <code>busuanzi.pure.mini.js</code>
+引入不蒜子统计脚本，它会自动计算并更新访问量。</li>
 </ul>
-<h4 id="修改后的文件："><strong>修改后的文件：</strong><a class="anchor" href="#修改后的文件：">·</a></h4>
+<h4 id="修改后的文件"><strong>修改后的文件：</strong></h4>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer-inner&quot;</span>&gt;</span><br>    &lt;% if (theme.footer.content) &#123; %&gt;<br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer-content&quot;</span>&gt;</span><br>            &lt;%- theme.footer.content %&gt;<br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    &lt;% &#125; %&gt;<br>    &lt;% if (theme.footer.statistics.enable) &#123; %&gt;<br>        &lt;%- partial(&#x27;_partials/footer/statistics.ejs&#x27;) %&gt;<br>    &lt;% &#125; %&gt;<br>    &lt;% if(theme.footer.beian.enable) &#123; %&gt;<br>        <span class="hljs-comment">&lt;!-- 备案信息 ICP for China --&gt;</span><br>        &lt;%- partial(&#x27;_partials/footer/beian.ejs&#x27;) %&gt;<br>    &lt;% &#125; %&gt;<br>    &lt;% if(theme.web_analytics.cnzz) &#123; %&gt;<br>        <span class="hljs-comment">&lt;!-- cnzz Analytics Icon --&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cnzz_stat_icon_&lt;%= theme.web_analytics.cnzz %&gt;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>    &lt;% &#125; %&gt;<br><br>    <span class="hljs-comment">&lt;!-- 网站存活时间计时功能 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;site-lifetime&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// 设置网站的创建日期</span></span><br><span class="language-javascript">        <span class="hljs-keyword">const</span> creationDate = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;2024-04-21&#x27;</span>); <span class="hljs-comment">// 请根据实际情况修改日期</span></span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// 计算当前日期和网站创建日期之间的天数差</span></span><br><span class="language-javascript">        <span class="hljs-keyword">function</span> <span class="hljs-title function_">calculateDaysSinceCreation</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();</span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> timeDifference = now - creationDate;</span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> daysSinceCreation = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(timeDifference / (<span class="hljs-number">1000</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">24</span>));</span><br><span class="language-javascript">            <span class="hljs-keyword">return</span> daysSinceCreation;</span><br><span class="language-javascript">        &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// 页面加载完成后执行</span></span><br><span class="language-javascript">        <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;DOMContentLoaded&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            <span class="hljs-comment">// 计算存活天数</span></span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> daysSinceCreation = <span class="hljs-title function_">calculateDaysSinceCreation</span>();</span><br><span class="language-javascript">            </span><br><span class="language-javascript">            <span class="hljs-comment">// 更新存活时间</span></span><br><span class="language-javascript">            <span class="hljs-keyword">const</span> lifetimeElement = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;site-lifetime&#x27;</span>);</span><br><span class="language-javascript">            lifetimeElement.<span class="hljs-property">textContent</span> = <span class="hljs-string">`网站存活了 <span class="hljs-subst">$&#123;daysSinceCreation&#125;</span> 天`</span>;</span><br><span class="language-javascript">        &#125;);</span><br><span class="language-javascript">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!-- 访问人数统计 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span><br>        本站总访问量：<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 次<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<h3 id="2-使用插件方式显示访问量">2. <strong>使用插件方式显示访问量</strong><a class="anchor" href="#2-使用插件方式显示访问量">·</a></h3>
-<p>如果你想使用插件（例如 <code>hexo-wordcount</code>）来统计和显示页面访问量，你可以按照以下步骤进行配置。</p>
-<h4 id="步骤：-2"><strong>步骤：</strong><a class="anchor" href="#步骤：-2">·</a></h4>
-<ol>
-<li>
-<p><strong>安装插件：</strong></p>
+<h3 id="使用插件方式显示访问量">2.
+<strong>使用插件方式显示访问量</strong></h3>
+<p>如果你想使用插件（例如
+<code>hexo-wordcount</code>）来统计和显示页面访问量，你可以按照以下步骤进行配置。</p>
+<h4 id="步骤-1"><strong>步骤：</strong></h4>
+<ol type="1">
+<li><p><strong>安装插件：</strong></p>
 <p>首先，安装 <code>hexo-wordcount</code> 插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-wordcount --save<br></code></pre></td></tr></table></figure>
-</li>
-<li>
-<p><strong>修改模板文件：</strong></p>
-<p>找到你的主题文件夹中的页面模板（例如 <code>themes/your-theme/layout/_partial/footer.ejs</code> 或 <code>footer.ejs</code>），然后在适当位置（例如网站存活时间和备案信息之后）添加以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-wordcount --save<br></code></pre></td></tr></table></figure></li>
+<li><p><strong>修改模板文件：</strong></p>
+<p>找到你的主题文件夹中的页面模板（例如
+<code>themes/your-theme/layout/_partial/footer.ejs</code> 或
+<code>footer.ejs</code>），然后在适当位置（例如网站存活时间和备案信息之后）添加以下代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 访问人数统计 --&gt;</span><br>本站总访问量：&lt;%= page.total_count %&gt;<br></code></pre></td></tr></table></figure>
-<p><strong>注意：</strong> 这个插件可以统计字数、阅读时间等信息，也可以结合其他统计功能使用。</p>
-</li>
-<li>
-<p><strong>更新 Hexo 并生成静态文件：</strong></p>
+<p><strong>注意：</strong>
+这个插件可以统计字数、阅读时间等信息，也可以结合其他统计功能使用。</p></li>
+<li><p><strong>更新 Hexo 并生成静态文件：</strong></p>
 <p>完成后，执行以下命令生成更新后的静态文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo generate<br></code></pre></td></tr></table></figure>
 <p>然后部署网站：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="3-Moe-Counter-动漫式计数">3. <code>Moe-Counter</code> 动漫式计数<a class="anchor" href="#3-Moe-Counter-动漫式计数">·</a></h3>
+<h3 id="moe-counter-动漫式计数">3. <code>Moe-Counter</code>
+动漫式计数</h3>
 <p><a target="_blank" rel="noopener" href="https://github.com/journey-ad/Moe-Counter">github🔗</a></p>
-<p>主要思路就是跟着文档操作就行了的，先生成代码 (就是一个 img 格式的代码)</p>
-<p>然后，如果你想在底部 (footer) 插入，你就要在 <code>/home/ice/my-blog/themes/fluid(your-theme)/layout/_partials/footer.ejs</code> 插入代码，具体示例如下:</p>
+<p>主要思路就是跟着文档操作就行了的，先生成代码 (就是一个 img
+格式的代码)</p>
+<p>然后，如果你想在底部 (footer) 插入，你就要在
+<code>/home/ice/my-blog/themes/fluid(your-theme)/layout/_partials/footer.ejs</code>
+插入代码，具体示例如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- Moe-Counter 访问人数统计 --&gt;<br>&lt;div style=<span class="hljs-string">&quot;text-align: center; margin-top: 10px;&quot;</span>&gt;<br>    &lt;span style=<span class="hljs-string">&quot;font-size: 16px; font-weight: bold;&quot;</span>&gt;访问人数统计: &lt;/span&gt;<br>    &lt;img src=<span class="hljs-string">&quot;https://count.getloli.com/@:ice345?name=%3Aice345&amp;theme=gelbooru&amp;padding=7&amp;offset=0&amp;align=bottom&amp;scale=1&amp;pixelated=1&amp;darkmode=auto&quot;</span> alt=<span class="hljs-string">&quot;visitor count&quot;</span>&gt;<br>&lt;/div&gt;<br></code></pre></td></tr></table></figure>
-<p>这个你想在底部生成<strong>邮箱，github 链接，QQ</strong>这些就仿照如下:</p>
+<p>这个你想在底部生成<strong>邮箱，github
+链接，QQ</strong>这些就仿照如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;!-- 添加社交链接 --&gt;<br>&lt;div style=<span class="hljs-string">&quot;font-size: 13px; font-weight: bold; text-align: center;&quot;</span>&gt;<br>    &lt;div style=<span class="hljs-string">&quot;display: flex; justify-content: center; gap: 20px;&quot;</span>&gt;<br>        &lt;span class=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;<br>            &lt;a class=<span class="hljs-string">&quot;nav-link&quot;</span> href=<span class="hljs-string">&quot;https://github.com/ice345&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;<br>                &lt;i class=<span class="hljs-string">&quot;fab fa-github&quot;</span> style=<span class="hljs-string">&quot;color:#409EFF;&quot;</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span>&gt;&lt;/i&gt;<br>                GitHub<br>            &lt;/a&gt;<br>        &lt;/span&gt;<br><br>        &lt;span class=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;<br>            &lt;a class=<span class="hljs-string">&quot;nav-link&quot;</span> href=<span class="hljs-string">&quot;mailto:nni461904@gmail.com&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;<br>                &lt;i class=<span class="hljs-string">&quot;fa fa-envelope&quot;</span> style=<span class="hljs-string">&quot;color:#409EFF&quot;</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span>&gt;&lt;/i&gt;<br>                邮箱<br>            &lt;/a&gt;<br>        &lt;/span&gt;<br><br>        &lt;span class=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;<br>            &lt;a class=<span class="hljs-string">&quot;nav-link&quot;</span> href=<span class="hljs-string">&quot;https://alist.050626.xyz&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;<br>                &lt;i class=<span class="hljs-string">&quot;fa-solid fa-cloud-download&quot;</span> style=<span class="hljs-string">&quot;color:#409EFF;&quot;</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span>&gt;&lt;/i&gt;<br>                Alist<br>            &lt;/a&gt;<br>        &lt;/span&gt;<br>    &lt;/div&gt;<br>    &lt;br /&gt;<br>&lt;/div&gt;  <br></code></pre></td></tr></table></figure>
-<h3 id="4-存活时间">4. 存活时间<a class="anchor" href="#4-存活时间">·</a></h3>
+<h3 id="存活时间">4. 存活时间</h3>
 <p>这个的添加就仿照访问人数即可</p>
 
                 
@@ -443,6 +453,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/01/27/alist%E9%85%8D%E7%BD%AESSL%E5%AE%9E%E7%8E%B0https%E8%AE%BF%E9%97%AE/" title="alist配置SSL实现https访问">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">alist配置SSL实现https访问</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
