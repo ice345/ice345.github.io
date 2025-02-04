@@ -1,0 +1,1151 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MNR8G43J');</script>
+  <!-- End Google Tag Manager -->
+  
+
+
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="JunBin Liang">
+  <meta name="keywords" content="Blog 京吹粉">
+  
+    <meta name="description" content="You can find my dotfiles here. Open a terminal window Open a terminal window on your macOs or linux machine. I’m using Alacritty on macOs and I’m using the zsh shell. Install Homebrew Run the followin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7-Amazing-CLI-Tools">
+<meta property="og:url" content="http://example.com/2025/02/04/7-Amazing-CLI-Tools/index.html">
+<meta property="og:site_name" content="ICEのBlog">
+<meta property="og:description" content="You can find my dotfiles here. Open a terminal window Open a terminal window on your macOs or linux machine. I’m using Alacritty on macOs and I’m using the zsh shell. Install Homebrew Run the followin">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-04T05:29:20.000Z">
+<meta property="article:modified_time" content="2025-02-04T05:41:09.490Z">
+<meta property="article:author" content="JunBin Liang">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+    <meta name="google-site-verification" content="9JRO3fIih2QZAncVygVo__DkMIqg2DRoHWwuclS6YEw" />
+  
+  <title>7-Amazing-CLI-Tools - ICEのBlog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/source/css/_custom.styl.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNR8G43J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+
+  
+
+  <header>
+    
+
+<script src="https://unpkg.com/oh-my-live2d"></script>
+
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/LiztoAoiTori.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="7-Amazing-CLI-Tools"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        JunBin Liang
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-04 13:29" pubdate>
+          2025年2月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          733 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">7-Amazing-CLI-Tools</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>You can find my dotfiles <a
+target="_blank" rel="noopener" href="https://github.com/josean-dev/dev-environment-files">here</a>.</p>
+<h2 id="open-a-terminal-window">Open a terminal window</h2>
+<p>Open a terminal window on your macOs or linux machine.</p>
+<p>I’m using <strong>Alacritty</strong> on <strong>macOs</strong> and
+I’m using the <strong>zsh</strong> shell.</p>
+<h2 id="install-homebrew">Install Homebrew</h2>
+<p>Run the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+<p>If necessary, when prompted, enter your password here and press
+enter. If you haven’t installed the XCode Command Line Tools, when
+prompted, press enter and homebrew will install this as well.</p>
+<h2 id="add-to-path-only-apple-silicon-macbooks">Add To Path (Only Apple
+Silicon Macbooks)</h2>
+<p>After installing, add it to the path. This step shouldn’t be
+necessary on Intel macs.</p>
+<p>Run the following two commands to do so:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.zprofile<br><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(/opt/homebrew/bin/brew shellenv)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+<h2 id="fzf-command-line-fuzzy-finder">#1: fzf (command line fuzzy
+finder)</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/junegunn/fzf.git">fzf</a> is an amazing
+fuzzy finder for the command line.</p>
+<p>Install fzf with homebrew:</p>
+<p><em>This will vary slightly depending on the shell that you’re using,
+I’m using <strong>zsh</strong></em>.</p>
+<p>Open <code>~/.zshrc</code> file with your favorite editor. I
+personally use Neovim.</p>
+<p>With TextEdit:</p>
+<p>With VSCode (you have to have it installed):</p>
+<p>With Neovim (what I use):</p>
+<p>To the bottom of the file add:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ---- FZF -----</span><br><br><span class="hljs-comment"># Set up fzf key bindings and fuzzy completion</span><br><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(fzf --zsh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+<p>After saving, in your terminal reload the zsh configuration:</p>
+<p>Now you can use fzf!</p>
+<p>Examples of what you can do with it:</p>
+<table>
+
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CTRL-t</code></td>
+<td>Look for files and directories</td>
+</tr>
+<tr class="even">
+<td><code>CTRL-r</code></td>
+<td>Look through command history</td>
+</tr>
+<tr class="odd">
+<td><code>Enter</code></td>
+<td>Select the item</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl-j</code> or <code>Ctrl-n</code> or
+<code>Down arrow</code></td>
+<td>Go down one result</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl-k</code> or <code>Ctrl-p</code> or
+<code>Up arrow</code></td>
+<td>Go up one result</td>
+</tr>
+<tr class="even">
+<td><code>Tab</code></td>
+<td>Mark a result</td>
+</tr>
+<tr class="odd">
+<td><code>Shift-Tab</code></td>
+<td>Unmark a result</td>
+</tr>
+<tr class="even">
+<td><code>cd **Tab</code></td>
+<td>Open up fzf to find directory</td>
+</tr>
+<tr class="odd">
+<td><code>export **Tab</code></td>
+<td>Look for env variable to export</td>
+</tr>
+<tr class="even">
+<td><code>unset **Tab</code></td>
+<td>Look for env variable to unset</td>
+</tr>
+<tr class="odd">
+<td><code>unalias **Tab</code></td>
+<td>Look for alias to unalias</td>
+</tr>
+<tr class="even">
+<td><code>ssh **Tab</code></td>
+<td>Look for recently visited host names</td>
+</tr>
+<tr class="odd">
+<td><code>kill -9 **Tab</code></td>
+<td>Look for process name to kill to get pid</td>
+</tr>
+<tr class="even">
+<td>any command (like <code>nvim</code> or <code>code</code>) +
+<code>**Tab</code></td>
+<td>Look for files &amp; directories to complete command</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-fd-with-fzf">Use fd with fzf</h3>
+<p><strong>fzf</strong> by default uses the find command to look for
+files and directories.</p>
+<p>Let’s replace that with <a
+target="_blank" rel="noopener" href="https://github.com/sharkdp/fd">fd</a> for better functionality,
+like ignoring files ignored by git (with .gitignore).</p>
+<p>Install fd:</p>
+<p>Open <code>~/.zshrc</code> with preferred text editor.</p>
+<p>Add to the bottom of this file:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># -- Use fd instead of fzf --</span><br><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_DEFAULT_COMMAND</span>=<span class="hljs-string">&quot;fd --hidden --strip-cwd-prefix --exclude .git&quot;</span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_CTRL_T_COMMAND</span>=<span class="hljs-string">&quot;<span class="hljs-variable">$FZF_DEFAULT_COMMAND</span>&quot;</span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_ALT_C_COMMAND</span>=<span class="hljs-string">&quot;fd --type=d --hidden --strip-cwd-prefix --exclude .git&quot;</span><br><br><span class="hljs-comment"># Use fd (https://github.com/sharkdp/fd) for listing path candidates.</span><br><span class="hljs-comment"># - The first argument to the function ($1) is the base path to start traversal</span><br><span class="hljs-comment"># - See the source code (completion.&#123;bash,zsh&#125;) for the details.</span><br>_fzf_compgen_path() &#123;<br>  fd --hidden --exclude .git . <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span><br>&#125;<br><br><span class="hljs-comment"># Use fd to generate the list for directory completion</span><br>_fzf_compgen_dir() &#123;<br>  fd <span class="hljs-attribute">--type</span>=d --hidden --exclude .git . <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>After saving, in your terminal do:</p>
+<h3 id="setup-fzf-git">Setup fzf-git</h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/junegunn/fzf-git.sh">fzf-git</a> is a
+really nice script to look for git related things (commits, hashes,
+files and more) with fzf.</p>
+<p>Navigate to your home directory:</p>
+<p>Clone the repository:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/junegunn/fzf-git.sh.git<br></code></pre></td></tr></table></figure>
+<p>Open <code>~/.zshrc</code> with preferred text editor and add to the
+bottom:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">source</span> ~/fzf-git.<span class="hljs-keyword">sh</span>/fzf-git.<span class="hljs-keyword">sh</span><br></code></pre></td></tr></table></figure>
+<p>Save and in terminal run:</p>
+<p>Now you can use the following:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Keybind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CTRL-GF</code></td>
+<td>Look for git files with fzf</td>
+</tr>
+<tr class="even">
+<td><code>CTRL-GB</code></td>
+<td>Look for git branches with fzf</td>
+</tr>
+<tr class="odd">
+<td><code>CTRL-GT</code></td>
+<td>Look for git tags with fzf</td>
+</tr>
+<tr class="even">
+<td><code>CTRL-GR</code></td>
+<td>Look for git remotes with fzf</td>
+</tr>
+<tr class="odd">
+<td><code>CTRL-GH</code></td>
+<td>Look for git commit hashes with fzf</td>
+</tr>
+<tr class="even">
+<td><code>CTRL-GS</code></td>
+<td>Look for git stashes with fzf</td>
+</tr>
+<tr class="odd">
+<td><code>CTRL-GL</code></td>
+<td>Look for git reflogs with fzf</td>
+</tr>
+<tr class="even">
+<td><code>CTRL-GW</code></td>
+<td>Look for git worktrees with fzf</td>
+</tr>
+<tr class="odd">
+<td><code>CTRL-GE</code></td>
+<td>Look for git for-each-ref with fzf</td>
+</tr>
+</tbody>
+</table>
+<p><em>Hold down <code>CTRL</code> and then press <code>GF</code> or one
+of the others consecutively and quickly.</em></p>
+<h3 id="setup-a-custom-theme-for-fzf">Setup a custom theme for fzf</h3>
+<p>You can also setup a custom theme for fzf.</p>
+<p>To use mine you can add this to <code>~/.zshrc</code>:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># --- setup fzf theme ---</span><br><span class="hljs-attribute">fg</span>=<span class="hljs-string">&quot;#CBE0F0&quot;</span><br><span class="hljs-attribute">bg</span>=<span class="hljs-string">&quot;#011628&quot;</span><br><span class="hljs-attribute">bg_highlight</span>=<span class="hljs-string">&quot;#143652&quot;</span><br><span class="hljs-attribute">purple</span>=<span class="hljs-string">&quot;#B388FF&quot;</span><br><span class="hljs-attribute">blue</span>=<span class="hljs-string">&quot;#06BCE4&quot;</span><br><span class="hljs-attribute">cyan</span>=<span class="hljs-string">&quot;#2CF9ED&quot;</span><br><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_DEFAULT_OPTS</span>=<span class="hljs-string">&quot;--color=fg:<span class="hljs-variable">$&#123;fg&#125;</span>,bg:<span class="hljs-variable">$&#123;bg&#125;</span>,hl:<span class="hljs-variable">$&#123;purple&#125;</span>,fg+:<span class="hljs-variable">$&#123;fg&#125;</span>,bg+:<span class="hljs-variable">$&#123;bg_highlight&#125;</span>,hl+:<span class="hljs-variable">$&#123;purple&#125;</span>,info:<span class="hljs-variable">$&#123;blue&#125;</span>,prompt:<span class="hljs-variable">$&#123;cyan&#125;</span>,pointer:<span class="hljs-variable">$&#123;cyan&#125;</span>,marker:<span class="hljs-variable">$&#123;cyan&#125;</span>,spinner:<span class="hljs-variable">$&#123;cyan&#125;</span>,header:<span class="hljs-variable">$&#123;cyan&#125;</span>&quot;</span><br></code></pre></td></tr></table></figure>
+<p>If you want to make your own check out the <a
+target="_blank" rel="noopener" href="https://vitormv.github.io/fzf-themes/">theme generator</a></p>
+<h2 id="bat-better-cat">#2: bat (better cat)</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/sharkdp/bat">bat</a> is a really nice
+alternative to cat to display file contents in the terminal with syntax
+highlighting.</p>
+<p>Install with homebrew:</p>
+<p>Now you can start using it!</p>
+<p>Example:</p>
+<p>The example above would print out the contents of a file called
+<code>filename.txt</code>.</p>
+<p>To see examples of all of the themes you can use:</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs brainfuck"><span class="hljs-comment">bat</span> <span class="hljs-literal">--</span><span class="hljs-comment">list</span><span class="hljs-literal">-</span><span class="hljs-comment">themes | fzf</span> <span class="hljs-literal">--</span><span class="hljs-comment">preview=&quot;bat</span> <span class="hljs-literal">--</span><span class="hljs-comment">theme=&#123;&#125;</span> <span class="hljs-literal">--</span><span class="hljs-comment">color=always /path/to/file&quot;</span><br></code></pre></td></tr></table></figure>
+<p>Make sure to replace <code>/path/to/file</code> with the path to an
+actual file.</p>
+<h3 id="install-a-custom-theme">Install a custom theme</h3>
+<p>If you find a theme on github for example, you can follow these
+steps.</p>
+<p>The first time you do this create the following directory:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p <span class="hljs-string">&quot;<span class="hljs-subst">$(bat --config-dir)</span>/themes&quot;</span><br></code></pre></td></tr></table></figure>
+<p>Then move into it:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(bat --config-dir)</span>/themes&quot;</span><br></code></pre></td></tr></table></figure>
+<p>Then you can download the file for the theme you want to use into
+this directory.</p>
+<p>The file should use the <code>.tmTheme</code> extension.</p>
+<p>For example:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">curl -O https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/folke/</span>tokyonight.nvim<span class="hljs-regexp">/main/</span>extras<span class="hljs-regexp">/sublime/</span>tokyonight_night.tmTheme<br></code></pre></td></tr></table></figure>
+<p>This will install the night version of the tokyonight theme.</p>
+<p>Then to use it run:</p>
+<p>And then add the following to your <code>~/.zshrc</code>:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># ----- Bat (better cat) -----</span><br><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">BAT_THEME</span>=tokyonight_night<br></code></pre></td></tr></table></figure>
+<p>Replace <code>tokyonight_night</code> with the name of the theme you
+would like to use.</p>
+<p>Then save this file and run:</p>
+<h2 id="delta-better-git-diff">#3: delta (better git diff)</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/dandavison/delta">delta</a> is a great
+way to produce better git diffs using the syntax highlighting
+functionality of bat.</p>
+<p>Install it:</p>
+<p>Then open your <code>~/.gitconfig</code> file.</p>
+<p>With TextEdit:</p>
+<p>With VSCode (you have to have it installed):</p>
+<p>With Neovim (what I use):</p>
+<p>Add the following to it:</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[core]</span><br>    <span class="hljs-attr">pager</span> = delta<br><br><span class="hljs-section">[interactive]</span><br>    <span class="hljs-attr">diffFilter</span> = delta --color-<span class="hljs-literal">on</span>ly<br><br><span class="hljs-section">[delta]</span><br>    <span class="hljs-attr">navigate</span> = <span class="hljs-literal">true</span>    <span class="hljs-comment"># use n and N to move between diff sections</span><br>    <span class="hljs-attr">side-by-side</span> = <span class="hljs-literal">true</span><br><br>    <span class="hljs-comment"># delta detects terminal colors automatically; set one of these to disable auto-detection</span><br>    <span class="hljs-comment"># dark = true</span><br>    <span class="hljs-comment"># light = true</span><br><br><span class="hljs-section">[merge]</span><br>    <span class="hljs-attr">conflictstyle</span> = diff3<br><br><span class="hljs-section">[diff]</span><br>    <span class="hljs-attr">colorMoved</span> = default<br></code></pre></td></tr></table></figure>
+<p>You can remove <code>side-by-side=true</code> if you don’t want side
+by side diffs.</p>
+<p>After saving this file your git diffs should look a lot nicer.</p>
+<h3 id="setup-fzf-previews">Setup fzf previews</h3>
+<p>Now that you have <code>eza</code> and <code>bat</code> setup you can
+setup some really nice previews for fzf.</p>
+<p>In your <code>~/.zshrc</code>, where you’re configuring fzf, add the
+following:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_CTRL_T_OPTS</span>=<span class="hljs-string">&quot;--preview &#x27;bat -n --color=always --line-range :500 &#123;&#125;&#x27;&quot;</span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_ALT_C_OPTS</span>=<span class="hljs-string">&quot;--preview &#x27;eza --tree --color=always &#123;&#125; | head -200&#x27;&quot;</span><br><br><span class="hljs-comment"># Advanced customization of fzf options via _fzf_comprun function</span><br><span class="hljs-comment"># - The first argument to the function is the name of the command.</span><br><span class="hljs-comment"># - You should make sure to pass the rest of the arguments to fzf.</span><br>_fzf_comprun() &#123;<br>  local <span class="hljs-attribute">command</span>=<span class="hljs-variable">$1</span><br>  shift<br><br>  case <span class="hljs-string">&quot;<span class="hljs-variable">$command</span>&quot;</span> <span class="hljs-keyword">in</span><br>    cd)           fzf --preview <span class="hljs-string">&#x27;eza --tree --color=always &#123;&#125; | head -200&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>    <span class="hljs-built_in">export</span>|unset) fzf --preview <span class="hljs-string">&quot;eval &#x27;echo $&#x27;&#123;&#125;&quot;</span>         <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>    ssh)          fzf --preview <span class="hljs-string">&#x27;dig &#123;&#125;&#x27;</span>                   <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>    *)            fzf --preview <span class="hljs-string">&quot;bat -n --color=always --line-range :500 &#123;&#125;&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>  esac<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>This will setup file previews with bat as well as directory previews
+with eza and some other previews as well.</p>
+<p>There is one slight issue with this code though. When we are looking
+for files and directories with <code>Ctrl-T</code> or doing something
+like <code>nvim **Tab</code>, we are using <code>bat</code> to generate
+the preview but this won’t work for directories and we’ll get an
+error.</p>
+<p>We can fix this by using an <strong>if statement</strong> that checks
+whether the path to what we should preview is a directory or not and use
+<code>eza</code> instead for the preview in this case.</p>
+<p>To do this you can replace the previous code with something like the
+following:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-attribute">show_file_or_dir_preview</span>=<span class="hljs-string">&quot;if [ -d &#123;&#125; ]; then eza --tree --color=always &#123;&#125; | head -200; else bat -n --color=always --line-range :500 &#123;&#125;; fi&quot;</span><br><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_CTRL_T_OPTS</span>=<span class="hljs-string">&quot;--preview &#x27;<span class="hljs-variable">$show_file_or_dir_preview</span>&#x27;&quot;</span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">FZF_ALT_C_OPTS</span>=<span class="hljs-string">&quot;--preview &#x27;eza --tree --color=always &#123;&#125; | head -200&#x27;&quot;</span><br><br><span class="hljs-comment"># Advanced customization of fzf options via _fzf_comprun function</span><br><span class="hljs-comment"># - The first argument to the function is the name of the command.</span><br><span class="hljs-comment"># - You should make sure to pass the rest of the arguments to fzf.</span><br>_fzf_comprun() &#123;<br>  local <span class="hljs-attribute">command</span>=<span class="hljs-variable">$1</span><br>  shift<br><br>  case <span class="hljs-string">&quot;<span class="hljs-variable">$command</span>&quot;</span> <span class="hljs-keyword">in</span><br>    cd)           fzf --preview <span class="hljs-string">&#x27;eza --tree --color=always &#123;&#125; | head -200&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>    <span class="hljs-built_in">export</span>|unset) fzf --preview <span class="hljs-string">&quot;eval &#x27;echo <span class="hljs-variable">$&#123;&#125;</span>&#x27;&quot;</span>         <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>    ssh)          fzf --preview <span class="hljs-string">&#x27;dig &#123;&#125;&#x27;</span>                   <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>    *)            fzf --preview <span class="hljs-string">&quot;<span class="hljs-variable">$show_file_or_dir_preview</span>&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> ;;<br>  esac<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="eza-better-ls">#4: eza (better ls)</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/eza-community/eza.git">eza</a> is a
+better version of ls with lots of different options.</p>
+<p>Install it:</p>
+<p>Now you can start using it!</p>
+<p>You can create an alias for it in <code>~/.zshrc</code> like so:</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs brainfuck"><span class="hljs-comment">#</span> <span class="hljs-literal">----</span> <span class="hljs-comment">Eza (better ls)</span> <span class="hljs-literal">-----</span><br><br><span class="hljs-comment">alias ls=&quot;eza</span> <span class="hljs-literal">--</span><span class="hljs-comment">color=always</span> <span class="hljs-literal">--</span><span class="hljs-comment">long</span> <span class="hljs-literal">--</span><span class="hljs-comment">git</span> <span class="hljs-literal">--</span><span class="hljs-comment">no</span><span class="hljs-literal">-</span><span class="hljs-comment">filesize</span> <span class="hljs-literal">--</span><span class="hljs-comment">icons=always</span> <span class="hljs-literal">--</span><span class="hljs-comment">no</span><span class="hljs-literal">-</span><span class="hljs-comment">time</span> <span class="hljs-literal">--</span><span class="hljs-comment">no</span><span class="hljs-literal">-</span><span class="hljs-comment">user</span> <span class="hljs-literal">--</span><span class="hljs-comment">no</span><span class="hljs-literal">-</span><span class="hljs-comment">permissions&quot;</span><br></code></pre></td></tr></table></figure>
+<h2 id="tldr-user-friendly-man-pages">#5: tldr (user-friendly man
+pages)</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/tldr-pages/tldr">tldr</a> is a huge
+collection of community maintained help pages with helpful summaries for
+cli tools. You can use this as an alternative to man pages.</p>
+<p>Install the rust client with homebrew:</p>
+<p>Now you can use it just like man to learn more about a tool.</p>
+<p>For example to learn more about <code>eza</code>:</p>
+<h2 id="thefuck">#6: thefuck</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/nvbn/thefuck">thefuck</a> is a really
+nice tool to auto correct mistyped commands.</p>
+<p>Install it like so:</p>
+<p>Then open your <code>~/.zshrc</code> file and add:</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mel"># thefuck <span class="hljs-keyword">alias</span><br><span class="hljs-keyword">eval</span> $(thefuck --<span class="hljs-keyword">alias</span>)<br></code></pre></td></tr></table></figure>
+<p>This will setup the alias which is <code>fuck</code>.</p>
+<p>You can also add your own custom alias:</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mel"># thefuck <span class="hljs-keyword">alias</span><br><span class="hljs-keyword">eval</span> $(thefuck --<span class="hljs-keyword">alias</span>)<br><span class="hljs-keyword">eval</span> $(thefuck --<span class="hljs-keyword">alias</span> fk)<br></code></pre></td></tr></table></figure>
+<p>Save your zshrc file and run:</p>
+<p>Now if mistype a command you can run <code>fuck</code>
+afterwards.</p>
+<p>If there are is more than one result you can use your <code>up</code>
+and <code>down</code> arrow keys and then <code>enter</code> to select
+the one you want.</p>
+<h2 id="zoxide-better-cd">#7: zoxide (better cd)</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/ajeetdsouza/zoxide.git">zoxide</a> is an
+amazing alternative to cd.</p>
+<p>It will remember the directories you’ve visited in the past and make
+it really easy to navigate back to them by just typing out a portion of
+the name of the directory you want to visit.</p>
+<p>Install it like so:</p>
+<p>Then add the following to <code>~/.zshrc</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ---- Zoxide (better cd) ----</span><br><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(zoxide init zsh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+<p>If you want to keep using <code>cd</code> then create an alias in
+<code>~/.zshrc</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ---- Zoxide (better cd) ----</span><br><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(zoxide init zsh)</span>&quot;</span><br><br><span class="hljs-built_in">alias</span> <span class="hljs-built_in">cd</span>=<span class="hljs-string">&quot;z&quot;</span><br></code></pre></td></tr></table></figure>
+<p>Save and then run:</p>
+<p>Now you can use <code>z</code> as a much smarter replacement to
+<code>cd</code>.</p>
+<p>If you want to trigger fzf when you’re moving to a directory with
+<code>z</code> you can do <code>space</code> + <code>tab</code>.</p>
+<h2 id="thats-it">That’s it! 🚀</h2>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Linux/CLI%E7%9B%B8%E5%85%B3/" class="category-chain-item">CLI相关</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>7-Amazing-CLI-Tools</div>
+      <div>http://example.com/2025/02/04/7-Amazing-CLI-Tools/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>JunBin Liang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/02/04/Android-PrivateDNS/" title="Android-PrivateDNS">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Android-PrivateDNS</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/02/04/%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%9B%B8%E5%85%B3%E7%A7%91%E6%99%AE/" title="图形化相关科普">
+                        <span class="hidden-mobile">图形化相关科普</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'ice345/comments');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+     <div class="footer-inner">
+    
+        <div class="footer-content">
+             <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+        </div>
+    
+
+    <!-- 添加社交链接 -->
+    <div style="font-size: 13px; font-weight: bold; text-align: center;">
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <span class="nav-item">
+                <a class="nav-link" href="https://github.com/ice345" target="_blank">
+                    <i class="fab fa-github" style="color:#409EFF;" aria-hidden="true"></i>
+                    GitHub
+                </a>
+            </span>
+
+            <span class="nav-item">
+                <a class="nav-link" href="mailto:nni461904@gmail.com" target="_blank">
+                    <i class="fa fa-envelope" style="color:#409EFF" aria-hidden="true"></i>
+                    邮箱
+                </a>
+            </span>
+
+            <span class="nav-item">
+                <a class="nav-link" href="https://alist.050626.xyz" target="_blank">
+                    <i class="fa-solid fa-cloud-download" style="color:#409EFF;" aria-hidden="true"></i>
+                    Alist
+                </a>
+            </span>
+        </div>
+        <br />
+    </div>
+
+    
+    
+    
+
+    <!-- 网站存活时间计时功能 -->
+    <div id="site-lifetime"></div>
+
+    <script>
+        const creationDate = new Date('2024-04-21');
+
+        function calculateDaysSinceCreation() {
+            const now = new Date();
+            const timeDifference = now - creationDate;
+            const daysSinceCreation = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            return daysSinceCreation;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const daysSinceCreation = calculateDaysSinceCreation();
+            const lifetimeElement = document.getElementById('site-lifetime');
+            lifetimeElement.textContent = `网站存活了 ${daysSinceCreation} 天`;
+        });
+    </script>
+
+    <!-- 访问人数统计 -->
+    <!-- <span id="busuanzi_container_site_pv" style="display: none;"> -->
+    <!--    本站总访问量：<span id="busuanzi_value_site_pv"></span> 次        -->
+    <!--  </span> -->
+    <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>    -->
+
+    <!-- Moe-Counter 访问人数统计 -->
+    <div style="text-align: center; margin-top: 10px;">
+        <span style="font-size: 16px; font-weight: bold;">访问人数统计: </span>
+        <img src="https://count.getloli.com/@:ice345?name=%3Aice345&theme=gelbooru&padding=7&offset=0&align=bottom&scale=1&pixelated=1&darkmode=auto" srcset="/img/loading.gif" lazyload alt="visitor count">
+    </div>
+
+    <!-- Utterances 脚本 -->
+    <!-- <script src="https://utteranc.es/client.js"
+            repo="ice345/comments"
+            issue-term="url"
+            label="Problem"
+            theme="dark-blue"
+            crossorigin="anonymous"
+            async>
+    </script> -->
+</div>
+
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
