@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>alist杂谈</title>
+    <link href="/2025/04/20/alist%E6%9D%82%E8%B0%88/"/>
+    <url>/2025/04/20/alist%E6%9D%82%E8%B0%88/</url>
+    
+    <content type="html"><![CDATA[<h2 id="杂谈">杂谈</h2><p>alist 的相关目录配置全部都在 <code>/opt/alist</code>目录下，这里可以配置相关的比如: - https 设置 (<em>即证书的设置</em>) -端口设置 - 密码设置 (高版本已经不行了)</p><hr /><p>谈到有关证书的事情，我这个 <code>alist</code> 服务器有关 https访问，就要申请 ssl 证书。那么就要将相关的情况分类说明:</p><h2 id="情况一">情况一</h2><p>你的 <code>cloudflare</code> 代理不是仅 DNS 的 (即你的云朵是橙色的),这就要看你的加密方式是什么了 (在 <code>边缘证书</code>那里可以看到相关设置)</p><p>Cloudflare 提供三种主要的 SSL/TLS 模式，决定了 Cloudflare与源站之间的连接方式：</p><ol type="1"><li><p><strong>灵活（Flexible）</strong>：​浏览器与 Cloudflare 之间使用HTTPS，但 Cloudflare 与源站之间使用 HTTP。​</p></li><li><p><strong>完全（Full）</strong>：​浏览器与 Cloudflare 之间使用HTTPS，Cloudflare 与源站之间也使用HTTPS，但不验证源站证书的有效性。​</p></li><li><p><strong>完全（严格）（Full (Strict)）</strong>：​浏览器与Cloudflare 之间使用 HTTPS，Cloudflare 与源站之间也使用HTTPS，并且验证源站证书的有效性（必须是受信任的 CA签发的有效证书）。</p></li></ol><p>在“完全（严格）”模式下，Cloudflare 会验证你服务器上的 SSL证书是否有效且由受信任的证书颁发机构（CA）签发。​如果你使用 Let’s Encrypt证书，并确保其未过期，Cloudflare 将接受该证书。​</p><p>所以，如果你想设置 <code>cloudflare</code>的证书，你就要自己手动设置相关的还有续期也要分不同情况来决定是否会自动续期.</p><h2 id="情况二">情况二</h2><p>你的 <code>cloudflare</code> 代理是仅 DNS 的 (即你的云朵是灰色的)</p><p>我的服务器是通过 <code>cerbot</code> 这个来申请 ssl证书的，他的相关配置文件存储在 <code>/etc/letsencrypt</code> 下</p><ul><li><p><code>/etc/letsencrypt/live/yourdomain/</code>：包含实际使用的证书文件的符号链接。​以下是先骨干目录结构内容:</p></li><li><p><code>fullchain.pem</code>：完整的证书链，供服务器使用。​</p></li><li><p><code>privkey.pem</code>：私钥文件。​</p></li><li><p><code>/etc/letsencrypt/archive/yourdomain/</code>：存储所有历史版本的证书和私钥。​</p></li><li><p><code>/etc/letsencrypt/renewal/yourdomain.conf</code>：包含续期所需的配置信息。​</p></li><li><p><code>/var/log/letsencrypt/letsencrypt.log</code>：Certbot的日志文件，记录操作过程和错误信息。</p></li></ul><p>以下是通过 <code>cerbot</code> 申请 ssl 证书步骤:</p><ol type="1"><li><p><strong>申请 SSL 证书</strong>: 通过 <code>standalone</code>模式申请证书：(因为我不是使用 <code>nginx</code> 的，所以是<code>standalone</code> 模式) <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> cerbot certonly --standalone -d alist.050626.xyz<br></code></pre></td></tr></table></figure></p></li><li><p><strong>验证过程</strong>: Certbot 会启动一个临时的 web服务器，向 Let's Encrypt证明你拥有该域名。验证完成后，它会生成证书并保存在<code>/etc/letsencrypt/live/yourdomain.com/</code> 目录下。</p></li><li><p><strong>证书自动续期</strong>: Certbot 会自动配置一个 cron任务来定期检查并续期证书。验证证书是否会自动续期: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> cerbot renew --dry-run<br></code></pre></td></tr></table></figure></p></li><li><p><strong>配置定时任务</strong>: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> crontab -e<br></code></pre></td></tr></table></figure></p></li></ol><p>每天检查证书并进行续期 (如果需要), 然后重启 alist <figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">0 </span><span class="hljs-number">0</span> * * * certbot renew --quiet &amp;&amp; systemctl restart alist<br></code></pre></td></tr></table></figure></p><p>然后有了证书之后，就在 <code>/opt/alist/data</code> 目录下:</p><p>在 <code>cert_file</code> 以及 <code>key_file</code>上放置相关配置文件</p><p>例如:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-string">&quot;cert_file&quot;</span>: <span class="hljs-string">&quot;/etc/letsencrypt/live/alist.050626.xyz/fullchain.pem&quot;</span>,<br><span class="hljs-string">&quot;key_file&quot;</span>: <span class="hljs-string">&quot;/etc/letsencrypt/live/alist.050626.xyz/privkey.pem&quot;</span>,<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>alist</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>alist</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>regrex补充</title>
     <link href="/2025/02/04/regrex%E8%A1%A5%E5%85%85/"/>
     <url>/2025/02/04/regrex%E8%A1%A5%E5%85%85/</url>
@@ -271,16 +296,14 @@
     
     <categories>
       
-      <category>Linux</category>
-      
-      <category>深入学习</category>
+      <category>alist</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Linux</tag>
+      <tag>alist</tag>
       
     </tags>
     
