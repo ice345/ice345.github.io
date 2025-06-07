@@ -1,0 +1,973 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MNR8G43J');</script>
+  <!-- End Google Tag Manager -->
+  
+
+
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="JunBin Liang">
+  <meta name="keywords" content="Blog 京吹粉">
+  
+    <meta name="description" content="先前做法 先前, 我们是通过脚本来和 cloudflare 配合来不断将域名和 ipv6 进行一个绑定来修改, 但是这样我的服务器就是一个直接的出站, 并没有经过什么加速. 所以相比通过代理的方式, 速度会慢很多. 脚本如下: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474">
+<meta property="og:type" content="article">
+<meta property="og:title" content="alist加速">
+<meta property="og:url" content="http://example.com/2025/06/07/alist%E5%8A%A0%E9%80%9F/index.html">
+<meta property="og:site_name" content="ice345のBlog">
+<meta property="og:description" content="先前做法 先前, 我们是通过脚本来和 cloudflare 配合来不断将域名和 ipv6 进行一个绑定来修改, 但是这样我的服务器就是一个直接的出站, 并没有经过什么加速. 所以相比通过代理的方式, 速度会慢很多. 脚本如下: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-07T08:21:33.000Z">
+<meta property="article:modified_time" content="2025-06-07T08:22:12.486Z">
+<meta property="article:author" content="JunBin Liang">
+<meta property="article:tag" content="alist">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+    <meta name="google-site-verification" content="9JRO3fIih2QZAncVygVo__DkMIqg2DRoHWwuclS6YEw" />
+  
+  <title>alist加速 - ice345のBlog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/source/css/_custom.styl.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNR8G43J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+
+  
+
+  <header>
+    
+
+<script src="https://unpkg.com/oh-my-live2d"></script>
+
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/LiztoAoiTori.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="alist加速"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        JunBin Liang
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-07 16:21" pubdate>
+          2025年6月7日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">alist加速</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="先前做法">先前做法</h1>
+<p>先前, 我们是通过脚本来和 cloudflare 配合来不断将域名和 ipv6
+进行一个绑定来修改, 但是这样我的服务器就是一个直接的出站,
+并没有经过什么加速. 所以相比通过代理的方式, 速度会慢很多.</p>
+<p>脚本如下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">!/bin/bash</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">CHANGE THESE</span><br>auth_email=&quot;nni461904@gmail.com&quot;  #你的CloudFlare注册账户邮箱,your cloudflare account email address<br>auth_key=&quot;188f5f3f1ba73b37fd2a0&quot;   #你的cloudflare账户Globel ID ,your cloudflare Globel ID（就是我的个人资料里的global api key，应该就是用来做身份识别用的）<br>zone_name=&quot;050626.xyz&quot;   #你的域名,your root domain address<br>record_name=&quot;alist.050626.xyz&quot; #完整域名,your full domain address<br>record_type=&quot;AAAA&quot;             #A or AAAA,ipv4 或 ipv6解析<br><br>ip_index=&quot;local&quot;            #use &quot;internet&quot; or &quot;local&quot;,使用本地方式还是网络方式获取地址<br>eth_card=&quot;enp1s0&quot;             #使用本地方式获取ip绑定的网卡，默认为eth0，仅本地方式有效,the default ethernet card is eth0<br><br>ip_file=&quot;ip.txt&quot;            #保存地址信息,save ip information in the ip.txt<br>id_file=&quot;cloudflare.ids&quot;<br>log_file=&quot;cloudflare.log&quot;<br><br><br>if [ $record_type = &quot;AAAA&quot; ];then<br>    if [ $ip_index = &quot;internet&quot; ];then<br>        ip=$(curl -6 ip.sb)<br>    elif [ $ip_index = &quot;local&quot; ];then<br>        if [ &quot;$user&quot; = &quot;root&quot; ];then<br>            ip=$(ifconfig $eth_card | grep &#x27;inet6&#x27; | cut -f2 | awk &#x27;&#123; print $2&#125;&#x27; |  grep -v &#x27;^::1$&#x27; | grep -v &#x27;^fe80&#x27; | grep -v &#x27;^f[d|c]&#x27; | head -1)<br>        else<br>            ip=$(/sbin/ifconfig $eth_card | grep &#x27;inet6&#x27; | cut -f2 | awk &#x27;&#123; print $2&#125;&#x27; |  grep -v &#x27;^::1$&#x27; | grep -v &#x27;^fe80&#x27; | grep -v &#x27;^f[d|c]&#x27; | head -1)<br>        fi<br>    else <br>        echo &quot;Error IP index, please input the right type&quot;<br>        exit 0<br>    fi<br>elif [ $record_type = &quot;A&quot; ];then<br>    if [ $ip_index = &quot;internet&quot; ];then<br>        ip=$(curl -4 ip.sb)<br>    elif [ $ip_index = &quot;local&quot; ];then<br>        if [ &quot;$user&quot; = &quot;root&quot; ];then<br>            ip=$(ifconfig $eth_card | grep &#x27;inet&#x27;| grep -v &#x27;127.0.0.1&#x27; | grep -v &#x27;inet6&#x27;|cut -f2 | awk &#x27;&#123; print $2&#125;&#x27;)<br>        else<br>            ip=$(/sbin/ifconfig $eth_card | grep &#x27;inet&#x27;| grep -v &#x27;127.0.0.1&#x27; | grep -v &#x27;inet6&#x27;|cut -f2 | awk &#x27;&#123; print $2&#125;&#x27;)<br>        fi<br>    else <br>        echo &quot;Error IP index, please input the right type&quot;<br>        exit 0<br>    fi<br>else<br>    echo &quot;Error DNS type&quot;<br>    exit 0<br>fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">日志 <span class="hljs-built_in">log</span> file</span><br>log() &#123;<br>    if [ &quot;$1&quot; ]; then<br>        echo -e &quot;[$(date)] - $1&quot; &gt;&gt; $log_file<br>    fi<br>&#125;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">SCRIPT START</span><br>log &quot;Check Initiated&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">判断ip是否发生变化,check the ip had been changed?</span><br>if [ -f $ip_file ]; then<br>    old_ip=$(cat $ip_file)<br>    if [ $ip == $old_ip ]; then<br>        echo &quot;IP has not changed.&quot;<br>        exit 0<br>    fi<br>fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">获取域名和授权 get the domain and authentic</span><br>if [ -f $id_file ] &amp;&amp; [ $(wc -l $id_file | cut -d &quot; &quot; -f 1) == 2 ]; then<br>    zone_identifier=$(head -1 $id_file)<br>    record_identifier=$(tail -1 $id_file)<br>else<br>    zone_identifier=$(curl -s -X GET &quot;https://api.cloudflare.com/client/v4/zones?name=$zone_name&quot; \<br>        -H &quot;X-Auth-Email: $auth_email&quot; \<br>        -H &quot;X-Auth-Key: $auth_key&quot; \<br>        -H &quot;Content-Type: application/json&quot; | grep -Po &#x27;(?&lt;=&quot;id&quot;:&quot;)[^&quot;]*&#x27; | head -1 )<br>    record_identifier=$(curl -s -X GET &quot;https://api.cloudflare.com/client/v4/zones/$zone_identifier/dns_records?type=$&#123;record_type&#125;&amp;name=$record_name&quot; \<br>        -H &quot;X-Auth-Email: $auth_email&quot; \<br>        -H &quot;X-Auth-Key: $auth_key&quot; \<br>        -H &quot;Content-Type: application/json&quot;  | grep -Po &#x27;(?&lt;=&quot;id&quot;:&quot;)[^&quot;]*&#x27;)<br>    echo &quot;$zone_identifier&quot; &gt; $id_file<br>    echo &quot;$record_identifier&quot; &gt;&gt; $id_file<br>fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">更新DNS记录 update the dns</span><br>update=$(curl -s -X PUT &quot;https://api.cloudflare.com/client/v4/zones/$zone_identifier/dns_records/$record_identifier&quot; \<br>    -H &quot;X-Auth-Email: $auth_email&quot; \<br>    -H &quot;X-Auth-Key: $auth_key&quot; \<br>    -H &quot;Content-Type: application/json&quot; \<br>    --data &quot;&#123;\&quot;type\&quot;:\&quot;$record_type\&quot;,\&quot;name\&quot;:\&quot;$record_name\&quot;,\&quot;content\&quot;:\&quot;$ip\&quot;,\&quot;ttl\&quot;:1,\&quot;proxied\&quot;:false&#125;&quot;)<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">反馈更新情况 gave the feedback about the update statues</span><br>if [[ $update == *&quot;\&quot;success\&quot;:true&quot;* ]]; then<br>    message=&quot;IP changed to: $ip&quot;<br>    echo &quot;$ip&quot; &gt; $ip_file<br>    log &quot;$message&quot;<br>    echo &quot;$message&quot;<br>else<br>    message=&quot;API UPDATE FAILED. DUMPING RESULTS:\n$update&quot;<br>    log &quot;$message&quot;<br>    echo -e &quot;$message&quot;<br>    exit 1<br>fi<br></code></pre></td></tr></table></figure>
+<p>然后, 在 cloudflare 中配置一条 DNS 记录 (先设为 AAAA,
+然后就是先输入一次 ipv6, 之后更改就会通过脚本自动推送的了,
+不设置代理即云朵为灰色)</p>
+<p>但是, 显然这样的方法, 速度会很慢. 所以就有了以下改进.</p>
+<hr />
+<h1 id="通过-cloudflare-的-tunnel-和-alist-绑定">通过 Cloudflare 的
+Tunnel 和 alist 绑定</h1>
+<blockquote>
+<p>[!Tip] 因为 alist 一开始是直接通过本服务器的自身 ipv6 链路出站的,
+所以速度很慢. 现在换成通过 cloudflare 节点加速的话, 配置就改变一下.
+(其实就是通过 cloudflare 代理), 所以要删除原先的 <code>DNS记录</code>
+才行</p>
+</blockquote>
+<p>所以, 先设置 <code>/opt/alist/data</code> 的 <code>config.yaml</code>
+中的 <code>force_https</code> 为 <code>false</code></p>
+<p>还有就是因为已经通过 <code>cloudflare</code> 代理了,
+所以我们不用自己设置端口号为 443, 我们可以通过设置
+<code>http://localhost:5244</code> 这个本地的端口就行, 免得发生冲突</p>
+<p>用 cloudflared 将 Alist 暴露为
+https://yourname.cloudflare.workers.dev</p>
+<p>Cloudflare 代理可自动走优质线路，无需暴露真实 IPv6</p>
+<p>几乎所有地区都有高质量访问速度</p>
+<p>适合你的场景（远端用户多，原生 IPv6 差）</p>
+<p>非常好，你已经使用了 IPv6 + DDNS 访问
+<code>https://alist.050626.xyz</code>，接下来我们要做的是：</p>
+<hr />
+<h1 id="使用-cloudflare-tunnel-给你的-alist-提速绕过-ipv6-出口限制">使用
+Cloudflare Tunnel 给你的 Alist 提速（绕过 IPv6 出口限制）</h1>
+<h3 id="目标">目标：</h3>
+<p>通过 Cloudflare Tunnel 实现：</p>
+<ul>
+<li>不暴露真实 IP（保护隐私）</li>
+<li>自动走 Cloudflare 高质量 CDN 节点</li>
+<li>提升远端访问速度（避免你当前的“IPv6 出站带宽被限速”问题）</li>
+</ul>
+<hr />
+<h3 id="步骤一在服务器上安装-cloudflared">步骤一：在服务器上安装
+<code>cloudflared</code></h3>
+<p>以 Arch 为例（你是 Arch 用户）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S cloudflared<br></code></pre></td></tr></table></figure>
+<p>若是其他系统：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Debian/Ubuntu</span><br><span class="hljs-built_in">sudo</span> apt install cloudflared<br><br><span class="hljs-comment"># RedHat/CentOS</span><br><span class="hljs-built_in">sudo</span> yum install cloudflared<br></code></pre></td></tr></table></figure>
+<p>若没有, 就要通过 wget 下载 deb 包然后 dpkg 解压安装</p>
+<hr />
+<h2 id="步骤二登录并授权-cloudflared">步骤二：登录并授权
+cloudflared</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cloudflared tunnel login<br></code></pre></td></tr></table></figure>
+<p>这会打开浏览器登录 Cloudflare，授权后你可以创建 tunnel。</p>
+<hr />
+<h2 id="步骤三创建-tunnel-并绑定-alist-服务">步骤三：创建 tunnel 并绑定
+Alist 服务</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cloudflared tunnel create alist-tunnel<br></code></pre></td></tr></table></figure>
+<p>会输出一个 tunnel ID，例如：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Created</span> tunnel alist-tunnel with ID <span class="hljs-number">12345678</span>-aaaa-bbbb-cccc-<span class="hljs-number">123456</span>abcdef<br></code></pre></td></tr></table></figure>
+<hr />
+<h2 id="步骤五创建配置文件">步骤五：创建配置文件</h2>
+<p>默认目录在 <code>~/.cloudflared/config.yml</code>, 你也要配置在
+<code>/etc/cloudflared/</code> 目录中：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">tunnel:</span> <span class="hljs-number">12345678</span><span class="hljs-string">-aaaa-bbbb-cccc-123456abcdef</span>  <span class="hljs-comment"># 你的 tunnel ID</span><br><span class="hljs-attr">credentials-file:</span> <span class="hljs-string">/home/&lt;user&gt;/.cloudflared/12345678-aaaa-bbbb-cccc-123456abcdef.json</span>   <span class="hljs-comment"># 你的json文件</span><br><br><span class="hljs-attr">ingress:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostname:</span> <span class="hljs-string">alist.050626.xyz</span><br>    <span class="hljs-attr">service:</span> <span class="hljs-string">http://localhost:5244</span>  <span class="hljs-comment"># Alist 默认端口</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">service:</span> <span class="hljs-string">http_status:404</span><br></code></pre></td></tr></table></figure>
+<p>确保 <code>localhost:5244</code> 是 Alist 的监听地址和端口。</p>
+<hr />
+<h2 id="步骤六创建-dns-记录-启动-tunnel">步骤六：创建 DNS 记录 + 启动
+tunnel</h2>
+<p>将 tunnel 与 Cloudflare DNS 绑定：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cloudflared tunnel route dns alist-tunnel alist.044454.xyz<br></code></pre></td></tr></table></figure>
+<p>然后运行 tunnel：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cloudflared tunnel run alist-tunnel<br></code></pre></td></tr></table></figure>
+<p>如需后台运行，可以用 systemd 或 <code>--no-autoupdate</code>
+参数。</p>
+<hr />
+<h2 id="成功后你可以">成功后你可以：</h2>
+<ul>
+<li>使用 <code>https://alist.044454.xyz</code> 高速访问 Alist（通过
+Cloudflare 节点加速）</li>
+<li>客户端访问走的是 Cloudflare 的全球加速网络，而不是你服务器自身出站
+IPv6 链路</li>
+</ul>
+<hr />
+<h2 id="可选设置为-systemd-后台服务">可选：设置为 systemd 后台服务</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> cloudflared service install<br></code></pre></td></tr></table></figure>
+<p>这样服务器重启后自动启动 tunnel。</p>
+<hr />
+<h2 id="验证">验证：</h2>
+<ol type="1">
+<li>用浏览器打开 <code>https://alist.044454.xyz</code></li>
+<li>使用 <code>curl -v https://alist.044454.xyz</code>，应看到
+Cloudflare 代理标识</li>
+<li>远程测速明显比直接 IPv6 快，尤其是下载时</li>
+</ol>
+<hr />
+<h1 id="通过-systemd-来自动运行">通过 systemd 来自动运行</h1>
+<h3 id="一键启用后台服务">一键启用后台服务</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> cloudflared service install<br></code></pre></td></tr></table></figure>
+<p>这个命令会自动为你生成 systemd 服务文件并启用开机启动。</p>
+<h3 id="然后启动服务">然后启动服务：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl start cloudflared<br></code></pre></td></tr></table></figure>
+<h3
+id="设置开机自动运行通常默认启用">设置开机自动运行（通常默认启用）：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> cloudflared<br></code></pre></td></tr></table></figure>
+<h3 id="检查运行状态">检查运行状态：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status cloudflared<br></code></pre></td></tr></table></figure>
+<p>会看到 tunnel 正常运行，输出中包含 <code>alist-tunnel</code>
+和你的域名。</p>
+<hr />
+<h2 id="验证-1">验证</h2>
+<ol type="1">
+<li>浏览器访问你的域名 <code>https://alist.050626.xyz</code></li>
+<li>用命令查看：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -I https://alist.050626.xyz<br></code></pre></td></tr></table></figure>
+<p>看是否有响应头包含：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">HTTP</span>/<span class="hljs-number">1</span>.<span class="hljs-number">1</span> <span class="hljs-number">200</span><br><span class="hljs-attribute">HTTP</span>/<span class="hljs-number">2</span> <span class="hljs-number">200</span><br><span class="hljs-attribute">cf</span>-ray: xxxx<br><span class="hljs-attribute">server</span>: cloudflare<br></code></pre></td></tr></table></figure>
+<p>说明已通过 Cloudflare Tunnel 代理 ✅</p>
+<p><strong>完整示例:</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell"><br>HTTP/1.1 200 Connection established<br><br>HTTP/2 200 <br>date: Fri, 06 Jun 2025 05:12:42 GMT<br>content-type: text/html<br>cf-cache-status: DYNAMIC<br>speculation-rules: &quot;/cdn-cgi/speculation&quot;<br>report-to: &#123;&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800,&quot;endpoints&quot;:[&#123;&quot;url&quot;:&quot;https://a.nel.cloudflare.com/report/v4?s=UOD6%2Fislw4MqZ951XaKh0jczFwySa4dshAcWMzNleVhuay3NDTkvlRwkqr%2BRv5PBb%2FPMW7aQ2mZFerZSiEZxvZpKE4CPVIpvxGXTdWO5ph4%3D&quot;&#125;]&#125;<br>nel: &#123;&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;success_fraction&quot;:0.0,&quot;max_age&quot;:604800&#125;<br>server: cloudflare<br>cf-ray: 94b56a8e293909f0-HKG<br>alt-svc: h3=&quot;:443&quot;; ma=86400<br></code></pre></td></tr></table></figure>
+<hr />
+<h2 id="常见问题提示">❗ 常见问题提示</h2>
+<ul>
+<li>如果你配置了多个 tunnel，可以指定要运行的 tunnel，比如编辑
+<code>/etc/default/cloudflared</code>，或手动创建一个 service
+文件（进阶使用）。</li>
+<li>如果你使用 <code>--config ~/.cloudflared/config.yml</code>，确保
+<code>cloudflared</code> 安装路径和 config 路径匹配</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/alist/" class="category-chain-item">alist</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/alist/" class="print-no-link">#alist</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>alist加速</div>
+      <div>http://example.com/2025/06/07/alist加速/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>JunBin Liang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/06/lazyvim-keymap/" title="lazyvim_keymap">
+                        <span class="hidden-mobile">lazyvim_keymap</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'ice345/comments');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+     <div class="footer-inner">
+    
+        <div class="footer-content">
+             <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+        </div>
+    
+
+    <!-- 添加社交链接 -->
+    <div style="font-size: 13px; font-weight: bold; text-align: center;">
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <span class="nav-item">
+                <a class="nav-link" href="https://github.com/ice345" target="_blank">
+                    <i class="fab fa-github" style="color:#409EFF;" aria-hidden="true"></i>
+                    GitHub
+                </a>
+            </span>
+
+            <span class="nav-item">
+                <a class="nav-link" href="mailto:nni461904@gmail.com" target="_blank">
+                    <i class="fa fa-envelope" style="color:#409EFF" aria-hidden="true"></i>
+                    邮箱
+                </a>
+            </span>
+
+            <span class="nav-item">
+                <a class="nav-link" href="https://alist.050626.xyz" target="_blank">
+                    <i class="fa-solid fa-cloud-download" style="color:#409EFF;" aria-hidden="true"></i>
+                    Alist
+                </a>
+            </span>
+        </div>
+        <br />
+    </div>
+
+    
+    
+    
+
+    <!-- 网站存活时间计时功能 -->
+    <div id="site-lifetime"></div>
+
+    <script>
+        const creationDate = new Date('2024-04-21');
+
+        function calculateDaysSinceCreation() {
+            const now = new Date();
+            const timeDifference = now - creationDate;
+            const daysSinceCreation = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            return daysSinceCreation;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const daysSinceCreation = calculateDaysSinceCreation();
+            const lifetimeElement = document.getElementById('site-lifetime');
+            lifetimeElement.textContent = `网站存活了 ${daysSinceCreation} 天`;
+        });
+    </script>
+
+    <!-- 访问人数统计 -->
+    <!-- <span id="busuanzi_container_site_pv" style="display: none;"> -->
+    <!--    本站总访问量：<span id="busuanzi_value_site_pv"></span> 次        -->
+    <!--  </span> -->
+    <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>    -->
+
+    <!-- Moe-Counter 访问人数统计 -->
+    <div style="text-align: center; margin-top: 10px;">
+        <span style="font-size: 16px; font-weight: bold;">访问人数统计: </span>
+        <img src="https://count.getloli.com/@:ice345?name=%3Aice345&theme=gelbooru&padding=7&offset=0&align=bottom&scale=1&pixelated=1&darkmode=auto" srcset="/img/loading.gif" lazyload alt="visitor count">
+    </div>
+
+    <!-- Utterances 脚本 -->
+    <!-- <script src="https://utteranc.es/client.js"
+            repo="ice345/comments"
+            issue-term="url"
+            label="Problem"
+            theme="dark-blue"
+            crossorigin="anonymous"
+            async>
+    </script> -->
+</div>
+
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
