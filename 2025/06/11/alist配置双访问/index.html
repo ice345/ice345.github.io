@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="icon" href="/img/LizitoAoi.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -27,15 +27,15 @@
   <meta name="author" content="JunBin Liang">
   <meta name="keywords" content="Blog 京吹粉">
   
-    <meta name="description" content="杂谈 alist 的相关目录配置全部都在 &#x2F;opt&#x2F;alist 目录下，这里可以配置相关的比如: - https 设置 (即证书的设置) - 端口设置 - 密码设置 (高版本已经不行了)  谈到有关证书的事情，我这个 alist 服务器有关 https 访问，就要申请 ssl 证书。那么就要将相关的情况分类说明: 情况一 你的 cloudflare 代理不是仅 DNS 的 (即你的云朵是橙色的),">
+    <meta name="description" content="问题描述 因为通过上一节的描述, 我们可以通过 cloudflare tunnel 和 alist 结合实现加速访问以及稳定加载, 但是这又导致了一个问题:alist 上传出现了问题. 经过分析, 有以下原因: 1. cloudflare 的 tunnel 的免费服务无法支持不稳定的连接和长时间的连接支持 2. 家里的服务器因为被墙, 所以无法稳定连接 (因为 cloudflare 是在国外)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="alist杂谈">
-<meta property="og:url" content="http://example.com/2025/04/20/alist%E6%9D%82%E8%B0%88/index.html">
+<meta property="og:title" content="alist配置双访问">
+<meta property="og:url" content="http://example.com/2025/06/11/alist%E9%85%8D%E7%BD%AE%E5%8F%8C%E8%AE%BF%E9%97%AE/index.html">
 <meta property="og:site_name" content="ice345のBlog">
-<meta property="og:description" content="杂谈 alist 的相关目录配置全部都在 &#x2F;opt&#x2F;alist 目录下，这里可以配置相关的比如: - https 设置 (即证书的设置) - 端口设置 - 密码设置 (高版本已经不行了)  谈到有关证书的事情，我这个 alist 服务器有关 https 访问，就要申请 ssl 证书。那么就要将相关的情况分类说明: 情况一 你的 cloudflare 代理不是仅 DNS 的 (即你的云朵是橙色的),">
+<meta property="og:description" content="问题描述 因为通过上一节的描述, 我们可以通过 cloudflare tunnel 和 alist 结合实现加速访问以及稳定加载, 但是这又导致了一个问题:alist 上传出现了问题. 经过分析, 有以下原因: 1. cloudflare 的 tunnel 的免费服务无法支持不稳定的连接和长时间的连接支持 2. 家里的服务器因为被墙, 所以无法稳定连接 (因为 cloudflare 是在国外)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-20T03:53:29.000Z">
-<meta property="article:modified_time" content="2025-04-20T03:56:45.752Z">
+<meta property="article:published_time" content="2025-06-11T02:19:35.000Z">
+<meta property="article:modified_time" content="2025-06-11T02:20:31.621Z">
 <meta property="article:author" content="JunBin Liang">
 <meta property="article:tag" content="alist">
 <meta name="twitter:card" content="summary_large_image">
@@ -44,7 +44,7 @@
   
     <meta name="google-site-verification" content="9JRO3fIih2QZAncVygVo__DkMIqg2DRoHWwuclS6YEw" />
   
-  <title>alist杂谈 - ice345のBlog</title>
+  <title>alist配置双访问 - ice345のBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="alist杂谈"></span>
+            <span id="subtitle" data-typed-text="alist配置双访问"></span>
           
         </div>
 
@@ -242,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-20 11:53" pubdate>
-          2025年4月20日 中午
+        <time datetime="2025-06-11 10:19" pubdate>
+          2025年6月11日 上午
         </time>
       </span>
     
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          769 字
+          357 字
         
       </span>
     
@@ -265,7 +265,7 @@
         
         
         
-          7 分钟
+          3 分钟
         
       </span>
     
@@ -302,73 +302,40 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">alist杂谈</h1>
+            <h1 id="seo-header">alist配置双访问</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="杂谈">杂谈</h2>
-<p>alist 的相关目录配置全部都在 <code>/opt/alist</code>
-目录下，这里可以配置相关的比如: - https 设置 (<em>即证书的设置</em>) -
-端口设置 - 密码设置 (高版本已经不行了)</p>
+                <h1 id="问题描述">问题描述</h1>
+<p>因为通过上一节的描述, 我们可以通过 <code>cloudflare tunnel</code> 和
+<code>alist</code> 结合实现加速访问以及稳定加载,
+但是这又导致了一个问题:<strong>alist 上传出现了问题</strong>.</p>
+<p>经过分析, 有以下原因: 1. cloudflare 的 tunnel
+的免费服务无法支持不稳定的连接和长时间的连接支持 2.
+家里的服务器因为被墙, 所以无法稳定连接 (因为 cloudflare 是在国外)</p>
 <hr />
-<p>谈到有关证书的事情，我这个 <code>alist</code> 服务器有关 https
-访问，就要申请 ssl 证书。那么就要将相关的情况分类说明:</p>
-<h2 id="情况一">情况一</h2>
-<p>你的 <code>cloudflare</code> 代理不是仅 DNS 的 (即你的云朵是橙色的),
-这就要看你的加密方式是什么了 (在 <code>边缘证书</code>
-那里可以看到相关设置)</p>
-<p>Cloudflare 提供三种主要的 SSL/TLS 模式，决定了 Cloudflare
-与源站之间的连接方式：</p>
+<h1 id="解决办法">解决办法</h1>
+<p>所以, 我们想有一种办法能够同时解决这两种问题:
+<code>不稳定加载和访问</code> 和 <code>稳定上传</code>
+这是无法免费的解决办法可以解决的.</p>
+<p>因此, 我们只好设置两个口来访问 <code>alist</code> 就行.</p>
+<p>通过上一节的办法为 <code>alistip.050626.xyz</code> 再申请一个域名,
+然后配置在 <code>/opt/alist/data/config.json</code> 中即可, 然后设置
+cloudflare 的 DNS 记录</p>
+<p>这样就可以有域名访问 alist 了, 这个就是直接通过服务器的 ipv6
+链路直连的, 稳定性相比配置 cloudflare 的 tunnel 稳定不少</p>
+<blockquote>
+<p>[!Tip] <code>/opt/alist/data/config.json</code> 里的
+<code>force_https</code> 这里仍然是 <code>false</code>, 不然 cloudflare
+的 tunnel 绑定的域名会发生问题, 无法访问</p>
+</blockquote>
+<p>所以, 现在我们就会有两个域名来访问 <code>alist</code></p>
+<p>但是这两种访问的用途就不一样.</p>
 <ol type="1">
-<li><p><strong>灵活（Flexible）</strong>：​浏览器与 Cloudflare 之间使用
-HTTPS，但 Cloudflare 与源站之间使用 HTTP。​</p></li>
-<li><p><strong>完全（Full）</strong>：​浏览器与 Cloudflare 之间使用
-HTTPS，Cloudflare 与源站之间也使用
-HTTPS，但不验证源站证书的有效性。​</p></li>
-<li><p><strong>完全（严格）（Full (Strict)）</strong>：​浏览器与
-Cloudflare 之间使用 HTTPS，Cloudflare 与源站之间也使用
-HTTPS，并且验证源站证书的有效性（必须是受信任的 CA
-签发的有效证书）。</p></li>
+<li><code>alist.050626.xyz</code> 就是用来提升下载和访问速度的</li>
+<li><code>alistip.050626.xyz</code> 就是用来上传的</li>
 </ol>
-<p>在“完全（严格）”模式下，Cloudflare 会验证你服务器上的 SSL
-证书是否有效且由受信任的证书颁发机构（CA）签发。​如果你使用 Let’s Encrypt
-证书，并确保其未过期，Cloudflare 将接受该证书。​</p>
-<p>所以，如果你想设置 <code>cloudflare</code>
-的证书，你就要自己手动设置相关的还有续期也要分不同情况来决定是否会自动续期.</p>
-<h2 id="情况二">情况二</h2>
-<p>你的 <code>cloudflare</code> 代理是仅 DNS 的 (即你的云朵是灰色的)</p>
-<p>我的服务器是通过 <code>cerbot</code> 这个来申请 ssl
-证书的，他的相关配置文件存储在 <code>/etc/letsencrypt</code> 下</p>
-<ul>
-<li><p><code>/etc/letsencrypt/live/yourdomain/</code>：包含实际使用的证书文件的符号链接。​
-以下是先骨干目录结构内容:</p></li>
-<li><p><code>fullchain.pem</code>：完整的证书链，供服务器使用。​</p></li>
-<li><p><code>privkey.pem</code>：私钥文件。​</p></li>
-<li><p><code>/etc/letsencrypt/archive/yourdomain/</code>：存储所有历史版本的证书和私钥。​</p></li>
-<li><p><code>/etc/letsencrypt/renewal/yourdomain.conf</code>：包含续期所需的配置信息。​</p></li>
-<li><p><code>/var/log/letsencrypt/letsencrypt.log</code>：Certbot
-的日志文件，记录操作过程和错误信息。</p></li>
-</ul>
-<p>以下是通过 <code>cerbot</code> 申请 ssl 证书步骤:</p>
-<ol type="1">
-<li><p><strong>申请 SSL 证书</strong>: 通过 <code>standalone</code>
-模式申请证书：(因为我不是使用 <code>nginx</code> 的，所以是
-<code>standalone</code> 模式) <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> cerbot certonly --standalone -d alist.050626.xyz<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>验证过程</strong>: Certbot 会启动一个临时的 web
-服务器，向 Let's Encrypt
-证明你拥有该域名。验证完成后，它会生成证书并保存在
-<code>/etc/letsencrypt/live/yourdomain.com/</code> 目录下。</p></li>
-<li><p><strong>证书自动续期</strong>: Certbot 会自动配置一个 cron
-任务来定期检查并续期证书。验证证书是否会自动续期: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> cerbot renew --dry-run<br></code></pre></td></tr></table></figure></p></li>
-<li><p><strong>配置定时任务</strong>: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> crontab -e<br></code></pre></td></tr></table></figure></p></li>
-</ol>
-<p>每天检查证书并进行续期 (如果需要), 然后重启 alist <figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">0 </span><span class="hljs-number">0</span> * * * certbot renew --quiet &amp;&amp; systemctl restart alist<br></code></pre></td></tr></table></figure></p>
-<p>然后有了证书之后，就在 <code>/opt/alist/data</code> 目录下:</p>
-<p>在 <code>cert_file</code> 以及 <code>key_file</code>
-上放置相关配置文件</p>
-<p>例如:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-string">&quot;cert_file&quot;</span>: <span class="hljs-string">&quot;/etc/letsencrypt/live/alist.050626.xyz/fullchain.pem&quot;</span>,<br><span class="hljs-string">&quot;key_file&quot;</span>: <span class="hljs-string">&quot;/etc/letsencrypt/live/alist.050626.xyz/privkey.pem&quot;</span>,<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -414,8 +381,8 @@ HTTPS，并且验证源站证书的有效性（必须是受信任的 CA
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>alist杂谈</div>
-      <div>http://example.com/2025/04/20/alist杂谈/</div>
+      <div>alist配置双访问</div>
+      <div>http://example.com/2025/06/11/alist配置双访问/</div>
     </div>
     <div class="license-meta">
       
@@ -427,7 +394,7 @@ HTTPS，并且验证源站证书的有效性（必须是受信任的 CA
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月20日</div>
+          <div>2025年6月11日</div>
         </div>
       
       
@@ -459,18 +426,12 @@ HTTPS，并且验证源站证书的有效性（必须是受信任的 CA
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/06/Hyprland%E7%AE%80%E6%98%8E%E6%8C%87%E5%8C%97/" title="Hyprland简明指北">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hyprland简明指北</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/02/04/regrex%E8%A1%A5%E5%85%85/" title="regrex补充">
-                        <span class="hidden-mobile">regrex补充</span>
+                      <a href="/2025/06/07/alist%E5%8A%A0%E9%80%9F/" title="alist加速">
+                        <span class="hidden-mobile">alist加速</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
