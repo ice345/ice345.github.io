@@ -1,0 +1,1000 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/LizitoAoi.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MNR8G43J');</script>
+  <!-- End Google Tag Manager -->
+  
+
+
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="JunBin Liang">
+  <meta name="keywords" content="Blog 京吹粉">
+  
+    <meta name="description" content="1sudo mount -t glusterfs 192.168.1.108:&#x2F;myvolume    &#x2F;mnt&#x2F;gluster 关于 GlusterFS，这是一个分布式文件系统，常用命令主要围绕卷（volume）的管理和查看状态。下面我整理了一些常用的查看卷信息和管理卷的命令。  Gluster 常用命令（卷信息及管理） 1. 查看卷信息  查看所有卷列表：  1gluster volume l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="alist以及gluster">
+<meta property="og:url" content="http://example.com/2025/08/10/alist%E4%BB%A5%E5%8F%8Agluster/index.html">
+<meta property="og:site_name" content="ice345のBlog">
+<meta property="og:description" content="1sudo mount -t glusterfs 192.168.1.108:&#x2F;myvolume    &#x2F;mnt&#x2F;gluster 关于 GlusterFS，这是一个分布式文件系统，常用命令主要围绕卷（volume）的管理和查看状态。下面我整理了一些常用的查看卷信息和管理卷的命令。  Gluster 常用命令（卷信息及管理） 1. 查看卷信息  查看所有卷列表：  1gluster volume l">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-10T14:32:06.000Z">
+<meta property="article:modified_time" content="2025-08-10T14:33:21.243Z">
+<meta property="article:author" content="JunBin Liang">
+<meta property="article:tag" content="alist">
+<meta property="article:tag" content="gluster">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+    <meta name="google-site-verification" content="9JRO3fIih2QZAncVygVo__DkMIqg2DRoHWwuclS6YEw" />
+  
+  <title>alist以及gluster - ice345のBlog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNR8G43J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+
+  
+
+  <header>
+    
+
+<script src="https://unpkg.com/oh-my-live2d"></script>
+
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/LiztoAoiTori.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="alist以及gluster"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        JunBin Liang
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-10 22:32" pubdate>
+          2025年8月10日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          641 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">alist以及gluster</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo mount -t glusterfs 192.168.1.108:/myvolume    /mnt/gluster<br></code></pre></td></tr></table></figure>
+<p>关于
+<strong>GlusterFS</strong>，这是一个分布式文件系统，常用命令主要围绕卷（volume）的管理和查看状态。下面我整理了一些常用的查看卷信息和管理卷的命令。</p>
+<hr />
+<h2 id="gluster-常用命令卷信息及管理">Gluster
+常用命令（卷信息及管理）</h2>
+<h3 id="查看卷信息">1. 查看卷信息</h3>
+<ul>
+<li>查看所有卷列表：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume list<br></code></pre></td></tr></table></figure>
+<ul>
+<li>查看某个卷的详细信息：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume info &lt;卷名&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>查看某个卷的状态：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume status &lt;卷名&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>查看卷的配置信息（例如副本数、分布等）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume get &lt;卷名&gt; all<br></code></pre></td></tr></table></figure>
+<ul>
+<li>查看所有节点状态：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster peer status<br></code></pre></td></tr></table></figure>
+<hr />
+<h3 id="卷的基本管理命令">2. 卷的基本管理命令</h3>
+<ul>
+<li>创建卷：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume create &lt;卷名&gt; &lt;brick1&gt; &lt;brick2&gt; ...<br></code></pre></td></tr></table></figure>
+<ul>
+<li>启动卷：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume start &lt;卷名&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>停止卷：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume stop &lt;卷名&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>删除卷：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume delete &lt;卷名&gt;<br></code></pre></td></tr></table></figure>
+<hr />
+<h3 id="节点管理相关">3. 节点管理相关</h3>
+<ul>
+<li>查看当前集群中的节点：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster peer status<br></code></pre></td></tr></table></figure>
+<ul>
+<li>移除一个节点：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster peer detach &lt;hostname|uuid&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>添加一个节点（节点本身需先安装好 glusterfs）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster peer probe &lt;hostname&gt;<br></code></pre></td></tr></table></figure>
+<hr />
+<h3 id="查看卷使用情况和配额">4. 查看卷使用情况和配额</h3>
+<ul>
+<li>查看配额信息：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume quota &lt;卷名&gt; list<br></code></pre></td></tr></table></figure>
+<ul>
+<li>启用配额：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume quota &lt;卷名&gt; <span class="hljs-built_in">enable</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>设置配额：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume quota &lt;卷名&gt; limit-usage /path &lt;size&gt;<br></code></pre></td></tr></table></figure>
+<hr />
+<h3 id="查看日志位置">5. 查看日志位置</h3>
+<p>Gluster 的日志一般在：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/var/log/glusterfs/<br></code></pre></td></tr></table></figure>
+<p>可以用 <code>tail -f</code> 来实时查看日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f /var/log/glusterfs/glusterd.log<br></code></pre></td></tr></table></figure>
+<hr />
+<h3 id="其他实用命令">6. 其他实用命令</h3>
+<ul>
+<li>查看卷挂载点：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mount | grep glusterfs<br></code></pre></td></tr></table></figure>
+<ul>
+<li>查看卷的brick信息：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gluster volume status &lt;卷名&gt; detail<br></code></pre></td></tr></table></figure>
+<hr />
+<h1 id="一次情况的处理">一次情况的处理</h1>
+<h2 id="一检查-brick-挂载及状态相关命令">一、检查 brick
+挂载及状态相关命令</h2>
+<ul>
+<li><p>查看 volume 详细状态，包括 brick 状态：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume status myvolume detail<br></code></pre></td></tr></table></figure></p></li>
+<li><p>查看 volume 简单状态：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume status myvolume<br></code></pre></td></tr></table></figure></p></li>
+<li><p>查看 brick 对应磁盘设备信息（文件系统、UUID 等）：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> blkid /dev/sdb1<br></code></pre></td></tr></table></figure></p></li>
+<li><p>查看挂载点是否挂载成功：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mount | grep extended_gluster<br></code></pre></td></tr></table></figure></p></li>
+<li><p>手动挂载所有 fstab 中定义的设备：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount -a<br></code></pre></td></tr></table></figure></p></li>
+<li><p>编辑 fstab 文件配置自动挂载：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/fstab<br></code></pre></td></tr></table></figure></p></li>
+</ul>
+<hr />
+<h2 id="二处理-brick-离线与恢复">二、处理 brick 离线与恢复</h2>
+<ul>
+<li><p>强制启动 volume（重启 brick 服务）：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume start myvolume force<br></code></pre></td></tr></table></figure></p></li>
+<li><p>（慎用）强制移除并重新添加 brick：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume remove-brick myvolume ice:/mnt/extended_gluster/extended_brick force<br><span class="hljs-built_in">sudo</span> gluster volume add-brick myvolume ice:/mnt/extended_gluster/extended_brick<br></code></pre></td></tr></table></figure></p></li>
+</ul>
+<hr />
+<h2 id="三管理-rebalance-任务">三、管理 rebalance 任务</h2>
+<ul>
+<li><p>查看 rebalance 任务状态：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume rebalance myvolume status<br></code></pre></td></tr></table></figure></p></li>
+<li><p>启动 rebalance 任务：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume rebalance myvolume start<br></code></pre></td></tr></table></figure></p></li>
+<li><p>停止（清理）rebalance 任务：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume rebalance myvolume stop<br></code></pre></td></tr></table></figure></p></li>
+<li><p>实时监控 rebalance 状态（循环查询）：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">watch -n 2 <span class="hljs-built_in">sudo</span> gluster volume rebalance myvolume status<br></code></pre></td></tr></table></figure></p></li>
+</ul>
+<hr />
+<h2 id="四日志排查相关命令">四、日志排查相关命令</h2>
+<ul>
+<li><p>查看 GlusterFS 进程日志（全局）：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> less /var/log/glusterfs/glusterfsd.log<br></code></pre></td></tr></table></figure></p></li>
+<li><p>查看指定 brick 的日志：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> less /var/log/glusterfs/bricks/extended_brick.log<br></code></pre></td></tr></table></figure></p></li>
+<li><p>过滤日志中 rebalance 相关内容：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> grep rebalance /var/log/glusterfs/glusterfsd.log<br></code></pre></td></tr></table></figure></p></li>
+</ul>
+<hr />
+<h2 id="五其它实用命令">五、其它实用命令</h2>
+<ul>
+<li><p>查看 volume 信息（类型，副本数等）：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> gluster volume info myvolume<br></code></pre></td></tr></table></figure></p></li>
+<li><p>查看挂载目录文件分布情况（判断数据是否正常）：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -lh /mnt/extended_gluster/extended_brick<br></code></pre></td></tr></table></figure></p></li>
+<li><p>检查文件系统挂载情况和容量：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">df</span> -h | grep extended_gluster<br></code></pre></td></tr></table></figure></p></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/alist/" class="category-chain-item">alist</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/alist/gluster/" class="category-chain-item">gluster</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/alist/" class="print-no-link">#alist</a>
+      
+        <a href="/tags/gluster/" class="print-no-link">#gluster</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>alist以及gluster</div>
+      <div>http://example.com/2025/08/10/alist以及gluster/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>JunBin Liang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/10/gluster%E6%A6%82%E5%BF%B5/" title="gluster概念">
+                        <span class="hidden-mobile">gluster概念</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'ice345/comments');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+     <div class="footer-inner">
+    
+        <div class="footer-content">
+             <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+        </div>
+    
+
+    <!-- 添加社交链接 -->
+    <div style="font-size: 13px; font-weight: bold; text-align: center;">
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <span class="nav-item">
+                <a class="nav-link" href="https://github.com/ice345" target="_blank">
+                    <i class="fab fa-github" style="color:#409EFF;" aria-hidden="true"></i>
+                    GitHub
+                </a>
+            </span>
+
+            <span class="nav-item">
+                <a class="nav-link" href="mailto:nni461904@gmail.com" target="_blank">
+                    <i class="fa fa-envelope" style="color:#409EFF" aria-hidden="true"></i>
+                    邮箱
+                </a>
+            </span>
+
+            <span class="nav-item">
+                <a class="nav-link" href="https://alist.050626.xyz" target="_blank">
+                    <i class="fa-solid fa-cloud-download" style="color:#409EFF;" aria-hidden="true"></i>
+                    Alist
+                </a>
+            </span>
+        </div>
+        <br />
+    </div>
+
+    
+    
+    
+
+    <!-- 网站存活时间计时功能 -->
+    <div id="site-lifetime"></div>
+
+    <script>
+        const creationDate = new Date('2024-04-21');
+
+        function calculateDaysSinceCreation() {
+            const now = new Date();
+            const timeDifference = now - creationDate;
+            const daysSinceCreation = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            return daysSinceCreation;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const daysSinceCreation = calculateDaysSinceCreation();
+            const lifetimeElement = document.getElementById('site-lifetime');
+            lifetimeElement.textContent = `网站存活了 ${daysSinceCreation} 天`;
+        });
+    </script>
+
+    <!-- 访问人数统计 -->
+    <!-- <span id="busuanzi_container_site_pv" style="display: none;"> -->
+    <!--    本站总访问量：<span id="busuanzi_value_site_pv"></span> 次        -->
+    <!--  </span> -->
+    <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>    -->
+
+    <!-- Moe-Counter 访问人数统计 -->
+    <div style="text-align: center; margin-top: 10px;">
+        <span style="font-size: 16px; font-weight: bold;">访问人数统计: </span>
+        <img src="https://count.getloli.com/@:ice345?name=%3Aice345&theme=gelbooru&padding=7&offset=0&align=bottom&scale=1&pixelated=1&darkmode=auto" srcset="/img/loading.gif" lazyload alt="visitor count">
+    </div>
+
+    <!-- Utterances 脚本 -->
+    <!-- <script src="https://utteranc.es/client.js"
+            repo="ice345/comments"
+            issue-term="url"
+            label="Problem"
+            theme="dark-blue"
+            crossorigin="anonymous"
+            async>
+    </script> -->
+</div>
+
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
