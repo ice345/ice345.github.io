@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on ICE345のBLOG</title><link>https://myblog.050626.xyz/categories/java/</link><description>Recent content in Java on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Sat, 21 Sep 2024 16:15:08 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Java中有关包的相关配置以及介绍</title><link>https://myblog.050626.xyz/posts/java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/</link><pubDate>Sat, 21 Sep 2024 16:15:08 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/</guid><description>&lt;p&gt;下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 创建 Java 包
+ &lt;div id="1-创建-java-包" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%88%9b%e5%bb%ba-java-%e5%8c%85" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;1.1 目录结构
+ &lt;div id="11-目录结构" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;假设我们要创建一个名为 &lt;code&gt;com.example.myapp&lt;/code&gt; 的包，目录结构如下：&lt;/p&gt;</description></item><item><title>javadoc生成注释文件</title><link>https://myblog.050626.xyz/posts/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/</link><pubDate>Fri, 20 Sep 2024 16:47:41 +0000</pubDate><guid>https://myblog.050626.xyz/posts/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/</guid><description>&lt;h3 class="relative group"&gt;什么是 Javadoc？
+ &lt;div id="什么是-javadoc" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-javadoc" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Javadoc 是 Java 编程语言中用于生成 API 文档的工具。它通过解析源代码中的特殊注释，生成带有结构化文档的 HTML 文件，从而为类、方法、字段等生成说明文档。Javadoc 是 Java 编程中极为重要的文档生成工具，有助于开发者理解和使用代码。&lt;/p&gt;</description></item><item><title>java_command</title><link>https://myblog.050626.xyz/posts/java-command/</link><pubDate>Sat, 14 Sep 2024 16:34:47 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java-command/</guid><description>&lt;p&gt;在Java中，编译和运行程序涉及几个主要命令，包括 &lt;code&gt;javac&lt;/code&gt;（编译器）、&lt;code&gt;java&lt;/code&gt;（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令：&lt;/p&gt;</description></item><item><title>java_lib常见error</title><link>https://myblog.050626.xyz/posts/java-lib%E5%B8%B8%E8%A7%81error/</link><pubDate>Sat, 14 Sep 2024 16:33:54 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java-lib%E5%B8%B8%E8%A7%81error/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;在 javac 编译和使用 java 运行时自动添加库，使用&amp;ndash;module-path 添加库路径，使用&amp;ndash;module-add 添加库&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;在较新的 Ubuntu 版本（如 22.04）中，&lt;code&gt;openjdk-8-jdk&lt;/code&gt; 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动包含 JavaFX。&lt;/p&gt;</description></item><item><title>java_set</title><link>https://myblog.050626.xyz/posts/java-set/</link><pubDate>Sat, 14 Sep 2024 16:31:40 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java-set/</guid><description>&lt;p&gt;在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括&lt;code&gt;JAVA_HOME&lt;/code&gt;、&lt;code&gt;PATH&lt;/code&gt;和&lt;code&gt;CLASSPATH&lt;/code&gt;），以及设置&lt;code&gt;CLASSPATH&lt;/code&gt;以便程序能够找到所需的库文件。以下是详细步骤：&lt;/p&gt;</description></item></channel></rss>

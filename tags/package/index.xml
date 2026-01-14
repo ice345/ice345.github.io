@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Package on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/package/</link><description>Recent content in Package on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Sat, 21 Sep 2024 16:15:08 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/package/index.xml" rel="self" type="application/rss+xml"/><item><title>Java中有关包的相关配置以及介绍</title><link>https://myblog.050626.xyz/posts/java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/</link><pubDate>Sat, 21 Sep 2024 16:15:08 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/</guid><description>&lt;p&gt;下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 创建 Java 包
+ &lt;div id="1-创建-java-包" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%88%9b%e5%bb%ba-java-%e5%8c%85" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;1.1 目录结构
+ &lt;div id="11-目录结构" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;假设我们要创建一个名为 &lt;code&gt;com.example.myapp&lt;/code&gt; 的包，目录结构如下：&lt;/p&gt;</description></item></channel></rss>

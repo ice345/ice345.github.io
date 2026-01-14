@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CPU管理 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/cpu%E7%AE%A1%E7%90%86/</link><description>Recent content in CPU管理 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 13 Dec 2024 20:09:49 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/cpu%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>linux进程调度</title><link>https://myblog.050626.xyz/posts/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</link><pubDate>Fri, 13 Dec 2024 20:09:49 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</guid><description>&lt;h3 class="relative group"&gt;00:00 - ⏰ 进程调度
+ &lt;div id="0000----进程调度" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#0000----%e8%bf%9b%e7%a8%8b%e8%b0%83%e5%ba%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;总结：
+ &lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程调度的目的是在多个程序或进程之间合理分配 CPU 时间。最初，程序通过主动调用 API 函数交出 CPU，但有时进程不合作，比如陷入死循环或长时间占用 CPU，导致其他进程无法执行。&lt;/p&gt;</description></item></channel></rss>

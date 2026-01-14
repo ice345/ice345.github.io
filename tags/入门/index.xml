@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>入门 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E5%85%A5%E9%97%A8/</link><description>Recent content in 入门 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><atom:link href="https://myblog.050626.xyz/tags/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://myblog.050626.xyz/posts/hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hello-world/</guid><description>&lt;p&gt;Welcome to &lt;a href="https://hexo.io/" target="_blank"&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href="https://hexo.io/docs/" target="_blank"&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href="https://hexo.io/docs/troubleshooting.html" target="_blank"&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href="https://github.com/hexojs/hexo/issues" target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Quick Start
+ &lt;div id="quick-start" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-start" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;Create a new post
+ &lt;div id="create-a-new-post" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-a-new-post" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ hexo new &lt;span class="s2"&gt;&amp;#34;My New Post&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;More info: &lt;a href="https://hexo.io/docs/writing.html" target="_blank"&gt;Writing&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

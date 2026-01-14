@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BIOS on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/bios/</link><description>Recent content in BIOS on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Thu, 10 Oct 2024 20:30:57 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/bios/index.xml" rel="self" type="application/rss+xml"/><item><title>MBR分区方案</title><link>https://myblog.050626.xyz/posts/mbr%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/mbr%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;MBR（主引导记录） 结构就是&lt;strong&gt;主引导代码+分区表（+post-mbr gap）&lt;/strong&gt;，&lt;code&gt;主引导代码&lt;/code&gt; 就是专门负责用来加载系统到内存中的，&lt;code&gt;分区表&lt;/code&gt; 就是一个磁盘的整体布局。&lt;code&gt;post-mbr gap&lt;/code&gt; 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，==则就会出现 grub 的代码覆盖了原本的主引导的原先代码。==&lt;/p&gt;</description></item><item><title>固件 驱动程序</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</guid><description>&lt;h3 class="relative group"&gt;&lt;strong&gt;固件&lt;/strong&gt;
+ &lt;div id="固件" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%ba%e4%bb%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。&lt;/p&gt;</description></item><item><title>固件 硬件 系统</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E7%A1%AC%E4%BB%B6-%E7%B3%BB%E7%BB%9F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E7%A1%AC%E4%BB%B6-%E7%B3%BB%E7%BB%9F/</guid><description>&lt;p&gt;在 Linux 中，&lt;strong&gt;固件&lt;/strong&gt; 是指与特定硬件组件紧密相关的低级软件，通过提供指令和控制机制使它们能够正常运行。此固件在内核之下运行，但对于硬件与操作系统交互至关重要。&lt;/p&gt;</description></item><item><title>简单总结MBR和GPT分区</title><link>https://myblog.050626.xyz/posts/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93mbr%E5%92%8Cgpt%E5%88%86%E5%8C%BA/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93mbr%E5%92%8Cgpt%E5%88%86%E5%8C%BA/</guid><description>&lt;h1 class="relative group"&gt;boot 方式和分区方案的最佳配合
+ &lt;div id="boot-方式和分区方案的最佳配合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#boot-%e6%96%b9%e5%bc%8f%e5%92%8c%e5%88%86%e5%8c%ba%e6%96%b9%e6%a1%88%e7%9a%84%e6%9c%80%e4%bd%b3%e9%85%8d%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;uefi+gpt&lt;/li&gt;
+&lt;li&gt;bios+mbr&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;BIOS+MBR
+ &lt;div id="biosmbr" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#biosmbr" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;MBR (主引导记录)的整体详细结构简单介绍就是：&lt;code&gt;主引导代码+分区表+post-mbr gap&lt;/code&gt;&lt;/p&gt;</description></item><item><title>一个整体的开机流程</title><link>https://myblog.050626.xyz/posts/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/</guid><description>&lt;p&gt;当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。&lt;/p&gt;</description></item></channel></rss>

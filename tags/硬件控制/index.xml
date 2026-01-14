@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>硬件控制 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6/</link><description>Recent content in 硬件控制 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Thu, 10 Oct 2024 20:30:57 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>固件 驱动程序</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</guid><description>&lt;h3 class="relative group"&gt;&lt;strong&gt;固件&lt;/strong&gt;
+ &lt;div id="固件" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%ba%e4%bb%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。&lt;/p&gt;</description></item></channel></rss>

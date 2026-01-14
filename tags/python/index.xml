@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/python/</link><description>Recent content in Python on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:54:11 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>regrex补充</title><link>https://myblog.050626.xyz/posts/regrex%E8%A1%A5%E5%85%85/</link><pubDate>Tue, 04 Feb 2025 13:54:11 +0000</pubDate><guid>https://myblog.050626.xyz/posts/regrex%E8%A1%A5%E5%85%85/</guid><description>&lt;p&gt;零宽断言（lookahead 和 lookbehind）、负向断言、后向引用以及平衡组是正则表达式中的高级特性，能够处理更复杂的匹配需求。以下是它们的功能和在 Python 中的具体应用。&lt;/p&gt;</description></item><item><title>正则表达式练习</title><link>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BB%83%E4%B9%A0/</link><pubDate>Tue, 04 Feb 2025 13:53:04 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BB%83%E4%B9%A0/</guid><description>&lt;p&gt;以下是一些精心设计的正则表达式练习，结合了 &lt;strong&gt;Python 编程&lt;/strong&gt; 和 &lt;strong&gt;文件操作&lt;/strong&gt;，帮助你熟悉正则表达式在不同场景中的实际应用。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;&lt;strong&gt;练习一：基本字符匹配&lt;/strong&gt;
+ &lt;div id="练习一基本字符匹配" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e4%b8%80%e5%9f%ba%e6%9c%ac%e5%ad%97%e7%ac%a6%e5%8c%b9%e9%85%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;：掌握正则表达式的基础功能。&lt;/p&gt;</description></item></channel></rss>

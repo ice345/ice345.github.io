@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on ICE345のBLOG</title><link>https://myblog.050626.xyz/categories/technology/</link><description>Recent content in Technology on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 30 Apr 2024 00:03:29 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/categories/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>latex</title><link>https://myblog.050626.xyz/posts/latex/</link><pubDate>Tue, 30 Apr 2024 00:03:29 +0000</pubDate><guid>https://myblog.050626.xyz/posts/latex/</guid><description>&lt;h1 class="relative group"&gt;Divide-and-Conquer Method Share
+ &lt;div id="divide-and-conquer-method-share" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#divide-and-conquer-method-share" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;\section{Substitution Method}&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 阐释
+ &lt;div id="1-阐释" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e9%98%90%e9%87%8a" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;代换法的关键在于利用数学归纳法。首先，要猜测一个大致的上界，并结合数学归纳法进行证明。然后，验证基本条件，确保递归满足这个上界。若无法准确猜测界限，可能需要一个一个试着证明，直到达到比较准确的界限为止。&lt;/p&gt;</description></item></channel></rss>

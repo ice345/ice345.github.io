@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自动登录 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</link><description>Recent content in 自动登录 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:22:07 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux无需密码登陆-适合服务器</title><link>https://myblog.050626.xyz/posts/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</link><pubDate>Tue, 04 Feb 2025 13:22:07 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid><description>&lt;h4 class="relative group"&gt;需求
+ &lt;div id="需求" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9c%80%e6%b1%82" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="在这里插入图片描述"
+ src="https://i-blog.csdnimg.cn/blog_migrate/fdf416e80dcea03a8e49488f2d473f3e.jpeg#pic_center"
+ &gt;&lt;/figure&gt;
+&lt;br&gt;
+最近我们在开发一个基于树莓派的小盒子，我们会采购一些树莓派，装好外盒，装好&lt;a href="https://so.csdn.net/so/search?q=arm&amp;amp;spm=1001.2101.3001.7020" target="_blank"&gt;arm&lt;/a&gt;版本的【Ubuntu Server 20.04】系统，并且装上我们开发的配套软件，对接我们云端的服务，最终把小盒子卖给用户并提供一些收费的服务。我们在安装系统的时候使用了Ubuntu自带的磁盘&lt;a href="https://so.csdn.net/so/search?q=%E5%8A%A0%E5%AF%86&amp;amp;spm=1001.2101.3001.7020" target="_blank"&gt;加密&lt;/a&gt;功能，确保机器在不开机的情况下不能被轻易的取出TF卡读取数据。&lt;/p&gt;</description></item></channel></rss>

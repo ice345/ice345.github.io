@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>快捷键 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><description>Recent content in 快捷键 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 06 Jun 2025 13:52:24 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>lazyvim_keymap</title><link>https://myblog.050626.xyz/posts/lazyvim-keymap/</link><pubDate>Fri, 06 Jun 2025 13:52:24 +0000</pubDate><guid>https://myblog.050626.xyz/posts/lazyvim-keymap/</guid><description>&lt;h1 class="relative group"&gt;在 LazyVim 中自定义插件的快捷键
+ &lt;div id="在-lazyvim-中自定义插件的快捷键" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%a8-lazyvim-%e4%b8%ad%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8f%92%e4%bb%b6%e7%9a%84%e5%bf%ab%e6%8d%b7%e9%94%ae" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;要自定义 LazyVim 插件使用的快捷键，有几种不同的方法，具体取决于你希望快捷键在哪些地方生效以及如何应用。LazyVim 是基于 Neovim 并由 &lt;code&gt;lazy.nvim&lt;/code&gt; 插件管理器驱动的，提供了灵活的方式来管理插件的快捷键，同时保持高效的懒加载机制。下面，我将详细介绍几种主要的方法，并提供完整的示例代码，同时解答是否需要手动加载相关文件。&lt;/p&gt;</description></item><item><title>vim_command</title><link>https://myblog.050626.xyz/posts/vim-command/</link><pubDate>Sat, 14 Sep 2024 20:47:20 +0000</pubDate><guid>https://myblog.050626.xyz/posts/vim-command/</guid><description>&lt;p&gt;在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;常用命令模式命令
+ &lt;div id="常用命令模式命令" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e5%91%bd%e4%bb%a4" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;进入命令模式&lt;/strong&gt;：按 &lt;code&gt;Esc&lt;/code&gt; 键进入命令模式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;退出 Vim&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:q&lt;/code&gt; 退出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:q!&lt;/code&gt; 强制退出（不保存）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:wq&lt;/code&gt; 保存并退出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:x&lt;/code&gt; 保存并退出（等同于 &lt;code&gt;:wq&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保存文件&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:w&lt;/code&gt; 保存文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:w new_filename&lt;/code&gt; 另存为新文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 class="relative group"&gt;移动方向的键位
+ &lt;div id="移动方向的键位" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a7%bb%e5%8a%a8%e6%96%b9%e5%90%91%e7%9a%84%e9%94%ae%e4%bd%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本方向移动&lt;/strong&gt;：&lt;/p&gt;</description></item></channel></rss>

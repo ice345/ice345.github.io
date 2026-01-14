@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spectre on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/spectre/</link><description>Recent content in Spectre on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 13 Dec 2024 20:11:19 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/spectre/index.xml" rel="self" type="application/rss+xml"/><item><title>spectre和meltdown</title><link>https://myblog.050626.xyz/posts/spectre%E5%92%8Cmeltdown/</link><pubDate>Fri, 13 Dec 2024 20:11:19 +0000</pubDate><guid>https://myblog.050626.xyz/posts/spectre%E5%92%8Cmeltdown/</guid><description>&lt;p&gt;就利用到了 cache 的缓存的时间不一样 (访问某些位置时会发生访问时间快的问题使得可以通过这个来得到其他进程的数据内容)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分支预测 (speculative execution)&lt;/li&gt;
+&lt;li&gt;侧信道攻击 (side-channel attack)&lt;/li&gt;
+&lt;li&gt;访问时间差异获取数据内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;通过下面的这张图基本也可以理解个大概了&lt;/p&gt;</description></item></channel></rss>

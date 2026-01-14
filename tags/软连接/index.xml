@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>软连接 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E8%BD%AF%E8%BF%9E%E6%8E%A5/</link><description>Recent content in 软连接 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Sat, 14 Sep 2024 16:36:35 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E8%BD%AF%E8%BF%9E%E6%8E%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>软连接和/.desktop图标</title><link>https://myblog.050626.xyz/posts/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</link><pubDate>Sat, 14 Sep 2024 16:36:35 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</guid><description>&lt;h1 class="relative group"&gt;两者区别
+ &lt;div id="两者区别" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%a4%e8%80%85%e5%8c%ba%e5%88%ab" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别：&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文件系统 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 文件系统 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:25:48 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux文件FILE</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</link><pubDate>Tue, 04 Feb 2025 13:25:48 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</guid><description>&lt;h1 class="relative group"&gt;文件描述符
+ &lt;div id="文件描述符" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e6%8f%8f%e8%bf%b0%e7%ac%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;文件在 Linux 系统中通过文件描述符与内核进行交互。打开文件时，Linux 内核会执行以下步骤：&lt;/p&gt;</description></item><item><title>chroot</title><link>https://myblog.050626.xyz/posts/chroot/</link><pubDate>Mon, 14 Oct 2024 17:00:36 +0000</pubDate><guid>https://myblog.050626.xyz/posts/chroot/</guid><description>&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdXX /mnt 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdaXX /mnt/home&lt;span class="o"&gt;(&lt;/span&gt;有这个分区的话&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev /mnt/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev/pts /mnt/dev/pts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /proc /mnt/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /sys /mnt/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /run /mnt/run
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /etc/resolv. conf /mnt/etc/resolv. conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /tmp /mnt/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo chroot /mnt &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 class="relative group"&gt;什么是 &lt;code&gt;chroot&lt;/code&gt;？
+ &lt;div id="什么是-chroot" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-chroot" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;chroot&lt;/code&gt;（Change Root）是 Linux/Unix 系统中的一种工具，它允许你将当前的根文件系统切换到指定的目录，使该目录成为虚拟机或类似于容器的环境。简单来说，&lt;code&gt;chroot&lt;/code&gt; 可以将系统的根目录 &lt;code&gt;/&lt;/code&gt; 改变为某个其他的目录，这样你可以在这个隔离的环境下操作，不影响主系统。这种方式通常用于恢复系统、测试环境、构建软件或者运行独立的系统。&lt;/p&gt;</description></item><item><title>文件系统和卷的关系</title><link>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</link><pubDate>Fri, 27 Sep 2024 17:49:14 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</guid><description>&lt;h1 class="relative group"&gt;大致流程
+ &lt;div id="大致流程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e8%87%b4%e6%b5%81%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;流程如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将硬盘分区，并将其初始化为 &lt;strong&gt;物理卷（PV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;将物理卷加入到一个 &lt;strong&gt;卷组（VG）&lt;/strong&gt; 中。&lt;/li&gt;
+&lt;li&gt;在卷组中创建 &lt;strong&gt;逻辑卷（LV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在逻辑卷上创建文件系统（如 Ext4、XFS 等）。&lt;/li&gt;
+&lt;li&gt;将逻辑卷 &lt;strong&gt;挂载&lt;/strong&gt; 到系统目录中，以便访问和存储数据。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;文件系统介绍
+ &lt;div id="文件系统介绍" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%bb%8b%e7%bb%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;1. 文件系统
+ &lt;div id="1-文件系统" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;文件系统说白了就是操作系统管理硬盘中数据的一个方式。&lt;/strong&gt; 详细点就是：问阿金系统可以管理 &lt;code&gt;硬盘&lt;/code&gt;，&lt;code&gt;SSD&lt;/code&gt;，&lt;code&gt;u盘&lt;/code&gt; 等存储设备的数据布局，提供读写文件的接口。文件系统负责存储文件、文件的元数据（如文件名称、权限、时间戳等），以及组织文件所在的路径结构（如文件夹层级）。&lt;/p&gt;</description></item></channel></rss>

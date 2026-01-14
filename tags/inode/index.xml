@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inode on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/inode/</link><description>Recent content in Inode on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:25:48 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/inode/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux文件FILE</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</link><pubDate>Tue, 04 Feb 2025 13:25:48 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</guid><description>&lt;h1 class="relative group"&gt;文件描述符
+ &lt;div id="文件描述符" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e6%8f%8f%e8%bf%b0%e7%ac%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;文件在 Linux 系统中通过文件描述符与内核进行交互。打开文件时，Linux 内核会执行以下步骤：&lt;/p&gt;</description></item></channel></rss>

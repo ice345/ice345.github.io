@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>终端 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E7%BB%88%E7%AB%AF/</link><description>Recent content in 终端 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:29:20 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E7%BB%88%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>7-Amazing-CLI-Tools</title><link>https://myblog.050626.xyz/posts/7-amazing-cli-tools/</link><pubDate>Tue, 04 Feb 2025 13:29:20 +0000</pubDate><guid>https://myblog.050626.xyz/posts/7-amazing-cli-tools/</guid><description>&lt;p&gt;You can find my dotfiles &lt;a href="https://github.com/josean-dev/dev-environment-files" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Open a terminal window
+ &lt;div id="open-a-terminal-window" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#open-a-terminal-window" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Open a terminal window on your macOs or linux machine.&lt;/p&gt;
+&lt;p&gt;I’m using &lt;strong&gt;Alacritty&lt;/strong&gt; on &lt;strong&gt;macOs&lt;/strong&gt; and I’m using the &lt;strong&gt;zsh&lt;/strong&gt; shell.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Install Homebrew
+ &lt;div id="install-homebrew" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#install-homebrew" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Run the following command:&lt;/p&gt;</description></item></channel></rss>

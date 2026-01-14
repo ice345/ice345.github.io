@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宏编程 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E5%AE%8F%E7%BC%96%E7%A8%8B/</link><description>Recent content in 宏编程 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 06 Jun 2025 13:52:05 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E5%AE%8F%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>neovim_macro</title><link>https://myblog.050626.xyz/posts/neovim-macro/</link><pubDate>Fri, 06 Jun 2025 13:52:05 +0000</pubDate><guid>https://myblog.050626.xyz/posts/neovim-macro/</guid><description>&lt;p&gt;Neovim 的「宏编程」就是通过录制并使用宏（macro）来快速执行&lt;strong&gt;重复性操作&lt;/strong&gt;。它是 Vim/Neovim 中非常实用、效率极高的功能之一。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h3 class="relative group"&gt;✅ 什么是 Neovim 的宏？
+ &lt;div id="-什么是-neovim-的宏" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-%e4%bb%80%e4%b9%88%e6%98%af-neovim-%e7%9a%84%e5%ae%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;宏本质上是：&lt;strong&gt;你在 Normal 模式下的操作序列的录音回放。&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

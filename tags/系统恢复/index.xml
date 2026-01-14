@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>系统恢复 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D/</link><description>Recent content in 系统恢复 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Mon, 14 Oct 2024 17:00:36 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D/index.xml" rel="self" type="application/rss+xml"/><item><title>chroot</title><link>https://myblog.050626.xyz/posts/chroot/</link><pubDate>Mon, 14 Oct 2024 17:00:36 +0000</pubDate><guid>https://myblog.050626.xyz/posts/chroot/</guid><description>&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdXX /mnt 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdaXX /mnt/home&lt;span class="o"&gt;(&lt;/span&gt;有这个分区的话&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev /mnt/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev/pts /mnt/dev/pts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /proc /mnt/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /sys /mnt/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /run /mnt/run
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /etc/resolv. conf /mnt/etc/resolv. conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /tmp /mnt/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo chroot /mnt &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 class="relative group"&gt;什么是 &lt;code&gt;chroot&lt;/code&gt;？
+ &lt;div id="什么是-chroot" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-chroot" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;chroot&lt;/code&gt;（Change Root）是 Linux/Unix 系统中的一种工具，它允许你将当前的根文件系统切换到指定的目录，使该目录成为虚拟机或类似于容器的环境。简单来说，&lt;code&gt;chroot&lt;/code&gt; 可以将系统的根目录 &lt;code&gt;/&lt;/code&gt; 改变为某个其他的目录，这样你可以在这个隔离的环境下操作，不影响主系统。这种方式通常用于恢复系统、测试环境、构建软件或者运行独立的系统。&lt;/p&gt;</description></item></channel></rss>

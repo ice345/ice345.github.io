@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>主题配置 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link><description>Recent content in 主题配置 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Sat, 07 Sep 2024 14:45:48 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>hexo个人博客创建</title><link>https://myblog.050626.xyz/posts/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/</link><pubDate>Sat, 07 Sep 2024 14:45:48 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;三条常用命令：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;hexo clean&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo generate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo deploy&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;&lt;blockquote&gt;
+ &lt;p&gt;上面的这些命令以及配置文件（. yml）这些全部都是基于 source 目录下去搜索执行的。因此，如果是配置路径是就要注意这个是要基于 source 目录的，配置路径直接/img/test. jpg 这种是以 source 目录作为根目录的。因此要你就写完整相对目录，不然就在 source 文夹下创建文件夹。&lt;/p&gt;</description></item></channel></rss>

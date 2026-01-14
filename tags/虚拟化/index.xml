@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>虚拟化 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/</link><description>Recent content in 虚拟化 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Sun, 28 Apr 2024 19:09:55 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>docker</title><link>https://myblog.050626.xyz/posts/docker/</link><pubDate>Sun, 28 Apr 2024 19:09:55 +0000</pubDate><guid>https://myblog.050626.xyz/posts/docker/</guid><description>&lt;h1 class="relative group"&gt;docker learn
+ &lt;div id="docker-learn" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#docker-learn" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;h1 class="relative group"&gt;table of contents
+ &lt;div id="table-of-contents" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#table-of-contents" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker-learn" &gt;docker learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#table-of-contents" &gt;table of contents&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%92%8cdocker" &gt;虚拟机和docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker%e5%92%8c%e5%ae%b9%e5%99%a8" &gt;docker和容器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker%e8%ae%b2%e8%a7%a3" &gt;docker讲解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker_desktop%e4%bb%8b%e7%bb%8d" &gt;docker_desktop介绍&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;虚拟机和docker
+ &lt;div id="虚拟机和docker" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%92%8cdocker" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟机和容器都是一种虚拟化技术，都是能实现一个操作系统上运行一些别的系统，运行一些安装包什么的&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>分组 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E5%88%86%E7%BB%84/</link><description>Recent content in 分组 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:52:01 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E5%88%86%E7%BB%84/index.xml" rel="self" type="application/rss+xml"/><item><title>正则表达式30分钟入门</title><link>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F30%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8/</link><pubDate>Tue, 04 Feb 2025 13:52:01 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F30%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8/</guid><description>&lt;p&gt;版本：v2.4.1 (2019-11-15) 作者：&lt;a href="https://deerchao.cn/" target="_blank"&gt;deerchao&lt;/a&gt; 转载请注明&lt;a href="https://deerchao.cn/tutorials/regex/regex.htm" target="_blank"&gt;来源&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;目录
+ &lt;div id="目录" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e5%bd%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#mission" target="_blank"&gt;本文目标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#howtouse" target="_blank"&gt;如何使用本教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#introduction" target="_blank"&gt;正则表达式到底是什么东西？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#getstarted" target="_blank"&gt;入门&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#testing" target="_blank"&gt;测试正则表达式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#metacode" target="_blank"&gt;元字符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#escape" target="_blank"&gt;字符转义&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#repeat" target="_blank"&gt;重复&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#charclass" target="_blank"&gt;字符类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#alternative" target="_blank"&gt;分枝条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#negation" target="_blank"&gt;反义&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#grouping" target="_blank"&gt;分组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#backreference" target="_blank"&gt;后向引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#lookaround" target="_blank"&gt;零宽断言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#negativelookaround" target="_blank"&gt;负向零宽断言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#commenting" target="_blank"&gt;注释&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#greedyandlazy" target="_blank"&gt;贪婪与懒惰&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#regexoptions" target="_blank"&gt;处理选项&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#balancedgroup" target="_blank"&gt;平衡组/递归匹配&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#more" target="_blank"&gt;还有些什么东西没提到&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#contact" target="_blank"&gt;联系作者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#resources" target="_blank"&gt;网上的资源及本文参考文献&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#updatelog" target="_blank"&gt;更新纪录&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 class="relative group"&gt;本文目标
+ &lt;div id="本文目标" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%ac%e6%96%87%e7%9b%ae%e6%a0%87" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;30分钟内让你明白正则表达式是什么，并对它有一些基本的了解，让你可以在自己的程序或网页里使用它。&lt;/p&gt;</description></item></channel></rss>

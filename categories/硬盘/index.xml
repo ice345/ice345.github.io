@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>硬盘 on ICE345のBLOG</title><link>https://myblog.050626.xyz/categories/%E7%A1%AC%E7%9B%98/</link><description>Recent content in 硬盘 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Thu, 10 Oct 2024 20:30:57 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/categories/%E7%A1%AC%E7%9B%98/index.xml" rel="self" type="application/rss+xml"/><item><title>bootloader 和 boot manager的区别（中文）</title><link>https://myblog.050626.xyz/posts/bootloader-%E5%92%8C-boot-manager%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%AD%E6%96%87/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/bootloader-%E5%92%8C-boot-manager%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%AD%E6%96%87/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;bootloader&lt;/strong&gt; is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system&amp;rsquo;s firmware (e.g., BIOS/UEFI).&lt;/p&gt;
+&lt;/blockquote&gt;&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;boot manager&lt;/strong&gt; is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. ==It operates after the system firmware has selected a boot device but before the operating system is loaded.==&lt;/p&gt;</description></item><item><title>BOOTLOADER和BOOT MANAGER的区别（English）</title><link>https://myblog.050626.xyz/posts/bootloader%E5%92%8Cboot-manager%E7%9A%84%E5%8C%BA%E5%88%ABenglish/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/bootloader%E5%92%8Cboot-manager%E7%9A%84%E5%8C%BA%E5%88%ABenglish/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;bootloader&lt;/strong&gt; is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system&amp;rsquo;s firmware (e.g., BIOS/UEFI).&lt;/p&gt;
+&lt;/blockquote&gt;&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;boot manager&lt;/strong&gt; is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. ==It operates after the system firmware has selected a boot device but before the operating system is loaded.==&lt;/p&gt;</description></item><item><title>GPT分区方案</title><link>https://myblog.050626.xyz/posts/gpt%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/gpt%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</guid><description>&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="p18"
+ src="pictures/18.webp"
+ &gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;GPT（GUID 分区表）&lt;/strong&gt; 分区方案在结构、功能以及与引导加载程序和系统引导的交互方式方面与 &lt;strong&gt;MBR（主引导记录）&lt;/strong&gt; 方案有很大不同。让我们比较一下这两者，并了解 GPT 在系统引导环境中的工作原理，尤其是对于双引导场景。&lt;/p&gt;</description></item><item><title>GRUB</title><link>https://myblog.050626.xyz/posts/grub/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/grub/</guid><description>&lt;p&gt;是的，&lt;strong&gt;GRUB 不会将其所有引导加载程序代码都存储在 &lt;code&gt;/boot/grub&lt;/code&gt;&lt;/strong&gt; 中。它使用 &lt;strong&gt;多阶段架构&lt;/strong&gt;，其中引导加载程序的不同部分存储在不同的位置，这对于使用 &lt;strong&gt;MBR&lt;/strong&gt; 和 &lt;strong&gt;GPT&lt;/strong&gt; 分区方案的系统至关重要，尤其是在 &lt;strong&gt;BIOS 模式&lt;/strong&gt; 下启动时。&lt;/p&gt;</description></item><item><title>MBR分区方案</title><link>https://myblog.050626.xyz/posts/mbr%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/mbr%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;MBR（主引导记录） 结构就是&lt;strong&gt;主引导代码+分区表（+post-mbr gap）&lt;/strong&gt;，&lt;code&gt;主引导代码&lt;/code&gt; 就是专门负责用来加载系统到内存中的，&lt;code&gt;分区表&lt;/code&gt; 就是一个磁盘的整体布局。&lt;code&gt;post-mbr gap&lt;/code&gt; 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，==则就会出现 grub 的代码覆盖了原本的主引导的原先代码。==&lt;/p&gt;</description></item><item><title>固件 驱动程序</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</guid><description>&lt;h3 class="relative group"&gt;&lt;strong&gt;固件&lt;/strong&gt;
+ &lt;div id="固件" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%ba%e4%bb%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。&lt;/p&gt;</description></item><item><title>固件 硬件 系统</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E7%A1%AC%E4%BB%B6-%E7%B3%BB%E7%BB%9F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E7%A1%AC%E4%BB%B6-%E7%B3%BB%E7%BB%9F/</guid><description>&lt;p&gt;在 Linux 中，&lt;strong&gt;固件&lt;/strong&gt; 是指与特定硬件组件紧密相关的低级软件，通过提供指令和控制机制使它们能够正常运行。此固件在内核之下运行，但对于硬件与操作系统交互至关重要。&lt;/p&gt;</description></item><item><title>简单总结MBR和GPT分区</title><link>https://myblog.050626.xyz/posts/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93mbr%E5%92%8Cgpt%E5%88%86%E5%8C%BA/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93mbr%E5%92%8Cgpt%E5%88%86%E5%8C%BA/</guid><description>&lt;h1 class="relative group"&gt;boot 方式和分区方案的最佳配合
+ &lt;div id="boot-方式和分区方案的最佳配合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#boot-%e6%96%b9%e5%bc%8f%e5%92%8c%e5%88%86%e5%8c%ba%e6%96%b9%e6%a1%88%e7%9a%84%e6%9c%80%e4%bd%b3%e9%85%8d%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;uefi+gpt&lt;/li&gt;
+&lt;li&gt;bios+mbr&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;BIOS+MBR
+ &lt;div id="biosmbr" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#biosmbr" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;MBR (主引导记录)的整体详细结构简单介绍就是：&lt;code&gt;主引导代码+分区表+post-mbr gap&lt;/code&gt;&lt;/p&gt;</description></item><item><title>一个整体的开机流程</title><link>https://myblog.050626.xyz/posts/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/</guid><description>&lt;p&gt;当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。&lt;/p&gt;</description></item><item><title>文件系统和卷的关系</title><link>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</link><pubDate>Fri, 27 Sep 2024 17:49:14 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</guid><description>&lt;h1 class="relative group"&gt;大致流程
+ &lt;div id="大致流程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e8%87%b4%e6%b5%81%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;流程如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将硬盘分区，并将其初始化为 &lt;strong&gt;物理卷（PV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;将物理卷加入到一个 &lt;strong&gt;卷组（VG）&lt;/strong&gt; 中。&lt;/li&gt;
+&lt;li&gt;在卷组中创建 &lt;strong&gt;逻辑卷（LV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在逻辑卷上创建文件系统（如 Ext4、XFS 等）。&lt;/li&gt;
+&lt;li&gt;将逻辑卷 &lt;strong&gt;挂载&lt;/strong&gt; 到系统目录中，以便访问和存储数据。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;文件系统介绍
+ &lt;div id="文件系统介绍" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%bb%8b%e7%bb%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;1. 文件系统
+ &lt;div id="1-文件系统" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;文件系统说白了就是操作系统管理硬盘中数据的一个方式。&lt;/strong&gt; 详细点就是：问阿金系统可以管理 &lt;code&gt;硬盘&lt;/code&gt;，&lt;code&gt;SSD&lt;/code&gt;，&lt;code&gt;u盘&lt;/code&gt; 等存储设备的数据布局，提供读写文件的接口。文件系统负责存储文件、文件的元数据（如文件名称、权限、时间戳等），以及组织文件所在的路径结构（如文件夹层级）。&lt;/p&gt;</description></item><item><title>硬盘相关-卷</title><link>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</link><pubDate>Fri, 27 Sep 2024 15:53:23 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</guid><description>&lt;h3 class="relative group"&gt;LVM（逻辑卷管理器）的概念
+ &lt;div id="lvm逻辑卷管理器的概念" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lvm%e9%80%bb%e8%be%91%e5%8d%b7%e7%ae%a1%e7%90%86%e5%99%a8%e7%9a%84%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。&lt;/p&gt;</description></item></channel></rss>

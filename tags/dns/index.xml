@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/dns/</link><description>Recent content in DNS on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 06 Jun 2025 13:45:51 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux-DNS网络管理</title><link>https://myblog.050626.xyz/posts/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 06 Jun 2025 13:45:51 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;是的，你可以在 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 文件中修改 DNS 服务器。该文件用于配置 Linux 系统使用的 DNS 解析服务器。通过编辑该文件，你可以手动指定 DNS 服务器（例如 Google 的 &lt;code&gt;8.8.8.8&lt;/code&gt; 或 Cloudflare 的 &lt;code&gt;1.1.1.1&lt;/code&gt; 等）。&lt;/p&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;最好使用的是 dhcpcd 服务，这个最容易修改，就在 &lt;code&gt;/etc/dhcpcd.conf&lt;/code&gt; 中修改就行&lt;/p&gt;</description></item><item><title>Android-PrivateDNS</title><link>https://myblog.050626.xyz/posts/android-privatedns/</link><pubDate>Tue, 04 Feb 2025 13:32:01 +0000</pubDate><guid>https://myblog.050626.xyz/posts/android-privatedns/</guid><description>&lt;h2 class="relative group"&gt;3. Add a provider that offers secure DNS
+ &lt;div id="3-add-a-provider-that-offers-secure-dns" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-add-a-provider-that-offers-secure-dns" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;This is where it can get a bit tricky. You need to have the address of a provider that offers Private DNS. Here&amp;rsquo;s my provider of choice: &lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1dot1dot1dot1.cloudflare-dns.com&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 class="relative group"&gt;Some other possible hostnames you can use:
+ &lt;div id="some-other-possible-hostnames-you-can-use" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#some-other-possible-hostnames-you-can-use" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google DNS: dns.google&lt;/p&gt;</description></item></channel></rss>

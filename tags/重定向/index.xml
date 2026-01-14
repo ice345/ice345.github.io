@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>重定向 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</link><description>Recent content in 重定向 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Tue, 04 Feb 2025 13:24:22 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E9%87%8D%E5%AE%9A%E5%90%91/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux文件描述符(fd)</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</link><pubDate>Tue, 04 Feb 2025 13:24:22 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;作者: 杰克小麻雀&lt;br&gt;
+原文链接: &lt;a href="https://blog.csdn.net/yushuaigee/article/details/107883964" target="_blank"&gt;https://blog.csdn.net/yushuaigee/article/details/107883964&lt;/a&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;h3 class="relative group"&gt;1、从一个最常见的例子说起
+ &lt;div id="1从一个最常见的例子说起" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1%e4%bb%8e%e4%b8%80%e4%b8%aa%e6%9c%80%e5%b8%b8%e8%a7%81%e7%9a%84%e4%be%8b%e5%ad%90%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在使用Linux的过程中， 我们平时经常看到下面这样的用法：&lt;/p&gt;</description></item></channel></rss>

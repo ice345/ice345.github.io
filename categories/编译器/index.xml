@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编译器 on ICE345のBLOG</title><link>https://myblog.050626.xyz/categories/%E7%BC%96%E8%AF%91%E5%99%A8/</link><description>Recent content in 编译器 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Sat, 07 Sep 2024 11:21:43 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/categories/%E7%BC%96%E8%AF%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>gcc介绍</title><link>https://myblog.050626.xyz/posts/gcc%E4%BB%8B%E7%BB%8D/</link><pubDate>Sat, 07 Sep 2024 11:21:43 +0000</pubDate><guid>https://myblog.050626.xyz/posts/gcc%E4%BB%8B%E7%BB%8D/</guid><description>&lt;h1 class="relative group"&gt;编译系统（过程）
+ &lt;div id="编译系统过程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bc%96%e8%af%91%e7%b3%bb%e7%bb%9f%e8%bf%87%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="p7"
+ src="https://github.com/ice345/picture_share/blob/master/technology/7.png?raw=true"
+ &gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="p8"
+ src="https://github.com/ice345/picture_share/blob/master/technology/8.png?raw=true"
+ &gt;&lt;/figure&gt;
+&lt;p&gt;编译过程是将源代码转换成可执行文件的几个步骤的集合。每一步生成不同类型的文件，这些文件在最终的可执行程序中扮演不同的角色。以下是详细的步骤以及每个阶段产生的文件的作用：&lt;/p&gt;</description></item></channel></rss>

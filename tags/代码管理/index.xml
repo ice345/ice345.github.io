@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>代码管理 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/</link><description>Recent content in 代码管理 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 20 Sep 2024 16:50:14 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>git_use</title><link>https://myblog.050626.xyz/posts/git-use/</link><pubDate>Fri, 20 Sep 2024 16:50:14 +0000</pubDate><guid>https://myblog.050626.xyz/posts/git-use/</guid><description>&lt;!-- git初认识感想 --&gt;
+
+&lt;h1 class="relative group"&gt;git命令使用感想
+ &lt;div id="git命令使用感想" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git%e5%91%bd%e4%bb%a4%e4%bd%bf%e7%94%a8%e6%84%9f%e6%83%b3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;git命令初始用
+ &lt;div id="git命令初始用" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git%e5%91%bd%e4%bb%a4%e5%88%9d%e5%a7%8b%e7%94%a8" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;!-- 这是已经建了仓库，可以使用git命令n推上去的情况，因为如果没有分支这些就要创建 --&gt;
+&lt;ul&gt;
+&lt;li&gt;git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程&lt;/li&gt;
+&lt;li&gt;git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了&lt;/li&gt;
+&lt;li&gt;git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额&lt;/li&gt;
+&lt;li&gt;git commit -m “描述” 这个就是提交上去了&lt;/li&gt;
+&lt;li&gt;如果还没建分支就用git branch -M 分支名（一般是master或者是main）&lt;/li&gt;
+&lt;li&gt;git remote add origin url（一般最好用ssh密钥即建一个，后面可以不问密码）&lt;/li&gt;
+&lt;li&gt;git push origin 分支名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class="relative group"&gt;ssh密钥创建
+ &lt;div id="ssh密钥创建" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ssh%e5%af%86%e9%92%a5%e5%88%9b%e5%bb%ba" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;先cd ~/.ssh用ll看看有无id_rsa,id_rsa_pub，无就创建，用该命令：
+*** ssh-keygen -t rsa -b 4096 -C &amp;ldquo;&lt;a href="mailto:nni461904@gmail.com" &gt;nni461904@gmail.com&lt;/a&gt;&amp;rdquo; ***&lt;/li&gt;
+&lt;li&gt;创建好后就cat命令直接获取id_rsa_pub里的密钥或者vim复制也可&lt;/li&gt;
+&lt;li&gt;然后就进github网页设置那设置ssh密钥就可了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class="relative group"&gt;git push报错
+ &lt;div id="git-push报错" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-push%e6%8a%a5%e9%94%99" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;这个学问就大了，要看报错，这是冲突性问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;git push报错&lt;a href="https://www.bilibili.com/video/BV1BA41117Qb/?share_source=copy_web&amp;amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【push冲突与解决方法，git提交冲突的解决方法，冲突产生的原因，git-pull操作，2023年git最新实用教程】" target="_blank"&gt;git push冲突&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

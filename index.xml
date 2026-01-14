@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>響け！ユーフォニアム on ICE345のBLOG</title><link>https://myblog.050626.xyz/</link><description>Recent content in 響け！ユーフォニアム on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://myblog.050626.xyz/about/</link><pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate><guid>https://myblog.050626.xyz/about/</guid><description>&lt;h2 class="relative group"&gt;联系方式
+ &lt;div id="联系方式" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href="https://github.com/ice345" target="_blank"&gt;我的 GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;博客&lt;/strong&gt;: &lt;a href="https://ice345.github.io" target="_blank"&gt;我的博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QQ&lt;/strong&gt;: 2145256133&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;邮箱&lt;/strong&gt;： &lt;a href="mailto:nni461904@gmail.com" &gt;nni461904@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>alist以及gluster</title><link>https://myblog.050626.xyz/posts/alist%E4%BB%A5%E5%8F%8Agluster/</link><pubDate>Sun, 10 Aug 2025 22:32:06 +0000</pubDate><guid>https://myblog.050626.xyz/posts/alist%E4%BB%A5%E5%8F%8Agluster/</guid><description>&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount -t glusterfs 192.168.1.108:/myvolume /mnt/gluster&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;关于 &lt;strong&gt;GlusterFS&lt;/strong&gt;，这是一个分布式文件系统，常用命令主要围绕卷（volume）的管理和查看状态。下面我整理了一些常用的查看卷信息和管理卷的命令。&lt;/p&gt;</description></item><item><title>gluster概念</title><link>https://myblog.050626.xyz/posts/gluster%E6%A6%82%E5%BF%B5/</link><pubDate>Sun, 10 Aug 2025 22:30:38 +0000</pubDate><guid>https://myblog.050626.xyz/posts/gluster%E6%A6%82%E5%BF%B5/</guid><description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;节点（Node）&lt;/strong&gt;
+节点指的是参与 GlusterFS 集群的物理或虚拟服务器主机。每个节点上可以运行 GlusterFS 服务，并提供存储资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Peer（对等体）&lt;/strong&gt;
+Peer 指的是集群中彼此认识并通信的节点。一个 GlusterFS 集群由多个 peer 组成，peer 之间通过网络互联，形成分布式存储系统。&lt;/p&gt;</description></item><item><title>我的大二下</title><link>https://myblog.050626.xyz/posts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%BA%8C%E4%B8%8B/</link><pubDate>Sun, 10 Aug 2025 22:27:29 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%BA%8C%E4%B8%8B/</guid><description>&lt;h1 class="relative group"&gt;大二下存档
+ &lt;div id="大二下存档" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e4%ba%8c%e4%b8%8b%e5%ad%98%e6%a1%a3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;前序
+ &lt;div id="前序" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e5%ba%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;大二已经过完了,现在也已经是暑假的一半了.我为了浪费时间,就来写一篇博客,来记录一下大二下的生活,以此留下一份回忆😊&lt;/p&gt;</description></item><item><title>SSH简单配置</title><link>https://myblog.050626.xyz/posts/ssh%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 13 Jun 2025 16:55:45 +0000</pubDate><guid>https://myblog.050626.xyz/posts/ssh%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</guid><description>&lt;h2 class="relative group"&gt;一、在客户端生成 SSH 密钥对
+ &lt;div id="一在客户端生成-ssh-密钥对" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e5%9c%a8%e5%ae%a2%e6%88%b7%e7%ab%af%e7%94%9f%e6%88%90-ssh-%e5%af%86%e9%92%a5%e5%af%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;在你的本地客户端（例如你的笔记本或开发机器）上：&lt;/p&gt;</description></item><item><title>alist配置双访问</title><link>https://myblog.050626.xyz/posts/alist%E9%85%8D%E7%BD%AE%E5%8F%8C%E8%AE%BF%E9%97%AE/</link><pubDate>Wed, 11 Jun 2025 10:19:35 +0000</pubDate><guid>https://myblog.050626.xyz/posts/alist%E9%85%8D%E7%BD%AE%E5%8F%8C%E8%AE%BF%E9%97%AE/</guid><description>&lt;h1 class="relative group"&gt;问题描述
+ &lt;div id="问题描述" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;因为通过上一节的描述, 我们可以通过 &lt;code&gt;cloudflare tunnel&lt;/code&gt; 和 &lt;code&gt;alist&lt;/code&gt; 结合实现加速访问以及稳定加载, 但是这又导致了一个问题:&lt;strong&gt;alist 上传出现了问题&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>alist加速</title><link>https://myblog.050626.xyz/posts/alist%E5%8A%A0%E9%80%9F/</link><pubDate>Sat, 07 Jun 2025 16:21:33 +0000</pubDate><guid>https://myblog.050626.xyz/posts/alist%E5%8A%A0%E9%80%9F/</guid><description>&lt;h1 class="relative group"&gt;先前做法
+ &lt;div id="先前做法" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%88%e5%89%8d%e5%81%9a%e6%b3%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;先前, 我们是通过脚本来和 cloudflare 配合来不断将域名和 ipv6 进行一个绑定来修改, 但是这样我的服务器就是一个直接的出站, 并没有经过什么加速. 所以相比通过代理的方式, 速度会慢很多.&lt;/p&gt;</description></item><item><title>lazyvim_keymap</title><link>https://myblog.050626.xyz/posts/lazyvim-keymap/</link><pubDate>Fri, 06 Jun 2025 13:52:24 +0000</pubDate><guid>https://myblog.050626.xyz/posts/lazyvim-keymap/</guid><description>&lt;h1 class="relative group"&gt;在 LazyVim 中自定义插件的快捷键
+ &lt;div id="在-lazyvim-中自定义插件的快捷键" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%a8-lazyvim-%e4%b8%ad%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8f%92%e4%bb%b6%e7%9a%84%e5%bf%ab%e6%8d%b7%e9%94%ae" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;要自定义 LazyVim 插件使用的快捷键，有几种不同的方法，具体取决于你希望快捷键在哪些地方生效以及如何应用。LazyVim 是基于 Neovim 并由 &lt;code&gt;lazy.nvim&lt;/code&gt; 插件管理器驱动的，提供了灵活的方式来管理插件的快捷键，同时保持高效的懒加载机制。下面，我将详细介绍几种主要的方法，并提供完整的示例代码，同时解答是否需要手动加载相关文件。&lt;/p&gt;</description></item><item><title>lazyvim_plugins</title><link>https://myblog.050626.xyz/posts/lazyvim-plugins/</link><pubDate>Fri, 06 Jun 2025 13:52:16 +0000</pubDate><guid>https://myblog.050626.xyz/posts/lazyvim-plugins/</guid><description>&lt;h3 class="relative group"&gt;如何在 LazyVim 中配置插件？
+ &lt;div id="如何在-lazyvim-中配置插件" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a6%82%e4%bd%95%e5%9c%a8-lazyvim-%e4%b8%ad%e9%85%8d%e7%bd%ae%e6%8f%92%e4%bb%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;LazyVim 使用 &lt;code&gt;lazy.nvim&lt;/code&gt; 作为插件管理器，允许以模块化和灵活的方式定义和配置插件。要配置插件，您需要创建或修改 Lua 文件来指定要安装的插件及其设置和加载条件。这些文件通常位于 LazyVim 配置的 &lt;code&gt;lua/plugins/&lt;/code&gt; 目录中。&lt;/p&gt;</description></item><item><title>neovim_macro</title><link>https://myblog.050626.xyz/posts/neovim-macro/</link><pubDate>Fri, 06 Jun 2025 13:52:05 +0000</pubDate><guid>https://myblog.050626.xyz/posts/neovim-macro/</guid><description>&lt;p&gt;Neovim 的「宏编程」就是通过录制并使用宏（macro）来快速执行&lt;strong&gt;重复性操作&lt;/strong&gt;。它是 Vim/Neovim 中非常实用、效率极高的功能之一。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h3 class="relative group"&gt;✅ 什么是 Neovim 的宏？
+ &lt;div id="-什么是-neovim-的宏" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-%e4%bb%80%e4%b9%88%e6%98%af-neovim-%e7%9a%84%e5%ae%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;宏本质上是：&lt;strong&gt;你在 Normal 模式下的操作序列的录音回放。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Linux-DNS网络管理</title><link>https://myblog.050626.xyz/posts/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 06 Jun 2025 13:45:51 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;是的，你可以在 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 文件中修改 DNS 服务器。该文件用于配置 Linux 系统使用的 DNS 解析服务器。通过编辑该文件，你可以手动指定 DNS 服务器（例如 Google 的 &lt;code&gt;8.8.8.8&lt;/code&gt; 或 Cloudflare 的 &lt;code&gt;1.1.1.1&lt;/code&gt; 等）。&lt;/p&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;最好使用的是 dhcpcd 服务，这个最容易修改，就在 &lt;code&gt;/etc/dhcpcd.conf&lt;/code&gt; 中修改就行&lt;/p&gt;</description></item><item><title>Hyprland简明指北</title><link>https://myblog.050626.xyz/posts/hyprland%E7%AE%80%E6%98%8E%E6%8C%87%E5%8C%97/</link><pubDate>Fri, 06 Jun 2025 13:41:49 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hyprland%E7%AE%80%E6%98%8E%E6%8C%87%E5%8C%97/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;首先声明，并不是所有功能都是通过快捷键打开的，就是比如说: &lt;code&gt;Kool_Quick_Settings.sh&lt;/code&gt; 这个就是先通过 &lt;code&gt;yad&lt;/code&gt; 或者 &lt;code&gt;rofi&lt;/code&gt; 这些工具图形化功能栏目，然后就可以通过命令打开文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class="relative group"&gt;目录结构
+ &lt;div id="目录结构" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;省流版
+ &lt;div id="省流版" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9c%81%e6%b5%81%e7%89%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.config/hypr/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── animations
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── application-style.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── configs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hypridle.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprland.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprlock-2k.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprlock.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprpaper.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── initial-boot.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── Monitor_Profiles
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── monitors.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── scripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── UserConfigs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── UserScripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── v2.3.15
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── wallpaper_effects
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── wallust
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── workspaces.conf&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 class="relative group"&gt;大概说明
+ &lt;div id="大概说明" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e6%a6%82%e8%af%b4%e6%98%8e" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;最重要文件&lt;/strong&gt;: &lt;code&gt;hyprland.conf&lt;/code&gt;, 这个文件就是一个相当于 &lt;em&gt;hyprland&lt;/em&gt; 的根配置文件，窗口管理(&lt;code&gt;WM&lt;/code&gt;)的根基配置&lt;/p&gt;</description></item><item><title>alist配置</title><link>https://myblog.050626.xyz/posts/alist%E9%85%8D%E7%BD%AE/</link><pubDate>Sun, 20 Apr 2025 11:53:29 +0000</pubDate><guid>https://myblog.050626.xyz/posts/alist%E9%85%8D%E7%BD%AE/</guid><description>&lt;h2 class="relative group"&gt;杂谈
+ &lt;div id="杂谈" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9d%82%e8%b0%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;alist 的相关目录配置全部都在 &lt;code&gt;/opt/alist&lt;/code&gt; 目录下，这里可以配置相关的比如:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https 设置 (&lt;em&gt;即证书的设置&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;端口设置&lt;/li&gt;
+&lt;li&gt;密码设置 (高版本已经不行了)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;这个脚本是可以使用缓存的文件的, 所以配置新的域名或者什么的, 请先删除 &lt;code&gt;ip.txt&lt;/code&gt;, &lt;code&gt;cloudflare.log&lt;/code&gt;, &lt;code&gt;cloudflare.ids&lt;/code&gt; 文件&lt;/p&gt;</description></item><item><title>regrex补充</title><link>https://myblog.050626.xyz/posts/regrex%E8%A1%A5%E5%85%85/</link><pubDate>Tue, 04 Feb 2025 13:54:11 +0000</pubDate><guid>https://myblog.050626.xyz/posts/regrex%E8%A1%A5%E5%85%85/</guid><description>&lt;p&gt;零宽断言（lookahead 和 lookbehind）、负向断言、后向引用以及平衡组是正则表达式中的高级特性，能够处理更复杂的匹配需求。以下是它们的功能和在 Python 中的具体应用。&lt;/p&gt;</description></item><item><title>正则表达式练习</title><link>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BB%83%E4%B9%A0/</link><pubDate>Tue, 04 Feb 2025 13:53:04 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BB%83%E4%B9%A0/</guid><description>&lt;p&gt;以下是一些精心设计的正则表达式练习，结合了 &lt;strong&gt;Python 编程&lt;/strong&gt; 和 &lt;strong&gt;文件操作&lt;/strong&gt;，帮助你熟悉正则表达式在不同场景中的实际应用。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;&lt;strong&gt;练习一：基本字符匹配&lt;/strong&gt;
+ &lt;div id="练习一基本字符匹配" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e4%b8%80%e5%9f%ba%e6%9c%ac%e5%ad%97%e7%ac%a6%e5%8c%b9%e9%85%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;：掌握正则表达式的基础功能。&lt;/p&gt;</description></item><item><title>正则表达式30分钟入门</title><link>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F30%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8/</link><pubDate>Tue, 04 Feb 2025 13:52:01 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F30%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8/</guid><description>&lt;p&gt;版本：v2.4.1 (2019-11-15) 作者：&lt;a href="https://deerchao.cn/" target="_blank"&gt;deerchao&lt;/a&gt; 转载请注明&lt;a href="https://deerchao.cn/tutorials/regex/regex.htm" target="_blank"&gt;来源&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;目录
+ &lt;div id="目录" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e5%bd%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#mission" target="_blank"&gt;本文目标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#howtouse" target="_blank"&gt;如何使用本教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#introduction" target="_blank"&gt;正则表达式到底是什么东西？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#getstarted" target="_blank"&gt;入门&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#testing" target="_blank"&gt;测试正则表达式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#metacode" target="_blank"&gt;元字符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#escape" target="_blank"&gt;字符转义&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#repeat" target="_blank"&gt;重复&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#charclass" target="_blank"&gt;字符类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#alternative" target="_blank"&gt;分枝条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#negation" target="_blank"&gt;反义&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#grouping" target="_blank"&gt;分组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#backreference" target="_blank"&gt;后向引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#lookaround" target="_blank"&gt;零宽断言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#negativelookaround" target="_blank"&gt;负向零宽断言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#commenting" target="_blank"&gt;注释&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#greedyandlazy" target="_blank"&gt;贪婪与懒惰&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#regexoptions" target="_blank"&gt;处理选项&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#balancedgroup" target="_blank"&gt;平衡组/递归匹配&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#more" target="_blank"&gt;还有些什么东西没提到&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#contact" target="_blank"&gt;联系作者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#resources" target="_blank"&gt;网上的资源及本文参考文献&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://deerchao.cn/tutorials/regex/#updatelog" target="_blank"&gt;更新纪录&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 class="relative group"&gt;本文目标
+ &lt;div id="本文目标" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%ac%e6%96%87%e7%9b%ae%e6%a0%87" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;30分钟内让你明白正则表达式是什么，并对它有一些基本的了解，让你可以在自己的程序或网页里使用它。&lt;/p&gt;</description></item><item><title>python使用pip之setup.py编写</title><link>https://myblog.050626.xyz/posts/python%E4%BD%BF%E7%94%A8pip%E4%B9%8Bsetup-py%E7%BC%96%E5%86%99/</link><pubDate>Tue, 04 Feb 2025 13:34:10 +0000</pubDate><guid>https://myblog.050626.xyz/posts/python%E4%BD%BF%E7%94%A8pip%E4%B9%8Bsetup-py%E7%BC%96%E5%86%99/</guid><description>&lt;h3 class="relative group"&gt;&lt;strong&gt;1. 基础结构&lt;/strong&gt;
+ &lt;div id="1-基础结构" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%9f%ba%e7%a1%80%e7%bb%93%e6%9e%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;setup.py&lt;/code&gt; 是 Python 打包的核心配置文件，需使用 &lt;code&gt;setuptools&lt;/code&gt; 库定义包的元数据和构建规则。&lt;/p&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;基本模板&lt;/strong&gt;
+ &lt;div id="基本模板" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9f%ba%e6%9c%ac%e6%a8%a1%e6%9d%bf" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;find_packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;your-package-name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 包名（PyPI唯一标识）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;0.1.0&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 版本号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;author_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;your@email.com&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Short description&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;long_description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;README.md&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="c1"&gt;# 长描述（README内容）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;long_description_content_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;text/markdown&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# README格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://github.com/yourusername/your-package&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 项目地址&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;find_packages&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="c1"&gt;# 自动发现包目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;install_requires&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="c1"&gt;# 依赖库列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;entry_points&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{},&lt;/span&gt; &lt;span class="c1"&gt;# 命令行工具入口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;classifiers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="c1"&gt;# PyPI分类标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;python_requires&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&amp;gt;=3.6&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# Python版本要求&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;h3 class="relative group"&gt;&lt;strong&gt;2. 关键参数详解&lt;/strong&gt;
+ &lt;div id="2-关键参数详解" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e5%85%b3%e9%94%ae%e5%8f%82%e6%95%b0%e8%af%a6%e8%a7%a3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(1) &lt;code&gt;name&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="1" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：包在 PyPI 上的唯一标识符。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规则&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;必须全小写，可用连字符（&lt;code&gt;-&lt;/code&gt;），如 &lt;code&gt;my-package&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;需在 PyPI 上未被占用（上传前检查）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(2) &lt;code&gt;version&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="2" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：包的版本号，每次更新必须递增。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;格式&lt;/strong&gt;：推荐语义化版本（如 &lt;code&gt;1.0.0&lt;/code&gt;, &lt;code&gt;0.2.5&lt;/code&gt;）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(3) &lt;code&gt;packages&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="3" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：指定包含的 Python 包目录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动发现&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;find_packages&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="c1"&gt;# 自动搜索所有含 __init__.py 的目录&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;手动指定&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;my_package&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;my_package.submodule&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(4) &lt;code&gt;install_requires&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="4" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：定义包的依赖库及版本约束。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;install_requires&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;requests&amp;gt;=2.25.1&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 最低版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;numpy&amp;lt;1.22,&amp;gt;=1.20&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 版本范围&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;pandas&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 不限制版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(5) &lt;code&gt;entry_points&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="5" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：定义命令行工具入口，生成可执行命令。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;entry_points&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;console_scripts&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;my-command=my_package.module:main&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 格式：命令名=包.模块:函数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;用户安装后可直接运行 &lt;code&gt;my-command&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(6) &lt;code&gt;package_data&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="6" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：包含包内的非代码文件（如数据、配置文件）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;package_data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;my_package&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;data/*.csv&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;templates/*.html&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(7) &lt;code&gt;include_package_data&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="7" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：自动包含 &lt;code&gt;MANIFEST.in&lt;/code&gt; 中指定的文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用法&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;include_package_data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 需配合 MANIFEST.in 文件&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class="relative group"&gt;&lt;strong&gt;(8) &lt;code&gt;classifiers&lt;/code&gt;&lt;/strong&gt;
+ &lt;div id="8" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：为 PyPI 提供包的分类标签（便于搜索）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用选项&lt;/strong&gt;：
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;classifiers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Programming Language :: Python :: 3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;License :: OSI Approved :: MIT License&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Operating System :: OS Independent&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Topic :: Software Development :: Libraries&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;完整列表见：&lt;a href="https://pypi.org/classifiers/" target="_blank"&gt;PyPI Classifiers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;h3 class="relative group"&gt;&lt;strong&gt;3. 完整示例&lt;/strong&gt;
+ &lt;div id="3-完整示例" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e5%ae%8c%e6%95%b4%e7%a4%ba%e4%be%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;假设项目结构如下：&lt;/p&gt;</description></item><item><title>Android-PrivateDNS</title><link>https://myblog.050626.xyz/posts/android-privatedns/</link><pubDate>Tue, 04 Feb 2025 13:32:01 +0000</pubDate><guid>https://myblog.050626.xyz/posts/android-privatedns/</guid><description>&lt;h2 class="relative group"&gt;3. Add a provider that offers secure DNS
+ &lt;div id="3-add-a-provider-that-offers-secure-dns" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-add-a-provider-that-offers-secure-dns" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;This is where it can get a bit tricky. You need to have the address of a provider that offers Private DNS. Here&amp;rsquo;s my provider of choice: &lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1dot1dot1dot1.cloudflare-dns.com&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 class="relative group"&gt;Some other possible hostnames you can use:
+ &lt;div id="some-other-possible-hostnames-you-can-use" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#some-other-possible-hostnames-you-can-use" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google DNS: dns.google&lt;/p&gt;</description></item><item><title>7-Amazing-CLI-Tools</title><link>https://myblog.050626.xyz/posts/7-amazing-cli-tools/</link><pubDate>Tue, 04 Feb 2025 13:29:20 +0000</pubDate><guid>https://myblog.050626.xyz/posts/7-amazing-cli-tools/</guid><description>&lt;p&gt;You can find my dotfiles &lt;a href="https://github.com/josean-dev/dev-environment-files" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Open a terminal window
+ &lt;div id="open-a-terminal-window" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#open-a-terminal-window" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Open a terminal window on your macOs or linux machine.&lt;/p&gt;
+&lt;p&gt;I’m using &lt;strong&gt;Alacritty&lt;/strong&gt; on &lt;strong&gt;macOs&lt;/strong&gt; and I’m using the &lt;strong&gt;zsh&lt;/strong&gt; shell.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Install Homebrew
+ &lt;div id="install-homebrew" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#install-homebrew" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Run the following command:&lt;/p&gt;</description></item><item><title>图形化相关科普</title><link>https://myblog.050626.xyz/posts/%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%9B%B8%E5%85%B3%E7%A7%91%E6%99%AE/</link><pubDate>Tue, 04 Feb 2025 13:26:58 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%9B%B8%E5%85%B3%E7%A7%91%E6%99%AE/</guid><description>&lt;p&gt;Wayland、Xorg、GNOME、KDE 这些术语在 Linux 图形系统和桌面环境中扮演着不同的角色。它们分别负责不同的功能，彼此之间相互协作，提供完整的图形用户体验。下面我将解释它们的关系以及各自的定义：&lt;/p&gt;</description></item><item><title>Linux文件FILE</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</link><pubDate>Tue, 04 Feb 2025 13:25:48 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</guid><description>&lt;h1 class="relative group"&gt;文件描述符
+ &lt;div id="文件描述符" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e6%8f%8f%e8%bf%b0%e7%ac%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;文件在 Linux 系统中通过文件描述符与内核进行交互。打开文件时，Linux 内核会执行以下步骤：&lt;/p&gt;</description></item><item><title>Linux文件描述符(fd)</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</link><pubDate>Tue, 04 Feb 2025 13:24:22 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;作者: 杰克小麻雀&lt;br&gt;
+原文链接: &lt;a href="https://blog.csdn.net/yushuaigee/article/details/107883964" target="_blank"&gt;https://blog.csdn.net/yushuaigee/article/details/107883964&lt;/a&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;h3 class="relative group"&gt;1、从一个最常见的例子说起
+ &lt;div id="1从一个最常见的例子说起" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1%e4%bb%8e%e4%b8%80%e4%b8%aa%e6%9c%80%e5%b8%b8%e8%a7%81%e7%9a%84%e4%be%8b%e5%ad%90%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在使用Linux的过程中， 我们平时经常看到下面这样的用法：&lt;/p&gt;</description></item><item><title>Linux无需密码登陆-适合服务器</title><link>https://myblog.050626.xyz/posts/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</link><pubDate>Tue, 04 Feb 2025 13:22:07 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid><description>&lt;h4 class="relative group"&gt;需求
+ &lt;div id="需求" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9c%80%e6%b1%82" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="在这里插入图片描述"
+ src="https://i-blog.csdnimg.cn/blog_migrate/fdf416e80dcea03a8e49488f2d473f3e.jpeg#pic_center"
+ &gt;&lt;/figure&gt;
+&lt;br&gt;
+最近我们在开发一个基于树莓派的小盒子，我们会采购一些树莓派，装好外盒，装好&lt;a href="https://so.csdn.net/so/search?q=arm&amp;amp;spm=1001.2101.3001.7020" target="_blank"&gt;arm&lt;/a&gt;版本的【Ubuntu Server 20.04】系统，并且装上我们开发的配套软件，对接我们云端的服务，最终把小盒子卖给用户并提供一些收费的服务。我们在安装系统的时候使用了Ubuntu自带的磁盘&lt;a href="https://so.csdn.net/so/search?q=%E5%8A%A0%E5%AF%86&amp;amp;spm=1001.2101.3001.7020" target="_blank"&gt;加密&lt;/a&gt;功能，确保机器在不开机的情况下不能被轻易的取出TF卡读取数据。&lt;/p&gt;</description></item><item><title>hexo添加存活时间和访问人数</title><link>https://myblog.050626.xyz/posts/hexo%E6%B7%BB%E5%8A%A0%E5%AD%98%E6%B4%BB%E6%97%B6%E9%97%B4%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0/</link><pubDate>Mon, 27 Jan 2025 18:46:31 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hexo%E6%B7%BB%E5%8A%A0%E5%AD%98%E6%B4%BB%E6%97%B6%E9%97%B4%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0/</guid><description>&lt;p&gt;你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤：&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. &lt;strong&gt;不蒜子访问量统计的代码添加&lt;/strong&gt;
+ &lt;div id="1-不蒜子访问量统计的代码添加" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e4%b8%8d%e8%92%9c%e5%ad%90%e8%ae%bf%e9%97%ae%e9%87%8f%e7%bb%9f%e8%ae%a1%e7%9a%84%e4%bb%a3%e7%a0%81%e6%b7%bb%e5%8a%a0" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。&lt;/p&gt;</description></item><item><title>我的大二上</title><link>https://myblog.050626.xyz/posts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%BA%8C%E4%B8%8A/</link><pubDate>Wed, 15 Jan 2025 20:35:06 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%BA%8C%E4%B8%8A/</guid><description>&lt;h1 class="relative group"&gt;1.前序
+ &lt;div id="1前序" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1%e5%89%8d%e5%ba%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;大二已经过去一半，我也现在还在家中🏠写下这份存档点🗃, 以此留下浅浅的回忆能够让以后回想起这。&lt;/p&gt;</description></item><item><title>我的大一</title><link>https://myblog.050626.xyz/posts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%B8%80/</link><pubDate>Wed, 15 Jan 2025 20:34:54 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%B8%80/</guid><description>&lt;h1 class="relative group"&gt;前序
+ &lt;div id="前序" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e5%ba%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;时光荏苒，不知不觉间我已经大二了，已经可以说是成为一个老毕登了。为了让自己留下一份浅浅的回忆，故作此文章 blog 来作为一个存档点。&lt;/p&gt;</description></item><item><title>Linux下.desktop创建时发生的错误</title><link>https://myblog.050626.xyz/posts/linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/</link><pubDate>Fri, 20 Dec 2024 10:04:36 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;好用的工具: &lt;code&gt;desktop-file-validate&lt;/code&gt; 这个来检查编写的错误&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class="relative group"&gt;例子
+ &lt;div id="例子" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%be%8b%e5%ad%90" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;Desktop Entry&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Todoist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;This is balabala&lt;span class="o"&gt;(&lt;/span&gt;填任何东西都可以&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/ice/....
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/ice/.....
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Application
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Utility&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;这个就是典型的 &lt;code&gt;.desktop&lt;/code&gt; 的编写例子&lt;/strong&gt;, 其余什么的 &lt;code&gt;.desktop&lt;/code&gt; 文件都可以参考这个来编写&lt;/p&gt;</description></item><item><title>spectre和meltdown</title><link>https://myblog.050626.xyz/posts/spectre%E5%92%8Cmeltdown/</link><pubDate>Fri, 13 Dec 2024 20:11:19 +0000</pubDate><guid>https://myblog.050626.xyz/posts/spectre%E5%92%8Cmeltdown/</guid><description>&lt;p&gt;就利用到了 cache 的缓存的时间不一样 (访问某些位置时会发生访问时间快的问题使得可以通过这个来得到其他进程的数据内容)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分支预测 (speculative execution)&lt;/li&gt;
+&lt;li&gt;侧信道攻击 (side-channel attack)&lt;/li&gt;
+&lt;li&gt;访问时间差异获取数据内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;通过下面的这张图基本也可以理解个大概了&lt;/p&gt;</description></item><item><title>linux进程调度</title><link>https://myblog.050626.xyz/posts/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</link><pubDate>Fri, 13 Dec 2024 20:09:49 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</guid><description>&lt;h3 class="relative group"&gt;00:00 - ⏰ 进程调度
+ &lt;div id="0000----进程调度" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#0000----%e8%bf%9b%e7%a8%8b%e8%b0%83%e5%ba%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;总结：
+ &lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程调度的目的是在多个程序或进程之间合理分配 CPU 时间。最初，程序通过主动调用 API 函数交出 CPU，但有时进程不合作，比如陷入死循环或长时间占用 CPU，导致其他进程无法执行。&lt;/p&gt;</description></item><item><title>多进程和多线程,并发和并行</title><link>https://myblog.050626.xyz/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/</link><pubDate>Fri, 13 Dec 2024 20:03:38 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/</guid><description>&lt;h3 class="relative group"&gt;1. &lt;strong&gt;多进程 (Multiprocessing)&lt;/strong&gt;
+ &lt;div id="1-多进程-multiprocessing" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%a4%9a%e8%bf%9b%e7%a8%8b-multiprocessing" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：假设你需要进行大量的文件处理任务，比如读取多个文件、处理内容并写入新文件。&lt;/p&gt;</description></item><item><title>流行的大量数据或者大文件加密</title><link>https://myblog.050626.xyz/posts/%E6%B5%81%E8%A1%8C%E7%9A%84%E5%A4%A7%E9%87%8F%E6%95%B0%E6%8D%AE%E6%88%96%E8%80%85%E5%A4%A7%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86/</link><pubDate>Mon, 18 Nov 2024 15:51:27 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%B5%81%E8%A1%8C%E7%9A%84%E5%A4%A7%E9%87%8F%E6%95%B0%E6%8D%AE%E6%88%96%E8%80%85%E5%A4%A7%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86/</guid><description>&lt;p&gt;在处理大文件或大量数据时，流行的加密方法通常是采用 &lt;strong&gt;混合加密方案&lt;/strong&gt;，即结合了 &lt;strong&gt;对称加密&lt;/strong&gt;（如 AES）和 &lt;strong&gt;非对称加密&lt;/strong&gt;（如 RSA）的方法。这样可以在保证安全性的同时，提高效率，避免直接对大文件进行加密所带来的性能瓶颈。&lt;/p&gt;</description></item><item><title>RSA加密,数字签名和HAS算法结合例子</title><link>https://myblog.050626.xyz/posts/rsa%E5%8A%A0%E5%AF%86-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%92%8Chas%E7%AE%97%E6%B3%95%E7%BB%93%E5%90%88%E4%BE%8B%E5%AD%90/</link><pubDate>Mon, 18 Nov 2024 15:49:54 +0000</pubDate><guid>https://myblog.050626.xyz/posts/rsa%E5%8A%A0%E5%AF%86-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%92%8Chas%E7%AE%97%E6%B3%95%E7%BB%93%E5%90%88%E4%BE%8B%E5%AD%90/</guid><description>&lt;h3 class="relative group"&gt;&lt;strong&gt;情境概述&lt;/strong&gt;
+ &lt;div id="情境概述" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%83%85%e5%a2%83%e6%a6%82%e8%bf%b0" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Alice 和 Bob 是通信双方。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：确保消息 \( M \) 的机密性、完整性和来源可验证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用的技术&lt;/strong&gt;：RSA 加密、数字签名和 Hash 算法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;&lt;strong&gt;双方应持有的密钥&lt;/strong&gt;
+ &lt;div id="双方应持有的密钥" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%8c%e6%96%b9%e5%ba%94%e6%8c%81%e6%9c%89%e7%9a%84%e5%af%86%e9%92%a5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Alice&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>RSA加密算法</title><link>https://myblog.050626.xyz/posts/rsa%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</link><pubDate>Mon, 18 Nov 2024 15:38:01 +0000</pubDate><guid>https://myblog.050626.xyz/posts/rsa%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</guid><description>&lt;h1 class="relative group"&gt;RSA 加密算法解释
+ &lt;div id="rsa-加密算法解释" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rsa-%e5%8a%a0%e5%af%86%e7%ae%97%e6%b3%95%e8%a7%a3%e9%87%8a" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h3 class="relative group"&gt;一、RSA 加密算法的数学原理
+ &lt;div id="一rsa-加密算法的数学原理" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80rsa-%e5%8a%a0%e5%af%86%e7%ae%97%e6%b3%95%e7%9a%84%e6%95%b0%e5%ad%a6%e5%8e%9f%e7%90%86" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;1. 生成密钥对
+ &lt;div id="1-生成密钥对" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e7%94%9f%e6%88%90%e5%af%86%e9%92%a5%e5%af%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;步骤如下&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>chroot</title><link>https://myblog.050626.xyz/posts/chroot/</link><pubDate>Mon, 14 Oct 2024 17:00:36 +0000</pubDate><guid>https://myblog.050626.xyz/posts/chroot/</guid><description>&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdXX /mnt 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdaXX /mnt/home&lt;span class="o"&gt;(&lt;/span&gt;有这个分区的话&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev /mnt/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev/pts /mnt/dev/pts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /proc /mnt/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /sys /mnt/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /run /mnt/run
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /etc/resolv. conf /mnt/etc/resolv. conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /tmp /mnt/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo chroot /mnt &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 class="relative group"&gt;什么是 &lt;code&gt;chroot&lt;/code&gt;？
+ &lt;div id="什么是-chroot" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-chroot" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;chroot&lt;/code&gt;（Change Root）是 Linux/Unix 系统中的一种工具，它允许你将当前的根文件系统切换到指定的目录，使该目录成为虚拟机或类似于容器的环境。简单来说，&lt;code&gt;chroot&lt;/code&gt; 可以将系统的根目录 &lt;code&gt;/&lt;/code&gt; 改变为某个其他的目录，这样你可以在这个隔离的环境下操作，不影响主系统。这种方式通常用于恢复系统、测试环境、构建软件或者运行独立的系统。&lt;/p&gt;</description></item><item><title>bootloader 和 boot manager的区别（中文）</title><link>https://myblog.050626.xyz/posts/bootloader-%E5%92%8C-boot-manager%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%AD%E6%96%87/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/bootloader-%E5%92%8C-boot-manager%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%AD%E6%96%87/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;bootloader&lt;/strong&gt; is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system&amp;rsquo;s firmware (e.g., BIOS/UEFI).&lt;/p&gt;
+&lt;/blockquote&gt;&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;boot manager&lt;/strong&gt; is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. ==It operates after the system firmware has selected a boot device but before the operating system is loaded.==&lt;/p&gt;</description></item><item><title>BOOTLOADER和BOOT MANAGER的区别（English）</title><link>https://myblog.050626.xyz/posts/bootloader%E5%92%8Cboot-manager%E7%9A%84%E5%8C%BA%E5%88%ABenglish/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/bootloader%E5%92%8Cboot-manager%E7%9A%84%E5%8C%BA%E5%88%ABenglish/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;bootloader&lt;/strong&gt; is a program responsible for loading the operating system kernel into memory and starting the operating system. It operates at the low level, interfacing directly with the system&amp;rsquo;s firmware (e.g., BIOS/UEFI).&lt;/p&gt;
+&lt;/blockquote&gt;&lt;blockquote&gt;
+ &lt;p&gt;A &lt;strong&gt;boot manager&lt;/strong&gt; is a higher-level program that allows users to select from multiple operating systems or kernels to boot into. ==It operates after the system firmware has selected a boot device but before the operating system is loaded.==&lt;/p&gt;</description></item><item><title>GPT分区方案</title><link>https://myblog.050626.xyz/posts/gpt%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/gpt%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</guid><description>&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="p18"
+ src="pictures/18.webp"
+ &gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;GPT（GUID 分区表）&lt;/strong&gt; 分区方案在结构、功能以及与引导加载程序和系统引导的交互方式方面与 &lt;strong&gt;MBR（主引导记录）&lt;/strong&gt; 方案有很大不同。让我们比较一下这两者，并了解 GPT 在系统引导环境中的工作原理，尤其是对于双引导场景。&lt;/p&gt;</description></item><item><title>GRUB</title><link>https://myblog.050626.xyz/posts/grub/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/grub/</guid><description>&lt;p&gt;是的，&lt;strong&gt;GRUB 不会将其所有引导加载程序代码都存储在 &lt;code&gt;/boot/grub&lt;/code&gt;&lt;/strong&gt; 中。它使用 &lt;strong&gt;多阶段架构&lt;/strong&gt;，其中引导加载程序的不同部分存储在不同的位置，这对于使用 &lt;strong&gt;MBR&lt;/strong&gt; 和 &lt;strong&gt;GPT&lt;/strong&gt; 分区方案的系统至关重要，尤其是在 &lt;strong&gt;BIOS 模式&lt;/strong&gt; 下启动时。&lt;/p&gt;</description></item><item><title>MBR分区方案</title><link>https://myblog.050626.xyz/posts/mbr%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/mbr%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;MBR（主引导记录） 结构就是&lt;strong&gt;主引导代码+分区表（+post-mbr gap）&lt;/strong&gt;，&lt;code&gt;主引导代码&lt;/code&gt; 就是专门负责用来加载系统到内存中的，&lt;code&gt;分区表&lt;/code&gt; 就是一个磁盘的整体布局。&lt;code&gt;post-mbr gap&lt;/code&gt; 就是用来过渡引导的阶段 1 和阶段 2 的。如果就是，主引导记录用来引导 GRUB，==则就会出现 grub 的代码覆盖了原本的主引导的原先代码。==&lt;/p&gt;</description></item><item><title>固件 驱动程序</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F/</guid><description>&lt;h3 class="relative group"&gt;&lt;strong&gt;固件&lt;/strong&gt;
+ &lt;div id="固件" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%ba%e4%bb%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：固件是嵌入硬件或由系统加载以直接控制硬件内部操作的低级软件。它通常存储在硬件设备本身的非易失性存储器（如 ROM、EEPROM 或闪存）中。&lt;/p&gt;</description></item><item><title>固件 硬件 系统</title><link>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E7%A1%AC%E4%BB%B6-%E7%B3%BB%E7%BB%9F/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BA%E4%BB%B6-%E7%A1%AC%E4%BB%B6-%E7%B3%BB%E7%BB%9F/</guid><description>&lt;p&gt;在 Linux 中，&lt;strong&gt;固件&lt;/strong&gt; 是指与特定硬件组件紧密相关的低级软件，通过提供指令和控制机制使它们能够正常运行。此固件在内核之下运行，但对于硬件与操作系统交互至关重要。&lt;/p&gt;</description></item><item><title>简单总结MBR和GPT分区</title><link>https://myblog.050626.xyz/posts/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93mbr%E5%92%8Cgpt%E5%88%86%E5%8C%BA/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93mbr%E5%92%8Cgpt%E5%88%86%E5%8C%BA/</guid><description>&lt;h1 class="relative group"&gt;boot 方式和分区方案的最佳配合
+ &lt;div id="boot-方式和分区方案的最佳配合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#boot-%e6%96%b9%e5%bc%8f%e5%92%8c%e5%88%86%e5%8c%ba%e6%96%b9%e6%a1%88%e7%9a%84%e6%9c%80%e4%bd%b3%e9%85%8d%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;uefi+gpt&lt;/li&gt;
+&lt;li&gt;bios+mbr&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;BIOS+MBR
+ &lt;div id="biosmbr" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#biosmbr" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;MBR (主引导记录)的整体详细结构简单介绍就是：&lt;code&gt;主引导代码+分区表+post-mbr gap&lt;/code&gt;&lt;/p&gt;</description></item><item><title>一个整体的开机流程</title><link>https://myblog.050626.xyz/posts/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 10 Oct 2024 20:30:57 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E4%B8%80%E4%B8%AA%E6%95%B4%E4%BD%93%E7%9A%84%E5%BC%80%E6%9C%BA%E6%B5%81%E7%A8%8B/</guid><description>&lt;p&gt;当然！启动计算机的过程，从开机到加载操作系统并进入桌面，涉及多个阶段和组件。下面详细介绍了整个启动过程，包括 BIOS/UEFI、引导加载程序、启动管理器的作用以及操作系统的加载。&lt;/p&gt;</description></item><item><title>文件系统和卷的关系</title><link>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</link><pubDate>Fri, 27 Sep 2024 17:49:14 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</guid><description>&lt;h1 class="relative group"&gt;大致流程
+ &lt;div id="大致流程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e8%87%b4%e6%b5%81%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;流程如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将硬盘分区，并将其初始化为 &lt;strong&gt;物理卷（PV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;将物理卷加入到一个 &lt;strong&gt;卷组（VG）&lt;/strong&gt; 中。&lt;/li&gt;
+&lt;li&gt;在卷组中创建 &lt;strong&gt;逻辑卷（LV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在逻辑卷上创建文件系统（如 Ext4、XFS 等）。&lt;/li&gt;
+&lt;li&gt;将逻辑卷 &lt;strong&gt;挂载&lt;/strong&gt; 到系统目录中，以便访问和存储数据。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;文件系统介绍
+ &lt;div id="文件系统介绍" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%bb%8b%e7%bb%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;1. 文件系统
+ &lt;div id="1-文件系统" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;文件系统说白了就是操作系统管理硬盘中数据的一个方式。&lt;/strong&gt; 详细点就是：问阿金系统可以管理 &lt;code&gt;硬盘&lt;/code&gt;，&lt;code&gt;SSD&lt;/code&gt;，&lt;code&gt;u盘&lt;/code&gt; 等存储设备的数据布局，提供读写文件的接口。文件系统负责存储文件、文件的元数据（如文件名称、权限、时间戳等），以及组织文件所在的路径结构（如文件夹层级）。&lt;/p&gt;</description></item><item><title>硬盘相关-卷</title><link>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</link><pubDate>Fri, 27 Sep 2024 15:53:23 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</guid><description>&lt;h3 class="relative group"&gt;LVM（逻辑卷管理器）的概念
+ &lt;div id="lvm逻辑卷管理器的概念" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lvm%e9%80%bb%e8%be%91%e5%8d%b7%e7%ae%a1%e7%90%86%e5%99%a8%e7%9a%84%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。&lt;/p&gt;</description></item><item><title>Java中有关包的相关配置以及介绍</title><link>https://myblog.050626.xyz/posts/java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/</link><pubDate>Sat, 21 Sep 2024 16:15:08 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java%E4%B8%AD%E6%9C%89%E5%85%B3%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%8B%E7%BB%8D/</guid><description>&lt;p&gt;下面是一个详细的教程，涵盖如何将多个 Java 文件组织成包、引入包以及如何打包成 JAR 文件的过程。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 创建 Java 包
+ &lt;div id="1-创建-java-包" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%88%9b%e5%bb%ba-java-%e5%8c%85" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;1.1 目录结构
+ &lt;div id="11-目录结构" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;假设我们要创建一个名为 &lt;code&gt;com.example.myapp&lt;/code&gt; 的包，目录结构如下：&lt;/p&gt;</description></item><item><title>常用Git命令</title><link>https://myblog.050626.xyz/posts/%E5%B8%B8%E7%94%A8git%E5%91%BD%E4%BB%A4/</link><pubDate>Fri, 20 Sep 2024 16:51:32 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%B8%B8%E7%94%A8git%E5%91%BD%E4%BB%A4/</guid><description>&lt;h1 class="relative group"&gt;常用 Git 命令
+ &lt;div id="常用-git-命令" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e7%94%a8-git-%e5%91%bd%e4%bb%a4" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;Git简介
+ &lt;div id="git简介" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git%e7%ae%80%e4%bb%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/li&gt;
+&lt;li&gt;Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/li&gt;
+&lt;li&gt;Git与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class="relative group"&gt;Git与SVN的区别
+ &lt;div id="git与svn的区别" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git%e4%b8%8esvn%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Git不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等。
+如果你是一个具有使用SVN背景的人，你需要做一定的思想转换，来适应Git提供的一些概念和特征。
+Git 与 SVN 区别点：&lt;/p&gt;</description></item><item><title>git_use</title><link>https://myblog.050626.xyz/posts/git-use/</link><pubDate>Fri, 20 Sep 2024 16:50:14 +0000</pubDate><guid>https://myblog.050626.xyz/posts/git-use/</guid><description>&lt;!-- git初认识感想 --&gt;
+
+&lt;h1 class="relative group"&gt;git命令使用感想
+ &lt;div id="git命令使用感想" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git%e5%91%bd%e4%bb%a4%e4%bd%bf%e7%94%a8%e6%84%9f%e6%83%b3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;git命令初始用
+ &lt;div id="git命令初始用" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git%e5%91%bd%e4%bb%a4%e5%88%9d%e5%a7%8b%e7%94%a8" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;!-- 这是已经建了仓库，可以使用git命令n推上去的情况，因为如果没有分支这些就要创建 --&gt;
+&lt;ul&gt;
+&lt;li&gt;git init建一个.git仓库(相当于拍一张照，将本地文件都拍下来)，使得创建本地仓库，能够推送代码到远程&lt;/li&gt;
+&lt;li&gt;git add .这个是一点还是两点看路径，也可以添加想添加的代码文件,这样就将其推到一个暂存区了&lt;/li&gt;
+&lt;li&gt;git status就是查看推的状况了，可以查看有哪些文件推上去了，哪些失败了额&lt;/li&gt;
+&lt;li&gt;git commit -m “描述” 这个就是提交上去了&lt;/li&gt;
+&lt;li&gt;如果还没建分支就用git branch -M 分支名（一般是master或者是main）&lt;/li&gt;
+&lt;li&gt;git remote add origin url（一般最好用ssh密钥即建一个，后面可以不问密码）&lt;/li&gt;
+&lt;li&gt;git push origin 分支名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class="relative group"&gt;ssh密钥创建
+ &lt;div id="ssh密钥创建" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ssh%e5%af%86%e9%92%a5%e5%88%9b%e5%bb%ba" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;先cd ~/.ssh用ll看看有无id_rsa,id_rsa_pub，无就创建，用该命令：
+*** ssh-keygen -t rsa -b 4096 -C &amp;ldquo;&lt;a href="mailto:nni461904@gmail.com" &gt;nni461904@gmail.com&lt;/a&gt;&amp;rdquo; ***&lt;/li&gt;
+&lt;li&gt;创建好后就cat命令直接获取id_rsa_pub里的密钥或者vim复制也可&lt;/li&gt;
+&lt;li&gt;然后就进github网页设置那设置ssh密钥就可了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class="relative group"&gt;git push报错
+ &lt;div id="git-push报错" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-push%e6%8a%a5%e9%94%99" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;这个学问就大了，要看报错，这是冲突性问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;git push报错&lt;a href="https://www.bilibili.com/video/BV1BA41117Qb/?share_source=copy_web&amp;amp;vd_source=7883c34abf56792377b6d59ed4b3146b" title="【push冲突与解决方法，git提交冲突的解决方法，冲突产生的原因，git-pull操作，2023年git最新实用教程】" target="_blank"&gt;git push冲突&lt;/a&gt;&lt;/p&gt;</description></item><item><title>git版本管理</title><link>https://myblog.050626.xyz/posts/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 20 Sep 2024 16:49:27 +0000</pubDate><guid>https://myblog.050626.xyz/posts/git%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;在多人协作时，使用 Git 进行版本管理可以有效地避免和解决冲突问题，但仍然可能会遇到版本冲突。冲突的主要原因是不同开发者对同一个文件的同一部分进行修改，而 Git 无法自动合并这些更改。下面详细解释 Git 版本冲突出现的情形、如何解决冲突以及如何在多人合作中进行版本管理。&lt;/p&gt;</description></item><item><title>javadoc生成注释文件</title><link>https://myblog.050626.xyz/posts/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/</link><pubDate>Fri, 20 Sep 2024 16:47:41 +0000</pubDate><guid>https://myblog.050626.xyz/posts/javadoc%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/</guid><description>&lt;h3 class="relative group"&gt;什么是 Javadoc？
+ &lt;div id="什么是-javadoc" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-javadoc" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Javadoc 是 Java 编程语言中用于生成 API 文档的工具。它通过解析源代码中的特殊注释，生成带有结构化文档的 HTML 文件，从而为类、方法、字段等生成说明文档。Javadoc 是 Java 编程中极为重要的文档生成工具，有助于开发者理解和使用代码。&lt;/p&gt;</description></item><item><title>nvim_command</title><link>https://myblog.050626.xyz/posts/nvim-command/</link><pubDate>Sun, 15 Sep 2024 00:06:38 +0000</pubDate><guid>https://myblog.050626.xyz/posts/nvim-command/</guid><description>&lt;h1 class="relative group"&gt;安装最新版本 neovim
+ &lt;div id="安装最新版本-neovim" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ae%89%e8%a3%85%e6%9c%80%e6%96%b0%e7%89%88%e6%9c%ac-neovim" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;要在 Ubuntu 上将 Neovim 更新到 0.8.0 及以上版本，可以通过以下步骤操作：&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 卸载当前版本的 Neovim
+ &lt;div id="1-卸载当前版本的-neovim" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%8d%b8%e8%bd%bd%e5%bd%93%e5%89%8d%e7%89%88%e6%9c%ac%e7%9a%84-neovim" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;首先，卸载你当前版本的 Neovim：&lt;/p&gt;</description></item><item><title>vim_command</title><link>https://myblog.050626.xyz/posts/vim-command/</link><pubDate>Sat, 14 Sep 2024 20:47:20 +0000</pubDate><guid>https://myblog.050626.xyz/posts/vim-command/</guid><description>&lt;p&gt;在 Vim 中，常用的命令和导航键位对初学者和高级用户都非常有帮助。以下是一些常用命令、移动方向的键位以及如何快速移动到某个行内的位置。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;常用命令模式命令
+ &lt;div id="常用命令模式命令" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e5%91%bd%e4%bb%a4" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;进入命令模式&lt;/strong&gt;：按 &lt;code&gt;Esc&lt;/code&gt; 键进入命令模式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;退出 Vim&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:q&lt;/code&gt; 退出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:q!&lt;/code&gt; 强制退出（不保存）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:wq&lt;/code&gt; 保存并退出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:x&lt;/code&gt; 保存并退出（等同于 &lt;code&gt;:wq&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保存文件&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:w&lt;/code&gt; 保存文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:w new_filename&lt;/code&gt; 另存为新文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 class="relative group"&gt;移动方向的键位
+ &lt;div id="移动方向的键位" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a7%bb%e5%8a%a8%e6%96%b9%e5%90%91%e7%9a%84%e9%94%ae%e4%bd%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本方向移动&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>软连接和/.desktop图标</title><link>https://myblog.050626.xyz/posts/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</link><pubDate>Sat, 14 Sep 2024 16:36:35 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</guid><description>&lt;h1 class="relative group"&gt;两者区别
+ &lt;div id="两者区别" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%a4%e8%80%85%e5%8c%ba%e5%88%ab" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别：&lt;/p&gt;</description></item><item><title>java_command</title><link>https://myblog.050626.xyz/posts/java-command/</link><pubDate>Sat, 14 Sep 2024 16:34:47 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java-command/</guid><description>&lt;p&gt;在Java中，编译和运行程序涉及几个主要命令，包括 &lt;code&gt;javac&lt;/code&gt;（编译器）、&lt;code&gt;java&lt;/code&gt;（运行器）以及其他辅助命令。以下是最常用的Java编译和运行命令：&lt;/p&gt;</description></item><item><title>java_lib常见error</title><link>https://myblog.050626.xyz/posts/java-lib%E5%B8%B8%E8%A7%81error/</link><pubDate>Sat, 14 Sep 2024 16:33:54 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java-lib%E5%B8%B8%E8%A7%81error/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;在 javac 编译和使用 java 运行时自动添加库，使用&amp;ndash;module-path 添加库路径，使用&amp;ndash;module-add 添加库&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;在较新的 Ubuntu 版本（如 22.04）中，&lt;code&gt;openjdk-8-jdk&lt;/code&gt; 包仅包含 OpenJDK 8 的核心功能，不再包括 JavaFX 库。JavaFX 自 Java 11 起被移除出了 JDK，所以在 OpenJDK 8 也没有自动包含 JavaFX。&lt;/p&gt;</description></item><item><title>java_set</title><link>https://myblog.050626.xyz/posts/java-set/</link><pubDate>Sat, 14 Sep 2024 16:31:40 +0000</pubDate><guid>https://myblog.050626.xyz/posts/java-set/</guid><description>&lt;p&gt;在Windows上配置Java环境以便能够编译和运行Java源程序涉及三个主要步骤：安装JDK、配置环境变量（包括&lt;code&gt;JAVA_HOME&lt;/code&gt;、&lt;code&gt;PATH&lt;/code&gt;和&lt;code&gt;CLASSPATH&lt;/code&gt;），以及设置&lt;code&gt;CLASSPATH&lt;/code&gt;以便程序能够找到所需的库文件。以下是详细步骤：&lt;/p&gt;</description></item><item><title>hexo个人博客创建</title><link>https://myblog.050626.xyz/posts/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/</link><pubDate>Sat, 07 Sep 2024 14:45:48 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;三条常用命令：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;hexo clean&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo generate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo deploy&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;&lt;blockquote&gt;
+ &lt;p&gt;上面的这些命令以及配置文件（. yml）这些全部都是基于 source 目录下去搜索执行的。因此，如果是配置路径是就要注意这个是要基于 source 目录的，配置路径直接/img/test. jpg 这种是以 source 目录作为根目录的。因此要你就写完整相对目录，不然就在 source 文夹下创建文件夹。&lt;/p&gt;</description></item><item><title>内存区域介绍</title><link>https://myblog.050626.xyz/posts/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%BB%8B%E7%BB%8D/</link><pubDate>Sat, 07 Sep 2024 11:32:17 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%BB%8B%E7%BB%8D/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;The program code, global variables, and constant global variables are all stored in &lt;em&gt;static&lt;/em&gt; segments, as these all have static lifetimes and known sizes at compile time.&lt;/p&gt;
+&lt;p&gt;If we look at the addresses printed by &lt;code&gt;mexplore&lt;/code&gt;, we see that the global variables stored in are at relatively low memory addresses (around &lt;code&gt;0x60'0000&lt;/code&gt; hexadecimal and &lt;code&gt;0x40'0000&lt;/code&gt; hexadecimal), while the local variable is stored at a high address, close to &lt;code&gt;0x7fff'ffff'ffff&lt;/code&gt; (about 247), and the dynamically allocated character is stored in between (albeit closer to the static segments).&lt;/p&gt;</description></item><item><title>二村映射</title><link>https://myblog.050626.xyz/posts/%E4%BA%8C%E6%9D%91%E6%98%A0%E5%B0%84/</link><pubDate>Sat, 07 Sep 2024 11:25:58 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E4%BA%8C%E6%9D%91%E6%98%A0%E5%B0%84/</guid><description>&lt;p&gt;Futamura 投影（Futamura Projection）是编程语言和编译技术中的一个重要概念，由日本计算机科学家 Futamura Yoshihiko 在 1971 年提出。Futamura 投影解释了如何通过对解释器进行部分求值（Partial Evaluation），将解释器转换为编译器，以及进一步的可能转变。&lt;/p&gt;</description></item><item><title>gcc介绍</title><link>https://myblog.050626.xyz/posts/gcc%E4%BB%8B%E7%BB%8D/</link><pubDate>Sat, 07 Sep 2024 11:21:43 +0000</pubDate><guid>https://myblog.050626.xyz/posts/gcc%E4%BB%8B%E7%BB%8D/</guid><description>&lt;h1 class="relative group"&gt;编译系统（过程）
+ &lt;div id="编译系统过程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bc%96%e8%af%91%e7%b3%bb%e7%bb%9f%e8%bf%87%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="p7"
+ src="https://github.com/ice345/picture_share/blob/master/technology/7.png?raw=true"
+ &gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="p8"
+ src="https://github.com/ice345/picture_share/blob/master/technology/8.png?raw=true"
+ &gt;&lt;/figure&gt;
+&lt;p&gt;编译过程是将源代码转换成可执行文件的几个步骤的集合。每一步生成不同类型的文件，这些文件在最终的可执行程序中扮演不同的角色。以下是详细的步骤以及每个阶段产生的文件的作用：&lt;/p&gt;</description></item><item><title>hamming_number_solutions</title><link>https://myblog.050626.xyz/posts/hamming-number-solutions/</link><pubDate>Thu, 06 Jun 2024 10:59:06 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hamming-number-solutions/</guid><description>&lt;h1 class="relative group"&gt;hamming number 题解思路
+ &lt;div id="hamming-number-题解思路" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hamming-number-%e9%a2%98%e8%a7%a3%e6%80%9d%e8%b7%af" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;a href="https://www.codewars.com/kata/526d84b98f428f14a60008da" target="_blank"&gt;codewars网站&lt;/a&gt;
+ &lt;div id="题目codewars网站" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%a2%98%e7%9b%aecodewars%e7%bd%91%e7%ab%99" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;hr&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="problem description"
+ src="https://raw.githubusercontent.com/ice345/picture_share/master/study/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-28%20213429.png"
+ &gt;&lt;/figure&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;&lt;strong&gt;solutions&lt;/strong&gt;
+ &lt;div id="solutions" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solutions" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="solution"
+ src="https://raw.githubusercontent.com/ice345/picture_share/master/study/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-24%20220157.png"
+ &gt;&lt;/figure&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;***个人第一题目思路：***就一个数的质因数分解，我只要检查这个数质因数是不是只有2 3 5就行了。
+ &lt;div id="个人第一题目思路就一个数的质因数分解我只要检查这个数质因数是不是只有2-3-5就行了" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%aa%e4%ba%ba%e7%ac%ac%e4%b8%80%e9%a2%98%e7%9b%ae%e6%80%9d%e8%b7%af%e5%b0%b1%e4%b8%80%e4%b8%aa%e6%95%b0%e7%9a%84%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3%e6%88%91%e5%8f%aa%e8%a6%81%e6%a3%80%e6%9f%a5%e8%bf%99%e4%b8%aa%e6%95%b0%e8%b4%a8%e5%9b%a0%e6%95%b0%e6%98%af%e4%b8%8d%e6%98%af%e5%8f%aa%e6%9c%892-3-5%e5%b0%b1%e8%a1%8c%e4%ba%86" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;is_hamming_number&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&amp;#34;判断一个数是否是 Hamming 数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;//=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;//=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;//=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;generate_hamming_numbers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&amp;#34;生成前 n 个 Hamming 数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;hamming_numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hamming_numbers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;is_hamming_number&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;hamming_numbers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;hamming_numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;nth_hamming_number&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&amp;#34;查询第 n 个 Hamming 数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;hamming_numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;generate_hamming_numbers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;hamming_numbers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hamming_numbers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;简单明了的思路，就是不断遍历，直到找到质因数只有2，3，5的数，然后放进列表内。&lt;/p&gt;</description></item><item><title>数论知识</title><link>https://myblog.050626.xyz/posts/%E6%95%B0%E8%AE%BA%E7%9F%A5%E8%AF%86/</link><pubDate>Wed, 15 May 2024 14:59:56 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%95%B0%E8%AE%BA%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 class="relative group"&gt;#数论知识
+ &lt;div id="数论知识" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e8%ae%ba%e7%9f%a5%e8%af%86" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;:raised_hands:一些个人理解和思考（素数的一些建议看书，书本讲得不错，虽然有些点不加以细证），尤其Extened Chinese Remider Theroy那里，是个人思考总结的，仅供参考。:raised_hands:&lt;/p&gt;</description></item><item><title>latex</title><link>https://myblog.050626.xyz/posts/latex/</link><pubDate>Tue, 30 Apr 2024 00:03:29 +0000</pubDate><guid>https://myblog.050626.xyz/posts/latex/</guid><description>&lt;h1 class="relative group"&gt;Divide-and-Conquer Method Share
+ &lt;div id="divide-and-conquer-method-share" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#divide-and-conquer-method-share" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;\section{Substitution Method}&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 阐释
+ &lt;div id="1-阐释" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e9%98%90%e9%87%8a" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;代换法的关键在于利用数学归纳法。首先，要猜测一个大致的上界，并结合数学归纳法进行证明。然后，验证基本条件，确保递归满足这个上界。若无法准确猜测界限，可能需要一个一个试着证明，直到达到比较准确的界限为止。&lt;/p&gt;</description></item><item><title>docker_gitlab.md</title><link>https://myblog.050626.xyz/posts/docker-gitlab-md/</link><pubDate>Sun, 28 Apr 2024 19:58:22 +0000</pubDate><guid>https://myblog.050626.xyz/posts/docker-gitlab-md/</guid><description>&lt;h2 class="relative group"&gt;注意这些全都要根据自己所用系统是什么，ubuntu和debian这些可能都有些许出入，架构问题等
+ &lt;div id="注意这些全都要根据自己所用系统是什么ubuntu和debian这些可能都有些许出入架构问题等" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b3%a8%e6%84%8f%e8%bf%99%e4%ba%9b%e5%85%a8%e9%83%bd%e8%a6%81%e6%a0%b9%e6%8d%ae%e8%87%aa%e5%b7%b1%e6%89%80%e7%94%a8%e7%b3%bb%e7%bb%9f%e6%98%af%e4%bb%80%e4%b9%88ubuntu%e5%92%8cdebian%e8%bf%99%e4%ba%9b%e5%8f%af%e8%83%bd%e9%83%bd%e6%9c%89%e4%ba%9b%e8%ae%b8%e5%87%ba%e5%85%a5%e6%9e%b6%e6%9e%84%e9%97%ae%e9%a2%98%e7%ad%89" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h1 class="relative group"&gt;更新，安装依赖项
+ &lt;div id="更新安装依赖项" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9b%b4%e6%96%b0%e5%ae%89%e8%a3%85%e4%be%9d%e8%b5%96%e9%a1%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common&lt;/p&gt;</description></item><item><title>docker</title><link>https://myblog.050626.xyz/posts/docker/</link><pubDate>Sun, 28 Apr 2024 19:09:55 +0000</pubDate><guid>https://myblog.050626.xyz/posts/docker/</guid><description>&lt;h1 class="relative group"&gt;docker learn
+ &lt;div id="docker-learn" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#docker-learn" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;h1 class="relative group"&gt;table of contents
+ &lt;div id="table-of-contents" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#table-of-contents" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker-learn" &gt;docker learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#table-of-contents" &gt;table of contents&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%92%8cdocker" &gt;虚拟机和docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker%e5%92%8c%e5%ae%b9%e5%99%a8" &gt;docker和容器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker%e8%ae%b2%e8%a7%a3" &gt;docker讲解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://myblog.050626.xyz/posts/docker/#docker_desktop%e4%bb%8b%e7%bb%8d" &gt;docker_desktop介绍&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;虚拟机和docker
+ &lt;div id="虚拟机和docker" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%92%8cdocker" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟机和容器都是一种虚拟化技术，都是能实现一个操作系统上运行一些别的系统，运行一些安装包什么的&lt;/p&gt;</description></item><item><title>Hello World</title><link>https://myblog.050626.xyz/posts/hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hello-world/</guid><description>&lt;p&gt;Welcome to &lt;a href="https://hexo.io/" target="_blank"&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href="https://hexo.io/docs/" target="_blank"&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href="https://hexo.io/docs/troubleshooting.html" target="_blank"&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href="https://github.com/hexojs/hexo/issues" target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Quick Start
+ &lt;div id="quick-start" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-start" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;Create a new post
+ &lt;div id="create-a-new-post" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-a-new-post" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ hexo new &lt;span class="s2"&gt;&amp;#34;My New Post&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;More info: &lt;a href="https://hexo.io/docs/writing.html" target="_blank"&gt;Writing&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

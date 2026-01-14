@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on ICE345のBLOG</title><link>https://myblog.050626.xyz/categories/linux/</link><description>Recent content in Linux on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 13 Jun 2025 16:55:45 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH简单配置</title><link>https://myblog.050626.xyz/posts/ssh%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 13 Jun 2025 16:55:45 +0000</pubDate><guid>https://myblog.050626.xyz/posts/ssh%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</guid><description>&lt;h2 class="relative group"&gt;一、在客户端生成 SSH 密钥对
+ &lt;div id="一在客户端生成-ssh-密钥对" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e5%9c%a8%e5%ae%a2%e6%88%b7%e7%ab%af%e7%94%9f%e6%88%90-ssh-%e5%af%86%e9%92%a5%e5%af%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;在你的本地客户端（例如你的笔记本或开发机器）上：&lt;/p&gt;</description></item><item><title>Linux-DNS网络管理</title><link>https://myblog.050626.xyz/posts/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 06 Jun 2025 13:45:51 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;是的，你可以在 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 文件中修改 DNS 服务器。该文件用于配置 Linux 系统使用的 DNS 解析服务器。通过编辑该文件，你可以手动指定 DNS 服务器（例如 Google 的 &lt;code&gt;8.8.8.8&lt;/code&gt; 或 Cloudflare 的 &lt;code&gt;1.1.1.1&lt;/code&gt; 等）。&lt;/p&gt;
+&lt;blockquote&gt;
+ &lt;p&gt;最好使用的是 dhcpcd 服务，这个最容易修改，就在 &lt;code&gt;/etc/dhcpcd.conf&lt;/code&gt; 中修改就行&lt;/p&gt;</description></item><item><title>Hyprland简明指北</title><link>https://myblog.050626.xyz/posts/hyprland%E7%AE%80%E6%98%8E%E6%8C%87%E5%8C%97/</link><pubDate>Fri, 06 Jun 2025 13:41:49 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hyprland%E7%AE%80%E6%98%8E%E6%8C%87%E5%8C%97/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;首先声明，并不是所有功能都是通过快捷键打开的，就是比如说: &lt;code&gt;Kool_Quick_Settings.sh&lt;/code&gt; 这个就是先通过 &lt;code&gt;yad&lt;/code&gt; 或者 &lt;code&gt;rofi&lt;/code&gt; 这些工具图形化功能栏目，然后就可以通过命令打开文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class="relative group"&gt;目录结构
+ &lt;div id="目录结构" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;省流版
+ &lt;div id="省流版" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9c%81%e6%b5%81%e7%89%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.config/hypr/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── animations
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── application-style.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── configs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hypridle.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprland.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprlock-2k.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprlock.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hyprpaper.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── initial-boot.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── Monitor_Profiles
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── monitors.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── scripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── UserConfigs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── UserScripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── v2.3.15
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── wallpaper_effects
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── wallust
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── workspaces.conf&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 class="relative group"&gt;大概说明
+ &lt;div id="大概说明" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e6%a6%82%e8%af%b4%e6%98%8e" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;最重要文件&lt;/strong&gt;: &lt;code&gt;hyprland.conf&lt;/code&gt;, 这个文件就是一个相当于 &lt;em&gt;hyprland&lt;/em&gt; 的根配置文件，窗口管理(&lt;code&gt;WM&lt;/code&gt;)的根基配置&lt;/p&gt;</description></item><item><title>7-Amazing-CLI-Tools</title><link>https://myblog.050626.xyz/posts/7-amazing-cli-tools/</link><pubDate>Tue, 04 Feb 2025 13:29:20 +0000</pubDate><guid>https://myblog.050626.xyz/posts/7-amazing-cli-tools/</guid><description>&lt;p&gt;You can find my dotfiles &lt;a href="https://github.com/josean-dev/dev-environment-files" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Open a terminal window
+ &lt;div id="open-a-terminal-window" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#open-a-terminal-window" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Open a terminal window on your macOs or linux machine.&lt;/p&gt;
+&lt;p&gt;I’m using &lt;strong&gt;Alacritty&lt;/strong&gt; on &lt;strong&gt;macOs&lt;/strong&gt; and I’m using the &lt;strong&gt;zsh&lt;/strong&gt; shell.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Install Homebrew
+ &lt;div id="install-homebrew" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#install-homebrew" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Run the following command:&lt;/p&gt;</description></item><item><title>图形化相关科普</title><link>https://myblog.050626.xyz/posts/%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%9B%B8%E5%85%B3%E7%A7%91%E6%99%AE/</link><pubDate>Tue, 04 Feb 2025 13:26:58 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%9B%B8%E5%85%B3%E7%A7%91%E6%99%AE/</guid><description>&lt;p&gt;Wayland、Xorg、GNOME、KDE 这些术语在 Linux 图形系统和桌面环境中扮演着不同的角色。它们分别负责不同的功能，彼此之间相互协作，提供完整的图形用户体验。下面我将解释它们的关系以及各自的定义：&lt;/p&gt;</description></item><item><title>Linux文件FILE</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</link><pubDate>Tue, 04 Feb 2025 13:25:48 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6file/</guid><description>&lt;h1 class="relative group"&gt;文件描述符
+ &lt;div id="文件描述符" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e6%8f%8f%e8%bf%b0%e7%ac%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;文件在 Linux 系统中通过文件描述符与内核进行交互。打开文件时，Linux 内核会执行以下步骤：&lt;/p&gt;</description></item><item><title>Linux文件描述符(fd)</title><link>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</link><pubDate>Tue, 04 Feb 2025 13:24:22 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;作者: 杰克小麻雀&lt;br&gt;
+原文链接: &lt;a href="https://blog.csdn.net/yushuaigee/article/details/107883964" target="_blank"&gt;https://blog.csdn.net/yushuaigee/article/details/107883964&lt;/a&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;h3 class="relative group"&gt;1、从一个最常见的例子说起
+ &lt;div id="1从一个最常见的例子说起" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1%e4%bb%8e%e4%b8%80%e4%b8%aa%e6%9c%80%e5%b8%b8%e8%a7%81%e7%9a%84%e4%be%8b%e5%ad%90%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在使用Linux的过程中， 我们平时经常看到下面这样的用法：&lt;/p&gt;</description></item><item><title>Linux无需密码登陆-适合服务器</title><link>https://myblog.050626.xyz/posts/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</link><pubDate>Tue, 04 Feb 2025 13:22:07 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid><description>&lt;h4 class="relative group"&gt;需求
+ &lt;div id="需求" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9c%80%e6%b1%82" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="在这里插入图片描述"
+ src="https://i-blog.csdnimg.cn/blog_migrate/fdf416e80dcea03a8e49488f2d473f3e.jpeg#pic_center"
+ &gt;&lt;/figure&gt;
+&lt;br&gt;
+最近我们在开发一个基于树莓派的小盒子，我们会采购一些树莓派，装好外盒，装好&lt;a href="https://so.csdn.net/so/search?q=arm&amp;amp;spm=1001.2101.3001.7020" target="_blank"&gt;arm&lt;/a&gt;版本的【Ubuntu Server 20.04】系统，并且装上我们开发的配套软件，对接我们云端的服务，最终把小盒子卖给用户并提供一些收费的服务。我们在安装系统的时候使用了Ubuntu自带的磁盘&lt;a href="https://so.csdn.net/so/search?q=%E5%8A%A0%E5%AF%86&amp;amp;spm=1001.2101.3001.7020" target="_blank"&gt;加密&lt;/a&gt;功能，确保机器在不开机的情况下不能被轻易的取出TF卡读取数据。&lt;/p&gt;</description></item><item><title>Linux下.desktop创建时发生的错误</title><link>https://myblog.050626.xyz/posts/linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/</link><pubDate>Fri, 20 Dec 2024 10:04:36 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;好用的工具: &lt;code&gt;desktop-file-validate&lt;/code&gt; 这个来检查编写的错误&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class="relative group"&gt;例子
+ &lt;div id="例子" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%be%8b%e5%ad%90" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;Desktop Entry&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Todoist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;This is balabala&lt;span class="o"&gt;(&lt;/span&gt;填任何东西都可以&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/ice/....
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/ice/.....
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Application
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Utility&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;这个就是典型的 &lt;code&gt;.desktop&lt;/code&gt; 的编写例子&lt;/strong&gt;, 其余什么的 &lt;code&gt;.desktop&lt;/code&gt; 文件都可以参考这个来编写&lt;/p&gt;</description></item><item><title>spectre和meltdown</title><link>https://myblog.050626.xyz/posts/spectre%E5%92%8Cmeltdown/</link><pubDate>Fri, 13 Dec 2024 20:11:19 +0000</pubDate><guid>https://myblog.050626.xyz/posts/spectre%E5%92%8Cmeltdown/</guid><description>&lt;p&gt;就利用到了 cache 的缓存的时间不一样 (访问某些位置时会发生访问时间快的问题使得可以通过这个来得到其他进程的数据内容)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分支预测 (speculative execution)&lt;/li&gt;
+&lt;li&gt;侧信道攻击 (side-channel attack)&lt;/li&gt;
+&lt;li&gt;访问时间差异获取数据内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;通过下面的这张图基本也可以理解个大概了&lt;/p&gt;</description></item><item><title>linux进程调度</title><link>https://myblog.050626.xyz/posts/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</link><pubDate>Fri, 13 Dec 2024 20:09:49 +0000</pubDate><guid>https://myblog.050626.xyz/posts/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</guid><description>&lt;h3 class="relative group"&gt;00:00 - ⏰ 进程调度
+ &lt;div id="0000----进程调度" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#0000----%e8%bf%9b%e7%a8%8b%e8%b0%83%e5%ba%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;总结：
+ &lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程调度的目的是在多个程序或进程之间合理分配 CPU 时间。最初，程序通过主动调用 API 函数交出 CPU，但有时进程不合作，比如陷入死循环或长时间占用 CPU，导致其他进程无法执行。&lt;/p&gt;</description></item><item><title>多进程和多线程,并发和并行</title><link>https://myblog.050626.xyz/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/</link><pubDate>Fri, 13 Dec 2024 20:03:38 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/</guid><description>&lt;h3 class="relative group"&gt;1. &lt;strong&gt;多进程 (Multiprocessing)&lt;/strong&gt;
+ &lt;div id="1-多进程-multiprocessing" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%a4%9a%e8%bf%9b%e7%a8%8b-multiprocessing" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：假设你需要进行大量的文件处理任务，比如读取多个文件、处理内容并写入新文件。&lt;/p&gt;</description></item><item><title>chroot</title><link>https://myblog.050626.xyz/posts/chroot/</link><pubDate>Mon, 14 Oct 2024 17:00:36 +0000</pubDate><guid>https://myblog.050626.xyz/posts/chroot/</guid><description>&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdXX /mnt 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount /dev/sdaXX /mnt/home&lt;span class="o"&gt;(&lt;/span&gt;有这个分区的话&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev /mnt/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /dev/pts /mnt/dev/pts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /proc /mnt/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /sys /mnt/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /run /mnt/run
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /etc/resolv. conf /mnt/etc/resolv. conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mount --bind /tmp /mnt/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo chroot /mnt &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 class="relative group"&gt;什么是 &lt;code&gt;chroot&lt;/code&gt;？
+ &lt;div id="什么是-chroot" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-chroot" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;chroot&lt;/code&gt;（Change Root）是 Linux/Unix 系统中的一种工具，它允许你将当前的根文件系统切换到指定的目录，使该目录成为虚拟机或类似于容器的环境。简单来说，&lt;code&gt;chroot&lt;/code&gt; 可以将系统的根目录 &lt;code&gt;/&lt;/code&gt; 改变为某个其他的目录，这样你可以在这个隔离的环境下操作，不影响主系统。这种方式通常用于恢复系统、测试环境、构建软件或者运行独立的系统。&lt;/p&gt;</description></item><item><title>软连接和/.desktop图标</title><link>https://myblog.050626.xyz/posts/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</link><pubDate>Sat, 14 Sep 2024 16:36:35 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</guid><description>&lt;h1 class="relative group"&gt;两者区别
+ &lt;div id="两者区别" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%a4%e8%80%85%e5%8c%ba%e5%88%ab" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别：&lt;/p&gt;</description></item></channel></rss>

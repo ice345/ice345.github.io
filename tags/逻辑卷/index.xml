@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>逻辑卷 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E9%80%BB%E8%BE%91%E5%8D%B7/</link><description>Recent content in 逻辑卷 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 27 Sep 2024 17:49:14 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E9%80%BB%E8%BE%91%E5%8D%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>文件系统和卷的关系</title><link>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</link><pubDate>Fri, 27 Sep 2024 17:49:14 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%8D%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</guid><description>&lt;h1 class="relative group"&gt;大致流程
+ &lt;div id="大致流程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e8%87%b4%e6%b5%81%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;流程如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将硬盘分区，并将其初始化为 &lt;strong&gt;物理卷（PV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;将物理卷加入到一个 &lt;strong&gt;卷组（VG）&lt;/strong&gt; 中。&lt;/li&gt;
+&lt;li&gt;在卷组中创建 &lt;strong&gt;逻辑卷（LV）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在逻辑卷上创建文件系统（如 Ext4、XFS 等）。&lt;/li&gt;
+&lt;li&gt;将逻辑卷 &lt;strong&gt;挂载&lt;/strong&gt; 到系统目录中，以便访问和存储数据。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 class="relative group"&gt;文件系统介绍
+ &lt;div id="文件系统介绍" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%bb%8b%e7%bb%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+
+&lt;h2 class="relative group"&gt;1. 文件系统
+ &lt;div id="1-文件系统" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;文件系统说白了就是操作系统管理硬盘中数据的一个方式。&lt;/strong&gt; 详细点就是：问阿金系统可以管理 &lt;code&gt;硬盘&lt;/code&gt;，&lt;code&gt;SSD&lt;/code&gt;，&lt;code&gt;u盘&lt;/code&gt; 等存储设备的数据布局，提供读写文件的接口。文件系统负责存储文件、文件的元数据（如文件名称、权限、时间戳等），以及组织文件所在的路径结构（如文件夹层级）。&lt;/p&gt;</description></item><item><title>硬盘相关-卷</title><link>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</link><pubDate>Fri, 27 Sep 2024 15:53:23 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</guid><description>&lt;h3 class="relative group"&gt;LVM（逻辑卷管理器）的概念
+ &lt;div id="lvm逻辑卷管理器的概念" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lvm%e9%80%bb%e8%be%91%e5%8d%b7%e7%ae%a1%e7%90%86%e5%99%a8%e7%9a%84%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编辑器配置 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</link><description>Recent content in 编辑器配置 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 06 Jun 2025 13:52:16 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>lazyvim_plugins</title><link>https://myblog.050626.xyz/posts/lazyvim-plugins/</link><pubDate>Fri, 06 Jun 2025 13:52:16 +0000</pubDate><guid>https://myblog.050626.xyz/posts/lazyvim-plugins/</guid><description>&lt;h3 class="relative group"&gt;如何在 LazyVim 中配置插件？
+ &lt;div id="如何在-lazyvim-中配置插件" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a6%82%e4%bd%95%e5%9c%a8-lazyvim-%e4%b8%ad%e9%85%8d%e7%bd%ae%e6%8f%92%e4%bb%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;LazyVim 使用 &lt;code&gt;lazy.nvim&lt;/code&gt; 作为插件管理器，允许以模块化和灵活的方式定义和配置插件。要配置插件，您需要创建或修改 Lua 文件来指定要安装的插件及其设置和加载条件。这些文件通常位于 LazyVim 配置的 &lt;code&gt;lua/plugins/&lt;/code&gt; 目录中。&lt;/p&gt;</description></item></channel></rss>

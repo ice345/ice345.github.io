@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>磁盘存储 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E7%A3%81%E7%9B%98%E5%AD%98%E5%82%A8/</link><description>Recent content in 磁盘存储 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 27 Sep 2024 15:53:23 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E7%A3%81%E7%9B%98%E5%AD%98%E5%82%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>硬盘相关-卷</title><link>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</link><pubDate>Fri, 27 Sep 2024 15:53:23 +0000</pubDate><guid>https://myblog.050626.xyz/posts/%E7%A1%AC%E7%9B%98%E7%9B%B8%E5%85%B3-%E5%8D%B7/</guid><description>&lt;h3 class="relative group"&gt;LVM（逻辑卷管理器）的概念
+ &lt;div id="lvm逻辑卷管理器的概念" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lvm%e9%80%bb%e8%be%91%e5%8d%b7%e7%ae%a1%e7%90%86%e5%99%a8%e7%9a%84%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;LVM（Logical Volume Manager，逻辑卷管理器）是一种用于管理计算机存储设备上磁盘空间分配的方法。它提供了一种更灵活和动态的磁盘管理方式，与传统的分区方式相比，更加灵活和便于调整。&lt;/p&gt;</description></item></channel></rss>

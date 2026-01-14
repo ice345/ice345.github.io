@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>访问统计 on ICE345のBLOG</title><link>https://myblog.050626.xyz/tags/%E8%AE%BF%E9%97%AE%E7%BB%9F%E8%AE%A1/</link><description>Recent content in 访问统计 on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Mon, 27 Jan 2025 18:46:31 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/tags/%E8%AE%BF%E9%97%AE%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml"/><item><title>hexo添加存活时间和访问人数</title><link>https://myblog.050626.xyz/posts/hexo%E6%B7%BB%E5%8A%A0%E5%AD%98%E6%B4%BB%E6%97%B6%E9%97%B4%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0/</link><pubDate>Mon, 27 Jan 2025 18:46:31 +0000</pubDate><guid>https://myblog.050626.xyz/posts/hexo%E6%B7%BB%E5%8A%A0%E5%AD%98%E6%B4%BB%E6%97%B6%E9%97%B4%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0/</guid><description>&lt;p&gt;你提供的代码中已经添加了显示网站存活时间的功能，接下来可以根据你的需求来添加访问人数统计的功能。以下是详细步骤：&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. &lt;strong&gt;不蒜子访问量统计的代码添加&lt;/strong&gt;
+ &lt;div id="1-不蒜子访问量统计的代码添加" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e4%b8%8d%e8%92%9c%e5%ad%90%e8%ae%bf%e9%97%ae%e9%87%8f%e7%bb%9f%e8%ae%a1%e7%9a%84%e4%bb%a3%e7%a0%81%e6%b7%bb%e5%8a%a0" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;不蒜子是一个非常简单、免费且无需配置的访问量统计工具，可以直接嵌入你的 Hexo 网站。&lt;/p&gt;</description></item></channel></rss>
