@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on ICE345のBLOG</title><link>https://myblog.050626.xyz/notes/linux/</link><description>Recent content in Linux on ICE345のBLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026 ICE345</copyright><lastBuildDate>Fri, 06 Jun 2025 13:45:51 +0000</lastBuildDate><atom:link href="https://myblog.050626.xyz/notes/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux-DNS网络管理</title><link>https://myblog.050626.xyz/notes/linux/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 06 Jun 2025 13:45:51 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/linux-dns%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;是的，你可以在 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 文件中修改 DNS 服务器。该文件用于配置 Linux 系统使用的 DNS 解析服务器。通过编辑该文件，你可以手动指定 DNS 服务器（例如 Google 的 &lt;code&gt;8.8.8.8&lt;/code&gt; 或 Cloudflare 的 &lt;code&gt;1.1.1.1&lt;/code&gt; 等）。&lt;/p&gt;
+&lt;div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="warning"&gt;
+ &lt;div class="flex items-center gap-2 font-semibold text-inherit"&gt;
+ &lt;div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"&gt;&lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;&lt;/div&gt;
+ &lt;div class="grow"&gt;
+ 警告
+ &lt;/div&gt;
+ &lt;/div&gt;&lt;div class="admonition-content mt-3 text-base leading-relaxed text-inherit"&gt;&lt;p&gt;最好使用的是 dhcpcd 服务，这个最容易修改，就在 &lt;code&gt;/etc/dhcpcd.conf&lt;/code&gt; 中修改就行&lt;/p&gt;</description></item><item><title>Linux文件FILE</title><link>https://myblog.050626.xyz/notes/linux/linux%E6%96%87%E4%BB%B6file/</link><pubDate>Tue, 04 Feb 2025 13:25:48 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/linux%E6%96%87%E4%BB%B6file/</guid><description>&lt;h1 class="relative group"&gt;文件描述符
+ &lt;div id="文件描述符" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e4%bb%b6%e6%8f%8f%e8%bf%b0%e7%ac%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;文件在 Linux 系统中通过文件描述符与内核进行交互。打开文件时，Linux 内核会执行以下步骤：&lt;/p&gt;</description></item><item><title>Linux文件描述符(fd)</title><link>https://myblog.050626.xyz/notes/linux/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</link><pubDate>Tue, 04 Feb 2025 13:24:22 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/linux%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-fd/</guid><description>&lt;blockquote&gt;&lt;p&gt;作者: 杰克小麻雀&lt;br&gt;
+原文链接: &lt;a href="https://blog.csdn.net/yushuaigee/article/details/107883964" target="_blank" rel="noreferrer"&gt;https://blog.csdn.net/yushuaigee/article/details/107883964&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 class="relative group"&gt;1、从一个最常见的例子说起
+ &lt;div id="1从一个最常见的例子说起" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1%e4%bb%8e%e4%b8%80%e4%b8%aa%e6%9c%80%e5%b8%b8%e8%a7%81%e7%9a%84%e4%be%8b%e5%ad%90%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在使用Linux的过程中， 我们平时经常看到下面这样的用法：&lt;/p&gt;</description></item><item><title>Linux无需密码登陆-适合服务器</title><link>https://myblog.050626.xyz/notes/linux/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</link><pubDate>Tue, 04 Feb 2025 13:22:07 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/linux%E6%97%A0%E9%9C%80%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86-%E9%80%82%E5%90%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid><description>&lt;h4 class="relative group"&gt;需求
+ &lt;div id="需求" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9c%80%e6%b1%82" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="在这里插入图片描述"
+ src="https://i-blog.csdnimg.cn/blog_migrate/fdf416e80dcea03a8e49488f2d473f3e.jpeg#pic_center"
+ &gt;&lt;/figure&gt;
+&lt;br&gt;
+最近我们在开发一个基于树莓派的小盒子，我们会采购一些树莓派，装好外盒，装好&lt;a href="https://so.csdn.net/so/search?q=arm&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noreferrer"&gt;arm&lt;/a&gt;版本的【Ubuntu Server 20.04】系统，并且装上我们开发的配套软件，对接我们云端的服务，最终把小盒子卖给用户并提供一些收费的服务。我们在安装系统的时候使用了Ubuntu自带的磁盘&lt;a href="https://so.csdn.net/so/search?q=%E5%8A%A0%E5%AF%86&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noreferrer"&gt;加密&lt;/a&gt;功能，确保机器在不开机的情况下不能被轻易的取出TF卡读取数据。&lt;/p&gt;</description></item><item><title>Linux下.desktop创建时发生的错误</title><link>https://myblog.050626.xyz/notes/linux/linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/</link><pubDate>Fri, 20 Dec 2024 10:04:36 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/linux%E4%B8%8B-desktop%E5%88%9B%E5%BB%BA%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E9%94%99%E8%AF%AF/</guid><description>&lt;div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="note"&gt;
+ &lt;div class="flex items-center gap-2 font-semibold text-inherit"&gt;
+ &lt;div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"&gt;&lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;&lt;/div&gt;
+ &lt;div class="grow"&gt;
+ 笔记
+ &lt;/div&gt;
+ &lt;/div&gt;&lt;div class="admonition-content mt-3 text-base leading-relaxed text-inherit"&gt;&lt;p&gt;好用的工具: &lt;code&gt;desktop-file-validate&lt;/code&gt; 这个来检查编写的错误&lt;/p&gt;</description></item><item><title>linux进程调度</title><link>https://myblog.050626.xyz/notes/linux/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</link><pubDate>Fri, 13 Dec 2024 20:09:49 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/</guid><description>&lt;h3 class="relative group"&gt;00:00 - ⏰ 进程调度
+ &lt;div id="0000----进程调度" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#0000----%e8%bf%9b%e7%a8%8b%e8%b0%83%e5%ba%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+
+&lt;h4 class="relative group"&gt;总结：
+ &lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程调度的目的是在多个程序或进程之间合理分配 CPU 时间。最初，程序通过主动调用 API 函数交出 CPU，但有时进程不合作，比如陷入死循环或长时间占用 CPU，导致其他进程无法执行。&lt;/p&gt;</description></item><item><title>多进程和多线程,并发和并行</title><link>https://myblog.050626.xyz/notes/linux/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/</link><pubDate>Fri, 13 Dec 2024 20:03:38 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/</guid><description>&lt;h3 class="relative group"&gt;1. &lt;strong&gt;多进程 (Multiprocessing)&lt;/strong&gt;
+ &lt;div id="1-多进程-multiprocessing" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e5%a4%9a%e8%bf%9b%e7%a8%8b-multiprocessing" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：假设你需要进行大量的文件处理任务，比如读取多个文件、处理内容并写入新文件。&lt;/p&gt;</description></item><item><title>软连接和/.desktop图标</title><link>https://myblog.050626.xyz/notes/linux/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</link><pubDate>Sat, 14 Sep 2024 16:36:35 +0000</pubDate><guid>https://myblog.050626.xyz/notes/linux/%E8%BD%AF%E8%BF%9E%E6%8E%A5%E5%92%8C-desktop%E5%9B%BE%E6%A0%87/</guid><description>&lt;h1 class="relative group"&gt;两者区别
+ &lt;div id="两者区别" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%a4%e8%80%85%e5%8c%ba%e5%88%ab" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;创建桌面图标和创建软连接的方式有不同的用途和应用场景，以下是它们的主要区别：&lt;/p&gt;</description></item></channel></rss>
